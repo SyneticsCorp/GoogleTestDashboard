@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="1" failures="0" disabled="0" errors="0" time="0.001" timestamp="2026-09-02T00:00:00Z" name="AllTests">
+  <testsuite name="Malformed.Fixture" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.001" timestamp="2026-09-02T00:00:00Z">
+    <properties>
+      <property name="module" value="Malformed" />
+    </properties>
+    <testcase name="Broken_Case" classname="Malformed.Fixture" status="run" time="0.001">
+  </testsuite>
+</testsuites>

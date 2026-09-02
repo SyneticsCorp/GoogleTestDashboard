@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="8" failures="3" disabled="1" errors="2" time="0.010" timestamp="2026-09-02T00:00:00Z" name="AllTests">
+  <testsuite name="StatusPriorityFixture.Cases" tests="8" failures="3" disabled="1" skipped="2" errors="2" time="0.010" timestamp="2026-09-02T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="99" />
+      <property name="module" value="StatusPriorityFixture" />
+    </properties>
+    <testcase name="OnlyFailure" classname="StatusPriorityFixture.Cases" status="run" time="0.001" timestamp="2026-09-02T00:00:00Z">
+      <failure message="boom" type="AssertionFailure">details</failure>
+    </testcase>
+    <testcase name="OnlyError" classname="StatusPriorityFixture.Cases" status="run" time="0.001" timestamp="2026-09-02T00:00:00Z">
+      <error message="crash" type="RuntimeError">details</error>
+    </testcase>
+    <testcase name="OnlySkipped" classname="StatusPriorityFixture.Cases" status="run" time="0.001" timestamp="2026-09-02T00:00:00Z">
+      <skipped message="skipped by tag" />
+    </testcase>
+    <testcase name="OnlyDisabledStatusAttr" classname="StatusPriorityFixture.Cases" status="notrun" time="0.000" timestamp="2026-09-02T00:00:00Z" />
+    <testcase name="FailureAndError" classname="StatusPriorityFixture.Cases" status="run" time="0.001" timestamp="2026-09-02T00:00:00Z">
+      <failure message="boom" type="AssertionFailure">details</failure>
+      <error message="crash" type="RuntimeError">details</error>
+    </testcase>
+    <testcase name="SkippedAndFailure" classname="StatusPriorityFixture.Cases" status="run" time="0.001" timestamp="2026-09-02T00:00:00Z">
+      <skipped message="skipped by tag" />
+      <failure message="boom" type="AssertionFailure">details</failure>
+    </testcase>
+    <testcase name="DisabledAndSkipped" classname="StatusPriorityFixture.Cases" status="notrun" time="0.000" timestamp="2026-09-02T00:00:00Z">
+      <skipped message="skipped by tag" />
+    </testcase>
+    <testcase name="PlainPass" classname="StatusPriorityFixture.Cases" status="run" time="0.001" timestamp="2026-09-02T00:00:00Z" />
+  </testsuite>
+</testsuites>

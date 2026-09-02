@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="1" failures="0" disabled="0" errors="0" time="0.001" timestamp="2026-09-02T00:00:00Z" name="AllTests">
+  <testsuite name="FallbackFixture.NoModuleProperty" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.001" timestamp="2026-09-02T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="99" />
+      <property name="tested_function" value="DoSomething" />
+    </properties>
+    <testcase name="DoSomething_NominalInput" classname="FallbackModuleFromClassname.NoModuleProperty" status="run" time="0.001" timestamp="2026-09-02T00:00:00Z" />
+  </testsuite>
+</testsuites>

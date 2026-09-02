@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="5" failures="2" disabled="0" errors="0" time="0.010" timestamp="2026-09-02T00:00:00Z" name="AllTests">
+  <testsuite name="MismatchFixture.Cases" tests="5" failures="2" disabled="0" skipped="0" errors="0" time="0.010" timestamp="2026-09-02T00:00:00Z">
+    <properties>
+      <property name="module" value="MismatchFixture" />
+    </properties>
+    <testcase name="Case_One" classname="MismatchFixture.Cases" status="run" time="0.001" />
+    <testcase name="Case_Two" classname="MismatchFixture.Cases" status="run" time="0.001">
+      <failure message="boom" type="AssertionFailure">details</failure>
+    </testcase>
+    <testcase name="Case_Three" classname="MismatchFixture.Cases" status="run" time="0.001" />
+    <testcase name="Case_Four" classname="MismatchFixture.Cases" status="run" time="0.001" />
+  </testsuite>
+</testsuites>
