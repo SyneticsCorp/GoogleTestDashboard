@@ -2,5 +2,19 @@
   "enabledPlugins": {
     "andrej-karpathy-skills@karpathy-skills": true,
     "ui-ux-pro-max@ui-ux-pro-max-skill": true
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Agent",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/notify_sw_system_tester.py",
+            "statusMessage": "tdd-flow 완료 확인 중..."
+          }
+        ]
+      }
+    ]
   }
 }

@@ -74,9 +74,14 @@ Requirements.md §7에는 현재 데이터셋에 대한 고정된 수용 기준�
 호출하십시오.
 
 - **시스템 테스트 케이스 생성/검토** → `sw-system-tester` 서브에이전트 (내부적으로
-  `sw-system-test` 스킬 사용)
+  `sw-system-test` 스킬 사용, 산출물은 `TestCase_Template.xlsx`를 양식으로 사용)
 - **운영 코드 구현/버그 수정/리팩터링** → `tdd-flow` 서브에이전트 (내부적으로
   `test-driven-development` 스킬을 사용해 Red-Green-Refactor를 강제)
+
+`tdd-flow`가 개발 활동을 완료하면(Agent 도구 호출이 끝나면) `.claude/hooks/notify_sw_system_tester.py`가
+PostToolUse 훅으로 실행되어, 이어서 `sw-system-tester`를 호출해 `Requirements.md` 요구사항 기반으로
+테스트 케이스를 생성/갱신하도록 컨텍스트에 상기시킵니다(`.claude/settings.json`에 등록). 이 상기 메시지를
+받으면 반드시 `sw-system-tester`를 호출하십시오.
 
 ## 소스코드 품질 기준
 
