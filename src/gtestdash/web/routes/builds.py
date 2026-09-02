@@ -1,13 +1,14 @@
 """!
 @file builds.py
-@brief Build-detail route: GET /builds/<build_id> (FR-018, FR-019).
+@brief Build-detail route: GET /builds/<build_id> (FR-018, FR-019, FR-025~031).
 """
-from flask import abort, render_template
+from flask import abort, render_template, request
 
 from gtestdash.aggregation.build_history import summarizeBuildsByBuild
 from gtestdash.aggregation.grouping import numericBuildIdSortKey
 from gtestdash.aggregation.module_distribution import computeModuleDistribution
-from gtestdash.web.routes.route_helpers import buildTestDetailUrl
+from gtestdash.query.combined_query import runCombinedQuery
+from gtestdash.web.routes.route_helpers import attachPageNavLinks, buildTestDetailUrl, readListQueryArgs
 
 
 def _findBuildSummary(buildSummaries, buildId):
@@ -55,13 +56,33 @@ def _toTestRow(record):
     }
 
 
-def buildBuildDetailContext(records, buildId):
+def buildBuildDetailContext(
+    records,
+    buildId,
+    queryText=None,
+    failedOnly=False,
+    status=None,
+    module=None,
+    functionOrSuite=None,
+    sortKey=None,
+    page=1,
+    pageSize=50,
+):
     """!
-    @brief Assemble every value build_detail.html needs for one build (FR-018, FR-019).
+    @brief Assemble every value build_detail.html needs for one build (FR-018, FR-019, FR-025~031).
     @param records Full list of ResultRecord across every build.
     @param buildId Build id requested via the route (a str, e.g. "10").
-    @return Dict of template context (buildSummary, moduleDistribution, testRows,
-            prevBuildId, nextBuildId), or None when buildId is not present
+    @param queryText FR-026 free-text search, scoped to this build (FR-027).
+    @param failedOnly FR-025 failed-only toggle.
+    @param status FR-028 exact status filter.
+    @param module FR-028 exact module filter.
+    @param functionOrSuite FR-021/FR-028 exact function-or-suite filter.
+    @param sortKey FR-030 sort key, or None for the default order.
+    @param page FR-031 1-based page number.
+    @param pageSize FR-031 page size (25/50/100; other values fall back to 50).
+    @return Dict of template context (buildSummary, moduleDistribution,
+            testRows, prevBuildId, nextBuildId, plus the FR-025~031 query/
+            pagination/filter state), or None when buildId is not present
             among records, signaling the route should 404.
     """
     buildSummaries = summarizeBuildsByBuild(records)
@@ -70,20 +91,44 @@ def buildBuildDetailContext(records, buildId):
         return None
 
     prevBuildId, nextBuildId = _resolvePrevNextBuildIds(buildSummaries, buildId)
-    buildRecords = [record for record in records if record.build_id == buildId]
+    queryResult = runCombinedQuery(
+        records,
+        queryText=queryText,
+        failedOnly=failedOnly,
+        status=status,
+        buildId=buildId,
+        module=module,
+        functionOrSuite=functionOrSuite,
+        sortKey=sortKey,
+        page=page,
+        pageSize=pageSize,
+    )
 
     return {
         "buildSummary": buildSummary,
         "moduleDistribution": computeModuleDistribution(records, buildId),
-        "testRows": [_toTestRow(record) for record in buildRecords],
+        "testRows": [_toTestRow(record) for record in queryResult["records"]],
         "prevBuildId": prevBuildId,
         "nextBuildId": nextBuildId,
+        "searchContextBuildId": buildId,
+        "queryText": queryText or "",
+        "failedOnly": failedOnly,
+        "statusFilter": status,
+        "moduleFilter": module,
+        "functionOrSuiteFilter": functionOrSuite,
+        "sortKey": sortKey,
+        "page": queryResult["page"],
+        "pageSize": queryResult["pageSize"],
+        "totalMatches": queryResult["totalMatches"],
+        "totalPages": queryResult["totalPages"],
+        "displayRange": queryResult["displayRange"],
+        "filterOptions": queryResult["filterOptions"],
     }
 
 
 def registerBuildDetailRoute(app):
     """!
-    @brief Register GET /builds/<build_id> on the given Flask app (FR-018, FR-019).
+    @brief Register GET /builds/<build_id> on the given Flask app (FR-018, FR-019, FR-025~031).
     @param app Flask application instance to attach the route to.
     """
 
@@ -95,7 +140,9 @@ def registerBuildDetailRoute(app):
         @return Rendered build_detail.html, or a 404 for an unknown build id.
         """
         snapshot = app.config["SNAPSHOT"]
-        context = buildBuildDetailContext(snapshot.records, build_id)
+        queryArgs = readListQueryArgs(request.args, includeModule=True)
+        context = buildBuildDetailContext(snapshot.records, build_id, **queryArgs)
         if context is None:
             abort(404)
+        attachPageNavLinks(context, request.path, request.args)
         return render_template("build_detail.html", **context)

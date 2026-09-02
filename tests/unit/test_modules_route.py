@@ -98,20 +98,22 @@ def test_buildModuleDetailContext_testRows_scopedToBuildAndModuleOnly():
     assert {row["testName"] for row in context["testRows"]} == {"Case_A", "Case_B"}
 
 
-def test_buildModuleDetailContext_functionFilter_restrictsToMatchingFunction():
+def test_buildModuleDetailContext_functionOrSuiteFilter_matchesByFunction():
     """!
-    @brief A functionFilter keeps only rows whose function matches (FR-021).
+    @brief A functionOrSuite filter matching a function name keeps only that function's rows (FR-021).
     """
-    context = buildModuleDetailContext(_mixedModuleAndBuildRecords(), "01", "Alpha", functionFilter="Lock")
+    context = buildModuleDetailContext(_mixedModuleAndBuildRecords(), "01", "Alpha", functionOrSuite="Lock")
 
     assert {row["testName"] for row in context["testRows"]} == {"Case_A"}
 
 
-def test_buildModuleDetailContext_suiteFilter_restrictsToMatchingSuite():
+def test_buildModuleDetailContext_functionOrSuiteFilter_matchesBySuite():
     """!
-    @brief A suiteFilter keeps only rows whose suite matches (FR-021).
+    @brief A functionOrSuite filter matching a suite name keeps only that suite's rows (FR-021).
     """
-    context = buildModuleDetailContext(_mixedModuleAndBuildRecords(), "01", "Alpha", suiteFilter="Alpha.UnlockSuite")
+    context = buildModuleDetailContext(
+        _mixedModuleAndBuildRecords(), "01", "Alpha", functionOrSuite="Alpha.UnlockSuite"
+    )
 
     assert {row["testName"] for row in context["testRows"]} == {"Case_B"}
 
@@ -123,3 +125,33 @@ def test_buildModuleDetailContext_noFilter_includesEveryTestInThatBuildAndModule
     context = buildModuleDetailContext(_mixedModuleAndBuildRecords(), "01", "Alpha")
 
     assert len(context["testRows"]) == 2
+
+
+def test_buildModuleDetailContext_searchNeverLeaksOtherModulesRecords():
+    """!
+    @brief FR-027 acceptance: a module-detail search never returns another module's results.
+    """
+    context = buildModuleDetailContext(_mixedModuleAndBuildRecords(), "01", "Alpha", queryText="Case")
+
+    assert context["totalMatches"] == 2
+    assert all(row["testName"].startswith("Case") for row in context["testRows"])
+
+
+def test_buildModuleDetailContext_failedOnly_narrowsToFailedRecords():
+    """!
+    @brief FR-025: the failed-only toggle keeps only FAILED-status rows within this module.
+    """
+    context = buildModuleDetailContext(_mixedModuleAndBuildRecords(), "01", "Alpha", failedOnly=True)
+
+    assert context["totalMatches"] == 1
+    assert [row["status"] for row in context["testRows"]] == ["FAILED"]
+
+
+def test_buildModuleDetailContext_filterOptions_excludeOtherModulesFunctions():
+    """!
+    @brief FR-028: filterOptions never surface a function/suite from a different module.
+    """
+    context = buildModuleDetailContext(_mixedModuleAndBuildRecords(), "01", "Alpha")
+
+    assert "Sense" not in context["filterOptions"]["functionOrSuite"]
+    assert "Beta.SenseSuite" not in context["filterOptions"]["functionOrSuite"]

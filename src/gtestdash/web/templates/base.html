@@ -10,7 +10,11 @@
   <header class="app-header">
     <a class="app-title" href="{{ url_for('dashboard') }}">GoogleTest 대시보드</a>
     <form class="search-form" action="/search" method="get">
-      <input type="search" name="q" placeholder="모듈, 함수, 테스트명, 실패 메시지 검색">
+      <input type="search" name="q" value="{{ request.args.get('q', '') if request.endpoint == 'searchResults' else '' }}" placeholder="모듈, 함수, 테스트명, 실패 메시지 검색">
+      {% if searchContextBuildId %}
+      <input type="hidden" name="buildId" value="{{ searchContextBuildId }}">
+      {% endif %}
+      <button type="submit">검색</button>
     </form>
   </header>
   <main>

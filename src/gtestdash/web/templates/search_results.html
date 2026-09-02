@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% from "_list_controls.html" import queryControls, paginationInfo %}
+
+{% block title %}GoogleTest 대시보드 - 검색 결과{% endblock %}
+
+{% block content %}
+<nav class="crumb-nav"><a href="{{ url_for('dashboard') }}">메인</a> / 검색 결과</nav>
+
+<section class="tests-section" aria-labelledby="search-results-heading">
+  <h1 id="search-results-heading">검색 결과 ({{ totalMatches }}건)</h1>
+  {{ queryControls(
+       actionUrl="/search",
+       resetUrl="/search",
+       queryText=queryText, failedOnly=failedOnly, statusFilter=statusFilter,
+       buildIdFilter=buildIdFilter, moduleFilter=moduleFilter, functionOrSuiteFilter=functionOrSuiteFilter,
+       sortKey=sortKey, pageSize=pageSize, filterOptions=filterOptions,
+       showBuildFilter=true, showModuleFilter=true
+  ) }}
+  {{ paginationInfo(displayRange, totalMatches, prevPageUrl, nextPageUrl, page, totalPages) }}
+  {% if testRows %}
+  <table class="tests-table">
+    <thead>
+      <tr>
+        <th>상태</th><th>빌드</th><th>모듈</th><th>함수</th><th>스위트</th><th>테스트명</th><th>수행 시간</th><th>파일:줄</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in testRows %}
+      <tr class="test-row test-row--{{ row.status|lower }}">
+        <td>{{ row.status }}</td>
+        <td><a href="/builds/{{ row.buildId }}">{{ row.buildId }}</a></td>
+        <td>{{ row.module }}</td>
+        <td>{{ row.function }}</td>
+        <td>{{ row.suite }}</td>
+        <td><a href="{{ row.testUrl }}">{{ row.testName }}</a></td>
+        <td>{{ "%.3f"|format(row.durationSeconds) }}s</td>
+        <td>{{ row.testFile or "-" }}{% if row.line %}:{{ row.line }}{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="empty-state">조건에 맞는 테스트가 없습니다. 검색어나 필터를 조정해 보세요.</p>
+  {% endif %}
+</section>
+{% endblock %}

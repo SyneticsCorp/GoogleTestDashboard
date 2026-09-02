@@ -1,0 +1,90 @@
+{# !
+  @file _list_controls.html
+  @brief Shared FR-025~031 search/filter/sort/pagination controls, reused by
+         build_detail.html, module_detail.html and search_results.html so the
+         markup is defined once instead of duplicated per page.
+#}
+{% macro queryControls(actionUrl, resetUrl, queryText, failedOnly, statusFilter,
+                        buildIdFilter, moduleFilter, functionOrSuiteFilter, sortKey,
+                        pageSize, filterOptions, showBuildFilter=false, showModuleFilter=false) %}
+<form class="query-controls" method="get" action="{{ actionUrl }}">
+  <input type="search" name="q" value="{{ queryText or '' }}" placeholder="검색어 (모듈/함수/테스트명/실패 메시지 등)">
+
+  <label class="failed-only-toggle">
+    <input type="checkbox" name="failedOnly" value="true" {% if failedOnly %}checked{% endif %}>
+    실패 테스트만
+  </label>
+
+  <label for="status-filter">상태</label>
+  <select id="status-filter" name="status">
+    <option value="">전체</option>
+    {% for value in filterOptions.status %}
+    <option value="{{ value }}" {% if statusFilter == value %}selected{% endif %}>{{ value }}</option>
+    {% endfor %}
+  </select>
+
+  {% if showBuildFilter %}
+  <label for="build-filter">빌드</label>
+  <select id="build-filter" name="buildId">
+    <option value="">전체</option>
+    {% for value in filterOptions.buildId %}
+    <option value="{{ value }}" {% if buildIdFilter == value %}selected{% endif %}>빌드 {{ value }}</option>
+    {% endfor %}
+  </select>
+  {% endif %}
+
+  {% if showModuleFilter %}
+  <label for="module-filter">모듈</label>
+  <select id="module-filter" name="module">
+    <option value="">전체</option>
+    {% for value in filterOptions.module %}
+    <option value="{{ value }}" {% if moduleFilter == value %}selected{% endif %}>{{ value }}</option>
+    {% endfor %}
+  </select>
+  {% endif %}
+
+  <label for="function-or-suite-filter">함수/스위트</label>
+  <select id="function-or-suite-filter" name="functionOrSuite">
+    <option value="">전체</option>
+    {% for value in filterOptions.functionOrSuite %}
+    <option value="{{ value }}" {% if functionOrSuiteFilter == value %}selected{% endif %}>{{ value }}</option>
+    {% endfor %}
+  </select>
+
+  <label for="sort-select">정렬</label>
+  <select id="sort-select" name="sort">
+    <option value="">기본</option>
+    <option value="status" {% if sortKey == "status" %}selected{% endif %}>상태</option>
+    <option value="module" {% if sortKey == "module" %}selected{% endif %}>모듈</option>
+    <option value="functionOrSuite" {% if sortKey == "functionOrSuite" %}selected{% endif %}>함수/스위트</option>
+    <option value="testName" {% if sortKey == "testName" %}selected{% endif %}>테스트명</option>
+    <option value="duration" {% if sortKey == "duration" %}selected{% endif %}>수행 시간</option>
+  </select>
+
+  <label for="page-size-select">페이지 크기</label>
+  <select id="page-size-select" name="pageSize">
+    {% for size in (25, 50, 100) %}
+    <option value="{{ size }}" {% if pageSize == size %}selected{% endif %}>{{ size }}</option>
+    {% endfor %}
+  </select>
+
+  <button type="submit">적용</button>
+  <a class="reset-link" href="{{ resetUrl }}">전체 초기화</a>
+</form>
+{% endmacro %}
+
+{% macro paginationInfo(displayRange, totalMatches, prevPageUrl, nextPageUrl, page, totalPages) %}
+<div class="pagination-info">
+  <span class="pagination-range">{{ displayRange }} / 전체 {{ totalMatches }}건 (페이지 {{ page }}/{{ totalPages if totalPages > 0 else 1 }})</span>
+  {% if prevPageUrl %}
+  <a class="pagination-link" href="{{ prevPageUrl }}">&laquo; 이전 페이지</a>
+  {% else %}
+  <span class="pagination-link pagination-link--disabled">&laquo; 이전 페이지</span>
+  {% endif %}
+  {% if nextPageUrl %}
+  <a class="pagination-link" href="{{ nextPageUrl }}">다음 페이지 &raquo;</a>
+  {% else %}
+  <span class="pagination-link pagination-link--disabled">다음 페이지 &raquo;</span>
+  {% endif %}
+</div>
+{% endmacro %}

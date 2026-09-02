@@ -175,3 +175,15 @@ def test_testDetailRoute_passedTest_identityFieldsMatchRecord(dashboardApp):
     assert test["testFile"] == record.test_file
     assert test["line"] == record.line
     assert test["sourceFile"] == record.source_file
+
+
+def test_testDetailRoute_context_carriesCurrentBuildForCommonSearchForm(dashboardApp):
+    """!
+    @brief FR-027: the common search form defaults its scope to the current build.
+    """
+    record = _findOneRecord(dashboardApp, "10", "PASSED")
+
+    with _capturedTemplateContext(dashboardApp) as captured:
+        dashboardApp.test_client().get(buildTestDetailUrl(record))
+
+    assert captured[0]["searchContextBuildId"] == "10"

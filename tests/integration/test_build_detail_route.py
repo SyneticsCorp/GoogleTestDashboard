@@ -84,12 +84,15 @@ def test_buildDetailRoute_lastBuild_hasNoNextBuildLink(dashboardApp):
 
 def test_buildDetailRoute_build10_listsAllTwelveHundredTestRecordsWithNoFilter(dashboardApp):
     """!
-    @brief FR-019 acceptance: build 10 with no filter shows all 1,200 records.
+    @brief FR-019/FR-031 acceptance: build 10 with no filter matches all 1,200 records,
+           paginated 50 per page (24 pages) rather than rendered all at once.
     """
     with _capturedTemplateContext(dashboardApp) as captured:
         dashboardApp.test_client().get("/builds/10")
 
-    assert len(captured[0]["testRows"]) == 1200
+    assert captured[0]["totalMatches"] == 1200
+    assert captured[0]["totalPages"] == 24
+    assert len(captured[0]["testRows"]) == 50
 
 
 def test_buildDetailRoute_build10_summaryMatchesFR010Figures(dashboardApp):
@@ -116,3 +119,14 @@ def test_buildDetailRoute_build10_moduleDistributionHasTenModulesSummingToTwenty
     distribution = captured[0]["moduleDistribution"]
     assert len(distribution) == 10
     assert sum(entry["failed"] for entry in distribution) == 24
+
+
+def test_buildDetailRoute_build10_failedOnlyToggle_matchesExactlyTwentyFourTests(dashboardApp):
+    """!
+    @brief FR-025 acceptance: build 10's failed-only toggle matches exactly 24 tests.
+    """
+    with _capturedTemplateContext(dashboardApp) as captured:
+        dashboardApp.test_client().get("/builds/10?failedOnly=true")
+
+    assert captured[0]["totalMatches"] == 24
+    assert all(row["status"] == "FAILED" for row in captured[0]["testRows"])

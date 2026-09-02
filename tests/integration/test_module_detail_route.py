@@ -81,12 +81,15 @@ def test_moduleDetailRoute_build10EachModule_showsAllOneHundredTwentyTests(dashb
 
 def test_moduleDetailRoute_childLockControllerBuild10_noFilterShowsOneHundredTwentyTests(dashboardApp):
     """!
-    @brief FR-021 acceptance: no filter on build 10's ChildLockController shows 120 tests.
+    @brief FR-021/FR-031 acceptance: no filter on build 10's ChildLockController matches
+           120 tests, paginated 50 per page (3 pages) rather than rendered all at once.
     """
     with _capturedTemplateContext(dashboardApp) as captured:
         dashboardApp.test_client().get("/builds/10/modules/ChildLockController")
 
-    assert len(captured[0]["testRows"]) == 120
+    assert captured[0]["totalMatches"] == 120
+    assert captured[0]["totalPages"] == 3
+    assert len(captured[0]["testRows"]) == 50
 
 
 def test_moduleDetailRoute_childLockControllerBuild10_matchesThreeFailuresPerAcceptanceTable(dashboardApp):
@@ -99,20 +102,20 @@ def test_moduleDetailRoute_childLockControllerBuild10_matchesThreeFailuresPerAcc
     assert captured[0]["moduleSummary"]["failed"] == 3
 
 
-def test_moduleDetailRoute_functionFilter_narrowsTestRows(dashboardApp):
+def test_moduleDetailRoute_functionOrSuiteFilter_narrowsTestRows(dashboardApp):
     """!
-    @brief FR-021: a ?function= filter narrows testRows to that function only.
+    @brief FR-021: a ?functionOrSuite= filter narrows the matched tests to that function only.
     """
     with _capturedTemplateContext(dashboardApp) as captured:
         dashboardApp.test_client().get("/builds/10/modules/ChildLockController")
-    allRows = captured[0]["testRows"]
-    oneFunction = allRows[0]["function"]
+    allTotalMatches = captured[0]["totalMatches"]
+    oneFunction = captured[0]["testRows"][0]["function"]
 
     with _capturedTemplateContext(dashboardApp) as filteredCaptured:
-        dashboardApp.test_client().get(f"/builds/10/modules/ChildLockController?function={oneFunction}")
+        dashboardApp.test_client().get(f"/builds/10/modules/ChildLockController?functionOrSuite={oneFunction}")
 
     filteredRows = filteredCaptured[0]["testRows"]
-    assert 0 < len(filteredRows) < len(allRows)
+    assert 0 < filteredCaptured[0]["totalMatches"] < allTotalMatches
     assert all(row["function"] == oneFunction for row in filteredRows)
 
 

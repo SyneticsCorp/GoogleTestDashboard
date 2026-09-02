@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_list_controls.html" import queryControls, paginationInfo %}
 
 {% block title %}GoogleTest 대시보드 - 빌드 {{ buildSummary.buildId }}{% endblock %}
 
@@ -56,7 +57,16 @@
 </section>
 
 <section class="tests-section" aria-labelledby="build-tests-heading">
-  <h2 id="build-tests-heading">전체 테스트 목록 ({{ testRows|length }}건)</h2>
+  <h2 id="build-tests-heading">전체 테스트 목록 ({{ totalMatches }}건)</h2>
+  {{ queryControls(
+       actionUrl="/builds/" ~ buildSummary.buildId,
+       resetUrl="/builds/" ~ buildSummary.buildId,
+       queryText=queryText, failedOnly=failedOnly, statusFilter=statusFilter,
+       buildIdFilter=none, moduleFilter=moduleFilter, functionOrSuiteFilter=functionOrSuiteFilter,
+       sortKey=sortKey, pageSize=pageSize, filterOptions=filterOptions,
+       showBuildFilter=false, showModuleFilter=true
+  ) }}
+  {{ paginationInfo(displayRange, totalMatches, prevPageUrl, nextPageUrl, page, totalPages) }}
   {% if testRows %}
   <table class="tests-table">
     <thead>
@@ -79,7 +89,7 @@
     </tbody>
   </table>
   {% else %}
-  <p class="empty-state">표시할 테스트가 없습니다.</p>
+  <p class="empty-state">조건에 맞는 테스트가 없습니다. 검색어나 필터를 조정해 보세요.</p>
   {% endif %}
 </section>
 {% endblock %}

@@ -137,3 +137,55 @@ def test_buildBuildDetailContext_moduleDistribution_scopedToThatBuildOnly():
     context = buildBuildDetailContext(records, "01")
 
     assert {entry["module"] for entry in context["moduleDistribution"]} == {"Alpha"}
+
+
+def test_buildBuildDetailContext_defaultQueryState_matchesEveryRecordInBuild():
+    """!
+    @brief With no query args, totalMatches/testRows reflect the whole build (Phase 5 baseline, FR-029).
+    """
+    context = buildBuildDetailContext(_threeBuildRecords(), "01")
+
+    assert context["totalMatches"] == 2
+    assert len(context["testRows"]) == 2
+    assert context["queryText"] == ""
+    assert context["failedOnly"] is False
+
+
+def test_buildBuildDetailContext_searchScopedToOtherBuildsAreExcluded():
+    """!
+    @brief FR-027: build-detail search never returns records from other builds.
+    """
+    context = buildBuildDetailContext(_threeBuildRecords(), "01", queryText="Case")
+
+    assert context["totalMatches"] == 2
+    assert all(row["testName"].startswith("Case") for row in context["testRows"])
+
+
+def test_buildBuildDetailContext_failedOnly_narrowsToFailedRecords():
+    """!
+    @brief FR-025: the failed-only toggle keeps only FAILED-status rows.
+    """
+    context = buildBuildDetailContext(_threeBuildRecords(), "01", failedOnly=True)
+
+    assert context["totalMatches"] == 1
+    assert [row["status"] for row in context["testRows"]] == ["FAILED"]
+
+
+def test_buildBuildDetailContext_filterOptions_onlyIncludeThatBuildsValues():
+    """!
+    @brief FR-028: filterOptions never surface a module absent from this build's records.
+    """
+    context = buildBuildDetailContext(_threeBuildRecords(), "01")
+
+    assert context["filterOptions"]["module"] == ["Alpha"]
+
+
+def test_buildBuildDetailContext_pagination_reflectsRequestedPageAndSize():
+    """!
+    @brief FR-031: page/pageSize/totalPages are threaded through from the query engine.
+    """
+    context = buildBuildDetailContext(_threeBuildRecords(), "01", pageSize=25, page=1)
+
+    assert context["pageSize"] == 25
+    assert context["totalPages"] == 1
+    assert context["displayRange"] == "1-2"

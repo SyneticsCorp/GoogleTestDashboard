@@ -40,14 +40,15 @@ def buildTestDetailContext(records, buildId, testId):
     @param buildId Build id requested via the route (a str, e.g. "10").
     @param testId The "{classname}.{test_name}" slug requested via the route
            (see route_helpers.findRecordByTestId()).
-    @return Dict of template context ({"test": {...}}), or None when the
-            build+test_id combination is not present among records, signaling
-            the route should 404.
+    @return Dict of template context ({"test": {...}, "searchContextBuildId":
+            ...}), or None when the build+test_id combination is not present
+            among records, signaling the route should 404. searchContextBuildId
+            lets the common search form default its scope to this build (FR-027).
     """
     record = findRecordByTestId(records, buildId, testId)
     if record is None:
         return None
-    return {"test": _toTestDetail(record)}
+    return {"test": _toTestDetail(record), "searchContextBuildId": record.build_id}
 
 
 def registerTestDetailRoute(app):
