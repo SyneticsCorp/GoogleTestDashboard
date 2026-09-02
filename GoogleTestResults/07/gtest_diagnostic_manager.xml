@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="120" failures="6" disabled="0" errors="0" time="15.597" timestamp="2026-08-30T00:00:00Z" name="AllTests" random_seed="7165">
+  <testsuite name="DiagnosticManager.SetDiagnosticEventTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.568" timestamp="2026-08-30T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="07" />
+      <property name="module" value="DiagnosticManager" />
+      <property name="source_file" value="src/diagnostic/diagnostic_manager.cpp" />
+      <property name="tested_function" value="SetDiagnosticEvent" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="5.0" />
+    </properties>
+    <testcase name="SetDiagnosticEvent_NominalInput" file="tests/diagnostic/diagnostic_manager_test.cpp" line="80" status="run" result="completed" time="0.087" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+    <testcase name="SetDiagnosticEvent_LowerBoundary" file="tests/diagnostic/diagnostic_manager_test.cpp" line="84" status="run" result="completed" time="0.064" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+    <testcase name="SetDiagnosticEvent_UpperBoundary" file="tests/diagnostic/diagnostic_manager_test.cpp" line="88" status="run" result="completed" time="0.232" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+    <testcase name="SetDiagnosticEvent_BelowMinimum" file="tests/diagnostic/diagnostic_manager_test.cpp" line="92" status="run" result="completed" time="0.240" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+    <testcase name="SetDiagnosticEvent_AboveMaximum" file="tests/diagnostic/diagnostic_manager_test.cpp" line="96" status="run" result="completed" time="0.220" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+    <testcase name="SetDiagnosticEvent_MissingSignal" file="tests/diagnostic/diagnostic_manager_test.cpp" line="100" status="run" result="completed" time="0.007" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+    <testcase name="SetDiagnosticEvent_SignalTimeout" file="tests/diagnostic/diagnostic_manager_test.cpp" line="104" status="run" result="completed" time="0.103" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+    <testcase name="SetDiagnosticEvent_StaleSignal" file="tests/diagnostic/diagnostic_manager_test.cpp" line="108" status="run" result="completed" time="0.149" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+    <testcase name="SetDiagnosticEvent_RapidToggle" file="tests/diagnostic/diagnostic_manager_test.cpp" line="112" status="run" result="completed" time="0.092" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+    <testcase name="SetDiagnosticEvent_RepeatedCommand" file="tests/diagnostic/diagnostic_manager_test.cpp" line="116" status="run" result="completed" time="0.003" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+    <testcase name="SetDiagnosticEvent_ConcurrentRequest" file="tests/diagnostic/diagnostic_manager_test.cpp" line="120" status="run" result="completed" time="0.239" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+    <testcase name="SetDiagnosticEvent_IgnitionOff" file="tests/diagnostic/diagnostic_manager_test.cpp" line="124" status="run" result="completed" time="0.005" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+    <testcase name="SetDiagnosticEvent_IgnitionOn" file="tests/diagnostic/diagnostic_manager_test.cpp" line="128" status="run" result="completed" time="0.170" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+    <testcase name="SetDiagnosticEvent_VehicleStopped" file="tests/diagnostic/diagnostic_manager_test.cpp" line="132" status="run" result="completed" time="0.228" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+    <testcase name="SetDiagnosticEvent_VehicleMoving" file="tests/diagnostic/diagnostic_manager_test.cpp" line="136" status="run" result="completed" time="0.142" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+    <testcase name="SetDiagnosticEvent_DoorOpen" file="tests/diagnostic/diagnostic_manager_test.cpp" line="140" status="run" result="completed" time="0.051" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+    <testcase name="SetDiagnosticEvent_DoorClosed" file="tests/diagnostic/diagnostic_manager_test.cpp" line="144" status="run" result="completed" time="0.165" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+    <testcase name="SetDiagnosticEvent_ActuatorBusy" file="tests/diagnostic/diagnostic_manager_test.cpp" line="148" status="run" result="completed" time="0.069" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+    <testcase name="SetDiagnosticEvent_RecoveryAfterFault" file="tests/diagnostic/diagnostic_manager_test.cpp" line="152" status="run" result="completed" time="0.219" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+    <testcase name="SetDiagnosticEvent_PowerCycle" file="tests/diagnostic/diagnostic_manager_test.cpp" line="156" status="run" result="completed" time="0.083" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SetDiagnosticEventTest" />
+  </testsuite>
+  <testsuite name="DiagnosticManager.ClearDiagnosticEventTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.959" timestamp="2026-08-30T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="07" />
+      <property name="module" value="DiagnosticManager" />
+      <property name="source_file" value="src/diagnostic/diagnostic_manager.cpp" />
+      <property name="tested_function" value="ClearDiagnosticEvent" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="5.0" />
+    </properties>
+    <testcase name="ClearDiagnosticEvent_NominalInput" file="tests/diagnostic/diagnostic_manager_test.cpp" line="210" status="run" result="completed" time="0.027" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+    <testcase name="ClearDiagnosticEvent_LowerBoundary" file="tests/diagnostic/diagnostic_manager_test.cpp" line="214" status="run" result="completed" time="0.004" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+    <testcase name="ClearDiagnosticEvent_UpperBoundary" file="tests/diagnostic/diagnostic_manager_test.cpp" line="218" status="run" result="completed" time="0.247" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+    <testcase name="ClearDiagnosticEvent_BelowMinimum" file="tests/diagnostic/diagnostic_manager_test.cpp" line="222" status="run" result="completed" time="0.114" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+    <testcase name="ClearDiagnosticEvent_AboveMaximum" file="tests/diagnostic/diagnostic_manager_test.cpp" line="226" status="run" result="completed" time="0.238" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+    <testcase name="ClearDiagnosticEvent_MissingSignal" file="tests/diagnostic/diagnostic_manager_test.cpp" line="230" status="run" result="completed" time="0.172" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+    <testcase name="ClearDiagnosticEvent_SignalTimeout" file="tests/diagnostic/diagnostic_manager_test.cpp" line="234" status="run" result="completed" time="0.189" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+    <testcase name="ClearDiagnosticEvent_StaleSignal" file="tests/diagnostic/diagnostic_manager_test.cpp" line="238" status="run" result="completed" time="0.218" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+    <testcase name="ClearDiagnosticEvent_RapidToggle" file="tests/diagnostic/diagnostic_manager_test.cpp" line="242" status="run" result="completed" time="0.086" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+    <testcase name="ClearDiagnosticEvent_RepeatedCommand" file="tests/diagnostic/diagnostic_manager_test.cpp" line="246" status="run" result="completed" time="0.142" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+    <testcase name="ClearDiagnosticEvent_ConcurrentRequest" file="tests/diagnostic/diagnostic_manager_test.cpp" line="250" status="run" result="completed" time="0.187" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+    <testcase name="ClearDiagnosticEvent_IgnitionOff" file="tests/diagnostic/diagnostic_manager_test.cpp" line="254" status="run" result="completed" time="0.143" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+    <testcase name="ClearDiagnosticEvent_IgnitionOn" file="tests/diagnostic/diagnostic_manager_test.cpp" line="258" status="run" result="completed" time="0.207" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+    <testcase name="ClearDiagnosticEvent_VehicleStopped" file="tests/diagnostic/diagnostic_manager_test.cpp" line="262" status="run" result="completed" time="0.142" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+    <testcase name="ClearDiagnosticEvent_VehicleMoving" file="tests/diagnostic/diagnostic_manager_test.cpp" line="266" status="run" result="completed" time="0.138" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+    <testcase name="ClearDiagnosticEvent_DoorOpen" file="tests/diagnostic/diagnostic_manager_test.cpp" line="270" status="run" result="completed" time="0.213" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+    <testcase name="ClearDiagnosticEvent_DoorClosed" file="tests/diagnostic/diagnostic_manager_test.cpp" line="274" status="run" result="completed" time="0.087" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+    <testcase name="ClearDiagnosticEvent_ActuatorBusy" file="tests/diagnostic/diagnostic_manager_test.cpp" line="278" status="run" result="completed" time="0.074" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+    <testcase name="ClearDiagnosticEvent_RecoveryAfterFault" file="tests/diagnostic/diagnostic_manager_test.cpp" line="282" status="run" result="completed" time="0.196" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+    <testcase name="ClearDiagnosticEvent_PowerCycle" file="tests/diagnostic/diagnostic_manager_test.cpp" line="286" status="run" result="completed" time="0.135" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ClearDiagnosticEventTest" />
+  </testsuite>
+  <testsuite name="DiagnosticManager.SnapshotFreezeFrameTest" tests="20" failures="1" disabled="0" skipped="0" errors="0" time="2.349" timestamp="2026-08-30T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="07" />
+      <property name="module" value="DiagnosticManager" />
+      <property name="source_file" value="src/diagnostic/diagnostic_manager.cpp" />
+      <property name="tested_function" value="SnapshotFreezeFrame" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="5.0" />
+    </properties>
+    <testcase name="SnapshotFreezeFrame_NominalInput" file="tests/diagnostic/diagnostic_manager_test.cpp" line="340" status="run" result="completed" time="0.208" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest" />
+    <testcase name="SnapshotFreezeFrame_LowerBoundary" file="tests/diagnostic/diagnostic_manager_test.cpp" line="344" status="run" result="completed" time="0.098" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest" />
+    <testcase name="SnapshotFreezeFrame_UpperBoundary" file="tests/diagnostic/diagnostic_manager_test.cpp" line="348" status="run" result="completed" time="0.153" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest" />
+    <testcase name="SnapshotFreezeFrame_BelowMinimum" file="tests/diagnostic/diagnostic_manager_test.cpp" line="352" status="run" result="completed" time="0.152" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest">
+      <failure message="state mismatch" type="AssertionFailure"><![CDATA[tests/diagnostic/diagnostic_manager_test.cpp:352
+Failure
+Expected child-lock state: LOCKED
+  Actual child-lock state: UNLOCKED
+Synthetic Jenkins build: 07]]></failure>
+    </testcase>
+    <testcase name="SnapshotFreezeFrame_AboveMaximum" file="tests/diagnostic/diagnostic_manager_test.cpp" line="356" status="run" result="completed" time="0.096" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest" />
+    <testcase name="SnapshotFreezeFrame_MissingSignal" file="tests/diagnostic/diagnostic_manager_test.cpp" line="360" status="run" result="completed" time="0.224" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest" />
+    <testcase name="SnapshotFreezeFrame_SignalTimeout" file="tests/diagnostic/diagnostic_manager_test.cpp" line="364" status="run" result="completed" time="0.083" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest" />
+    <testcase name="SnapshotFreezeFrame_StaleSignal" file="tests/diagnostic/diagnostic_manager_test.cpp" line="368" status="run" result="completed" time="0.050" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest" />
+    <testcase name="SnapshotFreezeFrame_RapidToggle" file="tests/diagnostic/diagnostic_manager_test.cpp" line="372" status="run" result="completed" time="0.186" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest" />
+    <testcase name="SnapshotFreezeFrame_RepeatedCommand" file="tests/diagnostic/diagnostic_manager_test.cpp" line="376" status="run" result="completed" time="0.215" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest" />
+    <testcase name="SnapshotFreezeFrame_ConcurrentRequest" file="tests/diagnostic/diagnostic_manager_test.cpp" line="380" status="run" result="completed" time="0.047" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest" />
+    <testcase name="SnapshotFreezeFrame_IgnitionOff" file="tests/diagnostic/diagnostic_manager_test.cpp" line="384" status="run" result="completed" time="0.032" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest" />
+    <testcase name="SnapshotFreezeFrame_IgnitionOn" file="tests/diagnostic/diagnostic_manager_test.cpp" line="388" status="run" result="completed" time="0.021" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest" />
+    <testcase name="SnapshotFreezeFrame_VehicleStopped" file="tests/diagnostic/diagnostic_manager_test.cpp" line="392" status="run" result="completed" time="0.212" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest" />
+    <testcase name="SnapshotFreezeFrame_VehicleMoving" file="tests/diagnostic/diagnostic_manager_test.cpp" line="396" status="run" result="completed" time="0.093" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest" />
+    <testcase name="SnapshotFreezeFrame_DoorOpen" file="tests/diagnostic/diagnostic_manager_test.cpp" line="400" status="run" result="completed" time="0.024" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest" />
+    <testcase name="SnapshotFreezeFrame_DoorClosed" file="tests/diagnostic/diagnostic_manager_test.cpp" line="404" status="run" result="completed" time="0.111" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest" />
+    <testcase name="SnapshotFreezeFrame_ActuatorBusy" file="tests/diagnostic/diagnostic_manager_test.cpp" line="408" status="run" result="completed" time="0.207" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest" />
+    <testcase name="SnapshotFreezeFrame_RecoveryAfterFault" file="tests/diagnostic/diagnostic_manager_test.cpp" line="412" status="run" result="completed" time="0.125" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest" />
+    <testcase name="SnapshotFreezeFrame_PowerCycle" file="tests/diagnostic/diagnostic_manager_test.cpp" line="416" status="run" result="completed" time="0.012" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.SnapshotFreezeFrameTest" />
+  </testsuite>
+  <testsuite name="DiagnosticManager.ReportActuatorFaultTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.202" timestamp="2026-08-30T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="07" />
+      <property name="module" value="DiagnosticManager" />
+      <property name="source_file" value="src/diagnostic/diagnostic_manager.cpp" />
+      <property name="tested_function" value="ReportActuatorFault" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="5.0" />
+    </properties>
+    <testcase name="ReportActuatorFault_NominalInput" file="tests/diagnostic/diagnostic_manager_test.cpp" line="470" status="run" result="completed" time="0.046" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+    <testcase name="ReportActuatorFault_LowerBoundary" file="tests/diagnostic/diagnostic_manager_test.cpp" line="474" status="run" result="completed" time="0.188" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+    <testcase name="ReportActuatorFault_UpperBoundary" file="tests/diagnostic/diagnostic_manager_test.cpp" line="478" status="run" result="completed" time="0.234" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+    <testcase name="ReportActuatorFault_BelowMinimum" file="tests/diagnostic/diagnostic_manager_test.cpp" line="482" status="run" result="completed" time="0.239" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+    <testcase name="ReportActuatorFault_AboveMaximum" file="tests/diagnostic/diagnostic_manager_test.cpp" line="486" status="run" result="completed" time="0.053" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+    <testcase name="ReportActuatorFault_MissingSignal" file="tests/diagnostic/diagnostic_manager_test.cpp" line="490" status="run" result="completed" time="0.010" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+    <testcase name="ReportActuatorFault_SignalTimeout" file="tests/diagnostic/diagnostic_manager_test.cpp" line="494" status="run" result="completed" time="0.218" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+    <testcase name="ReportActuatorFault_StaleSignal" file="tests/diagnostic/diagnostic_manager_test.cpp" line="498" status="run" result="completed" time="0.002" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+    <testcase name="ReportActuatorFault_RapidToggle" file="tests/diagnostic/diagnostic_manager_test.cpp" line="502" status="run" result="completed" time="0.154" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+    <testcase name="ReportActuatorFault_RepeatedCommand" file="tests/diagnostic/diagnostic_manager_test.cpp" line="506" status="run" result="completed" time="0.060" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+    <testcase name="ReportActuatorFault_ConcurrentRequest" file="tests/diagnostic/diagnostic_manager_test.cpp" line="510" status="run" result="completed" time="0.133" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+    <testcase name="ReportActuatorFault_IgnitionOff" file="tests/diagnostic/diagnostic_manager_test.cpp" line="514" status="run" result="completed" time="0.097" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+    <testcase name="ReportActuatorFault_IgnitionOn" file="tests/diagnostic/diagnostic_manager_test.cpp" line="518" status="run" result="completed" time="0.145" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+    <testcase name="ReportActuatorFault_VehicleStopped" file="tests/diagnostic/diagnostic_manager_test.cpp" line="522" status="run" result="completed" time="0.017" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+    <testcase name="ReportActuatorFault_VehicleMoving" file="tests/diagnostic/diagnostic_manager_test.cpp" line="526" status="run" result="completed" time="0.010" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+    <testcase name="ReportActuatorFault_DoorOpen" file="tests/diagnostic/diagnostic_manager_test.cpp" line="530" status="run" result="completed" time="0.144" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+    <testcase name="ReportActuatorFault_DoorClosed" file="tests/diagnostic/diagnostic_manager_test.cpp" line="534" status="run" result="completed" time="0.078" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+    <testcase name="ReportActuatorFault_ActuatorBusy" file="tests/diagnostic/diagnostic_manager_test.cpp" line="538" status="run" result="completed" time="0.129" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+    <testcase name="ReportActuatorFault_RecoveryAfterFault" file="tests/diagnostic/diagnostic_manager_test.cpp" line="542" status="run" result="completed" time="0.230" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+    <testcase name="ReportActuatorFault_PowerCycle" file="tests/diagnostic/diagnostic_manager_test.cpp" line="546" status="run" result="completed" time="0.015" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportActuatorFaultTest" />
+  </testsuite>
+  <testsuite name="DiagnosticManager.ReportSignalFaultTest" tests="20" failures="3" disabled="0" skipped="0" errors="0" time="2.601" timestamp="2026-08-30T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="07" />
+      <property name="module" value="DiagnosticManager" />
+      <property name="source_file" value="src/diagnostic/diagnostic_manager.cpp" />
+      <property name="tested_function" value="ReportSignalFault" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="5.0" />
+    </properties>
+    <testcase name="ReportSignalFault_NominalInput" file="tests/diagnostic/diagnostic_manager_test.cpp" line="600" status="run" result="completed" time="0.159" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest">
+      <failure message="request acceptance mismatch" type="AssertionFailure"><![CDATA[tests/diagnostic/diagnostic_manager_test.cpp:600
+Failure
+Expected request result: REJECTED
+  Actual request result: ACCEPTED
+Synthetic Jenkins build: 07]]></failure>
+    </testcase>
+    <testcase name="ReportSignalFault_LowerBoundary" file="tests/diagnostic/diagnostic_manager_test.cpp" line="604" status="run" result="completed" time="0.112" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest">
+      <failure message="message validation mismatch" type="AssertionFailure"><![CDATA[tests/diagnostic/diagnostic_manager_test.cpp:604
+Failure
+Expected invalid message to be discarded
+  Actual invalid message was forwarded
+Synthetic Jenkins build: 07]]></failure>
+    </testcase>
+    <testcase name="ReportSignalFault_UpperBoundary" file="tests/diagnostic/diagnostic_manager_test.cpp" line="608" status="run" result="completed" time="0.107" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest" />
+    <testcase name="ReportSignalFault_BelowMinimum" file="tests/diagnostic/diagnostic_manager_test.cpp" line="612" status="run" result="completed" time="0.249" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest" />
+    <testcase name="ReportSignalFault_AboveMaximum" file="tests/diagnostic/diagnostic_manager_test.cpp" line="616" status="run" result="completed" time="0.165" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest" />
+    <testcase name="ReportSignalFault_MissingSignal" file="tests/diagnostic/diagnostic_manager_test.cpp" line="620" status="run" result="completed" time="0.120" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest" />
+    <testcase name="ReportSignalFault_SignalTimeout" file="tests/diagnostic/diagnostic_manager_test.cpp" line="624" status="run" result="completed" time="0.172" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest" />
+    <testcase name="ReportSignalFault_StaleSignal" file="tests/diagnostic/diagnostic_manager_test.cpp" line="628" status="run" result="completed" time="0.217" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest">
+      <failure message="state mismatch" type="AssertionFailure"><![CDATA[tests/diagnostic/diagnostic_manager_test.cpp:628
+Failure
+Expected child-lock state: LOCKED
+  Actual child-lock state: UNLOCKED
+Synthetic Jenkins build: 07]]></failure>
+    </testcase>
+    <testcase name="ReportSignalFault_RapidToggle" file="tests/diagnostic/diagnostic_manager_test.cpp" line="632" status="run" result="completed" time="0.062" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest" />
+    <testcase name="ReportSignalFault_RepeatedCommand" file="tests/diagnostic/diagnostic_manager_test.cpp" line="636" status="run" result="completed" time="0.091" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest" />
+    <testcase name="ReportSignalFault_ConcurrentRequest" file="tests/diagnostic/diagnostic_manager_test.cpp" line="640" status="run" result="completed" time="0.096" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest" />
+    <testcase name="ReportSignalFault_IgnitionOff" file="tests/diagnostic/diagnostic_manager_test.cpp" line="644" status="run" result="completed" time="0.142" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest" />
+    <testcase name="ReportSignalFault_IgnitionOn" file="tests/diagnostic/diagnostic_manager_test.cpp" line="648" status="run" result="completed" time="0.012" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest" />
+    <testcase name="ReportSignalFault_VehicleStopped" file="tests/diagnostic/diagnostic_manager_test.cpp" line="652" status="run" result="completed" time="0.134" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest" />
+    <testcase name="ReportSignalFault_VehicleMoving" file="tests/diagnostic/diagnostic_manager_test.cpp" line="656" status="run" result="completed" time="0.089" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest" />
+    <testcase name="ReportSignalFault_DoorOpen" file="tests/diagnostic/diagnostic_manager_test.cpp" line="660" status="run" result="completed" time="0.231" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest" />
+    <testcase name="ReportSignalFault_DoorClosed" file="tests/diagnostic/diagnostic_manager_test.cpp" line="664" status="run" result="completed" time="0.117" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest" />
+    <testcase name="ReportSignalFault_ActuatorBusy" file="tests/diagnostic/diagnostic_manager_test.cpp" line="668" status="run" result="completed" time="0.033" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest" />
+    <testcase name="ReportSignalFault_RecoveryAfterFault" file="tests/diagnostic/diagnostic_manager_test.cpp" line="672" status="run" result="completed" time="0.078" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest" />
+    <testcase name="ReportSignalFault_PowerCycle" file="tests/diagnostic/diagnostic_manager_test.cpp" line="676" status="run" result="completed" time="0.215" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ReportSignalFaultTest" />
+  </testsuite>
+  <testsuite name="DiagnosticManager.ManageHealingCounterTest" tests="20" failures="2" disabled="0" skipped="0" errors="0" time="2.918" timestamp="2026-08-30T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="07" />
+      <property name="module" value="DiagnosticManager" />
+      <property name="source_file" value="src/diagnostic/diagnostic_manager.cpp" />
+      <property name="tested_function" value="ManageHealingCounter" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="5.0" />
+    </properties>
+    <testcase name="ManageHealingCounter_NominalInput" file="tests/diagnostic/diagnostic_manager_test.cpp" line="730" status="run" result="completed" time="0.109" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest" />
+    <testcase name="ManageHealingCounter_LowerBoundary" file="tests/diagnostic/diagnostic_manager_test.cpp" line="734" status="run" result="completed" time="0.140" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest" />
+    <testcase name="ManageHealingCounter_UpperBoundary" file="tests/diagnostic/diagnostic_manager_test.cpp" line="738" status="run" result="completed" time="0.232" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest" />
+    <testcase name="ManageHealingCounter_BelowMinimum" file="tests/diagnostic/diagnostic_manager_test.cpp" line="742" status="run" result="completed" time="0.199" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest" />
+    <testcase name="ManageHealingCounter_AboveMaximum" file="tests/diagnostic/diagnostic_manager_test.cpp" line="746" status="run" result="completed" time="0.143" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest" />
+    <testcase name="ManageHealingCounter_MissingSignal" file="tests/diagnostic/diagnostic_manager_test.cpp" line="750" status="run" result="completed" time="0.030" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest" />
+    <testcase name="ManageHealingCounter_SignalTimeout" file="tests/diagnostic/diagnostic_manager_test.cpp" line="754" status="run" result="completed" time="0.245" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest" />
+    <testcase name="ManageHealingCounter_StaleSignal" file="tests/diagnostic/diagnostic_manager_test.cpp" line="758" status="run" result="completed" time="0.175" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest" />
+    <testcase name="ManageHealingCounter_RapidToggle" file="tests/diagnostic/diagnostic_manager_test.cpp" line="762" status="run" result="completed" time="0.111" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest" />
+    <testcase name="ManageHealingCounter_RepeatedCommand" file="tests/diagnostic/diagnostic_manager_test.cpp" line="766" status="run" result="completed" time="0.202" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest" />
+    <testcase name="ManageHealingCounter_ConcurrentRequest" file="tests/diagnostic/diagnostic_manager_test.cpp" line="770" status="run" result="completed" time="0.108" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest" />
+    <testcase name="ManageHealingCounter_IgnitionOff" file="tests/diagnostic/diagnostic_manager_test.cpp" line="774" status="run" result="completed" time="0.221" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest" />
+    <testcase name="ManageHealingCounter_IgnitionOn" file="tests/diagnostic/diagnostic_manager_test.cpp" line="778" status="run" result="completed" time="0.004" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest" />
+    <testcase name="ManageHealingCounter_VehicleStopped" file="tests/diagnostic/diagnostic_manager_test.cpp" line="782" status="run" result="completed" time="0.234" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest" />
+    <testcase name="ManageHealingCounter_VehicleMoving" file="tests/diagnostic/diagnostic_manager_test.cpp" line="786" status="run" result="completed" time="0.218" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest">
+      <failure message="state mismatch" type="AssertionFailure"><![CDATA[tests/diagnostic/diagnostic_manager_test.cpp:786
+Failure
+Expected child-lock state: LOCKED
+  Actual child-lock state: UNLOCKED
+Synthetic Jenkins build: 07]]></failure>
+    </testcase>
+    <testcase name="ManageHealingCounter_DoorOpen" file="tests/diagnostic/diagnostic_manager_test.cpp" line="790" status="run" result="completed" time="0.187" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest" />
+    <testcase name="ManageHealingCounter_DoorClosed" file="tests/diagnostic/diagnostic_manager_test.cpp" line="794" status="run" result="completed" time="0.028" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest">
+      <failure message="diagnostic event mismatch" type="AssertionFailure"><![CDATA[tests/diagnostic/diagnostic_manager_test.cpp:794
+Failure
+Expected diagnostic event: ACTIVE
+  Actual diagnostic event: INACTIVE
+Synthetic Jenkins build: 07]]></failure>
+    </testcase>
+    <testcase name="ManageHealingCounter_ActuatorBusy" file="tests/diagnostic/diagnostic_manager_test.cpp" line="798" status="run" result="completed" time="0.061" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest" />
+    <testcase name="ManageHealingCounter_RecoveryAfterFault" file="tests/diagnostic/diagnostic_manager_test.cpp" line="802" status="run" result="completed" time="0.128" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest" />
+    <testcase name="ManageHealingCounter_PowerCycle" file="tests/diagnostic/diagnostic_manager_test.cpp" line="806" status="run" result="completed" time="0.143" timestamp="2026-08-30T00:00:00Z" classname="DiagnosticManager.ManageHealingCounterTest" />
+  </testsuite>
+</testsuites>

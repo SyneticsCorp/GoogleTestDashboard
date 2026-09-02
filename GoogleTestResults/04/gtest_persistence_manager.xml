@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="120" failures="7" disabled="0" errors="0" time="16.041" timestamp="2026-08-27T00:00:00Z" name="AllTests" random_seed="4155">
+  <testsuite name="PersistenceManager.StoreChildLockPreferenceTest" tests="20" failures="1" disabled="0" skipped="0" errors="0" time="2.725" timestamp="2026-08-27T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="04" />
+      <property name="module" value="PersistenceManager" />
+      <property name="source_file" value="src/persistence/persistence_manager.cpp" />
+      <property name="tested_function" value="StoreChildLockPreference" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="6.0" />
+    </properties>
+    <testcase name="StoreChildLockPreference_NominalInput" file="tests/persistence/persistence_manager_test.cpp" line="80" status="run" result="completed" time="0.126" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest" />
+    <testcase name="StoreChildLockPreference_LowerBoundary" file="tests/persistence/persistence_manager_test.cpp" line="84" status="run" result="completed" time="0.076" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest" />
+    <testcase name="StoreChildLockPreference_UpperBoundary" file="tests/persistence/persistence_manager_test.cpp" line="88" status="run" result="completed" time="0.198" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest" />
+    <testcase name="StoreChildLockPreference_BelowMinimum" file="tests/persistence/persistence_manager_test.cpp" line="92" status="run" result="completed" time="0.122" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest" />
+    <testcase name="StoreChildLockPreference_AboveMaximum" file="tests/persistence/persistence_manager_test.cpp" line="96" status="run" result="completed" time="0.146" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest" />
+    <testcase name="StoreChildLockPreference_MissingSignal" file="tests/persistence/persistence_manager_test.cpp" line="100" status="run" result="completed" time="0.097" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest" />
+    <testcase name="StoreChildLockPreference_SignalTimeout" file="tests/persistence/persistence_manager_test.cpp" line="104" status="run" result="completed" time="0.151" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest" />
+    <testcase name="StoreChildLockPreference_StaleSignal" file="tests/persistence/persistence_manager_test.cpp" line="108" status="run" result="completed" time="0.185" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest" />
+    <testcase name="StoreChildLockPreference_RapidToggle" file="tests/persistence/persistence_manager_test.cpp" line="112" status="run" result="completed" time="0.248" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest" />
+    <testcase name="StoreChildLockPreference_RepeatedCommand" file="tests/persistence/persistence_manager_test.cpp" line="116" status="run" result="completed" time="0.050" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest" />
+    <testcase name="StoreChildLockPreference_ConcurrentRequest" file="tests/persistence/persistence_manager_test.cpp" line="120" status="run" result="completed" time="0.134" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest" />
+    <testcase name="StoreChildLockPreference_IgnitionOff" file="tests/persistence/persistence_manager_test.cpp" line="124" status="run" result="completed" time="0.160" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest" />
+    <testcase name="StoreChildLockPreference_IgnitionOn" file="tests/persistence/persistence_manager_test.cpp" line="128" status="run" result="completed" time="0.030" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest" />
+    <testcase name="StoreChildLockPreference_VehicleStopped" file="tests/persistence/persistence_manager_test.cpp" line="132" status="run" result="completed" time="0.228" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest" />
+    <testcase name="StoreChildLockPreference_VehicleMoving" file="tests/persistence/persistence_manager_test.cpp" line="136" status="run" result="completed" time="0.247" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest" />
+    <testcase name="StoreChildLockPreference_DoorOpen" file="tests/persistence/persistence_manager_test.cpp" line="140" status="run" result="completed" time="0.034" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest" />
+    <testcase name="StoreChildLockPreference_DoorClosed" file="tests/persistence/persistence_manager_test.cpp" line="144" status="run" result="completed" time="0.167" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest" />
+    <testcase name="StoreChildLockPreference_ActuatorBusy" file="tests/persistence/persistence_manager_test.cpp" line="148" status="run" result="completed" time="0.046" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest" />
+    <testcase name="StoreChildLockPreference_RecoveryAfterFault" file="tests/persistence/persistence_manager_test.cpp" line="152" status="run" result="completed" time="0.102" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest" />
+    <testcase name="StoreChildLockPreference_PowerCycle" file="tests/persistence/persistence_manager_test.cpp" line="156" status="run" result="completed" time="0.178" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.StoreChildLockPreferenceTest">
+      <failure message="diagnostic event mismatch" type="AssertionFailure"><![CDATA[tests/persistence/persistence_manager_test.cpp:156
+Failure
+Expected diagnostic event: ACTIVE
+  Actual diagnostic event: INACTIVE
+Synthetic Jenkins build: 04]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="PersistenceManager.LoadChildLockPreferenceTest" tests="20" failures="1" disabled="0" skipped="0" errors="0" time="2.275" timestamp="2026-08-27T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="04" />
+      <property name="module" value="PersistenceManager" />
+      <property name="source_file" value="src/persistence/persistence_manager.cpp" />
+      <property name="tested_function" value="LoadChildLockPreference" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="6.0" />
+    </properties>
+    <testcase name="LoadChildLockPreference_NominalInput" file="tests/persistence/persistence_manager_test.cpp" line="210" status="run" result="completed" time="0.035" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest" />
+    <testcase name="LoadChildLockPreference_LowerBoundary" file="tests/persistence/persistence_manager_test.cpp" line="214" status="run" result="completed" time="0.194" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest" />
+    <testcase name="LoadChildLockPreference_UpperBoundary" file="tests/persistence/persistence_manager_test.cpp" line="218" status="run" result="completed" time="0.202" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest" />
+    <testcase name="LoadChildLockPreference_BelowMinimum" file="tests/persistence/persistence_manager_test.cpp" line="222" status="run" result="completed" time="0.188" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest" />
+    <testcase name="LoadChildLockPreference_AboveMaximum" file="tests/persistence/persistence_manager_test.cpp" line="226" status="run" result="completed" time="0.177" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest" />
+    <testcase name="LoadChildLockPreference_MissingSignal" file="tests/persistence/persistence_manager_test.cpp" line="230" status="run" result="completed" time="0.173" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest">
+      <failure message="diagnostic event mismatch" type="AssertionFailure"><![CDATA[tests/persistence/persistence_manager_test.cpp:230
+Failure
+Expected diagnostic event: ACTIVE
+  Actual diagnostic event: INACTIVE
+Synthetic Jenkins build: 04]]></failure>
+    </testcase>
+    <testcase name="LoadChildLockPreference_SignalTimeout" file="tests/persistence/persistence_manager_test.cpp" line="234" status="run" result="completed" time="0.003" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest" />
+    <testcase name="LoadChildLockPreference_StaleSignal" file="tests/persistence/persistence_manager_test.cpp" line="238" status="run" result="completed" time="0.217" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest" />
+    <testcase name="LoadChildLockPreference_RapidToggle" file="tests/persistence/persistence_manager_test.cpp" line="242" status="run" result="completed" time="0.029" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest" />
+    <testcase name="LoadChildLockPreference_RepeatedCommand" file="tests/persistence/persistence_manager_test.cpp" line="246" status="run" result="completed" time="0.044" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest" />
+    <testcase name="LoadChildLockPreference_ConcurrentRequest" file="tests/persistence/persistence_manager_test.cpp" line="250" status="run" result="completed" time="0.077" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest" />
+    <testcase name="LoadChildLockPreference_IgnitionOff" file="tests/persistence/persistence_manager_test.cpp" line="254" status="run" result="completed" time="0.120" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest" />
+    <testcase name="LoadChildLockPreference_IgnitionOn" file="tests/persistence/persistence_manager_test.cpp" line="258" status="run" result="completed" time="0.069" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest" />
+    <testcase name="LoadChildLockPreference_VehicleStopped" file="tests/persistence/persistence_manager_test.cpp" line="262" status="run" result="completed" time="0.036" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest" />
+    <testcase name="LoadChildLockPreference_VehicleMoving" file="tests/persistence/persistence_manager_test.cpp" line="266" status="run" result="completed" time="0.166" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest" />
+    <testcase name="LoadChildLockPreference_DoorOpen" file="tests/persistence/persistence_manager_test.cpp" line="270" status="run" result="completed" time="0.024" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest" />
+    <testcase name="LoadChildLockPreference_DoorClosed" file="tests/persistence/persistence_manager_test.cpp" line="274" status="run" result="completed" time="0.217" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest" />
+    <testcase name="LoadChildLockPreference_ActuatorBusy" file="tests/persistence/persistence_manager_test.cpp" line="278" status="run" result="completed" time="0.052" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest" />
+    <testcase name="LoadChildLockPreference_RecoveryAfterFault" file="tests/persistence/persistence_manager_test.cpp" line="282" status="run" result="completed" time="0.150" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest" />
+    <testcase name="LoadChildLockPreference_PowerCycle" file="tests/persistence/persistence_manager_test.cpp" line="286" status="run" result="completed" time="0.102" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.LoadChildLockPreferenceTest" />
+  </testsuite>
+  <testsuite name="PersistenceManager.ValidateNvDataTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.977" timestamp="2026-08-27T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="04" />
+      <property name="module" value="PersistenceManager" />
+      <property name="source_file" value="src/persistence/persistence_manager.cpp" />
+      <property name="tested_function" value="ValidateNvData" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="6.0" />
+    </properties>
+    <testcase name="ValidateNvData_NominalInput" file="tests/persistence/persistence_manager_test.cpp" line="340" status="run" result="completed" time="0.218" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+    <testcase name="ValidateNvData_LowerBoundary" file="tests/persistence/persistence_manager_test.cpp" line="344" status="run" result="completed" time="0.157" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+    <testcase name="ValidateNvData_UpperBoundary" file="tests/persistence/persistence_manager_test.cpp" line="348" status="run" result="completed" time="0.134" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+    <testcase name="ValidateNvData_BelowMinimum" file="tests/persistence/persistence_manager_test.cpp" line="352" status="run" result="completed" time="0.117" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+    <testcase name="ValidateNvData_AboveMaximum" file="tests/persistence/persistence_manager_test.cpp" line="356" status="run" result="completed" time="0.147" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+    <testcase name="ValidateNvData_MissingSignal" file="tests/persistence/persistence_manager_test.cpp" line="360" status="run" result="completed" time="0.143" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+    <testcase name="ValidateNvData_SignalTimeout" file="tests/persistence/persistence_manager_test.cpp" line="364" status="run" result="completed" time="0.209" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+    <testcase name="ValidateNvData_StaleSignal" file="tests/persistence/persistence_manager_test.cpp" line="368" status="run" result="completed" time="0.025" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+    <testcase name="ValidateNvData_RapidToggle" file="tests/persistence/persistence_manager_test.cpp" line="372" status="run" result="completed" time="0.209" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+    <testcase name="ValidateNvData_RepeatedCommand" file="tests/persistence/persistence_manager_test.cpp" line="376" status="run" result="completed" time="0.165" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+    <testcase name="ValidateNvData_ConcurrentRequest" file="tests/persistence/persistence_manager_test.cpp" line="380" status="run" result="completed" time="0.106" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+    <testcase name="ValidateNvData_IgnitionOff" file="tests/persistence/persistence_manager_test.cpp" line="384" status="run" result="completed" time="0.110" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+    <testcase name="ValidateNvData_IgnitionOn" file="tests/persistence/persistence_manager_test.cpp" line="388" status="run" result="completed" time="0.150" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+    <testcase name="ValidateNvData_VehicleStopped" file="tests/persistence/persistence_manager_test.cpp" line="392" status="run" result="completed" time="0.185" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+    <testcase name="ValidateNvData_VehicleMoving" file="tests/persistence/persistence_manager_test.cpp" line="396" status="run" result="completed" time="0.127" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+    <testcase name="ValidateNvData_DoorOpen" file="tests/persistence/persistence_manager_test.cpp" line="400" status="run" result="completed" time="0.217" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+    <testcase name="ValidateNvData_DoorClosed" file="tests/persistence/persistence_manager_test.cpp" line="404" status="run" result="completed" time="0.121" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+    <testcase name="ValidateNvData_ActuatorBusy" file="tests/persistence/persistence_manager_test.cpp" line="408" status="run" result="completed" time="0.135" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+    <testcase name="ValidateNvData_RecoveryAfterFault" file="tests/persistence/persistence_manager_test.cpp" line="412" status="run" result="completed" time="0.160" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+    <testcase name="ValidateNvData_PowerCycle" file="tests/persistence/persistence_manager_test.cpp" line="416" status="run" result="completed" time="0.142" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.ValidateNvDataTest" />
+  </testsuite>
+  <testsuite name="PersistenceManager.RecoverDefaultPreferenceTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.453" timestamp="2026-08-27T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="04" />
+      <property name="module" value="PersistenceManager" />
+      <property name="source_file" value="src/persistence/persistence_manager.cpp" />
+      <property name="tested_function" value="RecoverDefaultPreference" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="6.0" />
+    </properties>
+    <testcase name="RecoverDefaultPreference_NominalInput" file="tests/persistence/persistence_manager_test.cpp" line="470" status="run" result="completed" time="0.097" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+    <testcase name="RecoverDefaultPreference_LowerBoundary" file="tests/persistence/persistence_manager_test.cpp" line="474" status="run" result="completed" time="0.117" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+    <testcase name="RecoverDefaultPreference_UpperBoundary" file="tests/persistence/persistence_manager_test.cpp" line="478" status="run" result="completed" time="0.010" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+    <testcase name="RecoverDefaultPreference_BelowMinimum" file="tests/persistence/persistence_manager_test.cpp" line="482" status="run" result="completed" time="0.025" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+    <testcase name="RecoverDefaultPreference_AboveMaximum" file="tests/persistence/persistence_manager_test.cpp" line="486" status="run" result="completed" time="0.112" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+    <testcase name="RecoverDefaultPreference_MissingSignal" file="tests/persistence/persistence_manager_test.cpp" line="490" status="run" result="completed" time="0.164" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+    <testcase name="RecoverDefaultPreference_SignalTimeout" file="tests/persistence/persistence_manager_test.cpp" line="494" status="run" result="completed" time="0.190" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+    <testcase name="RecoverDefaultPreference_StaleSignal" file="tests/persistence/persistence_manager_test.cpp" line="498" status="run" result="completed" time="0.048" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+    <testcase name="RecoverDefaultPreference_RapidToggle" file="tests/persistence/persistence_manager_test.cpp" line="502" status="run" result="completed" time="0.183" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+    <testcase name="RecoverDefaultPreference_RepeatedCommand" file="tests/persistence/persistence_manager_test.cpp" line="506" status="run" result="completed" time="0.169" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+    <testcase name="RecoverDefaultPreference_ConcurrentRequest" file="tests/persistence/persistence_manager_test.cpp" line="510" status="run" result="completed" time="0.029" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+    <testcase name="RecoverDefaultPreference_IgnitionOff" file="tests/persistence/persistence_manager_test.cpp" line="514" status="run" result="completed" time="0.226" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+    <testcase name="RecoverDefaultPreference_IgnitionOn" file="tests/persistence/persistence_manager_test.cpp" line="518" status="run" result="completed" time="0.162" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+    <testcase name="RecoverDefaultPreference_VehicleStopped" file="tests/persistence/persistence_manager_test.cpp" line="522" status="run" result="completed" time="0.055" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+    <testcase name="RecoverDefaultPreference_VehicleMoving" file="tests/persistence/persistence_manager_test.cpp" line="526" status="run" result="completed" time="0.231" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+    <testcase name="RecoverDefaultPreference_DoorOpen" file="tests/persistence/persistence_manager_test.cpp" line="530" status="run" result="completed" time="0.211" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+    <testcase name="RecoverDefaultPreference_DoorClosed" file="tests/persistence/persistence_manager_test.cpp" line="534" status="run" result="completed" time="0.139" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+    <testcase name="RecoverDefaultPreference_ActuatorBusy" file="tests/persistence/persistence_manager_test.cpp" line="538" status="run" result="completed" time="0.124" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+    <testcase name="RecoverDefaultPreference_RecoveryAfterFault" file="tests/persistence/persistence_manager_test.cpp" line="542" status="run" result="completed" time="0.063" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+    <testcase name="RecoverDefaultPreference_PowerCycle" file="tests/persistence/persistence_manager_test.cpp" line="546" status="run" result="completed" time="0.098" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.RecoverDefaultPreferenceTest" />
+  </testsuite>
+  <testsuite name="PersistenceManager.HandleWriteFailureTest" tests="20" failures="3" disabled="0" skipped="0" errors="0" time="2.686" timestamp="2026-08-27T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="04" />
+      <property name="module" value="PersistenceManager" />
+      <property name="source_file" value="src/persistence/persistence_manager.cpp" />
+      <property name="tested_function" value="HandleWriteFailure" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="6.0" />
+    </properties>
+    <testcase name="HandleWriteFailure_NominalInput" file="tests/persistence/persistence_manager_test.cpp" line="600" status="run" result="completed" time="0.243" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest" />
+    <testcase name="HandleWriteFailure_LowerBoundary" file="tests/persistence/persistence_manager_test.cpp" line="604" status="run" result="completed" time="0.247" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest" />
+    <testcase name="HandleWriteFailure_UpperBoundary" file="tests/persistence/persistence_manager_test.cpp" line="608" status="run" result="completed" time="0.125" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest" />
+    <testcase name="HandleWriteFailure_BelowMinimum" file="tests/persistence/persistence_manager_test.cpp" line="612" status="run" result="completed" time="0.060" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest">
+      <failure message="state mismatch" type="AssertionFailure"><![CDATA[tests/persistence/persistence_manager_test.cpp:612
+Failure
+Expected child-lock state: LOCKED
+  Actual child-lock state: UNLOCKED
+Synthetic Jenkins build: 04]]></failure>
+    </testcase>
+    <testcase name="HandleWriteFailure_AboveMaximum" file="tests/persistence/persistence_manager_test.cpp" line="616" status="run" result="completed" time="0.008" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest" />
+    <testcase name="HandleWriteFailure_MissingSignal" file="tests/persistence/persistence_manager_test.cpp" line="620" status="run" result="completed" time="0.069" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest" />
+    <testcase name="HandleWriteFailure_SignalTimeout" file="tests/persistence/persistence_manager_test.cpp" line="624" status="run" result="completed" time="0.217" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest">
+      <failure message="state mismatch" type="AssertionFailure"><![CDATA[tests/persistence/persistence_manager_test.cpp:624
+Failure
+Expected child-lock state: LOCKED
+  Actual child-lock state: UNLOCKED
+Synthetic Jenkins build: 04]]></failure>
+    </testcase>
+    <testcase name="HandleWriteFailure_StaleSignal" file="tests/persistence/persistence_manager_test.cpp" line="628" status="run" result="completed" time="0.234" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest" />
+    <testcase name="HandleWriteFailure_RapidToggle" file="tests/persistence/persistence_manager_test.cpp" line="632" status="run" result="completed" time="0.246" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest" />
+    <testcase name="HandleWriteFailure_RepeatedCommand" file="tests/persistence/persistence_manager_test.cpp" line="636" status="run" result="completed" time="0.171" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest" />
+    <testcase name="HandleWriteFailure_ConcurrentRequest" file="tests/persistence/persistence_manager_test.cpp" line="640" status="run" result="completed" time="0.126" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest" />
+    <testcase name="HandleWriteFailure_IgnitionOff" file="tests/persistence/persistence_manager_test.cpp" line="644" status="run" result="completed" time="0.127" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest" />
+    <testcase name="HandleWriteFailure_IgnitionOn" file="tests/persistence/persistence_manager_test.cpp" line="648" status="run" result="completed" time="0.161" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest" />
+    <testcase name="HandleWriteFailure_VehicleStopped" file="tests/persistence/persistence_manager_test.cpp" line="652" status="run" result="completed" time="0.022" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest" />
+    <testcase name="HandleWriteFailure_VehicleMoving" file="tests/persistence/persistence_manager_test.cpp" line="656" status="run" result="completed" time="0.113" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest" />
+    <testcase name="HandleWriteFailure_DoorOpen" file="tests/persistence/persistence_manager_test.cpp" line="660" status="run" result="completed" time="0.057" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest" />
+    <testcase name="HandleWriteFailure_DoorClosed" file="tests/persistence/persistence_manager_test.cpp" line="664" status="run" result="completed" time="0.038" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest" />
+    <testcase name="HandleWriteFailure_ActuatorBusy" file="tests/persistence/persistence_manager_test.cpp" line="668" status="run" result="completed" time="0.070" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest">
+      <failure message="retry count mismatch" type="AssertionFailure"><![CDATA[tests/persistence/persistence_manager_test.cpp:668
+Failure
+Expected retry count: 3
+  Actual retry count: 4
+Synthetic Jenkins build: 04]]></failure>
+    </testcase>
+    <testcase name="HandleWriteFailure_RecoveryAfterFault" file="tests/persistence/persistence_manager_test.cpp" line="672" status="run" result="completed" time="0.143" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest" />
+    <testcase name="HandleWriteFailure_PowerCycle" file="tests/persistence/persistence_manager_test.cpp" line="676" status="run" result="completed" time="0.209" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.HandleWriteFailureTest" />
+  </testsuite>
+  <testsuite name="PersistenceManager.MigrateStoredVersionTest" tests="20" failures="2" disabled="0" skipped="0" errors="0" time="2.925" timestamp="2026-08-27T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="04" />
+      <property name="module" value="PersistenceManager" />
+      <property name="source_file" value="src/persistence/persistence_manager.cpp" />
+      <property name="tested_function" value="MigrateStoredVersion" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="6.0" />
+    </properties>
+    <testcase name="MigrateStoredVersion_NominalInput" file="tests/persistence/persistence_manager_test.cpp" line="730" status="run" result="completed" time="0.054" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest" />
+    <testcase name="MigrateStoredVersion_LowerBoundary" file="tests/persistence/persistence_manager_test.cpp" line="734" status="run" result="completed" time="0.150" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest" />
+    <testcase name="MigrateStoredVersion_UpperBoundary" file="tests/persistence/persistence_manager_test.cpp" line="738" status="run" result="completed" time="0.036" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest" />
+    <testcase name="MigrateStoredVersion_BelowMinimum" file="tests/persistence/persistence_manager_test.cpp" line="742" status="run" result="completed" time="0.216" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest">
+      <failure message="retry count mismatch" type="AssertionFailure"><![CDATA[tests/persistence/persistence_manager_test.cpp:742
+Failure
+Expected retry count: 3
+  Actual retry count: 4
+Synthetic Jenkins build: 04]]></failure>
+    </testcase>
+    <testcase name="MigrateStoredVersion_AboveMaximum" file="tests/persistence/persistence_manager_test.cpp" line="746" status="run" result="completed" time="0.213" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest" />
+    <testcase name="MigrateStoredVersion_MissingSignal" file="tests/persistence/persistence_manager_test.cpp" line="750" status="run" result="completed" time="0.155" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest" />
+    <testcase name="MigrateStoredVersion_SignalTimeout" file="tests/persistence/persistence_manager_test.cpp" line="754" status="run" result="completed" time="0.239" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest" />
+    <testcase name="MigrateStoredVersion_StaleSignal" file="tests/persistence/persistence_manager_test.cpp" line="758" status="run" result="completed" time="0.224" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest" />
+    <testcase name="MigrateStoredVersion_RapidToggle" file="tests/persistence/persistence_manager_test.cpp" line="762" status="run" result="completed" time="0.157" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest" />
+    <testcase name="MigrateStoredVersion_RepeatedCommand" file="tests/persistence/persistence_manager_test.cpp" line="766" status="run" result="completed" time="0.213" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest" />
+    <testcase name="MigrateStoredVersion_ConcurrentRequest" file="tests/persistence/persistence_manager_test.cpp" line="770" status="run" result="completed" time="0.052" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest" />
+    <testcase name="MigrateStoredVersion_IgnitionOff" file="tests/persistence/persistence_manager_test.cpp" line="774" status="run" result="completed" time="0.175" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest" />
+    <testcase name="MigrateStoredVersion_IgnitionOn" file="tests/persistence/persistence_manager_test.cpp" line="778" status="run" result="completed" time="0.047" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest" />
+    <testcase name="MigrateStoredVersion_VehicleStopped" file="tests/persistence/persistence_manager_test.cpp" line="782" status="run" result="completed" time="0.247" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest" />
+    <testcase name="MigrateStoredVersion_VehicleMoving" file="tests/persistence/persistence_manager_test.cpp" line="786" status="run" result="completed" time="0.099" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest">
+      <failure message="message validation mismatch" type="AssertionFailure"><![CDATA[tests/persistence/persistence_manager_test.cpp:786
+Failure
+Expected invalid message to be discarded
+  Actual invalid message was forwarded
+Synthetic Jenkins build: 04]]></failure>
+    </testcase>
+    <testcase name="MigrateStoredVersion_DoorOpen" file="tests/persistence/persistence_manager_test.cpp" line="790" status="run" result="completed" time="0.023" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest" />
+    <testcase name="MigrateStoredVersion_DoorClosed" file="tests/persistence/persistence_manager_test.cpp" line="794" status="run" result="completed" time="0.027" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest" />
+    <testcase name="MigrateStoredVersion_ActuatorBusy" file="tests/persistence/persistence_manager_test.cpp" line="798" status="run" result="completed" time="0.226" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest" />
+    <testcase name="MigrateStoredVersion_RecoveryAfterFault" file="tests/persistence/persistence_manager_test.cpp" line="802" status="run" result="completed" time="0.204" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest" />
+    <testcase name="MigrateStoredVersion_PowerCycle" file="tests/persistence/persistence_manager_test.cpp" line="806" status="run" result="completed" time="0.168" timestamp="2026-08-27T00:00:00Z" classname="PersistenceManager.MigrateStoredVersionTest" />
+  </testsuite>
+</testsuites>

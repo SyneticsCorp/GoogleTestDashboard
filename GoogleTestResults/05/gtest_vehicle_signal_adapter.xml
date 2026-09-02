@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="120" failures="4" disabled="0" errors="0" time="16.291" timestamp="2026-08-28T00:00:00Z" name="AllTests" random_seed="5130">
+  <testsuite name="VehicleSignalAdapter.DecodeVehicleSpeedTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.879" timestamp="2026-08-28T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="05" />
+      <property name="module" value="VehicleSignalAdapter" />
+      <property name="source_file" value="src/signal/vehicle_signal_adapter.cpp" />
+      <property name="tested_function" value="DecodeVehicleSpeed" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="3.0" />
+    </properties>
+    <testcase name="DecodeVehicleSpeed_NominalInput" file="tests/signal/vehicle_signal_adapter_test.cpp" line="80" status="run" result="completed" time="0.201" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+    <testcase name="DecodeVehicleSpeed_LowerBoundary" file="tests/signal/vehicle_signal_adapter_test.cpp" line="84" status="run" result="completed" time="0.205" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+    <testcase name="DecodeVehicleSpeed_UpperBoundary" file="tests/signal/vehicle_signal_adapter_test.cpp" line="88" status="run" result="completed" time="0.245" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+    <testcase name="DecodeVehicleSpeed_BelowMinimum" file="tests/signal/vehicle_signal_adapter_test.cpp" line="92" status="run" result="completed" time="0.031" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+    <testcase name="DecodeVehicleSpeed_AboveMaximum" file="tests/signal/vehicle_signal_adapter_test.cpp" line="96" status="run" result="completed" time="0.222" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+    <testcase name="DecodeVehicleSpeed_MissingSignal" file="tests/signal/vehicle_signal_adapter_test.cpp" line="100" status="run" result="completed" time="0.063" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+    <testcase name="DecodeVehicleSpeed_SignalTimeout" file="tests/signal/vehicle_signal_adapter_test.cpp" line="104" status="run" result="completed" time="0.216" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+    <testcase name="DecodeVehicleSpeed_StaleSignal" file="tests/signal/vehicle_signal_adapter_test.cpp" line="108" status="run" result="completed" time="0.230" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+    <testcase name="DecodeVehicleSpeed_RapidToggle" file="tests/signal/vehicle_signal_adapter_test.cpp" line="112" status="run" result="completed" time="0.095" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+    <testcase name="DecodeVehicleSpeed_RepeatedCommand" file="tests/signal/vehicle_signal_adapter_test.cpp" line="116" status="run" result="completed" time="0.237" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+    <testcase name="DecodeVehicleSpeed_ConcurrentRequest" file="tests/signal/vehicle_signal_adapter_test.cpp" line="120" status="run" result="completed" time="0.015" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+    <testcase name="DecodeVehicleSpeed_IgnitionOff" file="tests/signal/vehicle_signal_adapter_test.cpp" line="124" status="run" result="completed" time="0.143" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+    <testcase name="DecodeVehicleSpeed_IgnitionOn" file="tests/signal/vehicle_signal_adapter_test.cpp" line="128" status="run" result="completed" time="0.095" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+    <testcase name="DecodeVehicleSpeed_VehicleStopped" file="tests/signal/vehicle_signal_adapter_test.cpp" line="132" status="run" result="completed" time="0.131" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+    <testcase name="DecodeVehicleSpeed_VehicleMoving" file="tests/signal/vehicle_signal_adapter_test.cpp" line="136" status="run" result="completed" time="0.127" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+    <testcase name="DecodeVehicleSpeed_DoorOpen" file="tests/signal/vehicle_signal_adapter_test.cpp" line="140" status="run" result="completed" time="0.076" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+    <testcase name="DecodeVehicleSpeed_DoorClosed" file="tests/signal/vehicle_signal_adapter_test.cpp" line="144" status="run" result="completed" time="0.142" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+    <testcase name="DecodeVehicleSpeed_ActuatorBusy" file="tests/signal/vehicle_signal_adapter_test.cpp" line="148" status="run" result="completed" time="0.008" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+    <testcase name="DecodeVehicleSpeed_RecoveryAfterFault" file="tests/signal/vehicle_signal_adapter_test.cpp" line="152" status="run" result="completed" time="0.174" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+    <testcase name="DecodeVehicleSpeed_PowerCycle" file="tests/signal/vehicle_signal_adapter_test.cpp" line="156" status="run" result="completed" time="0.223" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeVehicleSpeedTest" />
+  </testsuite>
+  <testsuite name="VehicleSignalAdapter.DecodeIgnitionStateTest" tests="20" failures="2" disabled="0" skipped="0" errors="0" time="2.846" timestamp="2026-08-28T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="05" />
+      <property name="module" value="VehicleSignalAdapter" />
+      <property name="source_file" value="src/signal/vehicle_signal_adapter.cpp" />
+      <property name="tested_function" value="DecodeIgnitionState" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="3.0" />
+    </properties>
+    <testcase name="DecodeIgnitionState_NominalInput" file="tests/signal/vehicle_signal_adapter_test.cpp" line="210" status="run" result="completed" time="0.221" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest" />
+    <testcase name="DecodeIgnitionState_LowerBoundary" file="tests/signal/vehicle_signal_adapter_test.cpp" line="214" status="run" result="completed" time="0.003" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest" />
+    <testcase name="DecodeIgnitionState_UpperBoundary" file="tests/signal/vehicle_signal_adapter_test.cpp" line="218" status="run" result="completed" time="0.095" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest" />
+    <testcase name="DecodeIgnitionState_BelowMinimum" file="tests/signal/vehicle_signal_adapter_test.cpp" line="222" status="run" result="completed" time="0.151" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest" />
+    <testcase name="DecodeIgnitionState_AboveMaximum" file="tests/signal/vehicle_signal_adapter_test.cpp" line="226" status="run" result="completed" time="0.095" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest" />
+    <testcase name="DecodeIgnitionState_MissingSignal" file="tests/signal/vehicle_signal_adapter_test.cpp" line="230" status="run" result="completed" time="0.231" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest">
+      <failure message="message validation mismatch" type="AssertionFailure"><![CDATA[tests/signal/vehicle_signal_adapter_test.cpp:230
+Failure
+Expected invalid message to be discarded
+  Actual invalid message was forwarded
+Synthetic Jenkins build: 05]]></failure>
+    </testcase>
+    <testcase name="DecodeIgnitionState_SignalTimeout" file="tests/signal/vehicle_signal_adapter_test.cpp" line="234" status="run" result="completed" time="0.108" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest" />
+    <testcase name="DecodeIgnitionState_StaleSignal" file="tests/signal/vehicle_signal_adapter_test.cpp" line="238" status="run" result="completed" time="0.127" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest" />
+    <testcase name="DecodeIgnitionState_RapidToggle" file="tests/signal/vehicle_signal_adapter_test.cpp" line="242" status="run" result="completed" time="0.223" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest" />
+    <testcase name="DecodeIgnitionState_RepeatedCommand" file="tests/signal/vehicle_signal_adapter_test.cpp" line="246" status="run" result="completed" time="0.154" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest" />
+    <testcase name="DecodeIgnitionState_ConcurrentRequest" file="tests/signal/vehicle_signal_adapter_test.cpp" line="250" status="run" result="completed" time="0.204" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest" />
+    <testcase name="DecodeIgnitionState_IgnitionOff" file="tests/signal/vehicle_signal_adapter_test.cpp" line="254" status="run" result="completed" time="0.068" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest" />
+    <testcase name="DecodeIgnitionState_IgnitionOn" file="tests/signal/vehicle_signal_adapter_test.cpp" line="258" status="run" result="completed" time="0.100" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest" />
+    <testcase name="DecodeIgnitionState_VehicleStopped" file="tests/signal/vehicle_signal_adapter_test.cpp" line="262" status="run" result="completed" time="0.081" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest" />
+    <testcase name="DecodeIgnitionState_VehicleMoving" file="tests/signal/vehicle_signal_adapter_test.cpp" line="266" status="run" result="completed" time="0.225" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest" />
+    <testcase name="DecodeIgnitionState_DoorOpen" file="tests/signal/vehicle_signal_adapter_test.cpp" line="270" status="run" result="completed" time="0.194" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest" />
+    <testcase name="DecodeIgnitionState_DoorClosed" file="tests/signal/vehicle_signal_adapter_test.cpp" line="274" status="run" result="completed" time="0.124" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest" />
+    <testcase name="DecodeIgnitionState_ActuatorBusy" file="tests/signal/vehicle_signal_adapter_test.cpp" line="278" status="run" result="completed" time="0.068" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest">
+      <failure message="message validation mismatch" type="AssertionFailure"><![CDATA[tests/signal/vehicle_signal_adapter_test.cpp:278
+Failure
+Expected invalid message to be discarded
+  Actual invalid message was forwarded
+Synthetic Jenkins build: 05]]></failure>
+    </testcase>
+    <testcase name="DecodeIgnitionState_RecoveryAfterFault" file="tests/signal/vehicle_signal_adapter_test.cpp" line="282" status="run" result="completed" time="0.224" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest" />
+    <testcase name="DecodeIgnitionState_PowerCycle" file="tests/signal/vehicle_signal_adapter_test.cpp" line="286" status="run" result="completed" time="0.150" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeIgnitionStateTest" />
+  </testsuite>
+  <testsuite name="VehicleSignalAdapter.DecodeGearPositionTest" tests="20" failures="1" disabled="0" skipped="0" errors="0" time="2.644" timestamp="2026-08-28T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="05" />
+      <property name="module" value="VehicleSignalAdapter" />
+      <property name="source_file" value="src/signal/vehicle_signal_adapter.cpp" />
+      <property name="tested_function" value="DecodeGearPosition" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="3.0" />
+    </properties>
+    <testcase name="DecodeGearPosition_NominalInput" file="tests/signal/vehicle_signal_adapter_test.cpp" line="340" status="run" result="completed" time="0.245" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest" />
+    <testcase name="DecodeGearPosition_LowerBoundary" file="tests/signal/vehicle_signal_adapter_test.cpp" line="344" status="run" result="completed" time="0.212" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest" />
+    <testcase name="DecodeGearPosition_UpperBoundary" file="tests/signal/vehicle_signal_adapter_test.cpp" line="348" status="run" result="completed" time="0.122" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest" />
+    <testcase name="DecodeGearPosition_BelowMinimum" file="tests/signal/vehicle_signal_adapter_test.cpp" line="352" status="run" result="completed" time="0.153" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest" />
+    <testcase name="DecodeGearPosition_AboveMaximum" file="tests/signal/vehicle_signal_adapter_test.cpp" line="356" status="run" result="completed" time="0.009" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest" />
+    <testcase name="DecodeGearPosition_MissingSignal" file="tests/signal/vehicle_signal_adapter_test.cpp" line="360" status="run" result="completed" time="0.188" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest">
+      <failure message="state mismatch" type="AssertionFailure"><![CDATA[tests/signal/vehicle_signal_adapter_test.cpp:360
+Failure
+Expected child-lock state: LOCKED
+  Actual child-lock state: UNLOCKED
+Synthetic Jenkins build: 05]]></failure>
+    </testcase>
+    <testcase name="DecodeGearPosition_SignalTimeout" file="tests/signal/vehicle_signal_adapter_test.cpp" line="364" status="run" result="completed" time="0.156" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest" />
+    <testcase name="DecodeGearPosition_StaleSignal" file="tests/signal/vehicle_signal_adapter_test.cpp" line="368" status="run" result="completed" time="0.043" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest" />
+    <testcase name="DecodeGearPosition_RapidToggle" file="tests/signal/vehicle_signal_adapter_test.cpp" line="372" status="run" result="completed" time="0.142" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest" />
+    <testcase name="DecodeGearPosition_RepeatedCommand" file="tests/signal/vehicle_signal_adapter_test.cpp" line="376" status="run" result="completed" time="0.238" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest" />
+    <testcase name="DecodeGearPosition_ConcurrentRequest" file="tests/signal/vehicle_signal_adapter_test.cpp" line="380" status="run" result="completed" time="0.191" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest" />
+    <testcase name="DecodeGearPosition_IgnitionOff" file="tests/signal/vehicle_signal_adapter_test.cpp" line="384" status="run" result="completed" time="0.084" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest" />
+    <testcase name="DecodeGearPosition_IgnitionOn" file="tests/signal/vehicle_signal_adapter_test.cpp" line="388" status="run" result="completed" time="0.147" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest" />
+    <testcase name="DecodeGearPosition_VehicleStopped" file="tests/signal/vehicle_signal_adapter_test.cpp" line="392" status="run" result="completed" time="0.006" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest" />
+    <testcase name="DecodeGearPosition_VehicleMoving" file="tests/signal/vehicle_signal_adapter_test.cpp" line="396" status="run" result="completed" time="0.008" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest" />
+    <testcase name="DecodeGearPosition_DoorOpen" file="tests/signal/vehicle_signal_adapter_test.cpp" line="400" status="run" result="completed" time="0.242" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest" />
+    <testcase name="DecodeGearPosition_DoorClosed" file="tests/signal/vehicle_signal_adapter_test.cpp" line="404" status="run" result="completed" time="0.100" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest" />
+    <testcase name="DecodeGearPosition_ActuatorBusy" file="tests/signal/vehicle_signal_adapter_test.cpp" line="408" status="run" result="completed" time="0.080" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest" />
+    <testcase name="DecodeGearPosition_RecoveryAfterFault" file="tests/signal/vehicle_signal_adapter_test.cpp" line="412" status="run" result="completed" time="0.137" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest" />
+    <testcase name="DecodeGearPosition_PowerCycle" file="tests/signal/vehicle_signal_adapter_test.cpp" line="416" status="run" result="completed" time="0.141" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.DecodeGearPositionTest" />
+  </testsuite>
+  <testsuite name="VehicleSignalAdapter.ValidateSignalAgeTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.630" timestamp="2026-08-28T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="05" />
+      <property name="module" value="VehicleSignalAdapter" />
+      <property name="source_file" value="src/signal/vehicle_signal_adapter.cpp" />
+      <property name="tested_function" value="ValidateSignalAge" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="3.0" />
+    </properties>
+    <testcase name="ValidateSignalAge_NominalInput" file="tests/signal/vehicle_signal_adapter_test.cpp" line="470" status="run" result="completed" time="0.139" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+    <testcase name="ValidateSignalAge_LowerBoundary" file="tests/signal/vehicle_signal_adapter_test.cpp" line="474" status="run" result="completed" time="0.116" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+    <testcase name="ValidateSignalAge_UpperBoundary" file="tests/signal/vehicle_signal_adapter_test.cpp" line="478" status="run" result="completed" time="0.021" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+    <testcase name="ValidateSignalAge_BelowMinimum" file="tests/signal/vehicle_signal_adapter_test.cpp" line="482" status="run" result="completed" time="0.226" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+    <testcase name="ValidateSignalAge_AboveMaximum" file="tests/signal/vehicle_signal_adapter_test.cpp" line="486" status="run" result="completed" time="0.101" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+    <testcase name="ValidateSignalAge_MissingSignal" file="tests/signal/vehicle_signal_adapter_test.cpp" line="490" status="run" result="completed" time="0.195" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+    <testcase name="ValidateSignalAge_SignalTimeout" file="tests/signal/vehicle_signal_adapter_test.cpp" line="494" status="run" result="completed" time="0.052" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+    <testcase name="ValidateSignalAge_StaleSignal" file="tests/signal/vehicle_signal_adapter_test.cpp" line="498" status="run" result="completed" time="0.081" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+    <testcase name="ValidateSignalAge_RapidToggle" file="tests/signal/vehicle_signal_adapter_test.cpp" line="502" status="run" result="completed" time="0.198" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+    <testcase name="ValidateSignalAge_RepeatedCommand" file="tests/signal/vehicle_signal_adapter_test.cpp" line="506" status="run" result="completed" time="0.165" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+    <testcase name="ValidateSignalAge_ConcurrentRequest" file="tests/signal/vehicle_signal_adapter_test.cpp" line="510" status="run" result="completed" time="0.204" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+    <testcase name="ValidateSignalAge_IgnitionOff" file="tests/signal/vehicle_signal_adapter_test.cpp" line="514" status="run" result="completed" time="0.160" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+    <testcase name="ValidateSignalAge_IgnitionOn" file="tests/signal/vehicle_signal_adapter_test.cpp" line="518" status="run" result="completed" time="0.224" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+    <testcase name="ValidateSignalAge_VehicleStopped" file="tests/signal/vehicle_signal_adapter_test.cpp" line="522" status="run" result="completed" time="0.159" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+    <testcase name="ValidateSignalAge_VehicleMoving" file="tests/signal/vehicle_signal_adapter_test.cpp" line="526" status="run" result="completed" time="0.066" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+    <testcase name="ValidateSignalAge_DoorOpen" file="tests/signal/vehicle_signal_adapter_test.cpp" line="530" status="run" result="completed" time="0.141" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+    <testcase name="ValidateSignalAge_DoorClosed" file="tests/signal/vehicle_signal_adapter_test.cpp" line="534" status="run" result="completed" time="0.015" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+    <testcase name="ValidateSignalAge_ActuatorBusy" file="tests/signal/vehicle_signal_adapter_test.cpp" line="538" status="run" result="completed" time="0.002" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+    <testcase name="ValidateSignalAge_RecoveryAfterFault" file="tests/signal/vehicle_signal_adapter_test.cpp" line="542" status="run" result="completed" time="0.213" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+    <testcase name="ValidateSignalAge_PowerCycle" file="tests/signal/vehicle_signal_adapter_test.cpp" line="546" status="run" result="completed" time="0.152" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.ValidateSignalAgeTest" />
+  </testsuite>
+  <testsuite name="VehicleSignalAdapter.HandleBusTimeoutTest" tests="20" failures="1" disabled="0" skipped="0" errors="0" time="2.790" timestamp="2026-08-28T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="05" />
+      <property name="module" value="VehicleSignalAdapter" />
+      <property name="source_file" value="src/signal/vehicle_signal_adapter.cpp" />
+      <property name="tested_function" value="HandleBusTimeout" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="3.0" />
+    </properties>
+    <testcase name="HandleBusTimeout_NominalInput" file="tests/signal/vehicle_signal_adapter_test.cpp" line="600" status="run" result="completed" time="0.196" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest" />
+    <testcase name="HandleBusTimeout_LowerBoundary" file="tests/signal/vehicle_signal_adapter_test.cpp" line="604" status="run" result="completed" time="0.065" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest" />
+    <testcase name="HandleBusTimeout_UpperBoundary" file="tests/signal/vehicle_signal_adapter_test.cpp" line="608" status="run" result="completed" time="0.048" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest" />
+    <testcase name="HandleBusTimeout_BelowMinimum" file="tests/signal/vehicle_signal_adapter_test.cpp" line="612" status="run" result="completed" time="0.222" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest" />
+    <testcase name="HandleBusTimeout_AboveMaximum" file="tests/signal/vehicle_signal_adapter_test.cpp" line="616" status="run" result="completed" time="0.105" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest" />
+    <testcase name="HandleBusTimeout_MissingSignal" file="tests/signal/vehicle_signal_adapter_test.cpp" line="620" status="run" result="completed" time="0.051" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest" />
+    <testcase name="HandleBusTimeout_SignalTimeout" file="tests/signal/vehicle_signal_adapter_test.cpp" line="624" status="run" result="completed" time="0.163" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest" />
+    <testcase name="HandleBusTimeout_StaleSignal" file="tests/signal/vehicle_signal_adapter_test.cpp" line="628" status="run" result="completed" time="0.199" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest" />
+    <testcase name="HandleBusTimeout_RapidToggle" file="tests/signal/vehicle_signal_adapter_test.cpp" line="632" status="run" result="completed" time="0.133" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest" />
+    <testcase name="HandleBusTimeout_RepeatedCommand" file="tests/signal/vehicle_signal_adapter_test.cpp" line="636" status="run" result="completed" time="0.086" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest">
+      <failure message="feedback timeout" type="AssertionFailure"><![CDATA[tests/signal/vehicle_signal_adapter_test.cpp:636
+Failure
+Expected feedback before timeout
+  Actual feedback: not received
+Synthetic Jenkins build: 05]]></failure>
+    </testcase>
+    <testcase name="HandleBusTimeout_ConcurrentRequest" file="tests/signal/vehicle_signal_adapter_test.cpp" line="640" status="run" result="completed" time="0.053" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest" />
+    <testcase name="HandleBusTimeout_IgnitionOff" file="tests/signal/vehicle_signal_adapter_test.cpp" line="644" status="run" result="completed" time="0.244" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest" />
+    <testcase name="HandleBusTimeout_IgnitionOn" file="tests/signal/vehicle_signal_adapter_test.cpp" line="648" status="run" result="completed" time="0.079" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest" />
+    <testcase name="HandleBusTimeout_VehicleStopped" file="tests/signal/vehicle_signal_adapter_test.cpp" line="652" status="run" result="completed" time="0.064" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest" />
+    <testcase name="HandleBusTimeout_VehicleMoving" file="tests/signal/vehicle_signal_adapter_test.cpp" line="656" status="run" result="completed" time="0.143" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest" />
+    <testcase name="HandleBusTimeout_DoorOpen" file="tests/signal/vehicle_signal_adapter_test.cpp" line="660" status="run" result="completed" time="0.239" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest" />
+    <testcase name="HandleBusTimeout_DoorClosed" file="tests/signal/vehicle_signal_adapter_test.cpp" line="664" status="run" result="completed" time="0.125" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest" />
+    <testcase name="HandleBusTimeout_ActuatorBusy" file="tests/signal/vehicle_signal_adapter_test.cpp" line="668" status="run" result="completed" time="0.216" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest" />
+    <testcase name="HandleBusTimeout_RecoveryAfterFault" file="tests/signal/vehicle_signal_adapter_test.cpp" line="672" status="run" result="completed" time="0.170" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest" />
+    <testcase name="HandleBusTimeout_PowerCycle" file="tests/signal/vehicle_signal_adapter_test.cpp" line="676" status="run" result="completed" time="0.189" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.HandleBusTimeoutTest" />
+  </testsuite>
+  <testsuite name="VehicleSignalAdapter.NormalizeSignalTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.502" timestamp="2026-08-28T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="05" />
+      <property name="module" value="VehicleSignalAdapter" />
+      <property name="source_file" value="src/signal/vehicle_signal_adapter.cpp" />
+      <property name="tested_function" value="NormalizeSignal" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="3.0" />
+    </properties>
+    <testcase name="NormalizeSignal_NominalInput" file="tests/signal/vehicle_signal_adapter_test.cpp" line="730" status="run" result="completed" time="0.030" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+    <testcase name="NormalizeSignal_LowerBoundary" file="tests/signal/vehicle_signal_adapter_test.cpp" line="734" status="run" result="completed" time="0.034" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+    <testcase name="NormalizeSignal_UpperBoundary" file="tests/signal/vehicle_signal_adapter_test.cpp" line="738" status="run" result="completed" time="0.234" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+    <testcase name="NormalizeSignal_BelowMinimum" file="tests/signal/vehicle_signal_adapter_test.cpp" line="742" status="run" result="completed" time="0.109" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+    <testcase name="NormalizeSignal_AboveMaximum" file="tests/signal/vehicle_signal_adapter_test.cpp" line="746" status="run" result="completed" time="0.211" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+    <testcase name="NormalizeSignal_MissingSignal" file="tests/signal/vehicle_signal_adapter_test.cpp" line="750" status="run" result="completed" time="0.141" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+    <testcase name="NormalizeSignal_SignalTimeout" file="tests/signal/vehicle_signal_adapter_test.cpp" line="754" status="run" result="completed" time="0.205" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+    <testcase name="NormalizeSignal_StaleSignal" file="tests/signal/vehicle_signal_adapter_test.cpp" line="758" status="run" result="completed" time="0.059" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+    <testcase name="NormalizeSignal_RapidToggle" file="tests/signal/vehicle_signal_adapter_test.cpp" line="762" status="run" result="completed" time="0.084" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+    <testcase name="NormalizeSignal_RepeatedCommand" file="tests/signal/vehicle_signal_adapter_test.cpp" line="766" status="run" result="completed" time="0.226" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+    <testcase name="NormalizeSignal_ConcurrentRequest" file="tests/signal/vehicle_signal_adapter_test.cpp" line="770" status="run" result="completed" time="0.159" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+    <testcase name="NormalizeSignal_IgnitionOff" file="tests/signal/vehicle_signal_adapter_test.cpp" line="774" status="run" result="completed" time="0.038" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+    <testcase name="NormalizeSignal_IgnitionOn" file="tests/signal/vehicle_signal_adapter_test.cpp" line="778" status="run" result="completed" time="0.239" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+    <testcase name="NormalizeSignal_VehicleStopped" file="tests/signal/vehicle_signal_adapter_test.cpp" line="782" status="run" result="completed" time="0.026" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+    <testcase name="NormalizeSignal_VehicleMoving" file="tests/signal/vehicle_signal_adapter_test.cpp" line="786" status="run" result="completed" time="0.022" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+    <testcase name="NormalizeSignal_DoorOpen" file="tests/signal/vehicle_signal_adapter_test.cpp" line="790" status="run" result="completed" time="0.220" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+    <testcase name="NormalizeSignal_DoorClosed" file="tests/signal/vehicle_signal_adapter_test.cpp" line="794" status="run" result="completed" time="0.126" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+    <testcase name="NormalizeSignal_ActuatorBusy" file="tests/signal/vehicle_signal_adapter_test.cpp" line="798" status="run" result="completed" time="0.152" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+    <testcase name="NormalizeSignal_RecoveryAfterFault" file="tests/signal/vehicle_signal_adapter_test.cpp" line="802" status="run" result="completed" time="0.069" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+    <testcase name="NormalizeSignal_PowerCycle" file="tests/signal/vehicle_signal_adapter_test.cpp" line="806" status="run" result="completed" time="0.118" timestamp="2026-08-28T00:00:00Z" classname="VehicleSignalAdapter.NormalizeSignalTest" />
+  </testsuite>
+</testsuites>

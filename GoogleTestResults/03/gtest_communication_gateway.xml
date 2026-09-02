@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="120" failures="11" disabled="0" errors="0" time="14.706" timestamp="2026-08-26T00:00:00Z" name="AllTests" random_seed="3180">
+  <testsuite name="CommunicationGateway.PublishChildLockStatusTest" tests="20" failures="2" disabled="0" skipped="0" errors="0" time="2.881" timestamp="2026-08-26T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="03" />
+      <property name="module" value="CommunicationGateway" />
+      <property name="source_file" value="src/communication/communication_gateway.cpp" />
+      <property name="tested_function" value="PublishChildLockStatus" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="9.0" />
+    </properties>
+    <testcase name="PublishChildLockStatus_NominalInput" file="tests/communication/communication_gateway_test.cpp" line="80" status="run" result="completed" time="0.186" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest" />
+    <testcase name="PublishChildLockStatus_LowerBoundary" file="tests/communication/communication_gateway_test.cpp" line="84" status="run" result="completed" time="0.163" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest" />
+    <testcase name="PublishChildLockStatus_UpperBoundary" file="tests/communication/communication_gateway_test.cpp" line="88" status="run" result="completed" time="0.068" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest" />
+    <testcase name="PublishChildLockStatus_BelowMinimum" file="tests/communication/communication_gateway_test.cpp" line="92" status="run" result="completed" time="0.024" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest" />
+    <testcase name="PublishChildLockStatus_AboveMaximum" file="tests/communication/communication_gateway_test.cpp" line="96" status="run" result="completed" time="0.148" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest" />
+    <testcase name="PublishChildLockStatus_MissingSignal" file="tests/communication/communication_gateway_test.cpp" line="100" status="run" result="completed" time="0.082" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest" />
+    <testcase name="PublishChildLockStatus_SignalTimeout" file="tests/communication/communication_gateway_test.cpp" line="104" status="run" result="completed" time="0.099" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest" />
+    <testcase name="PublishChildLockStatus_StaleSignal" file="tests/communication/communication_gateway_test.cpp" line="108" status="run" result="completed" time="0.128" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest" />
+    <testcase name="PublishChildLockStatus_RapidToggle" file="tests/communication/communication_gateway_test.cpp" line="112" status="run" result="completed" time="0.245" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest" />
+    <testcase name="PublishChildLockStatus_RepeatedCommand" file="tests/communication/communication_gateway_test.cpp" line="116" status="run" result="completed" time="0.212" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest" />
+    <testcase name="PublishChildLockStatus_ConcurrentRequest" file="tests/communication/communication_gateway_test.cpp" line="120" status="run" result="completed" time="0.038" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest">
+      <failure message="persistence mismatch" type="AssertionFailure"><![CDATA[tests/communication/communication_gateway_test.cpp:120
+Failure
+Expected restored preference: LOCKED
+  Actual restored preference: UNKNOWN
+Synthetic Jenkins build: 03]]></failure>
+    </testcase>
+    <testcase name="PublishChildLockStatus_IgnitionOff" file="tests/communication/communication_gateway_test.cpp" line="124" status="run" result="completed" time="0.243" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest" />
+    <testcase name="PublishChildLockStatus_IgnitionOn" file="tests/communication/communication_gateway_test.cpp" line="128" status="run" result="completed" time="0.058" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest" />
+    <testcase name="PublishChildLockStatus_VehicleStopped" file="tests/communication/communication_gateway_test.cpp" line="132" status="run" result="completed" time="0.242" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest" />
+    <testcase name="PublishChildLockStatus_VehicleMoving" file="tests/communication/communication_gateway_test.cpp" line="136" status="run" result="completed" time="0.238" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest" />
+    <testcase name="PublishChildLockStatus_DoorOpen" file="tests/communication/communication_gateway_test.cpp" line="140" status="run" result="completed" time="0.064" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest" />
+    <testcase name="PublishChildLockStatus_DoorClosed" file="tests/communication/communication_gateway_test.cpp" line="144" status="run" result="completed" time="0.187" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest">
+      <failure message="retry count mismatch" type="AssertionFailure"><![CDATA[tests/communication/communication_gateway_test.cpp:144
+Failure
+Expected retry count: 3
+  Actual retry count: 4
+Synthetic Jenkins build: 03]]></failure>
+    </testcase>
+    <testcase name="PublishChildLockStatus_ActuatorBusy" file="tests/communication/communication_gateway_test.cpp" line="148" status="run" result="completed" time="0.174" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest" />
+    <testcase name="PublishChildLockStatus_RecoveryAfterFault" file="tests/communication/communication_gateway_test.cpp" line="152" status="run" result="completed" time="0.047" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest" />
+    <testcase name="PublishChildLockStatus_PowerCycle" file="tests/communication/communication_gateway_test.cpp" line="156" status="run" result="completed" time="0.235" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.PublishChildLockStatusTest" />
+  </testsuite>
+  <testsuite name="CommunicationGateway.ReceiveRemoteRequestTest" tests="20" failures="2" disabled="0" skipped="0" errors="0" time="2.270" timestamp="2026-08-26T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="03" />
+      <property name="module" value="CommunicationGateway" />
+      <property name="source_file" value="src/communication/communication_gateway.cpp" />
+      <property name="tested_function" value="ReceiveRemoteRequest" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="9.0" />
+    </properties>
+    <testcase name="ReceiveRemoteRequest_NominalInput" file="tests/communication/communication_gateway_test.cpp" line="210" status="run" result="completed" time="0.225" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest" />
+    <testcase name="ReceiveRemoteRequest_LowerBoundary" file="tests/communication/communication_gateway_test.cpp" line="214" status="run" result="completed" time="0.181" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest" />
+    <testcase name="ReceiveRemoteRequest_UpperBoundary" file="tests/communication/communication_gateway_test.cpp" line="218" status="run" result="completed" time="0.114" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest" />
+    <testcase name="ReceiveRemoteRequest_BelowMinimum" file="tests/communication/communication_gateway_test.cpp" line="222" status="run" result="completed" time="0.043" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest" />
+    <testcase name="ReceiveRemoteRequest_AboveMaximum" file="tests/communication/communication_gateway_test.cpp" line="226" status="run" result="completed" time="0.044" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest" />
+    <testcase name="ReceiveRemoteRequest_MissingSignal" file="tests/communication/communication_gateway_test.cpp" line="230" status="run" result="completed" time="0.010" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest" />
+    <testcase name="ReceiveRemoteRequest_SignalTimeout" file="tests/communication/communication_gateway_test.cpp" line="234" status="run" result="completed" time="0.018" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest" />
+    <testcase name="ReceiveRemoteRequest_StaleSignal" file="tests/communication/communication_gateway_test.cpp" line="238" status="run" result="completed" time="0.234" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest" />
+    <testcase name="ReceiveRemoteRequest_RapidToggle" file="tests/communication/communication_gateway_test.cpp" line="242" status="run" result="completed" time="0.102" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest" />
+    <testcase name="ReceiveRemoteRequest_RepeatedCommand" file="tests/communication/communication_gateway_test.cpp" line="246" status="run" result="completed" time="0.094" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest" />
+    <testcase name="ReceiveRemoteRequest_ConcurrentRequest" file="tests/communication/communication_gateway_test.cpp" line="250" status="run" result="completed" time="0.218" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest" />
+    <testcase name="ReceiveRemoteRequest_IgnitionOff" file="tests/communication/communication_gateway_test.cpp" line="254" status="run" result="completed" time="0.021" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest">
+      <failure message="stale signal handling mismatch" type="AssertionFailure"><![CDATA[tests/communication/communication_gateway_test.cpp:254
+Failure
+Expected stale signal to be rejected
+  Actual stale signal was consumed
+Synthetic Jenkins build: 03]]></failure>
+    </testcase>
+    <testcase name="ReceiveRemoteRequest_IgnitionOn" file="tests/communication/communication_gateway_test.cpp" line="258" status="run" result="completed" time="0.047" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest" />
+    <testcase name="ReceiveRemoteRequest_VehicleStopped" file="tests/communication/communication_gateway_test.cpp" line="262" status="run" result="completed" time="0.154" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest" />
+    <testcase name="ReceiveRemoteRequest_VehicleMoving" file="tests/communication/communication_gateway_test.cpp" line="266" status="run" result="completed" time="0.043" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest">
+      <failure message="request acceptance mismatch" type="AssertionFailure"><![CDATA[tests/communication/communication_gateway_test.cpp:266
+Failure
+Expected request result: REJECTED
+  Actual request result: ACCEPTED
+Synthetic Jenkins build: 03]]></failure>
+    </testcase>
+    <testcase name="ReceiveRemoteRequest_DoorOpen" file="tests/communication/communication_gateway_test.cpp" line="270" status="run" result="completed" time="0.063" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest" />
+    <testcase name="ReceiveRemoteRequest_DoorClosed" file="tests/communication/communication_gateway_test.cpp" line="274" status="run" result="completed" time="0.205" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest" />
+    <testcase name="ReceiveRemoteRequest_ActuatorBusy" file="tests/communication/communication_gateway_test.cpp" line="278" status="run" result="completed" time="0.220" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest" />
+    <testcase name="ReceiveRemoteRequest_RecoveryAfterFault" file="tests/communication/communication_gateway_test.cpp" line="282" status="run" result="completed" time="0.179" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest" />
+    <testcase name="ReceiveRemoteRequest_PowerCycle" file="tests/communication/communication_gateway_test.cpp" line="286" status="run" result="completed" time="0.055" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ReceiveRemoteRequestTest" />
+  </testsuite>
+  <testsuite name="CommunicationGateway.ValidateMessageCounterTest" tests="20" failures="2" disabled="0" skipped="0" errors="0" time="2.221" timestamp="2026-08-26T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="03" />
+      <property name="module" value="CommunicationGateway" />
+      <property name="source_file" value="src/communication/communication_gateway.cpp" />
+      <property name="tested_function" value="ValidateMessageCounter" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="9.0" />
+    </properties>
+    <testcase name="ValidateMessageCounter_NominalInput" file="tests/communication/communication_gateway_test.cpp" line="340" status="run" result="completed" time="0.138" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest" />
+    <testcase name="ValidateMessageCounter_LowerBoundary" file="tests/communication/communication_gateway_test.cpp" line="344" status="run" result="completed" time="0.083" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest" />
+    <testcase name="ValidateMessageCounter_UpperBoundary" file="tests/communication/communication_gateway_test.cpp" line="348" status="run" result="completed" time="0.024" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest" />
+    <testcase name="ValidateMessageCounter_BelowMinimum" file="tests/communication/communication_gateway_test.cpp" line="352" status="run" result="completed" time="0.057" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest">
+      <failure message="request acceptance mismatch" type="AssertionFailure"><![CDATA[tests/communication/communication_gateway_test.cpp:352
+Failure
+Expected request result: REJECTED
+  Actual request result: ACCEPTED
+Synthetic Jenkins build: 03]]></failure>
+    </testcase>
+    <testcase name="ValidateMessageCounter_AboveMaximum" file="tests/communication/communication_gateway_test.cpp" line="356" status="run" result="completed" time="0.220" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest" />
+    <testcase name="ValidateMessageCounter_MissingSignal" file="tests/communication/communication_gateway_test.cpp" line="360" status="run" result="completed" time="0.015" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest" />
+    <testcase name="ValidateMessageCounter_SignalTimeout" file="tests/communication/communication_gateway_test.cpp" line="364" status="run" result="completed" time="0.082" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest" />
+    <testcase name="ValidateMessageCounter_StaleSignal" file="tests/communication/communication_gateway_test.cpp" line="368" status="run" result="completed" time="0.242" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest">
+      <failure message="request acceptance mismatch" type="AssertionFailure"><![CDATA[tests/communication/communication_gateway_test.cpp:368
+Failure
+Expected request result: REJECTED
+  Actual request result: ACCEPTED
+Synthetic Jenkins build: 03]]></failure>
+    </testcase>
+    <testcase name="ValidateMessageCounter_RapidToggle" file="tests/communication/communication_gateway_test.cpp" line="372" status="run" result="completed" time="0.093" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest" />
+    <testcase name="ValidateMessageCounter_RepeatedCommand" file="tests/communication/communication_gateway_test.cpp" line="376" status="run" result="completed" time="0.139" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest" />
+    <testcase name="ValidateMessageCounter_ConcurrentRequest" file="tests/communication/communication_gateway_test.cpp" line="380" status="run" result="completed" time="0.002" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest" />
+    <testcase name="ValidateMessageCounter_IgnitionOff" file="tests/communication/communication_gateway_test.cpp" line="384" status="run" result="completed" time="0.232" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest" />
+    <testcase name="ValidateMessageCounter_IgnitionOn" file="tests/communication/communication_gateway_test.cpp" line="388" status="run" result="completed" time="0.106" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest" />
+    <testcase name="ValidateMessageCounter_VehicleStopped" file="tests/communication/communication_gateway_test.cpp" line="392" status="run" result="completed" time="0.219" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest" />
+    <testcase name="ValidateMessageCounter_VehicleMoving" file="tests/communication/communication_gateway_test.cpp" line="396" status="run" result="completed" time="0.026" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest" />
+    <testcase name="ValidateMessageCounter_DoorOpen" file="tests/communication/communication_gateway_test.cpp" line="400" status="run" result="completed" time="0.059" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest" />
+    <testcase name="ValidateMessageCounter_DoorClosed" file="tests/communication/communication_gateway_test.cpp" line="404" status="run" result="completed" time="0.127" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest" />
+    <testcase name="ValidateMessageCounter_ActuatorBusy" file="tests/communication/communication_gateway_test.cpp" line="408" status="run" result="completed" time="0.185" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest" />
+    <testcase name="ValidateMessageCounter_RecoveryAfterFault" file="tests/communication/communication_gateway_test.cpp" line="412" status="run" result="completed" time="0.057" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest" />
+    <testcase name="ValidateMessageCounter_PowerCycle" file="tests/communication/communication_gateway_test.cpp" line="416" status="run" result="completed" time="0.115" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateMessageCounterTest" />
+  </testsuite>
+  <testsuite name="CommunicationGateway.ValidateChecksumTest" tests="20" failures="1" disabled="0" skipped="0" errors="0" time="2.334" timestamp="2026-08-26T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="03" />
+      <property name="module" value="CommunicationGateway" />
+      <property name="source_file" value="src/communication/communication_gateway.cpp" />
+      <property name="tested_function" value="ValidateChecksum" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="9.0" />
+    </properties>
+    <testcase name="ValidateChecksum_NominalInput" file="tests/communication/communication_gateway_test.cpp" line="470" status="run" result="completed" time="0.113" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest" />
+    <testcase name="ValidateChecksum_LowerBoundary" file="tests/communication/communication_gateway_test.cpp" line="474" status="run" result="completed" time="0.078" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest" />
+    <testcase name="ValidateChecksum_UpperBoundary" file="tests/communication/communication_gateway_test.cpp" line="478" status="run" result="completed" time="0.127" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest" />
+    <testcase name="ValidateChecksum_BelowMinimum" file="tests/communication/communication_gateway_test.cpp" line="482" status="run" result="completed" time="0.123" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest" />
+    <testcase name="ValidateChecksum_AboveMaximum" file="tests/communication/communication_gateway_test.cpp" line="486" status="run" result="completed" time="0.063" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest" />
+    <testcase name="ValidateChecksum_MissingSignal" file="tests/communication/communication_gateway_test.cpp" line="490" status="run" result="completed" time="0.049" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest" />
+    <testcase name="ValidateChecksum_SignalTimeout" file="tests/communication/communication_gateway_test.cpp" line="494" status="run" result="completed" time="0.145" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest">
+      <failure message="request acceptance mismatch" type="AssertionFailure"><![CDATA[tests/communication/communication_gateway_test.cpp:494
+Failure
+Expected request result: REJECTED
+  Actual request result: ACCEPTED
+Synthetic Jenkins build: 03]]></failure>
+    </testcase>
+    <testcase name="ValidateChecksum_StaleSignal" file="tests/communication/communication_gateway_test.cpp" line="498" status="run" result="completed" time="0.055" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest" />
+    <testcase name="ValidateChecksum_RapidToggle" file="tests/communication/communication_gateway_test.cpp" line="502" status="run" result="completed" time="0.241" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest" />
+    <testcase name="ValidateChecksum_RepeatedCommand" file="tests/communication/communication_gateway_test.cpp" line="506" status="run" result="completed" time="0.044" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest" />
+    <testcase name="ValidateChecksum_ConcurrentRequest" file="tests/communication/communication_gateway_test.cpp" line="510" status="run" result="completed" time="0.036" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest" />
+    <testcase name="ValidateChecksum_IgnitionOff" file="tests/communication/communication_gateway_test.cpp" line="514" status="run" result="completed" time="0.130" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest" />
+    <testcase name="ValidateChecksum_IgnitionOn" file="tests/communication/communication_gateway_test.cpp" line="518" status="run" result="completed" time="0.147" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest" />
+    <testcase name="ValidateChecksum_VehicleStopped" file="tests/communication/communication_gateway_test.cpp" line="522" status="run" result="completed" time="0.176" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest" />
+    <testcase name="ValidateChecksum_VehicleMoving" file="tests/communication/communication_gateway_test.cpp" line="526" status="run" result="completed" time="0.074" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest" />
+    <testcase name="ValidateChecksum_DoorOpen" file="tests/communication/communication_gateway_test.cpp" line="530" status="run" result="completed" time="0.051" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest" />
+    <testcase name="ValidateChecksum_DoorClosed" file="tests/communication/communication_gateway_test.cpp" line="534" status="run" result="completed" time="0.205" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest" />
+    <testcase name="ValidateChecksum_ActuatorBusy" file="tests/communication/communication_gateway_test.cpp" line="538" status="run" result="completed" time="0.161" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest" />
+    <testcase name="ValidateChecksum_RecoveryAfterFault" file="tests/communication/communication_gateway_test.cpp" line="542" status="run" result="completed" time="0.203" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest" />
+    <testcase name="ValidateChecksum_PowerCycle" file="tests/communication/communication_gateway_test.cpp" line="546" status="run" result="completed" time="0.113" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.ValidateChecksumTest" />
+  </testsuite>
+  <testsuite name="CommunicationGateway.HandleSequenceErrorTest" tests="20" failures="1" disabled="0" skipped="0" errors="0" time="2.444" timestamp="2026-08-26T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="03" />
+      <property name="module" value="CommunicationGateway" />
+      <property name="source_file" value="src/communication/communication_gateway.cpp" />
+      <property name="tested_function" value="HandleSequenceError" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="9.0" />
+    </properties>
+    <testcase name="HandleSequenceError_NominalInput" file="tests/communication/communication_gateway_test.cpp" line="600" status="run" result="completed" time="0.083" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest" />
+    <testcase name="HandleSequenceError_LowerBoundary" file="tests/communication/communication_gateway_test.cpp" line="604" status="run" result="completed" time="0.091" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest" />
+    <testcase name="HandleSequenceError_UpperBoundary" file="tests/communication/communication_gateway_test.cpp" line="608" status="run" result="completed" time="0.027" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest" />
+    <testcase name="HandleSequenceError_BelowMinimum" file="tests/communication/communication_gateway_test.cpp" line="612" status="run" result="completed" time="0.004" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest" />
+    <testcase name="HandleSequenceError_AboveMaximum" file="tests/communication/communication_gateway_test.cpp" line="616" status="run" result="completed" time="0.203" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest" />
+    <testcase name="HandleSequenceError_MissingSignal" file="tests/communication/communication_gateway_test.cpp" line="620" status="run" result="completed" time="0.089" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest" />
+    <testcase name="HandleSequenceError_SignalTimeout" file="tests/communication/communication_gateway_test.cpp" line="624" status="run" result="completed" time="0.071" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest" />
+    <testcase name="HandleSequenceError_StaleSignal" file="tests/communication/communication_gateway_test.cpp" line="628" status="run" result="completed" time="0.196" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest" />
+    <testcase name="HandleSequenceError_RapidToggle" file="tests/communication/communication_gateway_test.cpp" line="632" status="run" result="completed" time="0.170" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest" />
+    <testcase name="HandleSequenceError_RepeatedCommand" file="tests/communication/communication_gateway_test.cpp" line="636" status="run" result="completed" time="0.125" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest" />
+    <testcase name="HandleSequenceError_ConcurrentRequest" file="tests/communication/communication_gateway_test.cpp" line="640" status="run" result="completed" time="0.204" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest" />
+    <testcase name="HandleSequenceError_IgnitionOff" file="tests/communication/communication_gateway_test.cpp" line="644" status="run" result="completed" time="0.248" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest" />
+    <testcase name="HandleSequenceError_IgnitionOn" file="tests/communication/communication_gateway_test.cpp" line="648" status="run" result="completed" time="0.203" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest" />
+    <testcase name="HandleSequenceError_VehicleStopped" file="tests/communication/communication_gateway_test.cpp" line="652" status="run" result="completed" time="0.019" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest" />
+    <testcase name="HandleSequenceError_VehicleMoving" file="tests/communication/communication_gateway_test.cpp" line="656" status="run" result="completed" time="0.025" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest">
+      <failure message="message validation mismatch" type="AssertionFailure"><![CDATA[tests/communication/communication_gateway_test.cpp:656
+Failure
+Expected invalid message to be discarded
+  Actual invalid message was forwarded
+Synthetic Jenkins build: 03]]></failure>
+    </testcase>
+    <testcase name="HandleSequenceError_DoorOpen" file="tests/communication/communication_gateway_test.cpp" line="660" status="run" result="completed" time="0.199" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest" />
+    <testcase name="HandleSequenceError_DoorClosed" file="tests/communication/communication_gateway_test.cpp" line="664" status="run" result="completed" time="0.135" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest" />
+    <testcase name="HandleSequenceError_ActuatorBusy" file="tests/communication/communication_gateway_test.cpp" line="668" status="run" result="completed" time="0.148" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest" />
+    <testcase name="HandleSequenceError_RecoveryAfterFault" file="tests/communication/communication_gateway_test.cpp" line="672" status="run" result="completed" time="0.196" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest" />
+    <testcase name="HandleSequenceError_PowerCycle" file="tests/communication/communication_gateway_test.cpp" line="676" status="run" result="completed" time="0.008" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.HandleSequenceErrorTest" />
+  </testsuite>
+  <testsuite name="CommunicationGateway.RecoverCommunicationTest" tests="20" failures="3" disabled="0" skipped="0" errors="0" time="2.556" timestamp="2026-08-26T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="03" />
+      <property name="module" value="CommunicationGateway" />
+      <property name="source_file" value="src/communication/communication_gateway.cpp" />
+      <property name="tested_function" value="RecoverCommunication" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="9.0" />
+    </properties>
+    <testcase name="RecoverCommunication_NominalInput" file="tests/communication/communication_gateway_test.cpp" line="730" status="run" result="completed" time="0.162" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest" />
+    <testcase name="RecoverCommunication_LowerBoundary" file="tests/communication/communication_gateway_test.cpp" line="734" status="run" result="completed" time="0.191" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest">
+      <failure message="state mismatch" type="AssertionFailure"><![CDATA[tests/communication/communication_gateway_test.cpp:734
+Failure
+Expected child-lock state: LOCKED
+  Actual child-lock state: UNLOCKED
+Synthetic Jenkins build: 03]]></failure>
+    </testcase>
+    <testcase name="RecoverCommunication_UpperBoundary" file="tests/communication/communication_gateway_test.cpp" line="738" status="run" result="completed" time="0.051" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest" />
+    <testcase name="RecoverCommunication_BelowMinimum" file="tests/communication/communication_gateway_test.cpp" line="742" status="run" result="completed" time="0.145" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest" />
+    <testcase name="RecoverCommunication_AboveMaximum" file="tests/communication/communication_gateway_test.cpp" line="746" status="run" result="completed" time="0.220" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest" />
+    <testcase name="RecoverCommunication_MissingSignal" file="tests/communication/communication_gateway_test.cpp" line="750" status="run" result="completed" time="0.087" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest" />
+    <testcase name="RecoverCommunication_SignalTimeout" file="tests/communication/communication_gateway_test.cpp" line="754" status="run" result="completed" time="0.249" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest" />
+    <testcase name="RecoverCommunication_StaleSignal" file="tests/communication/communication_gateway_test.cpp" line="758" status="run" result="completed" time="0.066" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest" />
+    <testcase name="RecoverCommunication_RapidToggle" file="tests/communication/communication_gateway_test.cpp" line="762" status="run" result="completed" time="0.024" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest" />
+    <testcase name="RecoverCommunication_RepeatedCommand" file="tests/communication/communication_gateway_test.cpp" line="766" status="run" result="completed" time="0.163" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest">
+      <failure message="state mismatch" type="AssertionFailure"><![CDATA[tests/communication/communication_gateway_test.cpp:766
+Failure
+Expected child-lock state: LOCKED
+  Actual child-lock state: UNLOCKED
+Synthetic Jenkins build: 03]]></failure>
+    </testcase>
+    <testcase name="RecoverCommunication_ConcurrentRequest" file="tests/communication/communication_gateway_test.cpp" line="770" status="run" result="completed" time="0.047" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest">
+      <failure message="retry count mismatch" type="AssertionFailure"><![CDATA[tests/communication/communication_gateway_test.cpp:770
+Failure
+Expected retry count: 3
+  Actual retry count: 4
+Synthetic Jenkins build: 03]]></failure>
+    </testcase>
+    <testcase name="RecoverCommunication_IgnitionOff" file="tests/communication/communication_gateway_test.cpp" line="774" status="run" result="completed" time="0.097" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest" />
+    <testcase name="RecoverCommunication_IgnitionOn" file="tests/communication/communication_gateway_test.cpp" line="778" status="run" result="completed" time="0.093" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest" />
+    <testcase name="RecoverCommunication_VehicleStopped" file="tests/communication/communication_gateway_test.cpp" line="782" status="run" result="completed" time="0.169" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest" />
+    <testcase name="RecoverCommunication_VehicleMoving" file="tests/communication/communication_gateway_test.cpp" line="786" status="run" result="completed" time="0.068" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest" />
+    <testcase name="RecoverCommunication_DoorOpen" file="tests/communication/communication_gateway_test.cpp" line="790" status="run" result="completed" time="0.117" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest" />
+    <testcase name="RecoverCommunication_DoorClosed" file="tests/communication/communication_gateway_test.cpp" line="794" status="run" result="completed" time="0.245" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest" />
+    <testcase name="RecoverCommunication_ActuatorBusy" file="tests/communication/communication_gateway_test.cpp" line="798" status="run" result="completed" time="0.122" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest" />
+    <testcase name="RecoverCommunication_RecoveryAfterFault" file="tests/communication/communication_gateway_test.cpp" line="802" status="run" result="completed" time="0.021" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest" />
+    <testcase name="RecoverCommunication_PowerCycle" file="tests/communication/communication_gateway_test.cpp" line="806" status="run" result="completed" time="0.219" timestamp="2026-08-26T00:00:00Z" classname="CommunicationGateway.RecoverCommunicationTest" />
+  </testsuite>
+</testsuites>

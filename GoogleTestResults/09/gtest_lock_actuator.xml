@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="120" failures="5" disabled="0" errors="0" time="15.900" timestamp="2026-09-01T00:00:00Z" name="AllTests" random_seed="9132">
+  <testsuite name="LockActuator.CommandLockTest" tests="20" failures="2" disabled="0" skipped="0" errors="0" time="2.899" timestamp="2026-09-01T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="09" />
+      <property name="module" value="LockActuator" />
+      <property name="source_file" value="src/actuator/lock_actuator.cpp" />
+      <property name="tested_function" value="CommandLock" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="4.0" />
+    </properties>
+    <testcase name="CommandLock_NominalInput" file="tests/actuator/lock_actuator_test.cpp" line="80" status="run" result="completed" time="0.216" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest" />
+    <testcase name="CommandLock_LowerBoundary" file="tests/actuator/lock_actuator_test.cpp" line="84" status="run" result="completed" time="0.193" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest" />
+    <testcase name="CommandLock_UpperBoundary" file="tests/actuator/lock_actuator_test.cpp" line="88" status="run" result="completed" time="0.187" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest" />
+    <testcase name="CommandLock_BelowMinimum" file="tests/actuator/lock_actuator_test.cpp" line="92" status="run" result="completed" time="0.054" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest" />
+    <testcase name="CommandLock_AboveMaximum" file="tests/actuator/lock_actuator_test.cpp" line="96" status="run" result="completed" time="0.178" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest" />
+    <testcase name="CommandLock_MissingSignal" file="tests/actuator/lock_actuator_test.cpp" line="100" status="run" result="completed" time="0.112" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest" />
+    <testcase name="CommandLock_SignalTimeout" file="tests/actuator/lock_actuator_test.cpp" line="104" status="run" result="completed" time="0.129" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest">
+      <failure message="message validation mismatch" type="AssertionFailure"><![CDATA[tests/actuator/lock_actuator_test.cpp:104
+Failure
+Expected invalid message to be discarded
+  Actual invalid message was forwarded
+Synthetic Jenkins build: 09]]></failure>
+    </testcase>
+    <testcase name="CommandLock_StaleSignal" file="tests/actuator/lock_actuator_test.cpp" line="108" status="run" result="completed" time="0.158" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest" />
+    <testcase name="CommandLock_RapidToggle" file="tests/actuator/lock_actuator_test.cpp" line="112" status="run" result="completed" time="0.026" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest">
+      <failure message="persistence mismatch" type="AssertionFailure"><![CDATA[tests/actuator/lock_actuator_test.cpp:112
+Failure
+Expected restored preference: LOCKED
+  Actual restored preference: UNKNOWN
+Synthetic Jenkins build: 09]]></failure>
+    </testcase>
+    <testcase name="CommandLock_RepeatedCommand" file="tests/actuator/lock_actuator_test.cpp" line="116" status="run" result="completed" time="0.082" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest" />
+    <testcase name="CommandLock_ConcurrentRequest" file="tests/actuator/lock_actuator_test.cpp" line="120" status="run" result="completed" time="0.209" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest" />
+    <testcase name="CommandLock_IgnitionOff" file="tests/actuator/lock_actuator_test.cpp" line="124" status="run" result="completed" time="0.165" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest" />
+    <testcase name="CommandLock_IgnitionOn" file="tests/actuator/lock_actuator_test.cpp" line="128" status="run" result="completed" time="0.229" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest" />
+    <testcase name="CommandLock_VehicleStopped" file="tests/actuator/lock_actuator_test.cpp" line="132" status="run" result="completed" time="0.164" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest" />
+    <testcase name="CommandLock_VehicleMoving" file="tests/actuator/lock_actuator_test.cpp" line="136" status="run" result="completed" time="0.071" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest" />
+    <testcase name="CommandLock_DoorOpen" file="tests/actuator/lock_actuator_test.cpp" line="140" status="run" result="completed" time="0.146" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest" />
+    <testcase name="CommandLock_DoorClosed" file="tests/actuator/lock_actuator_test.cpp" line="144" status="run" result="completed" time="0.109" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest" />
+    <testcase name="CommandLock_ActuatorBusy" file="tests/actuator/lock_actuator_test.cpp" line="148" status="run" result="completed" time="0.096" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest" />
+    <testcase name="CommandLock_RecoveryAfterFault" file="tests/actuator/lock_actuator_test.cpp" line="152" status="run" result="completed" time="0.218" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest" />
+    <testcase name="CommandLock_PowerCycle" file="tests/actuator/lock_actuator_test.cpp" line="156" status="run" result="completed" time="0.157" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandLockTest" />
+  </testsuite>
+  <testsuite name="LockActuator.CommandUnlockTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.127" timestamp="2026-09-01T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="09" />
+      <property name="module" value="LockActuator" />
+      <property name="source_file" value="src/actuator/lock_actuator.cpp" />
+      <property name="tested_function" value="CommandUnlock" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="4.0" />
+    </properties>
+    <testcase name="CommandUnlock_NominalInput" file="tests/actuator/lock_actuator_test.cpp" line="210" status="run" result="completed" time="0.133" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+    <testcase name="CommandUnlock_LowerBoundary" file="tests/actuator/lock_actuator_test.cpp" line="214" status="run" result="completed" time="0.068" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+    <testcase name="CommandUnlock_UpperBoundary" file="tests/actuator/lock_actuator_test.cpp" line="218" status="run" result="completed" time="0.113" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+    <testcase name="CommandUnlock_BelowMinimum" file="tests/actuator/lock_actuator_test.cpp" line="222" status="run" result="completed" time="0.069" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+    <testcase name="CommandUnlock_AboveMaximum" file="tests/actuator/lock_actuator_test.cpp" line="226" status="run" result="completed" time="0.013" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+    <testcase name="CommandUnlock_MissingSignal" file="tests/actuator/lock_actuator_test.cpp" line="230" status="run" result="completed" time="0.249" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+    <testcase name="CommandUnlock_SignalTimeout" file="tests/actuator/lock_actuator_test.cpp" line="234" status="run" result="completed" time="0.064" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+    <testcase name="CommandUnlock_StaleSignal" file="tests/actuator/lock_actuator_test.cpp" line="238" status="run" result="completed" time="0.139" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+    <testcase name="CommandUnlock_RapidToggle" file="tests/actuator/lock_actuator_test.cpp" line="242" status="run" result="completed" time="0.038" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+    <testcase name="CommandUnlock_RepeatedCommand" file="tests/actuator/lock_actuator_test.cpp" line="246" status="run" result="completed" time="0.110" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+    <testcase name="CommandUnlock_ConcurrentRequest" file="tests/actuator/lock_actuator_test.cpp" line="250" status="run" result="completed" time="0.145" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+    <testcase name="CommandUnlock_IgnitionOff" file="tests/actuator/lock_actuator_test.cpp" line="254" status="run" result="completed" time="0.158" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+    <testcase name="CommandUnlock_IgnitionOn" file="tests/actuator/lock_actuator_test.cpp" line="258" status="run" result="completed" time="0.035" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+    <testcase name="CommandUnlock_VehicleStopped" file="tests/actuator/lock_actuator_test.cpp" line="262" status="run" result="completed" time="0.209" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+    <testcase name="CommandUnlock_VehicleMoving" file="tests/actuator/lock_actuator_test.cpp" line="266" status="run" result="completed" time="0.053" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+    <testcase name="CommandUnlock_DoorOpen" file="tests/actuator/lock_actuator_test.cpp" line="270" status="run" result="completed" time="0.118" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+    <testcase name="CommandUnlock_DoorClosed" file="tests/actuator/lock_actuator_test.cpp" line="274" status="run" result="completed" time="0.054" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+    <testcase name="CommandUnlock_ActuatorBusy" file="tests/actuator/lock_actuator_test.cpp" line="278" status="run" result="completed" time="0.098" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+    <testcase name="CommandUnlock_RecoveryAfterFault" file="tests/actuator/lock_actuator_test.cpp" line="282" status="run" result="completed" time="0.163" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+    <testcase name="CommandUnlock_PowerCycle" file="tests/actuator/lock_actuator_test.cpp" line="286" status="run" result="completed" time="0.098" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.CommandUnlockTest" />
+  </testsuite>
+  <testsuite name="LockActuator.VerifyFeedbackTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.896" timestamp="2026-09-01T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="09" />
+      <property name="module" value="LockActuator" />
+      <property name="source_file" value="src/actuator/lock_actuator.cpp" />
+      <property name="tested_function" value="VerifyFeedback" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="4.0" />
+    </properties>
+    <testcase name="VerifyFeedback_NominalInput" file="tests/actuator/lock_actuator_test.cpp" line="340" status="run" result="completed" time="0.182" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+    <testcase name="VerifyFeedback_LowerBoundary" file="tests/actuator/lock_actuator_test.cpp" line="344" status="run" result="completed" time="0.195" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+    <testcase name="VerifyFeedback_UpperBoundary" file="tests/actuator/lock_actuator_test.cpp" line="348" status="run" result="completed" time="0.072" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+    <testcase name="VerifyFeedback_BelowMinimum" file="tests/actuator/lock_actuator_test.cpp" line="352" status="run" result="completed" time="0.246" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+    <testcase name="VerifyFeedback_AboveMaximum" file="tests/actuator/lock_actuator_test.cpp" line="356" status="run" result="completed" time="0.250" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+    <testcase name="VerifyFeedback_MissingSignal" file="tests/actuator/lock_actuator_test.cpp" line="360" status="run" result="completed" time="0.066" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+    <testcase name="VerifyFeedback_SignalTimeout" file="tests/actuator/lock_actuator_test.cpp" line="364" status="run" result="completed" time="0.002" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+    <testcase name="VerifyFeedback_StaleSignal" file="tests/actuator/lock_actuator_test.cpp" line="368" status="run" result="completed" time="0.135" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+    <testcase name="VerifyFeedback_RapidToggle" file="tests/actuator/lock_actuator_test.cpp" line="372" status="run" result="completed" time="0.111" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+    <testcase name="VerifyFeedback_RepeatedCommand" file="tests/actuator/lock_actuator_test.cpp" line="376" status="run" result="completed" time="0.135" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+    <testcase name="VerifyFeedback_ConcurrentRequest" file="tests/actuator/lock_actuator_test.cpp" line="380" status="run" result="completed" time="0.149" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+    <testcase name="VerifyFeedback_IgnitionOff" file="tests/actuator/lock_actuator_test.cpp" line="384" status="run" result="completed" time="0.037" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+    <testcase name="VerifyFeedback_IgnitionOn" file="tests/actuator/lock_actuator_test.cpp" line="388" status="run" result="completed" time="0.225" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+    <testcase name="VerifyFeedback_VehicleStopped" file="tests/actuator/lock_actuator_test.cpp" line="392" status="run" result="completed" time="0.210" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+    <testcase name="VerifyFeedback_VehicleMoving" file="tests/actuator/lock_actuator_test.cpp" line="396" status="run" result="completed" time="0.108" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+    <testcase name="VerifyFeedback_DoorOpen" file="tests/actuator/lock_actuator_test.cpp" line="400" status="run" result="completed" time="0.014" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+    <testcase name="VerifyFeedback_DoorClosed" file="tests/actuator/lock_actuator_test.cpp" line="404" status="run" result="completed" time="0.173" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+    <testcase name="VerifyFeedback_ActuatorBusy" file="tests/actuator/lock_actuator_test.cpp" line="408" status="run" result="completed" time="0.206" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+    <testcase name="VerifyFeedback_RecoveryAfterFault" file="tests/actuator/lock_actuator_test.cpp" line="412" status="run" result="completed" time="0.167" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+    <testcase name="VerifyFeedback_PowerCycle" file="tests/actuator/lock_actuator_test.cpp" line="416" status="run" result="completed" time="0.213" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.VerifyFeedbackTest" />
+  </testsuite>
+  <testsuite name="LockActuator.RetryActuationTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.524" timestamp="2026-09-01T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="09" />
+      <property name="module" value="LockActuator" />
+      <property name="source_file" value="src/actuator/lock_actuator.cpp" />
+      <property name="tested_function" value="RetryActuation" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="4.0" />
+    </properties>
+    <testcase name="RetryActuation_NominalInput" file="tests/actuator/lock_actuator_test.cpp" line="470" status="run" result="completed" time="0.162" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+    <testcase name="RetryActuation_LowerBoundary" file="tests/actuator/lock_actuator_test.cpp" line="474" status="run" result="completed" time="0.031" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+    <testcase name="RetryActuation_UpperBoundary" file="tests/actuator/lock_actuator_test.cpp" line="478" status="run" result="completed" time="0.174" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+    <testcase name="RetryActuation_BelowMinimum" file="tests/actuator/lock_actuator_test.cpp" line="482" status="run" result="completed" time="0.099" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+    <testcase name="RetryActuation_AboveMaximum" file="tests/actuator/lock_actuator_test.cpp" line="486" status="run" result="completed" time="0.071" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+    <testcase name="RetryActuation_MissingSignal" file="tests/actuator/lock_actuator_test.cpp" line="490" status="run" result="completed" time="0.017" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+    <testcase name="RetryActuation_SignalTimeout" file="tests/actuator/lock_actuator_test.cpp" line="494" status="run" result="completed" time="0.040" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+    <testcase name="RetryActuation_StaleSignal" file="tests/actuator/lock_actuator_test.cpp" line="498" status="run" result="completed" time="0.076" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+    <testcase name="RetryActuation_RapidToggle" file="tests/actuator/lock_actuator_test.cpp" line="502" status="run" result="completed" time="0.099" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+    <testcase name="RetryActuation_RepeatedCommand" file="tests/actuator/lock_actuator_test.cpp" line="506" status="run" result="completed" time="0.212" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+    <testcase name="RetryActuation_ConcurrentRequest" file="tests/actuator/lock_actuator_test.cpp" line="510" status="run" result="completed" time="0.192" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+    <testcase name="RetryActuation_IgnitionOff" file="tests/actuator/lock_actuator_test.cpp" line="514" status="run" result="completed" time="0.223" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+    <testcase name="RetryActuation_IgnitionOn" file="tests/actuator/lock_actuator_test.cpp" line="518" status="run" result="completed" time="0.218" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+    <testcase name="RetryActuation_VehicleStopped" file="tests/actuator/lock_actuator_test.cpp" line="522" status="run" result="completed" time="0.043" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+    <testcase name="RetryActuation_VehicleMoving" file="tests/actuator/lock_actuator_test.cpp" line="526" status="run" result="completed" time="0.033" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+    <testcase name="RetryActuation_DoorOpen" file="tests/actuator/lock_actuator_test.cpp" line="530" status="run" result="completed" time="0.218" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+    <testcase name="RetryActuation_DoorClosed" file="tests/actuator/lock_actuator_test.cpp" line="534" status="run" result="completed" time="0.104" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+    <testcase name="RetryActuation_ActuatorBusy" file="tests/actuator/lock_actuator_test.cpp" line="538" status="run" result="completed" time="0.195" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+    <testcase name="RetryActuation_RecoveryAfterFault" file="tests/actuator/lock_actuator_test.cpp" line="542" status="run" result="completed" time="0.149" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+    <testcase name="RetryActuation_PowerCycle" file="tests/actuator/lock_actuator_test.cpp" line="546" status="run" result="completed" time="0.168" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.RetryActuationTest" />
+  </testsuite>
+  <testsuite name="LockActuator.DetectJamTest" tests="20" failures="1" disabled="0" skipped="0" errors="0" time="3.135" timestamp="2026-09-01T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="09" />
+      <property name="module" value="LockActuator" />
+      <property name="source_file" value="src/actuator/lock_actuator.cpp" />
+      <property name="tested_function" value="DetectJam" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="4.0" />
+    </properties>
+    <testcase name="DetectJam_NominalInput" file="tests/actuator/lock_actuator_test.cpp" line="600" status="run" result="completed" time="0.247" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest" />
+    <testcase name="DetectJam_LowerBoundary" file="tests/actuator/lock_actuator_test.cpp" line="604" status="run" result="completed" time="0.232" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest" />
+    <testcase name="DetectJam_UpperBoundary" file="tests/actuator/lock_actuator_test.cpp" line="608" status="run" result="completed" time="0.171" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest" />
+    <testcase name="DetectJam_BelowMinimum" file="tests/actuator/lock_actuator_test.cpp" line="612" status="run" result="completed" time="0.219" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest" />
+    <testcase name="DetectJam_AboveMaximum" file="tests/actuator/lock_actuator_test.cpp" line="616" status="run" result="completed" time="0.195" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest" />
+    <testcase name="DetectJam_MissingSignal" file="tests/actuator/lock_actuator_test.cpp" line="620" status="run" result="completed" time="0.228" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest" />
+    <testcase name="DetectJam_SignalTimeout" file="tests/actuator/lock_actuator_test.cpp" line="624" status="run" result="completed" time="0.041" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest" />
+    <testcase name="DetectJam_StaleSignal" file="tests/actuator/lock_actuator_test.cpp" line="628" status="run" result="completed" time="0.196" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest" />
+    <testcase name="DetectJam_RapidToggle" file="tests/actuator/lock_actuator_test.cpp" line="632" status="run" result="completed" time="0.105" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest" />
+    <testcase name="DetectJam_RepeatedCommand" file="tests/actuator/lock_actuator_test.cpp" line="636" status="run" result="completed" time="0.138" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest" />
+    <testcase name="DetectJam_ConcurrentRequest" file="tests/actuator/lock_actuator_test.cpp" line="640" status="run" result="completed" time="0.099" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest">
+      <failure message="diagnostic event mismatch" type="AssertionFailure"><![CDATA[tests/actuator/lock_actuator_test.cpp:640
+Failure
+Expected diagnostic event: ACTIVE
+  Actual diagnostic event: INACTIVE
+Synthetic Jenkins build: 09]]></failure>
+    </testcase>
+    <testcase name="DetectJam_IgnitionOff" file="tests/actuator/lock_actuator_test.cpp" line="644" status="run" result="completed" time="0.116" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest" />
+    <testcase name="DetectJam_IgnitionOn" file="tests/actuator/lock_actuator_test.cpp" line="648" status="run" result="completed" time="0.139" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest" />
+    <testcase name="DetectJam_VehicleStopped" file="tests/actuator/lock_actuator_test.cpp" line="652" status="run" result="completed" time="0.200" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest" />
+    <testcase name="DetectJam_VehicleMoving" file="tests/actuator/lock_actuator_test.cpp" line="656" status="run" result="completed" time="0.007" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest" />
+    <testcase name="DetectJam_DoorOpen" file="tests/actuator/lock_actuator_test.cpp" line="660" status="run" result="completed" time="0.191" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest" />
+    <testcase name="DetectJam_DoorClosed" file="tests/actuator/lock_actuator_test.cpp" line="664" status="run" result="completed" time="0.125" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest" />
+    <testcase name="DetectJam_ActuatorBusy" file="tests/actuator/lock_actuator_test.cpp" line="668" status="run" result="completed" time="0.129" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest" />
+    <testcase name="DetectJam_RecoveryAfterFault" file="tests/actuator/lock_actuator_test.cpp" line="672" status="run" result="completed" time="0.146" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest" />
+    <testcase name="DetectJam_PowerCycle" file="tests/actuator/lock_actuator_test.cpp" line="676" status="run" result="completed" time="0.211" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.DetectJamTest" />
+  </testsuite>
+  <testsuite name="LockActuator.StopActuatorTest" tests="20" failures="2" disabled="0" skipped="0" errors="0" time="2.319" timestamp="2026-09-01T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="09" />
+      <property name="module" value="LockActuator" />
+      <property name="source_file" value="src/actuator/lock_actuator.cpp" />
+      <property name="tested_function" value="StopActuator" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="4.0" />
+    </properties>
+    <testcase name="StopActuator_NominalInput" file="tests/actuator/lock_actuator_test.cpp" line="730" status="run" result="completed" time="0.102" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest" />
+    <testcase name="StopActuator_LowerBoundary" file="tests/actuator/lock_actuator_test.cpp" line="734" status="run" result="completed" time="0.098" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest" />
+    <testcase name="StopActuator_UpperBoundary" file="tests/actuator/lock_actuator_test.cpp" line="738" status="run" result="completed" time="0.164" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest">
+      <failure message="feedback timeout" type="AssertionFailure"><![CDATA[tests/actuator/lock_actuator_test.cpp:738
+Failure
+Expected feedback before timeout
+  Actual feedback: not received
+Synthetic Jenkins build: 09]]></failure>
+    </testcase>
+    <testcase name="StopActuator_BelowMinimum" file="tests/actuator/lock_actuator_test.cpp" line="742" status="run" result="completed" time="0.229" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest" />
+    <testcase name="StopActuator_AboveMaximum" file="tests/actuator/lock_actuator_test.cpp" line="746" status="run" result="completed" time="0.173" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest" />
+    <testcase name="StopActuator_MissingSignal" file="tests/actuator/lock_actuator_test.cpp" line="750" status="run" result="completed" time="0.112" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest" />
+    <testcase name="StopActuator_SignalTimeout" file="tests/actuator/lock_actuator_test.cpp" line="754" status="run" result="completed" time="0.089" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest" />
+    <testcase name="StopActuator_StaleSignal" file="tests/actuator/lock_actuator_test.cpp" line="758" status="run" result="completed" time="0.072" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest" />
+    <testcase name="StopActuator_RapidToggle" file="tests/actuator/lock_actuator_test.cpp" line="762" status="run" result="completed" time="0.026" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest">
+      <failure message="feedback timeout" type="AssertionFailure"><![CDATA[tests/actuator/lock_actuator_test.cpp:762
+Failure
+Expected feedback before timeout
+  Actual feedback: not received
+Synthetic Jenkins build: 09]]></failure>
+    </testcase>
+    <testcase name="StopActuator_RepeatedCommand" file="tests/actuator/lock_actuator_test.cpp" line="766" status="run" result="completed" time="0.101" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest" />
+    <testcase name="StopActuator_ConcurrentRequest" file="tests/actuator/lock_actuator_test.cpp" line="770" status="run" result="completed" time="0.047" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest" />
+    <testcase name="StopActuator_IgnitionOff" file="tests/actuator/lock_actuator_test.cpp" line="774" status="run" result="completed" time="0.105" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest" />
+    <testcase name="StopActuator_IgnitionOn" file="tests/actuator/lock_actuator_test.cpp" line="778" status="run" result="completed" time="0.116" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest" />
+    <testcase name="StopActuator_VehicleStopped" file="tests/actuator/lock_actuator_test.cpp" line="782" status="run" result="completed" time="0.131" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest" />
+    <testcase name="StopActuator_VehicleMoving" file="tests/actuator/lock_actuator_test.cpp" line="786" status="run" result="completed" time="0.131" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest" />
+    <testcase name="StopActuator_DoorOpen" file="tests/actuator/lock_actuator_test.cpp" line="790" status="run" result="completed" time="0.195" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest" />
+    <testcase name="StopActuator_DoorClosed" file="tests/actuator/lock_actuator_test.cpp" line="794" status="run" result="completed" time="0.108" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest" />
+    <testcase name="StopActuator_ActuatorBusy" file="tests/actuator/lock_actuator_test.cpp" line="798" status="run" result="completed" time="0.177" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest" />
+    <testcase name="StopActuator_RecoveryAfterFault" file="tests/actuator/lock_actuator_test.cpp" line="802" status="run" result="completed" time="0.081" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest" />
+    <testcase name="StopActuator_PowerCycle" file="tests/actuator/lock_actuator_test.cpp" line="806" status="run" result="completed" time="0.062" timestamp="2026-09-01T00:00:00Z" classname="LockActuator.StopActuatorTest" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="120" failures="3" disabled="0" errors="0" time="14.293" timestamp="2026-08-28T00:00:00Z" name="AllTests" random_seed="5045">
+  <testsuite name="ChildLockController.EvaluateLockRequestTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.525" timestamp="2026-08-28T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="05" />
+      <property name="module" value="ChildLockController" />
+      <property name="source_file" value="src/child_lock/child_lock_controller.cpp" />
+      <property name="tested_function" value="EvaluateLockRequest" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="3.0" />
+    </properties>
+    <testcase name="EvaluateLockRequest_NominalInput" file="tests/child_lock/child_lock_controller_test.cpp" line="80" status="run" result="completed" time="0.092" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+    <testcase name="EvaluateLockRequest_LowerBoundary" file="tests/child_lock/child_lock_controller_test.cpp" line="84" status="run" result="completed" time="0.017" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+    <testcase name="EvaluateLockRequest_UpperBoundary" file="tests/child_lock/child_lock_controller_test.cpp" line="88" status="run" result="completed" time="0.240" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+    <testcase name="EvaluateLockRequest_BelowMinimum" file="tests/child_lock/child_lock_controller_test.cpp" line="92" status="run" result="completed" time="0.109" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+    <testcase name="EvaluateLockRequest_AboveMaximum" file="tests/child_lock/child_lock_controller_test.cpp" line="96" status="run" result="completed" time="0.207" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+    <testcase name="EvaluateLockRequest_MissingSignal" file="tests/child_lock/child_lock_controller_test.cpp" line="100" status="run" result="completed" time="0.243" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+    <testcase name="EvaluateLockRequest_SignalTimeout" file="tests/child_lock/child_lock_controller_test.cpp" line="104" status="run" result="completed" time="0.149" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+    <testcase name="EvaluateLockRequest_StaleSignal" file="tests/child_lock/child_lock_controller_test.cpp" line="108" status="run" result="completed" time="0.095" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+    <testcase name="EvaluateLockRequest_RapidToggle" file="tests/child_lock/child_lock_controller_test.cpp" line="112" status="run" result="completed" time="0.125" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+    <testcase name="EvaluateLockRequest_RepeatedCommand" file="tests/child_lock/child_lock_controller_test.cpp" line="116" status="run" result="completed" time="0.018" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+    <testcase name="EvaluateLockRequest_ConcurrentRequest" file="tests/child_lock/child_lock_controller_test.cpp" line="120" status="run" result="completed" time="0.079" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+    <testcase name="EvaluateLockRequest_IgnitionOff" file="tests/child_lock/child_lock_controller_test.cpp" line="124" status="run" result="completed" time="0.066" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+    <testcase name="EvaluateLockRequest_IgnitionOn" file="tests/child_lock/child_lock_controller_test.cpp" line="128" status="run" result="completed" time="0.130" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+    <testcase name="EvaluateLockRequest_VehicleStopped" file="tests/child_lock/child_lock_controller_test.cpp" line="132" status="run" result="completed" time="0.205" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+    <testcase name="EvaluateLockRequest_VehicleMoving" file="tests/child_lock/child_lock_controller_test.cpp" line="136" status="run" result="completed" time="0.199" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+    <testcase name="EvaluateLockRequest_DoorOpen" file="tests/child_lock/child_lock_controller_test.cpp" line="140" status="run" result="completed" time="0.134" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+    <testcase name="EvaluateLockRequest_DoorClosed" file="tests/child_lock/child_lock_controller_test.cpp" line="144" status="run" result="completed" time="0.019" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+    <testcase name="EvaluateLockRequest_ActuatorBusy" file="tests/child_lock/child_lock_controller_test.cpp" line="148" status="run" result="completed" time="0.135" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+    <testcase name="EvaluateLockRequest_RecoveryAfterFault" file="tests/child_lock/child_lock_controller_test.cpp" line="152" status="run" result="completed" time="0.019" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+    <testcase name="EvaluateLockRequest_PowerCycle" file="tests/child_lock/child_lock_controller_test.cpp" line="156" status="run" result="completed" time="0.244" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.EvaluateLockRequestTest" />
+  </testsuite>
+  <testsuite name="ChildLockController.ApplyPolicyTest" tests="20" failures="2" disabled="0" skipped="0" errors="0" time="2.340" timestamp="2026-08-28T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="05" />
+      <property name="module" value="ChildLockController" />
+      <property name="source_file" value="src/child_lock/child_lock_controller.cpp" />
+      <property name="tested_function" value="ApplyChildLockPolicy" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="3.0" />
+    </properties>
+    <testcase name="ApplyChildLockPolicy_NominalInput" file="tests/child_lock/child_lock_controller_test.cpp" line="210" status="run" result="completed" time="0.030" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest" />
+    <testcase name="ApplyChildLockPolicy_LowerBoundary" file="tests/child_lock/child_lock_controller_test.cpp" line="214" status="run" result="completed" time="0.026" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest" />
+    <testcase name="ApplyChildLockPolicy_UpperBoundary" file="tests/child_lock/child_lock_controller_test.cpp" line="218" status="run" result="completed" time="0.092" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest" />
+    <testcase name="ApplyChildLockPolicy_BelowMinimum" file="tests/child_lock/child_lock_controller_test.cpp" line="222" status="run" result="completed" time="0.157" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest" />
+    <testcase name="ApplyChildLockPolicy_AboveMaximum" file="tests/child_lock/child_lock_controller_test.cpp" line="226" status="run" result="completed" time="0.101" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest" />
+    <testcase name="ApplyChildLockPolicy_MissingSignal" file="tests/child_lock/child_lock_controller_test.cpp" line="230" status="run" result="completed" time="0.040" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest" />
+    <testcase name="ApplyChildLockPolicy_SignalTimeout" file="tests/child_lock/child_lock_controller_test.cpp" line="234" status="run" result="completed" time="0.017" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest" />
+    <testcase name="ApplyChildLockPolicy_StaleSignal" file="tests/child_lock/child_lock_controller_test.cpp" line="238" status="run" result="completed" time="0.249" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest" />
+    <testcase name="ApplyChildLockPolicy_RapidToggle" file="tests/child_lock/child_lock_controller_test.cpp" line="242" status="run" result="completed" time="0.043" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest">
+      <failure message="feedback timeout" type="AssertionFailure"><![CDATA[tests/child_lock/child_lock_controller_test.cpp:242
+Failure
+Expected feedback before timeout
+  Actual feedback: not received
+Synthetic Jenkins build: 05]]></failure>
+    </testcase>
+    <testcase name="ApplyChildLockPolicy_RepeatedCommand" file="tests/child_lock/child_lock_controller_test.cpp" line="246" status="run" result="completed" time="0.029" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest">
+      <failure message="persistence mismatch" type="AssertionFailure"><![CDATA[tests/child_lock/child_lock_controller_test.cpp:246
+Failure
+Expected restored preference: LOCKED
+  Actual restored preference: UNKNOWN
+Synthetic Jenkins build: 05]]></failure>
+    </testcase>
+    <testcase name="ApplyChildLockPolicy_ConcurrentRequest" file="tests/child_lock/child_lock_controller_test.cpp" line="250" status="run" result="completed" time="0.146" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest" />
+    <testcase name="ApplyChildLockPolicy_IgnitionOff" file="tests/child_lock/child_lock_controller_test.cpp" line="254" status="run" result="completed" time="0.204" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest" />
+    <testcase name="ApplyChildLockPolicy_IgnitionOn" file="tests/child_lock/child_lock_controller_test.cpp" line="258" status="run" result="completed" time="0.215" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest" />
+    <testcase name="ApplyChildLockPolicy_VehicleStopped" file="tests/child_lock/child_lock_controller_test.cpp" line="262" status="run" result="completed" time="0.230" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest" />
+    <testcase name="ApplyChildLockPolicy_VehicleMoving" file="tests/child_lock/child_lock_controller_test.cpp" line="266" status="run" result="completed" time="0.141" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest" />
+    <testcase name="ApplyChildLockPolicy_DoorOpen" file="tests/child_lock/child_lock_controller_test.cpp" line="270" status="run" result="completed" time="0.045" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest" />
+    <testcase name="ApplyChildLockPolicy_DoorClosed" file="tests/child_lock/child_lock_controller_test.cpp" line="274" status="run" result="completed" time="0.207" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest" />
+    <testcase name="ApplyChildLockPolicy_ActuatorBusy" file="tests/child_lock/child_lock_controller_test.cpp" line="278" status="run" result="completed" time="0.027" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest" />
+    <testcase name="ApplyChildLockPolicy_RecoveryAfterFault" file="tests/child_lock/child_lock_controller_test.cpp" line="282" status="run" result="completed" time="0.180" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest" />
+    <testcase name="ApplyChildLockPolicy_PowerCycle" file="tests/child_lock/child_lock_controller_test.cpp" line="286" status="run" result="completed" time="0.161" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.ApplyPolicyTest" />
+  </testsuite>
+  <testsuite name="ChildLockController.HandleManualSwitchTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.308" timestamp="2026-08-28T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="05" />
+      <property name="module" value="ChildLockController" />
+      <property name="source_file" value="src/child_lock/child_lock_controller.cpp" />
+      <property name="tested_function" value="HandleManualSwitch" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="3.0" />
+    </properties>
+    <testcase name="HandleManualSwitch_NominalInput" file="tests/child_lock/child_lock_controller_test.cpp" line="340" status="run" result="completed" time="0.162" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+    <testcase name="HandleManualSwitch_LowerBoundary" file="tests/child_lock/child_lock_controller_test.cpp" line="344" status="run" result="completed" time="0.218" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+    <testcase name="HandleManualSwitch_UpperBoundary" file="tests/child_lock/child_lock_controller_test.cpp" line="348" status="run" result="completed" time="0.039" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+    <testcase name="HandleManualSwitch_BelowMinimum" file="tests/child_lock/child_lock_controller_test.cpp" line="352" status="run" result="completed" time="0.070" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+    <testcase name="HandleManualSwitch_AboveMaximum" file="tests/child_lock/child_lock_controller_test.cpp" line="356" status="run" result="completed" time="0.175" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+    <testcase name="HandleManualSwitch_MissingSignal" file="tests/child_lock/child_lock_controller_test.cpp" line="360" status="run" result="completed" time="0.194" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+    <testcase name="HandleManualSwitch_SignalTimeout" file="tests/child_lock/child_lock_controller_test.cpp" line="364" status="run" result="completed" time="0.073" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+    <testcase name="HandleManualSwitch_StaleSignal" file="tests/child_lock/child_lock_controller_test.cpp" line="368" status="run" result="completed" time="0.049" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+    <testcase name="HandleManualSwitch_RapidToggle" file="tests/child_lock/child_lock_controller_test.cpp" line="372" status="run" result="completed" time="0.059" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+    <testcase name="HandleManualSwitch_RepeatedCommand" file="tests/child_lock/child_lock_controller_test.cpp" line="376" status="run" result="completed" time="0.155" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+    <testcase name="HandleManualSwitch_ConcurrentRequest" file="tests/child_lock/child_lock_controller_test.cpp" line="380" status="run" result="completed" time="0.139" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+    <testcase name="HandleManualSwitch_IgnitionOff" file="tests/child_lock/child_lock_controller_test.cpp" line="384" status="run" result="completed" time="0.032" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+    <testcase name="HandleManualSwitch_IgnitionOn" file="tests/child_lock/child_lock_controller_test.cpp" line="388" status="run" result="completed" time="0.095" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+    <testcase name="HandleManualSwitch_VehicleStopped" file="tests/child_lock/child_lock_controller_test.cpp" line="392" status="run" result="completed" time="0.203" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+    <testcase name="HandleManualSwitch_VehicleMoving" file="tests/child_lock/child_lock_controller_test.cpp" line="396" status="run" result="completed" time="0.205" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+    <testcase name="HandleManualSwitch_DoorOpen" file="tests/child_lock/child_lock_controller_test.cpp" line="400" status="run" result="completed" time="0.190" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+    <testcase name="HandleManualSwitch_DoorClosed" file="tests/child_lock/child_lock_controller_test.cpp" line="404" status="run" result="completed" time="0.048" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+    <testcase name="HandleManualSwitch_ActuatorBusy" file="tests/child_lock/child_lock_controller_test.cpp" line="408" status="run" result="completed" time="0.028" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+    <testcase name="HandleManualSwitch_RecoveryAfterFault" file="tests/child_lock/child_lock_controller_test.cpp" line="412" status="run" result="completed" time="0.085" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+    <testcase name="HandleManualSwitch_PowerCycle" file="tests/child_lock/child_lock_controller_test.cpp" line="416" status="run" result="completed" time="0.089" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleManualSwitchTest" />
+  </testsuite>
+  <testsuite name="ChildLockController.HandleRemoteCommandTest" tests="20" failures="1" disabled="0" skipped="0" errors="0" time="3.040" timestamp="2026-08-28T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="05" />
+      <property name="module" value="ChildLockController" />
+      <property name="source_file" value="src/child_lock/child_lock_controller.cpp" />
+      <property name="tested_function" value="HandleRemoteCommand" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="3.0" />
+    </properties>
+    <testcase name="HandleRemoteCommand_NominalInput" file="tests/child_lock/child_lock_controller_test.cpp" line="470" status="run" result="completed" time="0.124" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest">
+      <failure message="persistence mismatch" type="AssertionFailure"><![CDATA[tests/child_lock/child_lock_controller_test.cpp:470
+Failure
+Expected restored preference: LOCKED
+  Actual restored preference: UNKNOWN
+Synthetic Jenkins build: 05]]></failure>
+    </testcase>
+    <testcase name="HandleRemoteCommand_LowerBoundary" file="tests/child_lock/child_lock_controller_test.cpp" line="474" status="run" result="completed" time="0.240" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest" />
+    <testcase name="HandleRemoteCommand_UpperBoundary" file="tests/child_lock/child_lock_controller_test.cpp" line="478" status="run" result="completed" time="0.153" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest" />
+    <testcase name="HandleRemoteCommand_BelowMinimum" file="tests/child_lock/child_lock_controller_test.cpp" line="482" status="run" result="completed" time="0.130" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest" />
+    <testcase name="HandleRemoteCommand_AboveMaximum" file="tests/child_lock/child_lock_controller_test.cpp" line="486" status="run" result="completed" time="0.066" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest" />
+    <testcase name="HandleRemoteCommand_MissingSignal" file="tests/child_lock/child_lock_controller_test.cpp" line="490" status="run" result="completed" time="0.095" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest" />
+    <testcase name="HandleRemoteCommand_SignalTimeout" file="tests/child_lock/child_lock_controller_test.cpp" line="494" status="run" result="completed" time="0.115" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest" />
+    <testcase name="HandleRemoteCommand_StaleSignal" file="tests/child_lock/child_lock_controller_test.cpp" line="498" status="run" result="completed" time="0.049" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest" />
+    <testcase name="HandleRemoteCommand_RapidToggle" file="tests/child_lock/child_lock_controller_test.cpp" line="502" status="run" result="completed" time="0.225" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest" />
+    <testcase name="HandleRemoteCommand_RepeatedCommand" file="tests/child_lock/child_lock_controller_test.cpp" line="506" status="run" result="completed" time="0.193" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest" />
+    <testcase name="HandleRemoteCommand_ConcurrentRequest" file="tests/child_lock/child_lock_controller_test.cpp" line="510" status="run" result="completed" time="0.143" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest" />
+    <testcase name="HandleRemoteCommand_IgnitionOff" file="tests/child_lock/child_lock_controller_test.cpp" line="514" status="run" result="completed" time="0.120" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest" />
+    <testcase name="HandleRemoteCommand_IgnitionOn" file="tests/child_lock/child_lock_controller_test.cpp" line="518" status="run" result="completed" time="0.199" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest" />
+    <testcase name="HandleRemoteCommand_VehicleStopped" file="tests/child_lock/child_lock_controller_test.cpp" line="522" status="run" result="completed" time="0.207" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest" />
+    <testcase name="HandleRemoteCommand_VehicleMoving" file="tests/child_lock/child_lock_controller_test.cpp" line="526" status="run" result="completed" time="0.187" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest" />
+    <testcase name="HandleRemoteCommand_DoorOpen" file="tests/child_lock/child_lock_controller_test.cpp" line="530" status="run" result="completed" time="0.063" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest" />
+    <testcase name="HandleRemoteCommand_DoorClosed" file="tests/child_lock/child_lock_controller_test.cpp" line="534" status="run" result="completed" time="0.159" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest" />
+    <testcase name="HandleRemoteCommand_ActuatorBusy" file="tests/child_lock/child_lock_controller_test.cpp" line="538" status="run" result="completed" time="0.205" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest" />
+    <testcase name="HandleRemoteCommand_RecoveryAfterFault" file="tests/child_lock/child_lock_controller_test.cpp" line="542" status="run" result="completed" time="0.148" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest" />
+    <testcase name="HandleRemoteCommand_PowerCycle" file="tests/child_lock/child_lock_controller_test.cpp" line="546" status="run" result="completed" time="0.219" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.HandleRemoteCommandTest" />
+  </testsuite>
+  <testsuite name="ChildLockController.SynchronizeDoorStateTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="1.804" timestamp="2026-08-28T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="05" />
+      <property name="module" value="ChildLockController" />
+      <property name="source_file" value="src/child_lock/child_lock_controller.cpp" />
+      <property name="tested_function" value="SynchronizeDoorState" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="3.0" />
+    </properties>
+    <testcase name="SynchronizeDoorState_NominalInput" file="tests/child_lock/child_lock_controller_test.cpp" line="600" status="run" result="completed" time="0.106" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+    <testcase name="SynchronizeDoorState_LowerBoundary" file="tests/child_lock/child_lock_controller_test.cpp" line="604" status="run" result="completed" time="0.220" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+    <testcase name="SynchronizeDoorState_UpperBoundary" file="tests/child_lock/child_lock_controller_test.cpp" line="608" status="run" result="completed" time="0.213" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+    <testcase name="SynchronizeDoorState_BelowMinimum" file="tests/child_lock/child_lock_controller_test.cpp" line="612" status="run" result="completed" time="0.088" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+    <testcase name="SynchronizeDoorState_AboveMaximum" file="tests/child_lock/child_lock_controller_test.cpp" line="616" status="run" result="completed" time="0.108" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+    <testcase name="SynchronizeDoorState_MissingSignal" file="tests/child_lock/child_lock_controller_test.cpp" line="620" status="run" result="completed" time="0.100" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+    <testcase name="SynchronizeDoorState_SignalTimeout" file="tests/child_lock/child_lock_controller_test.cpp" line="624" status="run" result="completed" time="0.021" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+    <testcase name="SynchronizeDoorState_StaleSignal" file="tests/child_lock/child_lock_controller_test.cpp" line="628" status="run" result="completed" time="0.044" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+    <testcase name="SynchronizeDoorState_RapidToggle" file="tests/child_lock/child_lock_controller_test.cpp" line="632" status="run" result="completed" time="0.050" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+    <testcase name="SynchronizeDoorState_RepeatedCommand" file="tests/child_lock/child_lock_controller_test.cpp" line="636" status="run" result="completed" time="0.016" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+    <testcase name="SynchronizeDoorState_ConcurrentRequest" file="tests/child_lock/child_lock_controller_test.cpp" line="640" status="run" result="completed" time="0.054" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+    <testcase name="SynchronizeDoorState_IgnitionOff" file="tests/child_lock/child_lock_controller_test.cpp" line="644" status="run" result="completed" time="0.039" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+    <testcase name="SynchronizeDoorState_IgnitionOn" file="tests/child_lock/child_lock_controller_test.cpp" line="648" status="run" result="completed" time="0.227" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+    <testcase name="SynchronizeDoorState_VehicleStopped" file="tests/child_lock/child_lock_controller_test.cpp" line="652" status="run" result="completed" time="0.026" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+    <testcase name="SynchronizeDoorState_VehicleMoving" file="tests/child_lock/child_lock_controller_test.cpp" line="656" status="run" result="completed" time="0.002" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+    <testcase name="SynchronizeDoorState_DoorOpen" file="tests/child_lock/child_lock_controller_test.cpp" line="660" status="run" result="completed" time="0.035" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+    <testcase name="SynchronizeDoorState_DoorClosed" file="tests/child_lock/child_lock_controller_test.cpp" line="664" status="run" result="completed" time="0.097" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+    <testcase name="SynchronizeDoorState_ActuatorBusy" file="tests/child_lock/child_lock_controller_test.cpp" line="668" status="run" result="completed" time="0.003" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+    <testcase name="SynchronizeDoorState_RecoveryAfterFault" file="tests/child_lock/child_lock_controller_test.cpp" line="672" status="run" result="completed" time="0.161" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+    <testcase name="SynchronizeDoorState_PowerCycle" file="tests/child_lock/child_lock_controller_test.cpp" line="676" status="run" result="completed" time="0.194" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.SynchronizeDoorStateTest" />
+  </testsuite>
+  <testsuite name="ChildLockController.RecoverFromFaultTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.276" timestamp="2026-08-28T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="05" />
+      <property name="module" value="ChildLockController" />
+      <property name="source_file" value="src/child_lock/child_lock_controller.cpp" />
+      <property name="tested_function" value="RecoverFromFault" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="3.0" />
+    </properties>
+    <testcase name="RecoverFromFault_NominalInput" file="tests/child_lock/child_lock_controller_test.cpp" line="730" status="run" result="completed" time="0.116" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+    <testcase name="RecoverFromFault_LowerBoundary" file="tests/child_lock/child_lock_controller_test.cpp" line="734" status="run" result="completed" time="0.083" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+    <testcase name="RecoverFromFault_UpperBoundary" file="tests/child_lock/child_lock_controller_test.cpp" line="738" status="run" result="completed" time="0.153" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+    <testcase name="RecoverFromFault_BelowMinimum" file="tests/child_lock/child_lock_controller_test.cpp" line="742" status="run" result="completed" time="0.184" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+    <testcase name="RecoverFromFault_AboveMaximum" file="tests/child_lock/child_lock_controller_test.cpp" line="746" status="run" result="completed" time="0.040" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+    <testcase name="RecoverFromFault_MissingSignal" file="tests/child_lock/child_lock_controller_test.cpp" line="750" status="run" result="completed" time="0.059" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+    <testcase name="RecoverFromFault_SignalTimeout" file="tests/child_lock/child_lock_controller_test.cpp" line="754" status="run" result="completed" time="0.027" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+    <testcase name="RecoverFromFault_StaleSignal" file="tests/child_lock/child_lock_controller_test.cpp" line="758" status="run" result="completed" time="0.163" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+    <testcase name="RecoverFromFault_RapidToggle" file="tests/child_lock/child_lock_controller_test.cpp" line="762" status="run" result="completed" time="0.013" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+    <testcase name="RecoverFromFault_RepeatedCommand" file="tests/child_lock/child_lock_controller_test.cpp" line="766" status="run" result="completed" time="0.109" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+    <testcase name="RecoverFromFault_ConcurrentRequest" file="tests/child_lock/child_lock_controller_test.cpp" line="770" status="run" result="completed" time="0.020" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+    <testcase name="RecoverFromFault_IgnitionOff" file="tests/child_lock/child_lock_controller_test.cpp" line="774" status="run" result="completed" time="0.162" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+    <testcase name="RecoverFromFault_IgnitionOn" file="tests/child_lock/child_lock_controller_test.cpp" line="778" status="run" result="completed" time="0.136" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+    <testcase name="RecoverFromFault_VehicleStopped" file="tests/child_lock/child_lock_controller_test.cpp" line="782" status="run" result="completed" time="0.084" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+    <testcase name="RecoverFromFault_VehicleMoving" file="tests/child_lock/child_lock_controller_test.cpp" line="786" status="run" result="completed" time="0.086" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+    <testcase name="RecoverFromFault_DoorOpen" file="tests/child_lock/child_lock_controller_test.cpp" line="790" status="run" result="completed" time="0.071" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+    <testcase name="RecoverFromFault_DoorClosed" file="tests/child_lock/child_lock_controller_test.cpp" line="794" status="run" result="completed" time="0.178" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+    <testcase name="RecoverFromFault_ActuatorBusy" file="tests/child_lock/child_lock_controller_test.cpp" line="798" status="run" result="completed" time="0.158" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+    <testcase name="RecoverFromFault_RecoveryAfterFault" file="tests/child_lock/child_lock_controller_test.cpp" line="802" status="run" result="completed" time="0.215" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+    <testcase name="RecoverFromFault_PowerCycle" file="tests/child_lock/child_lock_controller_test.cpp" line="806" status="run" result="completed" time="0.219" timestamp="2026-08-28T00:00:00Z" classname="ChildLockController.RecoverFromFaultTest" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="120" failures="5" disabled="0" errors="0" time="15.426" timestamp="2026-09-01T00:00:00Z" name="AllTests" random_seed="9098">
+  <testsuite name="DoorStateManager.UpdateDoorStateTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.844" timestamp="2026-09-01T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="09" />
+      <property name="module" value="DoorStateManager" />
+      <property name="source_file" value="src/door/door_state_manager.cpp" />
+      <property name="tested_function" value="UpdateDoorState" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="4.0" />
+    </properties>
+    <testcase name="UpdateDoorState_NominalInput" file="tests/door/door_state_manager_test.cpp" line="80" status="run" result="completed" time="0.060" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+    <testcase name="UpdateDoorState_LowerBoundary" file="tests/door/door_state_manager_test.cpp" line="84" status="run" result="completed" time="0.238" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+    <testcase name="UpdateDoorState_UpperBoundary" file="tests/door/door_state_manager_test.cpp" line="88" status="run" result="completed" time="0.082" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+    <testcase name="UpdateDoorState_BelowMinimum" file="tests/door/door_state_manager_test.cpp" line="92" status="run" result="completed" time="0.127" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+    <testcase name="UpdateDoorState_AboveMaximum" file="tests/door/door_state_manager_test.cpp" line="96" status="run" result="completed" time="0.124" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+    <testcase name="UpdateDoorState_MissingSignal" file="tests/door/door_state_manager_test.cpp" line="100" status="run" result="completed" time="0.091" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+    <testcase name="UpdateDoorState_SignalTimeout" file="tests/door/door_state_manager_test.cpp" line="104" status="run" result="completed" time="0.239" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+    <testcase name="UpdateDoorState_StaleSignal" file="tests/door/door_state_manager_test.cpp" line="108" status="run" result="completed" time="0.205" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+    <testcase name="UpdateDoorState_RapidToggle" file="tests/door/door_state_manager_test.cpp" line="112" status="run" result="completed" time="0.210" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+    <testcase name="UpdateDoorState_RepeatedCommand" file="tests/door/door_state_manager_test.cpp" line="116" status="run" result="completed" time="0.144" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+    <testcase name="UpdateDoorState_ConcurrentRequest" file="tests/door/door_state_manager_test.cpp" line="120" status="run" result="completed" time="0.207" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+    <testcase name="UpdateDoorState_IgnitionOff" file="tests/door/door_state_manager_test.cpp" line="124" status="run" result="completed" time="0.014" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+    <testcase name="UpdateDoorState_IgnitionOn" file="tests/door/door_state_manager_test.cpp" line="128" status="run" result="completed" time="0.084" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+    <testcase name="UpdateDoorState_VehicleStopped" file="tests/door/door_state_manager_test.cpp" line="132" status="run" result="completed" time="0.115" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+    <testcase name="UpdateDoorState_VehicleMoving" file="tests/door/door_state_manager_test.cpp" line="136" status="run" result="completed" time="0.220" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+    <testcase name="UpdateDoorState_DoorOpen" file="tests/door/door_state_manager_test.cpp" line="140" status="run" result="completed" time="0.239" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+    <testcase name="UpdateDoorState_DoorClosed" file="tests/door/door_state_manager_test.cpp" line="144" status="run" result="completed" time="0.207" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+    <testcase name="UpdateDoorState_ActuatorBusy" file="tests/door/door_state_manager_test.cpp" line="148" status="run" result="completed" time="0.094" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+    <testcase name="UpdateDoorState_RecoveryAfterFault" file="tests/door/door_state_manager_test.cpp" line="152" status="run" result="completed" time="0.104" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+    <testcase name="UpdateDoorState_PowerCycle" file="tests/door/door_state_manager_test.cpp" line="156" status="run" result="completed" time="0.040" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.UpdateDoorStateTest" />
+  </testsuite>
+  <testsuite name="DoorStateManager.ValidateDoorSignalTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.953" timestamp="2026-09-01T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="09" />
+      <property name="module" value="DoorStateManager" />
+      <property name="source_file" value="src/door/door_state_manager.cpp" />
+      <property name="tested_function" value="ValidateDoorSignal" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="4.0" />
+    </properties>
+    <testcase name="ValidateDoorSignal_NominalInput" file="tests/door/door_state_manager_test.cpp" line="210" status="run" result="completed" time="0.140" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+    <testcase name="ValidateDoorSignal_LowerBoundary" file="tests/door/door_state_manager_test.cpp" line="214" status="run" result="completed" time="0.191" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+    <testcase name="ValidateDoorSignal_UpperBoundary" file="tests/door/door_state_manager_test.cpp" line="218" status="run" result="completed" time="0.072" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+    <testcase name="ValidateDoorSignal_BelowMinimum" file="tests/door/door_state_manager_test.cpp" line="222" status="run" result="completed" time="0.206" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+    <testcase name="ValidateDoorSignal_AboveMaximum" file="tests/door/door_state_manager_test.cpp" line="226" status="run" result="completed" time="0.207" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+    <testcase name="ValidateDoorSignal_MissingSignal" file="tests/door/door_state_manager_test.cpp" line="230" status="run" result="completed" time="0.079" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+    <testcase name="ValidateDoorSignal_SignalTimeout" file="tests/door/door_state_manager_test.cpp" line="234" status="run" result="completed" time="0.195" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+    <testcase name="ValidateDoorSignal_StaleSignal" file="tests/door/door_state_manager_test.cpp" line="238" status="run" result="completed" time="0.159" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+    <testcase name="ValidateDoorSignal_RapidToggle" file="tests/door/door_state_manager_test.cpp" line="242" status="run" result="completed" time="0.018" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+    <testcase name="ValidateDoorSignal_RepeatedCommand" file="tests/door/door_state_manager_test.cpp" line="246" status="run" result="completed" time="0.217" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+    <testcase name="ValidateDoorSignal_ConcurrentRequest" file="tests/door/door_state_manager_test.cpp" line="250" status="run" result="completed" time="0.179" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+    <testcase name="ValidateDoorSignal_IgnitionOff" file="tests/door/door_state_manager_test.cpp" line="254" status="run" result="completed" time="0.150" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+    <testcase name="ValidateDoorSignal_IgnitionOn" file="tests/door/door_state_manager_test.cpp" line="258" status="run" result="completed" time="0.133" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+    <testcase name="ValidateDoorSignal_VehicleStopped" file="tests/door/door_state_manager_test.cpp" line="262" status="run" result="completed" time="0.199" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+    <testcase name="ValidateDoorSignal_VehicleMoving" file="tests/door/door_state_manager_test.cpp" line="266" status="run" result="completed" time="0.075" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+    <testcase name="ValidateDoorSignal_DoorOpen" file="tests/door/door_state_manager_test.cpp" line="270" status="run" result="completed" time="0.208" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+    <testcase name="ValidateDoorSignal_DoorClosed" file="tests/door/door_state_manager_test.cpp" line="274" status="run" result="completed" time="0.214" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+    <testcase name="ValidateDoorSignal_ActuatorBusy" file="tests/door/door_state_manager_test.cpp" line="278" status="run" result="completed" time="0.237" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+    <testcase name="ValidateDoorSignal_RecoveryAfterFault" file="tests/door/door_state_manager_test.cpp" line="282" status="run" result="completed" time="0.062" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+    <testcase name="ValidateDoorSignal_PowerCycle" file="tests/door/door_state_manager_test.cpp" line="286" status="run" result="completed" time="0.012" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.ValidateDoorSignalTest" />
+  </testsuite>
+  <testsuite name="DoorStateManager.DetectDoorAjarTest" tests="20" failures="1" disabled="0" skipped="0" errors="0" time="2.215" timestamp="2026-09-01T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="09" />
+      <property name="module" value="DoorStateManager" />
+      <property name="source_file" value="src/door/door_state_manager.cpp" />
+      <property name="tested_function" value="DetectDoorAjar" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="4.0" />
+    </properties>
+    <testcase name="DetectDoorAjar_NominalInput" file="tests/door/door_state_manager_test.cpp" line="340" status="run" result="completed" time="0.002" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest" />
+    <testcase name="DetectDoorAjar_LowerBoundary" file="tests/door/door_state_manager_test.cpp" line="344" status="run" result="completed" time="0.021" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest" />
+    <testcase name="DetectDoorAjar_UpperBoundary" file="tests/door/door_state_manager_test.cpp" line="348" status="run" result="completed" time="0.238" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest" />
+    <testcase name="DetectDoorAjar_BelowMinimum" file="tests/door/door_state_manager_test.cpp" line="352" status="run" result="completed" time="0.125" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest" />
+    <testcase name="DetectDoorAjar_AboveMaximum" file="tests/door/door_state_manager_test.cpp" line="356" status="run" result="completed" time="0.078" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest" />
+    <testcase name="DetectDoorAjar_MissingSignal" file="tests/door/door_state_manager_test.cpp" line="360" status="run" result="completed" time="0.045" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest" />
+    <testcase name="DetectDoorAjar_SignalTimeout" file="tests/door/door_state_manager_test.cpp" line="364" status="run" result="completed" time="0.204" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest" />
+    <testcase name="DetectDoorAjar_StaleSignal" file="tests/door/door_state_manager_test.cpp" line="368" status="run" result="completed" time="0.146" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest" />
+    <testcase name="DetectDoorAjar_RapidToggle" file="tests/door/door_state_manager_test.cpp" line="372" status="run" result="completed" time="0.134" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest" />
+    <testcase name="DetectDoorAjar_RepeatedCommand" file="tests/door/door_state_manager_test.cpp" line="376" status="run" result="completed" time="0.076" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest" />
+    <testcase name="DetectDoorAjar_ConcurrentRequest" file="tests/door/door_state_manager_test.cpp" line="380" status="run" result="completed" time="0.059" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest" />
+    <testcase name="DetectDoorAjar_IgnitionOff" file="tests/door/door_state_manager_test.cpp" line="384" status="run" result="completed" time="0.088" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest" />
+    <testcase name="DetectDoorAjar_IgnitionOn" file="tests/door/door_state_manager_test.cpp" line="388" status="run" result="completed" time="0.108" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest" />
+    <testcase name="DetectDoorAjar_VehicleStopped" file="tests/door/door_state_manager_test.cpp" line="392" status="run" result="completed" time="0.042" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest" />
+    <testcase name="DetectDoorAjar_VehicleMoving" file="tests/door/door_state_manager_test.cpp" line="396" status="run" result="completed" time="0.117" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest" />
+    <testcase name="DetectDoorAjar_DoorOpen" file="tests/door/door_state_manager_test.cpp" line="400" status="run" result="completed" time="0.233" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest" />
+    <testcase name="DetectDoorAjar_DoorClosed" file="tests/door/door_state_manager_test.cpp" line="404" status="run" result="completed" time="0.146" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest" />
+    <testcase name="DetectDoorAjar_ActuatorBusy" file="tests/door/door_state_manager_test.cpp" line="408" status="run" result="completed" time="0.123" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest" />
+    <testcase name="DetectDoorAjar_RecoveryAfterFault" file="tests/door/door_state_manager_test.cpp" line="412" status="run" result="completed" time="0.170" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest">
+      <failure message="persistence mismatch" type="AssertionFailure"><![CDATA[tests/door/door_state_manager_test.cpp:412
+Failure
+Expected restored preference: LOCKED
+  Actual restored preference: UNKNOWN
+Synthetic Jenkins build: 09]]></failure>
+    </testcase>
+    <testcase name="DetectDoorAjar_PowerCycle" file="tests/door/door_state_manager_test.cpp" line="416" status="run" result="completed" time="0.060" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DetectDoorAjarTest" />
+  </testsuite>
+  <testsuite name="DoorStateManager.AggregateRearDoorStateTest" tests="20" failures="1" disabled="0" skipped="0" errors="0" time="2.549" timestamp="2026-09-01T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="09" />
+      <property name="module" value="DoorStateManager" />
+      <property name="source_file" value="src/door/door_state_manager.cpp" />
+      <property name="tested_function" value="AggregateRearDoorState" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="4.0" />
+    </properties>
+    <testcase name="AggregateRearDoorState_NominalInput" file="tests/door/door_state_manager_test.cpp" line="470" status="run" result="completed" time="0.208" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest" />
+    <testcase name="AggregateRearDoorState_LowerBoundary" file="tests/door/door_state_manager_test.cpp" line="474" status="run" result="completed" time="0.024" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest" />
+    <testcase name="AggregateRearDoorState_UpperBoundary" file="tests/door/door_state_manager_test.cpp" line="478" status="run" result="completed" time="0.209" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest" />
+    <testcase name="AggregateRearDoorState_BelowMinimum" file="tests/door/door_state_manager_test.cpp" line="482" status="run" result="completed" time="0.004" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest" />
+    <testcase name="AggregateRearDoorState_AboveMaximum" file="tests/door/door_state_manager_test.cpp" line="486" status="run" result="completed" time="0.140" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest" />
+    <testcase name="AggregateRearDoorState_MissingSignal" file="tests/door/door_state_manager_test.cpp" line="490" status="run" result="completed" time="0.153" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest" />
+    <testcase name="AggregateRearDoorState_SignalTimeout" file="tests/door/door_state_manager_test.cpp" line="494" status="run" result="completed" time="0.030" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest" />
+    <testcase name="AggregateRearDoorState_StaleSignal" file="tests/door/door_state_manager_test.cpp" line="498" status="run" result="completed" time="0.204" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest" />
+    <testcase name="AggregateRearDoorState_RapidToggle" file="tests/door/door_state_manager_test.cpp" line="502" status="run" result="completed" time="0.250" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest" />
+    <testcase name="AggregateRearDoorState_RepeatedCommand" file="tests/door/door_state_manager_test.cpp" line="506" status="run" result="completed" time="0.178" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest" />
+    <testcase name="AggregateRearDoorState_ConcurrentRequest" file="tests/door/door_state_manager_test.cpp" line="510" status="run" result="completed" time="0.083" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest" />
+    <testcase name="AggregateRearDoorState_IgnitionOff" file="tests/door/door_state_manager_test.cpp" line="514" status="run" result="completed" time="0.049" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest" />
+    <testcase name="AggregateRearDoorState_IgnitionOn" file="tests/door/door_state_manager_test.cpp" line="518" status="run" result="completed" time="0.244" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest">
+      <failure message="stale signal handling mismatch" type="AssertionFailure"><![CDATA[tests/door/door_state_manager_test.cpp:518
+Failure
+Expected stale signal to be rejected
+  Actual stale signal was consumed
+Synthetic Jenkins build: 09]]></failure>
+    </testcase>
+    <testcase name="AggregateRearDoorState_VehicleStopped" file="tests/door/door_state_manager_test.cpp" line="522" status="run" result="completed" time="0.044" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest" />
+    <testcase name="AggregateRearDoorState_VehicleMoving" file="tests/door/door_state_manager_test.cpp" line="526" status="run" result="completed" time="0.020" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest" />
+    <testcase name="AggregateRearDoorState_DoorOpen" file="tests/door/door_state_manager_test.cpp" line="530" status="run" result="completed" time="0.096" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest" />
+    <testcase name="AggregateRearDoorState_DoorClosed" file="tests/door/door_state_manager_test.cpp" line="534" status="run" result="completed" time="0.223" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest" />
+    <testcase name="AggregateRearDoorState_ActuatorBusy" file="tests/door/door_state_manager_test.cpp" line="538" status="run" result="completed" time="0.024" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest" />
+    <testcase name="AggregateRearDoorState_RecoveryAfterFault" file="tests/door/door_state_manager_test.cpp" line="542" status="run" result="completed" time="0.165" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest" />
+    <testcase name="AggregateRearDoorState_PowerCycle" file="tests/door/door_state_manager_test.cpp" line="546" status="run" result="completed" time="0.201" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.AggregateRearDoorStateTest" />
+  </testsuite>
+  <testsuite name="DoorStateManager.DebounceDoorInputTest" tests="20" failures="2" disabled="0" skipped="0" errors="0" time="2.629" timestamp="2026-09-01T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="09" />
+      <property name="module" value="DoorStateManager" />
+      <property name="source_file" value="src/door/door_state_manager.cpp" />
+      <property name="tested_function" value="DebounceDoorInput" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="4.0" />
+    </properties>
+    <testcase name="DebounceDoorInput_NominalInput" file="tests/door/door_state_manager_test.cpp" line="600" status="run" result="completed" time="0.123" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest" />
+    <testcase name="DebounceDoorInput_LowerBoundary" file="tests/door/door_state_manager_test.cpp" line="604" status="run" result="completed" time="0.177" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest" />
+    <testcase name="DebounceDoorInput_UpperBoundary" file="tests/door/door_state_manager_test.cpp" line="608" status="run" result="completed" time="0.022" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest" />
+    <testcase name="DebounceDoorInput_BelowMinimum" file="tests/door/door_state_manager_test.cpp" line="612" status="run" result="completed" time="0.235" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest" />
+    <testcase name="DebounceDoorInput_AboveMaximum" file="tests/door/door_state_manager_test.cpp" line="616" status="run" result="completed" time="0.137" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest" />
+    <testcase name="DebounceDoorInput_MissingSignal" file="tests/door/door_state_manager_test.cpp" line="620" status="run" result="completed" time="0.108" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest" />
+    <testcase name="DebounceDoorInput_SignalTimeout" file="tests/door/door_state_manager_test.cpp" line="624" status="run" result="completed" time="0.045" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest" />
+    <testcase name="DebounceDoorInput_StaleSignal" file="tests/door/door_state_manager_test.cpp" line="628" status="run" result="completed" time="0.120" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest" />
+    <testcase name="DebounceDoorInput_RapidToggle" file="tests/door/door_state_manager_test.cpp" line="632" status="run" result="completed" time="0.166" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest">
+      <failure message="state mismatch" type="AssertionFailure"><![CDATA[tests/door/door_state_manager_test.cpp:632
+Failure
+Expected child-lock state: LOCKED
+  Actual child-lock state: UNLOCKED
+Synthetic Jenkins build: 09]]></failure>
+    </testcase>
+    <testcase name="DebounceDoorInput_RepeatedCommand" file="tests/door/door_state_manager_test.cpp" line="636" status="run" result="completed" time="0.211" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest" />
+    <testcase name="DebounceDoorInput_ConcurrentRequest" file="tests/door/door_state_manager_test.cpp" line="640" status="run" result="completed" time="0.123" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest" />
+    <testcase name="DebounceDoorInput_IgnitionOff" file="tests/door/door_state_manager_test.cpp" line="644" status="run" result="completed" time="0.241" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest" />
+    <testcase name="DebounceDoorInput_IgnitionOn" file="tests/door/door_state_manager_test.cpp" line="648" status="run" result="completed" time="0.224" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest" />
+    <testcase name="DebounceDoorInput_VehicleStopped" file="tests/door/door_state_manager_test.cpp" line="652" status="run" result="completed" time="0.149" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest" />
+    <testcase name="DebounceDoorInput_VehicleMoving" file="tests/door/door_state_manager_test.cpp" line="656" status="run" result="completed" time="0.032" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest" />
+    <testcase name="DebounceDoorInput_DoorOpen" file="tests/door/door_state_manager_test.cpp" line="660" status="run" result="completed" time="0.227" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest">
+      <failure message="diagnostic event mismatch" type="AssertionFailure"><![CDATA[tests/door/door_state_manager_test.cpp:660
+Failure
+Expected diagnostic event: ACTIVE
+  Actual diagnostic event: INACTIVE
+Synthetic Jenkins build: 09]]></failure>
+    </testcase>
+    <testcase name="DebounceDoorInput_DoorClosed" file="tests/door/door_state_manager_test.cpp" line="664" status="run" result="completed" time="0.090" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest" />
+    <testcase name="DebounceDoorInput_ActuatorBusy" file="tests/door/door_state_manager_test.cpp" line="668" status="run" result="completed" time="0.126" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest" />
+    <testcase name="DebounceDoorInput_RecoveryAfterFault" file="tests/door/door_state_manager_test.cpp" line="672" status="run" result="completed" time="0.060" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest" />
+    <testcase name="DebounceDoorInput_PowerCycle" file="tests/door/door_state_manager_test.cpp" line="676" status="run" result="completed" time="0.013" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.DebounceDoorInputTest" />
+  </testsuite>
+  <testsuite name="DoorStateManager.PublishDoorStateTest" tests="20" failures="1" disabled="0" skipped="0" errors="0" time="2.236" timestamp="2026-09-01T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="09" />
+      <property name="module" value="DoorStateManager" />
+      <property name="source_file" value="src/door/door_state_manager.cpp" />
+      <property name="tested_function" value="PublishDoorState" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="4.0" />
+    </properties>
+    <testcase name="PublishDoorState_NominalInput" file="tests/door/door_state_manager_test.cpp" line="730" status="run" result="completed" time="0.044" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest" />
+    <testcase name="PublishDoorState_LowerBoundary" file="tests/door/door_state_manager_test.cpp" line="734" status="run" result="completed" time="0.048" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest" />
+    <testcase name="PublishDoorState_UpperBoundary" file="tests/door/door_state_manager_test.cpp" line="738" status="run" result="completed" time="0.088" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest" />
+    <testcase name="PublishDoorState_BelowMinimum" file="tests/door/door_state_manager_test.cpp" line="742" status="run" result="completed" time="0.123" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest">
+      <failure message="diagnostic event mismatch" type="AssertionFailure"><![CDATA[tests/door/door_state_manager_test.cpp:742
+Failure
+Expected diagnostic event: ACTIVE
+  Actual diagnostic event: INACTIVE
+Synthetic Jenkins build: 09]]></failure>
+    </testcase>
+    <testcase name="PublishDoorState_AboveMaximum" file="tests/door/door_state_manager_test.cpp" line="746" status="run" result="completed" time="0.065" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest" />
+    <testcase name="PublishDoorState_MissingSignal" file="tests/door/door_state_manager_test.cpp" line="750" status="run" result="completed" time="0.155" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest" />
+    <testcase name="PublishDoorState_SignalTimeout" file="tests/door/door_state_manager_test.cpp" line="754" status="run" result="completed" time="0.059" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest" />
+    <testcase name="PublishDoorState_StaleSignal" file="tests/door/door_state_manager_test.cpp" line="758" status="run" result="completed" time="0.073" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest" />
+    <testcase name="PublishDoorState_RapidToggle" file="tests/door/door_state_manager_test.cpp" line="762" status="run" result="completed" time="0.187" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest" />
+    <testcase name="PublishDoorState_RepeatedCommand" file="tests/door/door_state_manager_test.cpp" line="766" status="run" result="completed" time="0.080" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest" />
+    <testcase name="PublishDoorState_ConcurrentRequest" file="tests/door/door_state_manager_test.cpp" line="770" status="run" result="completed" time="0.033" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest" />
+    <testcase name="PublishDoorState_IgnitionOff" file="tests/door/door_state_manager_test.cpp" line="774" status="run" result="completed" time="0.161" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest" />
+    <testcase name="PublishDoorState_IgnitionOn" file="tests/door/door_state_manager_test.cpp" line="778" status="run" result="completed" time="0.113" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest" />
+    <testcase name="PublishDoorState_VehicleStopped" file="tests/door/door_state_manager_test.cpp" line="782" status="run" result="completed" time="0.149" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest" />
+    <testcase name="PublishDoorState_VehicleMoving" file="tests/door/door_state_manager_test.cpp" line="786" status="run" result="completed" time="0.145" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest" />
+    <testcase name="PublishDoorState_DoorOpen" file="tests/door/door_state_manager_test.cpp" line="790" status="run" result="completed" time="0.094" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest" />
+    <testcase name="PublishDoorState_DoorClosed" file="tests/door/door_state_manager_test.cpp" line="794" status="run" result="completed" time="0.160" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest" />
+    <testcase name="PublishDoorState_ActuatorBusy" file="tests/door/door_state_manager_test.cpp" line="798" status="run" result="completed" time="0.026" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest" />
+    <testcase name="PublishDoorState_RecoveryAfterFault" file="tests/door/door_state_manager_test.cpp" line="802" status="run" result="completed" time="0.192" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest" />
+    <testcase name="PublishDoorState_PowerCycle" file="tests/door/door_state_manager_test.cpp" line="806" status="run" result="completed" time="0.241" timestamp="2026-09-01T00:00:00Z" classname="DoorStateManager.PublishDoorStateTest" />
+  </testsuite>
+</testsuites>

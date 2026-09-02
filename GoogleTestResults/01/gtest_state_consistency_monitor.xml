@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="120" failures="9" disabled="0" errors="0" time="15.756" timestamp="2026-08-24T00:00:00Z" name="AllTests" random_seed="1145">
+  <testsuite name="StateConsistencyMonitor.MonitorCommandFeedbackTest" tests="20" failures="1" disabled="0" skipped="0" errors="0" time="2.802" timestamp="2026-08-24T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="01" />
+      <property name="module" value="StateConsistencyMonitor" />
+      <property name="source_file" value="src/monitor/state_consistency_monitor.cpp" />
+      <property name="tested_function" value="MonitorCommandFeedback" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="8.0" />
+    </properties>
+    <testcase name="MonitorCommandFeedback_NominalInput" file="tests/monitor/state_consistency_monitor_test.cpp" line="80" status="run" result="completed" time="0.225" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest" />
+    <testcase name="MonitorCommandFeedback_LowerBoundary" file="tests/monitor/state_consistency_monitor_test.cpp" line="84" status="run" result="completed" time="0.025" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest" />
+    <testcase name="MonitorCommandFeedback_UpperBoundary" file="tests/monitor/state_consistency_monitor_test.cpp" line="88" status="run" result="completed" time="0.153" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest" />
+    <testcase name="MonitorCommandFeedback_BelowMinimum" file="tests/monitor/state_consistency_monitor_test.cpp" line="92" status="run" result="completed" time="0.030" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest" />
+    <testcase name="MonitorCommandFeedback_AboveMaximum" file="tests/monitor/state_consistency_monitor_test.cpp" line="96" status="run" result="completed" time="0.204" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest" />
+    <testcase name="MonitorCommandFeedback_MissingSignal" file="tests/monitor/state_consistency_monitor_test.cpp" line="100" status="run" result="completed" time="0.005" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest" />
+    <testcase name="MonitorCommandFeedback_SignalTimeout" file="tests/monitor/state_consistency_monitor_test.cpp" line="104" status="run" result="completed" time="0.250" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest" />
+    <testcase name="MonitorCommandFeedback_StaleSignal" file="tests/monitor/state_consistency_monitor_test.cpp" line="108" status="run" result="completed" time="0.077" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest" />
+    <testcase name="MonitorCommandFeedback_RapidToggle" file="tests/monitor/state_consistency_monitor_test.cpp" line="112" status="run" result="completed" time="0.066" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest" />
+    <testcase name="MonitorCommandFeedback_RepeatedCommand" file="tests/monitor/state_consistency_monitor_test.cpp" line="116" status="run" result="completed" time="0.194" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest" />
+    <testcase name="MonitorCommandFeedback_ConcurrentRequest" file="tests/monitor/state_consistency_monitor_test.cpp" line="120" status="run" result="completed" time="0.184" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest" />
+    <testcase name="MonitorCommandFeedback_IgnitionOff" file="tests/monitor/state_consistency_monitor_test.cpp" line="124" status="run" result="completed" time="0.151" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest" />
+    <testcase name="MonitorCommandFeedback_IgnitionOn" file="tests/monitor/state_consistency_monitor_test.cpp" line="128" status="run" result="completed" time="0.210" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest" />
+    <testcase name="MonitorCommandFeedback_VehicleStopped" file="tests/monitor/state_consistency_monitor_test.cpp" line="132" status="run" result="completed" time="0.176" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest">
+      <failure message="retry count mismatch" type="AssertionFailure"><![CDATA[tests/monitor/state_consistency_monitor_test.cpp:132
+Failure
+Expected retry count: 3
+  Actual retry count: 4
+Synthetic Jenkins build: 01]]></failure>
+    </testcase>
+    <testcase name="MonitorCommandFeedback_VehicleMoving" file="tests/monitor/state_consistency_monitor_test.cpp" line="136" status="run" result="completed" time="0.031" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest" />
+    <testcase name="MonitorCommandFeedback_DoorOpen" file="tests/monitor/state_consistency_monitor_test.cpp" line="140" status="run" result="completed" time="0.209" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest" />
+    <testcase name="MonitorCommandFeedback_DoorClosed" file="tests/monitor/state_consistency_monitor_test.cpp" line="144" status="run" result="completed" time="0.142" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest" />
+    <testcase name="MonitorCommandFeedback_ActuatorBusy" file="tests/monitor/state_consistency_monitor_test.cpp" line="148" status="run" result="completed" time="0.098" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest" />
+    <testcase name="MonitorCommandFeedback_RecoveryAfterFault" file="tests/monitor/state_consistency_monitor_test.cpp" line="152" status="run" result="completed" time="0.124" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest" />
+    <testcase name="MonitorCommandFeedback_PowerCycle" file="tests/monitor/state_consistency_monitor_test.cpp" line="156" status="run" result="completed" time="0.248" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.MonitorCommandFeedbackTest" />
+  </testsuite>
+  <testsuite name="StateConsistencyMonitor.DetectInconsistentStateTest" tests="20" failures="4" disabled="0" skipped="0" errors="0" time="2.680" timestamp="2026-08-24T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="01" />
+      <property name="module" value="StateConsistencyMonitor" />
+      <property name="source_file" value="src/monitor/state_consistency_monitor.cpp" />
+      <property name="tested_function" value="DetectInconsistentState" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="8.0" />
+    </properties>
+    <testcase name="DetectInconsistentState_NominalInput" file="tests/monitor/state_consistency_monitor_test.cpp" line="210" status="run" result="completed" time="0.050" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest" />
+    <testcase name="DetectInconsistentState_LowerBoundary" file="tests/monitor/state_consistency_monitor_test.cpp" line="214" status="run" result="completed" time="0.115" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest" />
+    <testcase name="DetectInconsistentState_UpperBoundary" file="tests/monitor/state_consistency_monitor_test.cpp" line="218" status="run" result="completed" time="0.140" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest" />
+    <testcase name="DetectInconsistentState_BelowMinimum" file="tests/monitor/state_consistency_monitor_test.cpp" line="222" status="run" result="completed" time="0.184" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest" />
+    <testcase name="DetectInconsistentState_AboveMaximum" file="tests/monitor/state_consistency_monitor_test.cpp" line="226" status="run" result="completed" time="0.231" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest" />
+    <testcase name="DetectInconsistentState_MissingSignal" file="tests/monitor/state_consistency_monitor_test.cpp" line="230" status="run" result="completed" time="0.244" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest" />
+    <testcase name="DetectInconsistentState_SignalTimeout" file="tests/monitor/state_consistency_monitor_test.cpp" line="234" status="run" result="completed" time="0.121" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest">
+      <failure message="message validation mismatch" type="AssertionFailure"><![CDATA[tests/monitor/state_consistency_monitor_test.cpp:234
+Failure
+Expected invalid message to be discarded
+  Actual invalid message was forwarded
+Synthetic Jenkins build: 01]]></failure>
+    </testcase>
+    <testcase name="DetectInconsistentState_StaleSignal" file="tests/monitor/state_consistency_monitor_test.cpp" line="238" status="run" result="completed" time="0.046" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest" />
+    <testcase name="DetectInconsistentState_RapidToggle" file="tests/monitor/state_consistency_monitor_test.cpp" line="242" status="run" result="completed" time="0.092" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest" />
+    <testcase name="DetectInconsistentState_RepeatedCommand" file="tests/monitor/state_consistency_monitor_test.cpp" line="246" status="run" result="completed" time="0.109" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest" />
+    <testcase name="DetectInconsistentState_ConcurrentRequest" file="tests/monitor/state_consistency_monitor_test.cpp" line="250" status="run" result="completed" time="0.215" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest" />
+    <testcase name="DetectInconsistentState_IgnitionOff" file="tests/monitor/state_consistency_monitor_test.cpp" line="254" status="run" result="completed" time="0.092" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest">
+      <failure message="request acceptance mismatch" type="AssertionFailure"><![CDATA[tests/monitor/state_consistency_monitor_test.cpp:254
+Failure
+Expected request result: REJECTED
+  Actual request result: ACCEPTED
+Synthetic Jenkins build: 01]]></failure>
+    </testcase>
+    <testcase name="DetectInconsistentState_IgnitionOn" file="tests/monitor/state_consistency_monitor_test.cpp" line="258" status="run" result="completed" time="0.038" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest">
+      <failure message="stale signal handling mismatch" type="AssertionFailure"><![CDATA[tests/monitor/state_consistency_monitor_test.cpp:258
+Failure
+Expected stale signal to be rejected
+  Actual stale signal was consumed
+Synthetic Jenkins build: 01]]></failure>
+    </testcase>
+    <testcase name="DetectInconsistentState_VehicleStopped" file="tests/monitor/state_consistency_monitor_test.cpp" line="262" status="run" result="completed" time="0.176" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest" />
+    <testcase name="DetectInconsistentState_VehicleMoving" file="tests/monitor/state_consistency_monitor_test.cpp" line="266" status="run" result="completed" time="0.152" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest" />
+    <testcase name="DetectInconsistentState_DoorOpen" file="tests/monitor/state_consistency_monitor_test.cpp" line="270" status="run" result="completed" time="0.139" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest" />
+    <testcase name="DetectInconsistentState_DoorClosed" file="tests/monitor/state_consistency_monitor_test.cpp" line="274" status="run" result="completed" time="0.017" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest" />
+    <testcase name="DetectInconsistentState_ActuatorBusy" file="tests/monitor/state_consistency_monitor_test.cpp" line="278" status="run" result="completed" time="0.067" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest" />
+    <testcase name="DetectInconsistentState_RecoveryAfterFault" file="tests/monitor/state_consistency_monitor_test.cpp" line="282" status="run" result="completed" time="0.208" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest">
+      <failure message="state mismatch" type="AssertionFailure"><![CDATA[tests/monitor/state_consistency_monitor_test.cpp:282
+Failure
+Expected child-lock state: LOCKED
+  Actual child-lock state: UNLOCKED
+Synthetic Jenkins build: 01]]></failure>
+    </testcase>
+    <testcase name="DetectInconsistentState_PowerCycle" file="tests/monitor/state_consistency_monitor_test.cpp" line="286" status="run" result="completed" time="0.244" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.DetectInconsistentStateTest" />
+  </testsuite>
+  <testsuite name="StateConsistencyMonitor.EnterProtectiveStateTest" tests="20" failures="3" disabled="0" skipped="0" errors="0" time="2.062" timestamp="2026-08-24T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="01" />
+      <property name="module" value="StateConsistencyMonitor" />
+      <property name="source_file" value="src/monitor/state_consistency_monitor.cpp" />
+      <property name="tested_function" value="EnterProtectiveState" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="8.0" />
+    </properties>
+    <testcase name="EnterProtectiveState_NominalInput" file="tests/monitor/state_consistency_monitor_test.cpp" line="340" status="run" result="completed" time="0.139" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest" />
+    <testcase name="EnterProtectiveState_LowerBoundary" file="tests/monitor/state_consistency_monitor_test.cpp" line="344" status="run" result="completed" time="0.165" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest">
+      <failure message="persistence mismatch" type="AssertionFailure"><![CDATA[tests/monitor/state_consistency_monitor_test.cpp:344
+Failure
+Expected restored preference: LOCKED
+  Actual restored preference: UNKNOWN
+Synthetic Jenkins build: 01]]></failure>
+    </testcase>
+    <testcase name="EnterProtectiveState_UpperBoundary" file="tests/monitor/state_consistency_monitor_test.cpp" line="348" status="run" result="completed" time="0.035" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest">
+      <failure message="feedback timeout" type="AssertionFailure"><![CDATA[tests/monitor/state_consistency_monitor_test.cpp:348
+Failure
+Expected feedback before timeout
+  Actual feedback: not received
+Synthetic Jenkins build: 01]]></failure>
+    </testcase>
+    <testcase name="EnterProtectiveState_BelowMinimum" file="tests/monitor/state_consistency_monitor_test.cpp" line="352" status="run" result="completed" time="0.233" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest" />
+    <testcase name="EnterProtectiveState_AboveMaximum" file="tests/monitor/state_consistency_monitor_test.cpp" line="356" status="run" result="completed" time="0.003" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest" />
+    <testcase name="EnterProtectiveState_MissingSignal" file="tests/monitor/state_consistency_monitor_test.cpp" line="360" status="run" result="completed" time="0.039" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest" />
+    <testcase name="EnterProtectiveState_SignalTimeout" file="tests/monitor/state_consistency_monitor_test.cpp" line="364" status="run" result="completed" time="0.172" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest" />
+    <testcase name="EnterProtectiveState_StaleSignal" file="tests/monitor/state_consistency_monitor_test.cpp" line="368" status="run" result="completed" time="0.051" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest" />
+    <testcase name="EnterProtectiveState_RapidToggle" file="tests/monitor/state_consistency_monitor_test.cpp" line="372" status="run" result="completed" time="0.107" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest" />
+    <testcase name="EnterProtectiveState_RepeatedCommand" file="tests/monitor/state_consistency_monitor_test.cpp" line="376" status="run" result="completed" time="0.183" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest" />
+    <testcase name="EnterProtectiveState_ConcurrentRequest" file="tests/monitor/state_consistency_monitor_test.cpp" line="380" status="run" result="completed" time="0.032" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest" />
+    <testcase name="EnterProtectiveState_IgnitionOff" file="tests/monitor/state_consistency_monitor_test.cpp" line="384" status="run" result="completed" time="0.017" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest">
+      <failure message="state mismatch" type="AssertionFailure"><![CDATA[tests/monitor/state_consistency_monitor_test.cpp:384
+Failure
+Expected child-lock state: LOCKED
+  Actual child-lock state: UNLOCKED
+Synthetic Jenkins build: 01]]></failure>
+    </testcase>
+    <testcase name="EnterProtectiveState_IgnitionOn" file="tests/monitor/state_consistency_monitor_test.cpp" line="388" status="run" result="completed" time="0.124" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest" />
+    <testcase name="EnterProtectiveState_VehicleStopped" file="tests/monitor/state_consistency_monitor_test.cpp" line="392" status="run" result="completed" time="0.104" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest" />
+    <testcase name="EnterProtectiveState_VehicleMoving" file="tests/monitor/state_consistency_monitor_test.cpp" line="396" status="run" result="completed" time="0.055" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest" />
+    <testcase name="EnterProtectiveState_DoorOpen" file="tests/monitor/state_consistency_monitor_test.cpp" line="400" status="run" result="completed" time="0.197" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest" />
+    <testcase name="EnterProtectiveState_DoorClosed" file="tests/monitor/state_consistency_monitor_test.cpp" line="404" status="run" result="completed" time="0.171" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest" />
+    <testcase name="EnterProtectiveState_ActuatorBusy" file="tests/monitor/state_consistency_monitor_test.cpp" line="408" status="run" result="completed" time="0.030" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest" />
+    <testcase name="EnterProtectiveState_RecoveryAfterFault" file="tests/monitor/state_consistency_monitor_test.cpp" line="412" status="run" result="completed" time="0.182" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest" />
+    <testcase name="EnterProtectiveState_PowerCycle" file="tests/monitor/state_consistency_monitor_test.cpp" line="416" status="run" result="completed" time="0.023" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.EnterProtectiveStateTest" />
+  </testsuite>
+  <testsuite name="StateConsistencyMonitor.WatchdogExpiryTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.677" timestamp="2026-08-24T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="01" />
+      <property name="module" value="StateConsistencyMonitor" />
+      <property name="source_file" value="src/monitor/state_consistency_monitor.cpp" />
+      <property name="tested_function" value="WatchdogExpiry" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="8.0" />
+    </properties>
+    <testcase name="WatchdogExpiry_NominalInput" file="tests/monitor/state_consistency_monitor_test.cpp" line="470" status="run" result="completed" time="0.182" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+    <testcase name="WatchdogExpiry_LowerBoundary" file="tests/monitor/state_consistency_monitor_test.cpp" line="474" status="run" result="completed" time="0.069" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+    <testcase name="WatchdogExpiry_UpperBoundary" file="tests/monitor/state_consistency_monitor_test.cpp" line="478" status="run" result="completed" time="0.195" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+    <testcase name="WatchdogExpiry_BelowMinimum" file="tests/monitor/state_consistency_monitor_test.cpp" line="482" status="run" result="completed" time="0.214" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+    <testcase name="WatchdogExpiry_AboveMaximum" file="tests/monitor/state_consistency_monitor_test.cpp" line="486" status="run" result="completed" time="0.059" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+    <testcase name="WatchdogExpiry_MissingSignal" file="tests/monitor/state_consistency_monitor_test.cpp" line="490" status="run" result="completed" time="0.090" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+    <testcase name="WatchdogExpiry_SignalTimeout" file="tests/monitor/state_consistency_monitor_test.cpp" line="494" status="run" result="completed" time="0.022" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+    <testcase name="WatchdogExpiry_StaleSignal" file="tests/monitor/state_consistency_monitor_test.cpp" line="498" status="run" result="completed" time="0.238" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+    <testcase name="WatchdogExpiry_RapidToggle" file="tests/monitor/state_consistency_monitor_test.cpp" line="502" status="run" result="completed" time="0.104" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+    <testcase name="WatchdogExpiry_RepeatedCommand" file="tests/monitor/state_consistency_monitor_test.cpp" line="506" status="run" result="completed" time="0.089" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+    <testcase name="WatchdogExpiry_ConcurrentRequest" file="tests/monitor/state_consistency_monitor_test.cpp" line="510" status="run" result="completed" time="0.222" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+    <testcase name="WatchdogExpiry_IgnitionOff" file="tests/monitor/state_consistency_monitor_test.cpp" line="514" status="run" result="completed" time="0.151" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+    <testcase name="WatchdogExpiry_IgnitionOn" file="tests/monitor/state_consistency_monitor_test.cpp" line="518" status="run" result="completed" time="0.244" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+    <testcase name="WatchdogExpiry_VehicleStopped" file="tests/monitor/state_consistency_monitor_test.cpp" line="522" status="run" result="completed" time="0.040" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+    <testcase name="WatchdogExpiry_VehicleMoving" file="tests/monitor/state_consistency_monitor_test.cpp" line="526" status="run" result="completed" time="0.126" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+    <testcase name="WatchdogExpiry_DoorOpen" file="tests/monitor/state_consistency_monitor_test.cpp" line="530" status="run" result="completed" time="0.093" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+    <testcase name="WatchdogExpiry_DoorClosed" file="tests/monitor/state_consistency_monitor_test.cpp" line="534" status="run" result="completed" time="0.152" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+    <testcase name="WatchdogExpiry_ActuatorBusy" file="tests/monitor/state_consistency_monitor_test.cpp" line="538" status="run" result="completed" time="0.118" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+    <testcase name="WatchdogExpiry_RecoveryAfterFault" file="tests/monitor/state_consistency_monitor_test.cpp" line="542" status="run" result="completed" time="0.123" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+    <testcase name="WatchdogExpiry_PowerCycle" file="tests/monitor/state_consistency_monitor_test.cpp" line="546" status="run" result="completed" time="0.146" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.WatchdogExpiryTest" />
+  </testsuite>
+  <testsuite name="StateConsistencyMonitor.SuppressRepeatedCommandTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.920" timestamp="2026-08-24T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="01" />
+      <property name="module" value="StateConsistencyMonitor" />
+      <property name="source_file" value="src/monitor/state_consistency_monitor.cpp" />
+      <property name="tested_function" value="SuppressRepeatedCommand" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="8.0" />
+    </properties>
+    <testcase name="SuppressRepeatedCommand_NominalInput" file="tests/monitor/state_consistency_monitor_test.cpp" line="600" status="run" result="completed" time="0.164" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+    <testcase name="SuppressRepeatedCommand_LowerBoundary" file="tests/monitor/state_consistency_monitor_test.cpp" line="604" status="run" result="completed" time="0.230" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+    <testcase name="SuppressRepeatedCommand_UpperBoundary" file="tests/monitor/state_consistency_monitor_test.cpp" line="608" status="run" result="completed" time="0.210" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+    <testcase name="SuppressRepeatedCommand_BelowMinimum" file="tests/monitor/state_consistency_monitor_test.cpp" line="612" status="run" result="completed" time="0.181" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+    <testcase name="SuppressRepeatedCommand_AboveMaximum" file="tests/monitor/state_consistency_monitor_test.cpp" line="616" status="run" result="completed" time="0.085" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+    <testcase name="SuppressRepeatedCommand_MissingSignal" file="tests/monitor/state_consistency_monitor_test.cpp" line="620" status="run" result="completed" time="0.019" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+    <testcase name="SuppressRepeatedCommand_SignalTimeout" file="tests/monitor/state_consistency_monitor_test.cpp" line="624" status="run" result="completed" time="0.106" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+    <testcase name="SuppressRepeatedCommand_StaleSignal" file="tests/monitor/state_consistency_monitor_test.cpp" line="628" status="run" result="completed" time="0.239" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+    <testcase name="SuppressRepeatedCommand_RapidToggle" file="tests/monitor/state_consistency_monitor_test.cpp" line="632" status="run" result="completed" time="0.147" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+    <testcase name="SuppressRepeatedCommand_RepeatedCommand" file="tests/monitor/state_consistency_monitor_test.cpp" line="636" status="run" result="completed" time="0.148" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+    <testcase name="SuppressRepeatedCommand_ConcurrentRequest" file="tests/monitor/state_consistency_monitor_test.cpp" line="640" status="run" result="completed" time="0.028" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+    <testcase name="SuppressRepeatedCommand_IgnitionOff" file="tests/monitor/state_consistency_monitor_test.cpp" line="644" status="run" result="completed" time="0.246" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+    <testcase name="SuppressRepeatedCommand_IgnitionOn" file="tests/monitor/state_consistency_monitor_test.cpp" line="648" status="run" result="completed" time="0.087" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+    <testcase name="SuppressRepeatedCommand_VehicleStopped" file="tests/monitor/state_consistency_monitor_test.cpp" line="652" status="run" result="completed" time="0.120" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+    <testcase name="SuppressRepeatedCommand_VehicleMoving" file="tests/monitor/state_consistency_monitor_test.cpp" line="656" status="run" result="completed" time="0.167" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+    <testcase name="SuppressRepeatedCommand_DoorOpen" file="tests/monitor/state_consistency_monitor_test.cpp" line="660" status="run" result="completed" time="0.031" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+    <testcase name="SuppressRepeatedCommand_DoorClosed" file="tests/monitor/state_consistency_monitor_test.cpp" line="664" status="run" result="completed" time="0.152" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+    <testcase name="SuppressRepeatedCommand_ActuatorBusy" file="tests/monitor/state_consistency_monitor_test.cpp" line="668" status="run" result="completed" time="0.133" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+    <testcase name="SuppressRepeatedCommand_RecoveryAfterFault" file="tests/monitor/state_consistency_monitor_test.cpp" line="672" status="run" result="completed" time="0.179" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+    <testcase name="SuppressRepeatedCommand_PowerCycle" file="tests/monitor/state_consistency_monitor_test.cpp" line="676" status="run" result="completed" time="0.248" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.SuppressRepeatedCommandTest" />
+  </testsuite>
+  <testsuite name="StateConsistencyMonitor.ReportMonitorFaultTest" tests="20" failures="1" disabled="0" skipped="0" errors="0" time="2.615" timestamp="2026-08-24T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="01" />
+      <property name="module" value="StateConsistencyMonitor" />
+      <property name="source_file" value="src/monitor/state_consistency_monitor.cpp" />
+      <property name="tested_function" value="ReportMonitorFault" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="8.0" />
+    </properties>
+    <testcase name="ReportMonitorFault_NominalInput" file="tests/monitor/state_consistency_monitor_test.cpp" line="730" status="run" result="completed" time="0.199" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest" />
+    <testcase name="ReportMonitorFault_LowerBoundary" file="tests/monitor/state_consistency_monitor_test.cpp" line="734" status="run" result="completed" time="0.248" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest" />
+    <testcase name="ReportMonitorFault_UpperBoundary" file="tests/monitor/state_consistency_monitor_test.cpp" line="738" status="run" result="completed" time="0.127" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest" />
+    <testcase name="ReportMonitorFault_BelowMinimum" file="tests/monitor/state_consistency_monitor_test.cpp" line="742" status="run" result="completed" time="0.004" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest" />
+    <testcase name="ReportMonitorFault_AboveMaximum" file="tests/monitor/state_consistency_monitor_test.cpp" line="746" status="run" result="completed" time="0.178" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest" />
+    <testcase name="ReportMonitorFault_MissingSignal" file="tests/monitor/state_consistency_monitor_test.cpp" line="750" status="run" result="completed" time="0.228" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest" />
+    <testcase name="ReportMonitorFault_SignalTimeout" file="tests/monitor/state_consistency_monitor_test.cpp" line="754" status="run" result="completed" time="0.224" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest" />
+    <testcase name="ReportMonitorFault_StaleSignal" file="tests/monitor/state_consistency_monitor_test.cpp" line="758" status="run" result="completed" time="0.051" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest">
+      <failure message="persistence mismatch" type="AssertionFailure"><![CDATA[tests/monitor/state_consistency_monitor_test.cpp:758
+Failure
+Expected restored preference: LOCKED
+  Actual restored preference: UNKNOWN
+Synthetic Jenkins build: 01]]></failure>
+    </testcase>
+    <testcase name="ReportMonitorFault_RapidToggle" file="tests/monitor/state_consistency_monitor_test.cpp" line="762" status="run" result="completed" time="0.040" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest" />
+    <testcase name="ReportMonitorFault_RepeatedCommand" file="tests/monitor/state_consistency_monitor_test.cpp" line="766" status="run" result="completed" time="0.168" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest" />
+    <testcase name="ReportMonitorFault_ConcurrentRequest" file="tests/monitor/state_consistency_monitor_test.cpp" line="770" status="run" result="completed" time="0.049" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest" />
+    <testcase name="ReportMonitorFault_IgnitionOff" file="tests/monitor/state_consistency_monitor_test.cpp" line="774" status="run" result="completed" time="0.016" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest" />
+    <testcase name="ReportMonitorFault_IgnitionOn" file="tests/monitor/state_consistency_monitor_test.cpp" line="778" status="run" result="completed" time="0.075" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest" />
+    <testcase name="ReportMonitorFault_VehicleStopped" file="tests/monitor/state_consistency_monitor_test.cpp" line="782" status="run" result="completed" time="0.130" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest" />
+    <testcase name="ReportMonitorFault_VehicleMoving" file="tests/monitor/state_consistency_monitor_test.cpp" line="786" status="run" result="completed" time="0.234" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest" />
+    <testcase name="ReportMonitorFault_DoorOpen" file="tests/monitor/state_consistency_monitor_test.cpp" line="790" status="run" result="completed" time="0.074" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest" />
+    <testcase name="ReportMonitorFault_DoorClosed" file="tests/monitor/state_consistency_monitor_test.cpp" line="794" status="run" result="completed" time="0.007" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest" />
+    <testcase name="ReportMonitorFault_ActuatorBusy" file="tests/monitor/state_consistency_monitor_test.cpp" line="798" status="run" result="completed" time="0.212" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest" />
+    <testcase name="ReportMonitorFault_RecoveryAfterFault" file="tests/monitor/state_consistency_monitor_test.cpp" line="802" status="run" result="completed" time="0.238" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest" />
+    <testcase name="ReportMonitorFault_PowerCycle" file="tests/monitor/state_consistency_monitor_test.cpp" line="806" status="run" result="completed" time="0.113" timestamp="2026-08-24T00:00:00Z" classname="StateConsistencyMonitor.ReportMonitorFaultTest" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,210 @@
+{
+  "dataset": "Synthetic GoogleTest XML results for an automotive child-lock example",
+  "synthetic": true,
+  "generatedAt": "2026-09-02T02:36:07.194Z",
+  "format": "GoogleTest XML compatible with Jenkins JUnit result collection",
+  "builds": [
+    {
+      "folder": "01",
+      "jenkinsBuildNumber": 1,
+      "timestampUtc": "2026-08-24T00:00:00Z",
+      "xmlFiles": 10,
+      "tests": 1200,
+      "failures": 96,
+      "failureRatePercent": 8,
+      "disabled": 0,
+      "errors": 0,
+      "totalTimeSeconds": 149.331
+    },
+    {
+      "folder": "02",
+      "jenkinsBuildNumber": 2,
+      "timestampUtc": "2026-08-25T00:00:00Z",
+      "xmlFiles": 10,
+      "tests": 1200,
+      "failures": 48,
+      "failureRatePercent": 4,
+      "disabled": 0,
+      "errors": 0,
+      "totalTimeSeconds": 149.569
+    },
+    {
+      "folder": "03",
+      "jenkinsBuildNumber": 3,
+      "timestampUtc": "2026-08-26T00:00:00Z",
+      "xmlFiles": 10,
+      "tests": 1200,
+      "failures": 108,
+      "failureRatePercent": 9,
+      "disabled": 0,
+      "errors": 0,
+      "totalTimeSeconds": 152.489
+    },
+    {
+      "folder": "04",
+      "jenkinsBuildNumber": 4,
+      "timestampUtc": "2026-08-27T00:00:00Z",
+      "xmlFiles": 10,
+      "tests": 1200,
+      "failures": 72,
+      "failureRatePercent": 6,
+      "disabled": 0,
+      "errors": 0,
+      "totalTimeSeconds": 152.937
+    },
+    {
+      "folder": "05",
+      "jenkinsBuildNumber": 5,
+      "timestampUtc": "2026-08-28T00:00:00Z",
+      "xmlFiles": 10,
+      "tests": 1200,
+      "failures": 36,
+      "failureRatePercent": 3,
+      "disabled": 0,
+      "errors": 0,
+      "totalTimeSeconds": 152.867
+    },
+    {
+      "folder": "06",
+      "jenkinsBuildNumber": 6,
+      "timestampUtc": "2026-08-29T00:00:00Z",
+      "xmlFiles": 10,
+      "tests": 1200,
+      "failures": 84,
+      "failureRatePercent": 7,
+      "disabled": 0,
+      "errors": 0,
+      "totalTimeSeconds": 148.242
+    },
+    {
+      "folder": "07",
+      "jenkinsBuildNumber": 7,
+      "timestampUtc": "2026-08-30T00:00:00Z",
+      "xmlFiles": 10,
+      "tests": 1200,
+      "failures": 60,
+      "failureRatePercent": 5,
+      "disabled": 0,
+      "errors": 0,
+      "totalTimeSeconds": 153.715
+    },
+    {
+      "folder": "08",
+      "jenkinsBuildNumber": 8,
+      "timestampUtc": "2026-08-31T00:00:00Z",
+      "xmlFiles": 10,
+      "tests": 1200,
+      "failures": 120,
+      "failureRatePercent": 10,
+      "disabled": 0,
+      "errors": 0,
+      "totalTimeSeconds": 151.612
+    },
+    {
+      "folder": "09",
+      "jenkinsBuildNumber": 9,
+      "timestampUtc": "2026-09-01T00:00:00Z",
+      "xmlFiles": 10,
+      "tests": 1200,
+      "failures": 48,
+      "failureRatePercent": 4,
+      "disabled": 0,
+      "errors": 0,
+      "totalTimeSeconds": 154.487
+    },
+    {
+      "folder": "10",
+      "jenkinsBuildNumber": 10,
+      "timestampUtc": "2026-09-02T00:00:00Z",
+      "xmlFiles": 10,
+      "tests": 1200,
+      "failures": 24,
+      "failureRatePercent": 2,
+      "disabled": 0,
+      "errors": 0,
+      "totalTimeSeconds": 153.015
+    }
+  ],
+  "modules": [
+    {
+      "name": "ChildLockController",
+      "xmlFile": "gtest_child_lock_controller.xml",
+      "sourceFile": "src/child_lock/child_lock_controller.cpp",
+      "testFile": "tests/child_lock/child_lock_controller_test.cpp",
+      "suites": 6,
+      "tests": 120
+    },
+    {
+      "name": "DoorStateManager",
+      "xmlFile": "gtest_door_state_manager.xml",
+      "sourceFile": "src/door/door_state_manager.cpp",
+      "testFile": "tests/door/door_state_manager_test.cpp",
+      "suites": 6,
+      "tests": 120
+    },
+    {
+      "name": "SpeedInterlock",
+      "xmlFile": "gtest_speed_interlock.xml",
+      "sourceFile": "src/interlock/speed_interlock.cpp",
+      "testFile": "tests/interlock/speed_interlock_test.cpp",
+      "suites": 6,
+      "tests": 120
+    },
+    {
+      "name": "LockActuator",
+      "xmlFile": "gtest_lock_actuator.xml",
+      "sourceFile": "src/actuator/lock_actuator.cpp",
+      "testFile": "tests/actuator/lock_actuator_test.cpp",
+      "suites": 6,
+      "tests": 120
+    },
+    {
+      "name": "SwitchInput",
+      "xmlFile": "gtest_switch_input.xml",
+      "sourceFile": "src/input/switch_input.cpp",
+      "testFile": "tests/input/switch_input_test.cpp",
+      "suites": 6,
+      "tests": 120
+    },
+    {
+      "name": "VehicleSignalAdapter",
+      "xmlFile": "gtest_vehicle_signal_adapter.xml",
+      "sourceFile": "src/signal/vehicle_signal_adapter.cpp",
+      "testFile": "tests/signal/vehicle_signal_adapter_test.cpp",
+      "suites": 6,
+      "tests": 120
+    },
+    {
+      "name": "DiagnosticManager",
+      "xmlFile": "gtest_diagnostic_manager.xml",
+      "sourceFile": "src/diagnostic/diagnostic_manager.cpp",
+      "testFile": "tests/diagnostic/diagnostic_manager_test.cpp",
+      "suites": 6,
+      "tests": 120
+    },
+    {
+      "name": "PersistenceManager",
+      "xmlFile": "gtest_persistence_manager.xml",
+      "sourceFile": "src/persistence/persistence_manager.cpp",
+      "testFile": "tests/persistence/persistence_manager_test.cpp",
+      "suites": 6,
+      "tests": 120
+    },
+    {
+      "name": "StateConsistencyMonitor",
+      "xmlFile": "gtest_state_consistency_monitor.xml",
+      "sourceFile": "src/monitor/state_consistency_monitor.cpp",
+      "testFile": "tests/monitor/state_consistency_monitor_test.cpp",
+      "suites": 6,
+      "tests": 120
+    },
+    {
+      "name": "CommunicationGateway",
+      "xmlFile": "gtest_communication_gateway.xml",
+      "sourceFile": "src/communication/communication_gateway.cpp",
+      "testFile": "tests/communication/communication_gateway_test.cpp",
+      "suites": 6,
+      "tests": 120
+    }
+  ]
+}

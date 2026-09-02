@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="120" failures="3" disabled="0" errors="0" time="15.234" timestamp="2026-08-28T00:00:00Z" name="AllTests" random_seed="5079">
+  <testsuite name="SpeedInterlock.EvaluateVehicleSpeedTest" tests="20" failures="1" disabled="0" skipped="0" errors="0" time="2.290" timestamp="2026-08-28T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="05" />
+      <property name="module" value="SpeedInterlock" />
+      <property name="source_file" value="src/interlock/speed_interlock.cpp" />
+      <property name="tested_function" value="EvaluateVehicleSpeed" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="3.0" />
+    </properties>
+    <testcase name="EvaluateVehicleSpeed_NominalInput" file="tests/interlock/speed_interlock_test.cpp" line="80" status="run" result="completed" time="0.186" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest" />
+    <testcase name="EvaluateVehicleSpeed_LowerBoundary" file="tests/interlock/speed_interlock_test.cpp" line="84" status="run" result="completed" time="0.152" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest" />
+    <testcase name="EvaluateVehicleSpeed_UpperBoundary" file="tests/interlock/speed_interlock_test.cpp" line="88" status="run" result="completed" time="0.071" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest" />
+    <testcase name="EvaluateVehicleSpeed_BelowMinimum" file="tests/interlock/speed_interlock_test.cpp" line="92" status="run" result="completed" time="0.038" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest" />
+    <testcase name="EvaluateVehicleSpeed_AboveMaximum" file="tests/interlock/speed_interlock_test.cpp" line="96" status="run" result="completed" time="0.029" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest" />
+    <testcase name="EvaluateVehicleSpeed_MissingSignal" file="tests/interlock/speed_interlock_test.cpp" line="100" status="run" result="completed" time="0.234" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest" />
+    <testcase name="EvaluateVehicleSpeed_SignalTimeout" file="tests/interlock/speed_interlock_test.cpp" line="104" status="run" result="completed" time="0.007" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest" />
+    <testcase name="EvaluateVehicleSpeed_StaleSignal" file="tests/interlock/speed_interlock_test.cpp" line="108" status="run" result="completed" time="0.185" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest" />
+    <testcase name="EvaluateVehicleSpeed_RapidToggle" file="tests/interlock/speed_interlock_test.cpp" line="112" status="run" result="completed" time="0.153" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest" />
+    <testcase name="EvaluateVehicleSpeed_RepeatedCommand" file="tests/interlock/speed_interlock_test.cpp" line="116" status="run" result="completed" time="0.107" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest" />
+    <testcase name="EvaluateVehicleSpeed_ConcurrentRequest" file="tests/interlock/speed_interlock_test.cpp" line="120" status="run" result="completed" time="0.083" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest" />
+    <testcase name="EvaluateVehicleSpeed_IgnitionOff" file="tests/interlock/speed_interlock_test.cpp" line="124" status="run" result="completed" time="0.149" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest" />
+    <testcase name="EvaluateVehicleSpeed_IgnitionOn" file="tests/interlock/speed_interlock_test.cpp" line="128" status="run" result="completed" time="0.129" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest" />
+    <testcase name="EvaluateVehicleSpeed_VehicleStopped" file="tests/interlock/speed_interlock_test.cpp" line="132" status="run" result="completed" time="0.100" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest" />
+    <testcase name="EvaluateVehicleSpeed_VehicleMoving" file="tests/interlock/speed_interlock_test.cpp" line="136" status="run" result="completed" time="0.164" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest" />
+    <testcase name="EvaluateVehicleSpeed_DoorOpen" file="tests/interlock/speed_interlock_test.cpp" line="140" status="run" result="completed" time="0.187" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest" />
+    <testcase name="EvaluateVehicleSpeed_DoorClosed" file="tests/interlock/speed_interlock_test.cpp" line="144" status="run" result="completed" time="0.025" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest" />
+    <testcase name="EvaluateVehicleSpeed_ActuatorBusy" file="tests/interlock/speed_interlock_test.cpp" line="148" status="run" result="completed" time="0.158" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest" />
+    <testcase name="EvaluateVehicleSpeed_RecoveryAfterFault" file="tests/interlock/speed_interlock_test.cpp" line="152" status="run" result="completed" time="0.066" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest">
+      <failure message="message validation mismatch" type="AssertionFailure"><![CDATA[tests/interlock/speed_interlock_test.cpp:152
+Failure
+Expected invalid message to be discarded
+  Actual invalid message was forwarded
+Synthetic Jenkins build: 05]]></failure>
+    </testcase>
+    <testcase name="EvaluateVehicleSpeed_PowerCycle" file="tests/interlock/speed_interlock_test.cpp" line="156" status="run" result="completed" time="0.067" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EvaluateVehicleSpeedTest" />
+  </testsuite>
+  <testsuite name="SpeedInterlock.EnterInterlockTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.754" timestamp="2026-08-28T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="05" />
+      <property name="module" value="SpeedInterlock" />
+      <property name="source_file" value="src/interlock/speed_interlock.cpp" />
+      <property name="tested_function" value="EnterInterlock" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="3.0" />
+    </properties>
+    <testcase name="EnterInterlock_NominalInput" file="tests/interlock/speed_interlock_test.cpp" line="210" status="run" result="completed" time="0.014" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+    <testcase name="EnterInterlock_LowerBoundary" file="tests/interlock/speed_interlock_test.cpp" line="214" status="run" result="completed" time="0.058" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+    <testcase name="EnterInterlock_UpperBoundary" file="tests/interlock/speed_interlock_test.cpp" line="218" status="run" result="completed" time="0.125" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+    <testcase name="EnterInterlock_BelowMinimum" file="tests/interlock/speed_interlock_test.cpp" line="222" status="run" result="completed" time="0.196" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+    <testcase name="EnterInterlock_AboveMaximum" file="tests/interlock/speed_interlock_test.cpp" line="226" status="run" result="completed" time="0.092" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+    <testcase name="EnterInterlock_MissingSignal" file="tests/interlock/speed_interlock_test.cpp" line="230" status="run" result="completed" time="0.126" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+    <testcase name="EnterInterlock_SignalTimeout" file="tests/interlock/speed_interlock_test.cpp" line="234" status="run" result="completed" time="0.067" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+    <testcase name="EnterInterlock_StaleSignal" file="tests/interlock/speed_interlock_test.cpp" line="238" status="run" result="completed" time="0.100" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+    <testcase name="EnterInterlock_RapidToggle" file="tests/interlock/speed_interlock_test.cpp" line="242" status="run" result="completed" time="0.176" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+    <testcase name="EnterInterlock_RepeatedCommand" file="tests/interlock/speed_interlock_test.cpp" line="246" status="run" result="completed" time="0.184" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+    <testcase name="EnterInterlock_ConcurrentRequest" file="tests/interlock/speed_interlock_test.cpp" line="250" status="run" result="completed" time="0.187" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+    <testcase name="EnterInterlock_IgnitionOff" file="tests/interlock/speed_interlock_test.cpp" line="254" status="run" result="completed" time="0.232" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+    <testcase name="EnterInterlock_IgnitionOn" file="tests/interlock/speed_interlock_test.cpp" line="258" status="run" result="completed" time="0.180" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+    <testcase name="EnterInterlock_VehicleStopped" file="tests/interlock/speed_interlock_test.cpp" line="262" status="run" result="completed" time="0.135" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+    <testcase name="EnterInterlock_VehicleMoving" file="tests/interlock/speed_interlock_test.cpp" line="266" status="run" result="completed" time="0.122" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+    <testcase name="EnterInterlock_DoorOpen" file="tests/interlock/speed_interlock_test.cpp" line="270" status="run" result="completed" time="0.015" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+    <testcase name="EnterInterlock_DoorClosed" file="tests/interlock/speed_interlock_test.cpp" line="274" status="run" result="completed" time="0.174" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+    <testcase name="EnterInterlock_ActuatorBusy" file="tests/interlock/speed_interlock_test.cpp" line="278" status="run" result="completed" time="0.127" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+    <testcase name="EnterInterlock_RecoveryAfterFault" file="tests/interlock/speed_interlock_test.cpp" line="282" status="run" result="completed" time="0.204" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+    <testcase name="EnterInterlock_PowerCycle" file="tests/interlock/speed_interlock_test.cpp" line="286" status="run" result="completed" time="0.240" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.EnterInterlockTest" />
+  </testsuite>
+  <testsuite name="SpeedInterlock.ExitInterlockTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.547" timestamp="2026-08-28T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="05" />
+      <property name="module" value="SpeedInterlock" />
+      <property name="source_file" value="src/interlock/speed_interlock.cpp" />
+      <property name="tested_function" value="ExitInterlock" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="3.0" />
+    </properties>
+    <testcase name="ExitInterlock_NominalInput" file="tests/interlock/speed_interlock_test.cpp" line="340" status="run" result="completed" time="0.233" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+    <testcase name="ExitInterlock_LowerBoundary" file="tests/interlock/speed_interlock_test.cpp" line="344" status="run" result="completed" time="0.015" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+    <testcase name="ExitInterlock_UpperBoundary" file="tests/interlock/speed_interlock_test.cpp" line="348" status="run" result="completed" time="0.107" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+    <testcase name="ExitInterlock_BelowMinimum" file="tests/interlock/speed_interlock_test.cpp" line="352" status="run" result="completed" time="0.163" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+    <testcase name="ExitInterlock_AboveMaximum" file="tests/interlock/speed_interlock_test.cpp" line="356" status="run" result="completed" time="0.107" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+    <testcase name="ExitInterlock_MissingSignal" file="tests/interlock/speed_interlock_test.cpp" line="360" status="run" result="completed" time="0.243" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+    <testcase name="ExitInterlock_SignalTimeout" file="tests/interlock/speed_interlock_test.cpp" line="364" status="run" result="completed" time="0.120" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+    <testcase name="ExitInterlock_StaleSignal" file="tests/interlock/speed_interlock_test.cpp" line="368" status="run" result="completed" time="0.139" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+    <testcase name="ExitInterlock_RapidToggle" file="tests/interlock/speed_interlock_test.cpp" line="372" status="run" result="completed" time="0.075" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+    <testcase name="ExitInterlock_RepeatedCommand" file="tests/interlock/speed_interlock_test.cpp" line="376" status="run" result="completed" time="0.166" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+    <testcase name="ExitInterlock_ConcurrentRequest" file="tests/interlock/speed_interlock_test.cpp" line="380" status="run" result="completed" time="0.171" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+    <testcase name="ExitInterlock_IgnitionOff" file="tests/interlock/speed_interlock_test.cpp" line="384" status="run" result="completed" time="0.195" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+    <testcase name="ExitInterlock_IgnitionOn" file="tests/interlock/speed_interlock_test.cpp" line="388" status="run" result="completed" time="0.067" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+    <testcase name="ExitInterlock_VehicleStopped" file="tests/interlock/speed_interlock_test.cpp" line="392" status="run" result="completed" time="0.048" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+    <testcase name="ExitInterlock_VehicleMoving" file="tests/interlock/speed_interlock_test.cpp" line="396" status="run" result="completed" time="0.192" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+    <testcase name="ExitInterlock_DoorOpen" file="tests/interlock/speed_interlock_test.cpp" line="400" status="run" result="completed" time="0.161" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+    <testcase name="ExitInterlock_DoorClosed" file="tests/interlock/speed_interlock_test.cpp" line="404" status="run" result="completed" time="0.091" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+    <testcase name="ExitInterlock_ActuatorBusy" file="tests/interlock/speed_interlock_test.cpp" line="408" status="run" result="completed" time="0.035" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+    <testcase name="ExitInterlock_RecoveryAfterFault" file="tests/interlock/speed_interlock_test.cpp" line="412" status="run" result="completed" time="0.102" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+    <testcase name="ExitInterlock_PowerCycle" file="tests/interlock/speed_interlock_test.cpp" line="416" status="run" result="completed" time="0.117" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ExitInterlockTest" />
+  </testsuite>
+  <testsuite name="SpeedInterlock.HandleSpeedTimeoutTest" tests="20" failures="1" disabled="0" skipped="0" errors="0" time="3.052" timestamp="2026-08-28T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="05" />
+      <property name="module" value="SpeedInterlock" />
+      <property name="source_file" value="src/interlock/speed_interlock.cpp" />
+      <property name="tested_function" value="HandleSpeedTimeout" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="3.0" />
+    </properties>
+    <testcase name="HandleSpeedTimeout_NominalInput" file="tests/interlock/speed_interlock_test.cpp" line="470" status="run" result="completed" time="0.144" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest" />
+    <testcase name="HandleSpeedTimeout_LowerBoundary" file="tests/interlock/speed_interlock_test.cpp" line="474" status="run" result="completed" time="0.059" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest" />
+    <testcase name="HandleSpeedTimeout_UpperBoundary" file="tests/interlock/speed_interlock_test.cpp" line="478" status="run" result="completed" time="0.186" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest" />
+    <testcase name="HandleSpeedTimeout_BelowMinimum" file="tests/interlock/speed_interlock_test.cpp" line="482" status="run" result="completed" time="0.210" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest" />
+    <testcase name="HandleSpeedTimeout_AboveMaximum" file="tests/interlock/speed_interlock_test.cpp" line="486" status="run" result="completed" time="0.158" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest" />
+    <testcase name="HandleSpeedTimeout_MissingSignal" file="tests/interlock/speed_interlock_test.cpp" line="490" status="run" result="completed" time="0.219" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest" />
+    <testcase name="HandleSpeedTimeout_SignalTimeout" file="tests/interlock/speed_interlock_test.cpp" line="494" status="run" result="completed" time="0.118" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest" />
+    <testcase name="HandleSpeedTimeout_StaleSignal" file="tests/interlock/speed_interlock_test.cpp" line="498" status="run" result="completed" time="0.135" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest" />
+    <testcase name="HandleSpeedTimeout_RapidToggle" file="tests/interlock/speed_interlock_test.cpp" line="502" status="run" result="completed" time="0.147" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest" />
+    <testcase name="HandleSpeedTimeout_RepeatedCommand" file="tests/interlock/speed_interlock_test.cpp" line="506" status="run" result="completed" time="0.072" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest" />
+    <testcase name="HandleSpeedTimeout_ConcurrentRequest" file="tests/interlock/speed_interlock_test.cpp" line="510" status="run" result="completed" time="0.050" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest" />
+    <testcase name="HandleSpeedTimeout_IgnitionOff" file="tests/interlock/speed_interlock_test.cpp" line="514" status="run" result="completed" time="0.051" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest">
+      <failure message="persistence mismatch" type="AssertionFailure"><![CDATA[tests/interlock/speed_interlock_test.cpp:514
+Failure
+Expected restored preference: LOCKED
+  Actual restored preference: UNKNOWN
+Synthetic Jenkins build: 05]]></failure>
+    </testcase>
+    <testcase name="HandleSpeedTimeout_IgnitionOn" file="tests/interlock/speed_interlock_test.cpp" line="518" status="run" result="completed" time="0.245" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest" />
+    <testcase name="HandleSpeedTimeout_VehicleStopped" file="tests/interlock/speed_interlock_test.cpp" line="522" status="run" result="completed" time="0.106" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest" />
+    <testcase name="HandleSpeedTimeout_VehicleMoving" file="tests/interlock/speed_interlock_test.cpp" line="526" status="run" result="completed" time="0.197" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest" />
+    <testcase name="HandleSpeedTimeout_DoorOpen" file="tests/interlock/speed_interlock_test.cpp" line="530" status="run" result="completed" time="0.230" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest" />
+    <testcase name="HandleSpeedTimeout_DoorClosed" file="tests/interlock/speed_interlock_test.cpp" line="534" status="run" result="completed" time="0.122" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest" />
+    <testcase name="HandleSpeedTimeout_ActuatorBusy" file="tests/interlock/speed_interlock_test.cpp" line="538" status="run" result="completed" time="0.243" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest" />
+    <testcase name="HandleSpeedTimeout_RecoveryAfterFault" file="tests/interlock/speed_interlock_test.cpp" line="542" status="run" result="completed" time="0.227" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest" />
+    <testcase name="HandleSpeedTimeout_PowerCycle" file="tests/interlock/speed_interlock_test.cpp" line="546" status="run" result="completed" time="0.133" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.HandleSpeedTimeoutTest" />
+  </testsuite>
+  <testsuite name="SpeedInterlock.ApplyHysteresisTest" tests="20" failures="1" disabled="0" skipped="0" errors="0" time="2.071" timestamp="2026-08-28T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="05" />
+      <property name="module" value="SpeedInterlock" />
+      <property name="source_file" value="src/interlock/speed_interlock.cpp" />
+      <property name="tested_function" value="ApplyHysteresis" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="3.0" />
+    </properties>
+    <testcase name="ApplyHysteresis_NominalInput" file="tests/interlock/speed_interlock_test.cpp" line="600" status="run" result="completed" time="0.015" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest" />
+    <testcase name="ApplyHysteresis_LowerBoundary" file="tests/interlock/speed_interlock_test.cpp" line="604" status="run" result="completed" time="0.047" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest" />
+    <testcase name="ApplyHysteresis_UpperBoundary" file="tests/interlock/speed_interlock_test.cpp" line="608" status="run" result="completed" time="0.090" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest">
+      <failure message="message validation mismatch" type="AssertionFailure"><![CDATA[tests/interlock/speed_interlock_test.cpp:608
+Failure
+Expected invalid message to be discarded
+  Actual invalid message was forwarded
+Synthetic Jenkins build: 05]]></failure>
+    </testcase>
+    <testcase name="ApplyHysteresis_BelowMinimum" file="tests/interlock/speed_interlock_test.cpp" line="612" status="run" result="completed" time="0.034" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest" />
+    <testcase name="ApplyHysteresis_AboveMaximum" file="tests/interlock/speed_interlock_test.cpp" line="616" status="run" result="completed" time="0.138" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest" />
+    <testcase name="ApplyHysteresis_MissingSignal" file="tests/interlock/speed_interlock_test.cpp" line="620" status="run" result="completed" time="0.248" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest" />
+    <testcase name="ApplyHysteresis_SignalTimeout" file="tests/interlock/speed_interlock_test.cpp" line="624" status="run" result="completed" time="0.103" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest" />
+    <testcase name="ApplyHysteresis_StaleSignal" file="tests/interlock/speed_interlock_test.cpp" line="628" status="run" result="completed" time="0.104" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest" />
+    <testcase name="ApplyHysteresis_RapidToggle" file="tests/interlock/speed_interlock_test.cpp" line="632" status="run" result="completed" time="0.062" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest" />
+    <testcase name="ApplyHysteresis_RepeatedCommand" file="tests/interlock/speed_interlock_test.cpp" line="636" status="run" result="completed" time="0.195" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest" />
+    <testcase name="ApplyHysteresis_ConcurrentRequest" file="tests/interlock/speed_interlock_test.cpp" line="640" status="run" result="completed" time="0.135" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest" />
+    <testcase name="ApplyHysteresis_IgnitionOff" file="tests/interlock/speed_interlock_test.cpp" line="644" status="run" result="completed" time="0.171" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest" />
+    <testcase name="ApplyHysteresis_IgnitionOn" file="tests/interlock/speed_interlock_test.cpp" line="648" status="run" result="completed" time="0.077" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest" />
+    <testcase name="ApplyHysteresis_VehicleStopped" file="tests/interlock/speed_interlock_test.cpp" line="652" status="run" result="completed" time="0.023" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest" />
+    <testcase name="ApplyHysteresis_VehicleMoving" file="tests/interlock/speed_interlock_test.cpp" line="656" status="run" result="completed" time="0.020" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest" />
+    <testcase name="ApplyHysteresis_DoorOpen" file="tests/interlock/speed_interlock_test.cpp" line="660" status="run" result="completed" time="0.194" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest" />
+    <testcase name="ApplyHysteresis_DoorClosed" file="tests/interlock/speed_interlock_test.cpp" line="664" status="run" result="completed" time="0.008" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest" />
+    <testcase name="ApplyHysteresis_ActuatorBusy" file="tests/interlock/speed_interlock_test.cpp" line="668" status="run" result="completed" time="0.126" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest" />
+    <testcase name="ApplyHysteresis_RecoveryAfterFault" file="tests/interlock/speed_interlock_test.cpp" line="672" status="run" result="completed" time="0.118" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest" />
+    <testcase name="ApplyHysteresis_PowerCycle" file="tests/interlock/speed_interlock_test.cpp" line="676" status="run" result="completed" time="0.163" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.ApplyHysteresisTest" />
+  </testsuite>
+  <testsuite name="SpeedInterlock.RejectUnsafeUnlockTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.520" timestamp="2026-08-28T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="05" />
+      <property name="module" value="SpeedInterlock" />
+      <property name="source_file" value="src/interlock/speed_interlock.cpp" />
+      <property name="tested_function" value="RejectUnsafeUnlock" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="3.0" />
+    </properties>
+    <testcase name="RejectUnsafeUnlock_NominalInput" file="tests/interlock/speed_interlock_test.cpp" line="730" status="run" result="completed" time="0.225" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+    <testcase name="RejectUnsafeUnlock_LowerBoundary" file="tests/interlock/speed_interlock_test.cpp" line="734" status="run" result="completed" time="0.122" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+    <testcase name="RejectUnsafeUnlock_UpperBoundary" file="tests/interlock/speed_interlock_test.cpp" line="738" status="run" result="completed" time="0.058" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+    <testcase name="RejectUnsafeUnlock_BelowMinimum" file="tests/interlock/speed_interlock_test.cpp" line="742" status="run" result="completed" time="0.128" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+    <testcase name="RejectUnsafeUnlock_AboveMaximum" file="tests/interlock/speed_interlock_test.cpp" line="746" status="run" result="completed" time="0.026" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+    <testcase name="RejectUnsafeUnlock_MissingSignal" file="tests/interlock/speed_interlock_test.cpp" line="750" status="run" result="completed" time="0.151" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+    <testcase name="RejectUnsafeUnlock_SignalTimeout" file="tests/interlock/speed_interlock_test.cpp" line="754" status="run" result="completed" time="0.200" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+    <testcase name="RejectUnsafeUnlock_StaleSignal" file="tests/interlock/speed_interlock_test.cpp" line="758" status="run" result="completed" time="0.196" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+    <testcase name="RejectUnsafeUnlock_RapidToggle" file="tests/interlock/speed_interlock_test.cpp" line="762" status="run" result="completed" time="0.139" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+    <testcase name="RejectUnsafeUnlock_RepeatedCommand" file="tests/interlock/speed_interlock_test.cpp" line="766" status="run" result="completed" time="0.159" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+    <testcase name="RejectUnsafeUnlock_ConcurrentRequest" file="tests/interlock/speed_interlock_test.cpp" line="770" status="run" result="completed" time="0.108" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+    <testcase name="RejectUnsafeUnlock_IgnitionOff" file="tests/interlock/speed_interlock_test.cpp" line="774" status="run" result="completed" time="0.054" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+    <testcase name="RejectUnsafeUnlock_IgnitionOn" file="tests/interlock/speed_interlock_test.cpp" line="778" status="run" result="completed" time="0.077" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+    <testcase name="RejectUnsafeUnlock_VehicleStopped" file="tests/interlock/speed_interlock_test.cpp" line="782" status="run" result="completed" time="0.113" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+    <testcase name="RejectUnsafeUnlock_VehicleMoving" file="tests/interlock/speed_interlock_test.cpp" line="786" status="run" result="completed" time="0.199" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+    <testcase name="RejectUnsafeUnlock_DoorOpen" file="tests/interlock/speed_interlock_test.cpp" line="790" status="run" result="completed" time="0.068" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+    <testcase name="RejectUnsafeUnlock_DoorClosed" file="tests/interlock/speed_interlock_test.cpp" line="794" status="run" result="completed" time="0.211" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+    <testcase name="RejectUnsafeUnlock_ActuatorBusy" file="tests/interlock/speed_interlock_test.cpp" line="798" status="run" result="completed" time="0.136" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+    <testcase name="RejectUnsafeUnlock_RecoveryAfterFault" file="tests/interlock/speed_interlock_test.cpp" line="802" status="run" result="completed" time="0.053" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+    <testcase name="RejectUnsafeUnlock_PowerCycle" file="tests/interlock/speed_interlock_test.cpp" line="806" status="run" result="completed" time="0.097" timestamp="2026-08-28T00:00:00Z" classname="SpeedInterlock.RejectUnsafeUnlockTest" />
+  </testsuite>
+</testsuites>

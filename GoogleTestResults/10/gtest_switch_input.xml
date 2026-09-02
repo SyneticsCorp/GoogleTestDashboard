@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="120" failures="2" disabled="0" errors="0" time="15.855" timestamp="2026-09-02T00:00:00Z" name="AllTests" random_seed="10158">
+  <testsuite name="SwitchInput.ReadChildLockSwitchTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.579" timestamp="2026-09-02T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="10" />
+      <property name="module" value="SwitchInput" />
+      <property name="source_file" value="src/input/switch_input.cpp" />
+      <property name="tested_function" value="ReadChildLockSwitch" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="2.0" />
+    </properties>
+    <testcase name="ReadChildLockSwitch_NominalInput" file="tests/input/switch_input_test.cpp" line="80" status="run" result="completed" time="0.150" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+    <testcase name="ReadChildLockSwitch_LowerBoundary" file="tests/input/switch_input_test.cpp" line="84" status="run" result="completed" time="0.137" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+    <testcase name="ReadChildLockSwitch_UpperBoundary" file="tests/input/switch_input_test.cpp" line="88" status="run" result="completed" time="0.201" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+    <testcase name="ReadChildLockSwitch_BelowMinimum" file="tests/input/switch_input_test.cpp" line="92" status="run" result="completed" time="0.027" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+    <testcase name="ReadChildLockSwitch_AboveMaximum" file="tests/input/switch_input_test.cpp" line="96" status="run" result="completed" time="0.110" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+    <testcase name="ReadChildLockSwitch_MissingSignal" file="tests/input/switch_input_test.cpp" line="100" status="run" result="completed" time="0.205" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+    <testcase name="ReadChildLockSwitch_SignalTimeout" file="tests/input/switch_input_test.cpp" line="104" status="run" result="completed" time="0.090" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+    <testcase name="ReadChildLockSwitch_StaleSignal" file="tests/input/switch_input_test.cpp" line="108" status="run" result="completed" time="0.046" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+    <testcase name="ReadChildLockSwitch_RapidToggle" file="tests/input/switch_input_test.cpp" line="112" status="run" result="completed" time="0.090" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+    <testcase name="ReadChildLockSwitch_RepeatedCommand" file="tests/input/switch_input_test.cpp" line="116" status="run" result="completed" time="0.066" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+    <testcase name="ReadChildLockSwitch_ConcurrentRequest" file="tests/input/switch_input_test.cpp" line="120" status="run" result="completed" time="0.029" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+    <testcase name="ReadChildLockSwitch_IgnitionOff" file="tests/input/switch_input_test.cpp" line="124" status="run" result="completed" time="0.006" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+    <testcase name="ReadChildLockSwitch_IgnitionOn" file="tests/input/switch_input_test.cpp" line="128" status="run" result="completed" time="0.249" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+    <testcase name="ReadChildLockSwitch_VehicleStopped" file="tests/input/switch_input_test.cpp" line="132" status="run" result="completed" time="0.116" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+    <testcase name="ReadChildLockSwitch_VehicleMoving" file="tests/input/switch_input_test.cpp" line="136" status="run" result="completed" time="0.240" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+    <testcase name="ReadChildLockSwitch_DoorOpen" file="tests/input/switch_input_test.cpp" line="140" status="run" result="completed" time="0.174" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+    <testcase name="ReadChildLockSwitch_DoorClosed" file="tests/input/switch_input_test.cpp" line="144" status="run" result="completed" time="0.191" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+    <testcase name="ReadChildLockSwitch_ActuatorBusy" file="tests/input/switch_input_test.cpp" line="148" status="run" result="completed" time="0.220" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+    <testcase name="ReadChildLockSwitch_RecoveryAfterFault" file="tests/input/switch_input_test.cpp" line="152" status="run" result="completed" time="0.088" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+    <testcase name="ReadChildLockSwitch_PowerCycle" file="tests/input/switch_input_test.cpp" line="156" status="run" result="completed" time="0.144" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReadChildLockSwitchTest" />
+  </testsuite>
+  <testsuite name="SwitchInput.DebounceSwitchTest" tests="20" failures="1" disabled="0" skipped="0" errors="0" time="2.497" timestamp="2026-09-02T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="10" />
+      <property name="module" value="SwitchInput" />
+      <property name="source_file" value="src/input/switch_input.cpp" />
+      <property name="tested_function" value="DebounceSwitch" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="2.0" />
+    </properties>
+    <testcase name="DebounceSwitch_NominalInput" file="tests/input/switch_input_test.cpp" line="210" status="run" result="completed" time="0.221" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest" />
+    <testcase name="DebounceSwitch_LowerBoundary" file="tests/input/switch_input_test.cpp" line="214" status="run" result="completed" time="0.187" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest" />
+    <testcase name="DebounceSwitch_UpperBoundary" file="tests/input/switch_input_test.cpp" line="218" status="run" result="completed" time="0.133" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest" />
+    <testcase name="DebounceSwitch_BelowMinimum" file="tests/input/switch_input_test.cpp" line="222" status="run" result="completed" time="0.182" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest" />
+    <testcase name="DebounceSwitch_AboveMaximum" file="tests/input/switch_input_test.cpp" line="226" status="run" result="completed" time="0.158" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest" />
+    <testcase name="DebounceSwitch_MissingSignal" file="tests/input/switch_input_test.cpp" line="230" status="run" result="completed" time="0.234" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest" />
+    <testcase name="DebounceSwitch_SignalTimeout" file="tests/input/switch_input_test.cpp" line="234" status="run" result="completed" time="0.112" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest" />
+    <testcase name="DebounceSwitch_StaleSignal" file="tests/input/switch_input_test.cpp" line="238" status="run" result="completed" time="0.162" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest" />
+    <testcase name="DebounceSwitch_RapidToggle" file="tests/input/switch_input_test.cpp" line="242" status="run" result="completed" time="0.054" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest" />
+    <testcase name="DebounceSwitch_RepeatedCommand" file="tests/input/switch_input_test.cpp" line="246" status="run" result="completed" time="0.090" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest" />
+    <testcase name="DebounceSwitch_ConcurrentRequest" file="tests/input/switch_input_test.cpp" line="250" status="run" result="completed" time="0.111" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest" />
+    <testcase name="DebounceSwitch_IgnitionOff" file="tests/input/switch_input_test.cpp" line="254" status="run" result="completed" time="0.175" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest">
+      <failure message="diagnostic event mismatch" type="AssertionFailure"><![CDATA[tests/input/switch_input_test.cpp:254
+Failure
+Expected diagnostic event: ACTIVE
+  Actual diagnostic event: INACTIVE
+Synthetic Jenkins build: 10]]></failure>
+    </testcase>
+    <testcase name="DebounceSwitch_IgnitionOn" file="tests/input/switch_input_test.cpp" line="258" status="run" result="completed" time="0.088" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest" />
+    <testcase name="DebounceSwitch_VehicleStopped" file="tests/input/switch_input_test.cpp" line="262" status="run" result="completed" time="0.157" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest" />
+    <testcase name="DebounceSwitch_VehicleMoving" file="tests/input/switch_input_test.cpp" line="266" status="run" result="completed" time="0.027" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest" />
+    <testcase name="DebounceSwitch_DoorOpen" file="tests/input/switch_input_test.cpp" line="270" status="run" result="completed" time="0.085" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest" />
+    <testcase name="DebounceSwitch_DoorClosed" file="tests/input/switch_input_test.cpp" line="274" status="run" result="completed" time="0.096" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest" />
+    <testcase name="DebounceSwitch_ActuatorBusy" file="tests/input/switch_input_test.cpp" line="278" status="run" result="completed" time="0.111" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest" />
+    <testcase name="DebounceSwitch_RecoveryAfterFault" file="tests/input/switch_input_test.cpp" line="282" status="run" result="completed" time="0.085" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest" />
+    <testcase name="DebounceSwitch_PowerCycle" file="tests/input/switch_input_test.cpp" line="286" status="run" result="completed" time="0.029" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DebounceSwitchTest" />
+  </testsuite>
+  <testsuite name="SwitchInput.DetectLongPressTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.779" timestamp="2026-09-02T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="10" />
+      <property name="module" value="SwitchInput" />
+      <property name="source_file" value="src/input/switch_input.cpp" />
+      <property name="tested_function" value="DetectLongPress" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="2.0" />
+    </properties>
+    <testcase name="DetectLongPress_NominalInput" file="tests/input/switch_input_test.cpp" line="340" status="run" result="completed" time="0.115" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+    <testcase name="DetectLongPress_LowerBoundary" file="tests/input/switch_input_test.cpp" line="344" status="run" result="completed" time="0.019" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+    <testcase name="DetectLongPress_UpperBoundary" file="tests/input/switch_input_test.cpp" line="348" status="run" result="completed" time="0.092" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+    <testcase name="DetectLongPress_BelowMinimum" file="tests/input/switch_input_test.cpp" line="352" status="run" result="completed" time="0.250" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+    <testcase name="DetectLongPress_AboveMaximum" file="tests/input/switch_input_test.cpp" line="356" status="run" result="completed" time="0.120" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+    <testcase name="DetectLongPress_MissingSignal" file="tests/input/switch_input_test.cpp" line="360" status="run" result="completed" time="0.089" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+    <testcase name="DetectLongPress_SignalTimeout" file="tests/input/switch_input_test.cpp" line="364" status="run" result="completed" time="0.189" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+    <testcase name="DetectLongPress_StaleSignal" file="tests/input/switch_input_test.cpp" line="368" status="run" result="completed" time="0.204" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+    <testcase name="DetectLongPress_RapidToggle" file="tests/input/switch_input_test.cpp" line="372" status="run" result="completed" time="0.089" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+    <testcase name="DetectLongPress_RepeatedCommand" file="tests/input/switch_input_test.cpp" line="376" status="run" result="completed" time="0.122" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+    <testcase name="DetectLongPress_ConcurrentRequest" file="tests/input/switch_input_test.cpp" line="380" status="run" result="completed" time="0.062" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+    <testcase name="DetectLongPress_IgnitionOff" file="tests/input/switch_input_test.cpp" line="384" status="run" result="completed" time="0.093" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+    <testcase name="DetectLongPress_IgnitionOn" file="tests/input/switch_input_test.cpp" line="388" status="run" result="completed" time="0.025" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+    <testcase name="DetectLongPress_VehicleStopped" file="tests/input/switch_input_test.cpp" line="392" status="run" result="completed" time="0.241" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+    <testcase name="DetectLongPress_VehicleMoving" file="tests/input/switch_input_test.cpp" line="396" status="run" result="completed" time="0.185" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+    <testcase name="DetectLongPress_DoorOpen" file="tests/input/switch_input_test.cpp" line="400" status="run" result="completed" time="0.072" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+    <testcase name="DetectLongPress_DoorClosed" file="tests/input/switch_input_test.cpp" line="404" status="run" result="completed" time="0.198" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+    <testcase name="DetectLongPress_ActuatorBusy" file="tests/input/switch_input_test.cpp" line="408" status="run" result="completed" time="0.217" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+    <testcase name="DetectLongPress_RecoveryAfterFault" file="tests/input/switch_input_test.cpp" line="412" status="run" result="completed" time="0.153" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+    <testcase name="DetectLongPress_PowerCycle" file="tests/input/switch_input_test.cpp" line="416" status="run" result="completed" time="0.244" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.DetectLongPressTest" />
+  </testsuite>
+  <testsuite name="SwitchInput.IgnoreBounceTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="2.399" timestamp="2026-09-02T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="10" />
+      <property name="module" value="SwitchInput" />
+      <property name="source_file" value="src/input/switch_input.cpp" />
+      <property name="tested_function" value="IgnoreBounce" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="2.0" />
+    </properties>
+    <testcase name="IgnoreBounce_NominalInput" file="tests/input/switch_input_test.cpp" line="470" status="run" result="completed" time="0.053" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+    <testcase name="IgnoreBounce_LowerBoundary" file="tests/input/switch_input_test.cpp" line="474" status="run" result="completed" time="0.070" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+    <testcase name="IgnoreBounce_UpperBoundary" file="tests/input/switch_input_test.cpp" line="478" status="run" result="completed" time="0.093" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+    <testcase name="IgnoreBounce_BelowMinimum" file="tests/input/switch_input_test.cpp" line="482" status="run" result="completed" time="0.154" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+    <testcase name="IgnoreBounce_AboveMaximum" file="tests/input/switch_input_test.cpp" line="486" status="run" result="completed" time="0.210" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+    <testcase name="IgnoreBounce_MissingSignal" file="tests/input/switch_input_test.cpp" line="490" status="run" result="completed" time="0.145" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+    <testcase name="IgnoreBounce_SignalTimeout" file="tests/input/switch_input_test.cpp" line="494" status="run" result="completed" time="0.079" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+    <testcase name="IgnoreBounce_StaleSignal" file="tests/input/switch_input_test.cpp" line="498" status="run" result="completed" time="0.083" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+    <testcase name="IgnoreBounce_RapidToggle" file="tests/input/switch_input_test.cpp" line="502" status="run" result="completed" time="0.100" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+    <testcase name="IgnoreBounce_RepeatedCommand" file="tests/input/switch_input_test.cpp" line="506" status="run" result="completed" time="0.165" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+    <testcase name="IgnoreBounce_ConcurrentRequest" file="tests/input/switch_input_test.cpp" line="510" status="run" result="completed" time="0.230" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+    <testcase name="IgnoreBounce_IgnitionOff" file="tests/input/switch_input_test.cpp" line="514" status="run" result="completed" time="0.077" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+    <testcase name="IgnoreBounce_IgnitionOn" file="tests/input/switch_input_test.cpp" line="518" status="run" result="completed" time="0.212" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+    <testcase name="IgnoreBounce_VehicleStopped" file="tests/input/switch_input_test.cpp" line="522" status="run" result="completed" time="0.054" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+    <testcase name="IgnoreBounce_VehicleMoving" file="tests/input/switch_input_test.cpp" line="526" status="run" result="completed" time="0.140" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+    <testcase name="IgnoreBounce_DoorOpen" file="tests/input/switch_input_test.cpp" line="530" status="run" result="completed" time="0.082" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+    <testcase name="IgnoreBounce_DoorClosed" file="tests/input/switch_input_test.cpp" line="534" status="run" result="completed" time="0.166" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+    <testcase name="IgnoreBounce_ActuatorBusy" file="tests/input/switch_input_test.cpp" line="538" status="run" result="completed" time="0.151" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+    <testcase name="IgnoreBounce_RecoveryAfterFault" file="tests/input/switch_input_test.cpp" line="542" status="run" result="completed" time="0.084" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+    <testcase name="IgnoreBounce_PowerCycle" file="tests/input/switch_input_test.cpp" line="546" status="run" result="completed" time="0.051" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.IgnoreBounceTest" />
+  </testsuite>
+  <testsuite name="SwitchInput.MapSwitchPositionTest" tests="20" failures="1" disabled="0" skipped="0" errors="0" time="2.579" timestamp="2026-09-02T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="10" />
+      <property name="module" value="SwitchInput" />
+      <property name="source_file" value="src/input/switch_input.cpp" />
+      <property name="tested_function" value="MapSwitchPosition" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="2.0" />
+    </properties>
+    <testcase name="MapSwitchPosition_NominalInput" file="tests/input/switch_input_test.cpp" line="600" status="run" result="completed" time="0.176" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest" />
+    <testcase name="MapSwitchPosition_LowerBoundary" file="tests/input/switch_input_test.cpp" line="604" status="run" result="completed" time="0.177" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest" />
+    <testcase name="MapSwitchPosition_UpperBoundary" file="tests/input/switch_input_test.cpp" line="608" status="run" result="completed" time="0.122" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest" />
+    <testcase name="MapSwitchPosition_BelowMinimum" file="tests/input/switch_input_test.cpp" line="612" status="run" result="completed" time="0.072" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest" />
+    <testcase name="MapSwitchPosition_AboveMaximum" file="tests/input/switch_input_test.cpp" line="616" status="run" result="completed" time="0.163" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest" />
+    <testcase name="MapSwitchPosition_MissingSignal" file="tests/input/switch_input_test.cpp" line="620" status="run" result="completed" time="0.107" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest" />
+    <testcase name="MapSwitchPosition_SignalTimeout" file="tests/input/switch_input_test.cpp" line="624" status="run" result="completed" time="0.088" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest" />
+    <testcase name="MapSwitchPosition_StaleSignal" file="tests/input/switch_input_test.cpp" line="628" status="run" result="completed" time="0.120" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest" />
+    <testcase name="MapSwitchPosition_RapidToggle" file="tests/input/switch_input_test.cpp" line="632" status="run" result="completed" time="0.193" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest">
+      <failure message="diagnostic event mismatch" type="AssertionFailure"><![CDATA[tests/input/switch_input_test.cpp:632
+Failure
+Expected diagnostic event: ACTIVE
+  Actual diagnostic event: INACTIVE
+Synthetic Jenkins build: 10]]></failure>
+    </testcase>
+    <testcase name="MapSwitchPosition_RepeatedCommand" file="tests/input/switch_input_test.cpp" line="636" status="run" result="completed" time="0.010" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest" />
+    <testcase name="MapSwitchPosition_ConcurrentRequest" file="tests/input/switch_input_test.cpp" line="640" status="run" result="completed" time="0.207" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest" />
+    <testcase name="MapSwitchPosition_IgnitionOff" file="tests/input/switch_input_test.cpp" line="644" status="run" result="completed" time="0.014" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest" />
+    <testcase name="MapSwitchPosition_IgnitionOn" file="tests/input/switch_input_test.cpp" line="648" status="run" result="completed" time="0.220" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest" />
+    <testcase name="MapSwitchPosition_VehicleStopped" file="tests/input/switch_input_test.cpp" line="652" status="run" result="completed" time="0.188" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest" />
+    <testcase name="MapSwitchPosition_VehicleMoving" file="tests/input/switch_input_test.cpp" line="656" status="run" result="completed" time="0.028" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest" />
+    <testcase name="MapSwitchPosition_DoorOpen" file="tests/input/switch_input_test.cpp" line="660" status="run" result="completed" time="0.027" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest" />
+    <testcase name="MapSwitchPosition_DoorClosed" file="tests/input/switch_input_test.cpp" line="664" status="run" result="completed" time="0.172" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest" />
+    <testcase name="MapSwitchPosition_ActuatorBusy" file="tests/input/switch_input_test.cpp" line="668" status="run" result="completed" time="0.222" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest" />
+    <testcase name="MapSwitchPosition_RecoveryAfterFault" file="tests/input/switch_input_test.cpp" line="672" status="run" result="completed" time="0.148" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest" />
+    <testcase name="MapSwitchPosition_PowerCycle" file="tests/input/switch_input_test.cpp" line="676" status="run" result="completed" time="0.125" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.MapSwitchPositionTest" />
+  </testsuite>
+  <testsuite name="SwitchInput.ReportSwitchFaultTest" tests="20" failures="0" disabled="0" skipped="0" errors="0" time="3.022" timestamp="2026-09-02T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="10" />
+      <property name="module" value="SwitchInput" />
+      <property name="source_file" value="src/input/switch_input.cpp" />
+      <property name="tested_function" value="ReportSwitchFault" />
+      <property name="synthetic_data" value="true" />
+      <property name="target_build_failure_rate_percent" value="2.0" />
+    </properties>
+    <testcase name="ReportSwitchFault_NominalInput" file="tests/input/switch_input_test.cpp" line="730" status="run" result="completed" time="0.066" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+    <testcase name="ReportSwitchFault_LowerBoundary" file="tests/input/switch_input_test.cpp" line="734" status="run" result="completed" time="0.079" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+    <testcase name="ReportSwitchFault_UpperBoundary" file="tests/input/switch_input_test.cpp" line="738" status="run" result="completed" time="0.205" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+    <testcase name="ReportSwitchFault_BelowMinimum" file="tests/input/switch_input_test.cpp" line="742" status="run" result="completed" time="0.130" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+    <testcase name="ReportSwitchFault_AboveMaximum" file="tests/input/switch_input_test.cpp" line="746" status="run" result="completed" time="0.134" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+    <testcase name="ReportSwitchFault_MissingSignal" file="tests/input/switch_input_test.cpp" line="750" status="run" result="completed" time="0.199" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+    <testcase name="ReportSwitchFault_SignalTimeout" file="tests/input/switch_input_test.cpp" line="754" status="run" result="completed" time="0.135" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+    <testcase name="ReportSwitchFault_StaleSignal" file="tests/input/switch_input_test.cpp" line="758" status="run" result="completed" time="0.179" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+    <testcase name="ReportSwitchFault_RapidToggle" file="tests/input/switch_input_test.cpp" line="762" status="run" result="completed" time="0.244" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+    <testcase name="ReportSwitchFault_RepeatedCommand" file="tests/input/switch_input_test.cpp" line="766" status="run" result="completed" time="0.179" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+    <testcase name="ReportSwitchFault_ConcurrentRequest" file="tests/input/switch_input_test.cpp" line="770" status="run" result="completed" time="0.114" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+    <testcase name="ReportSwitchFault_IgnitionOff" file="tests/input/switch_input_test.cpp" line="774" status="run" result="completed" time="0.002" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+    <testcase name="ReportSwitchFault_IgnitionOn" file="tests/input/switch_input_test.cpp" line="778" status="run" result="completed" time="0.190" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+    <testcase name="ReportSwitchFault_VehicleStopped" file="tests/input/switch_input_test.cpp" line="782" status="run" result="completed" time="0.175" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+    <testcase name="ReportSwitchFault_VehicleMoving" file="tests/input/switch_input_test.cpp" line="786" status="run" result="completed" time="0.233" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+    <testcase name="ReportSwitchFault_DoorOpen" file="tests/input/switch_input_test.cpp" line="790" status="run" result="completed" time="0.139" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+    <testcase name="ReportSwitchFault_DoorClosed" file="tests/input/switch_input_test.cpp" line="794" status="run" result="completed" time="0.138" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+    <testcase name="ReportSwitchFault_ActuatorBusy" file="tests/input/switch_input_test.cpp" line="798" status="run" result="completed" time="0.171" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+    <testcase name="ReportSwitchFault_RecoveryAfterFault" file="tests/input/switch_input_test.cpp" line="802" status="run" result="completed" time="0.132" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+    <testcase name="ReportSwitchFault_PowerCycle" file="tests/input/switch_input_test.cpp" line="806" status="run" result="completed" time="0.178" timestamp="2026-09-02T00:00:00Z" classname="SwitchInput.ReportSwitchFaultTest" />
+  </testsuite>
+</testsuites>
