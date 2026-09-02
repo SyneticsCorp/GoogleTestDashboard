@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}GoogleTest 대시보드 - 빌드 {{ moduleSummary.buildId }} / {{ moduleSummary.module }}{% endblock %}
+
+{% block content %}
+<nav class="crumb-nav">
+  <a href="{{ url_for('dashboard') }}">메인</a> /
+  <a href="/builds/{{ moduleSummary.buildId }}">빌드 {{ moduleSummary.buildId }}</a> /
+  {{ moduleSummary.module }}
+</nav>
+
+<section class="module-summary" aria-labelledby="module-summary-heading">
+  <h1 id="module-summary-heading">빌드 {{ moduleSummary.buildId }} - {{ moduleSummary.module }}</h1>
+
+  <dl class="stat-grid">
+    <div class="stat-tile"><dt>전체</dt><dd>{{ moduleSummary.total }}</dd></div>
+    <div class="stat-tile"><dt>통과</dt><dd>{{ moduleSummary.passed }}</dd></div>
+    <div class="stat-tile stat-tile--failed"><dt>실패</dt><dd>{{ moduleSummary.failed }}</dd></div>
+    <div class="stat-tile"><dt>오류</dt><dd>{{ moduleSummary.error }}</dd></div>
+    <div class="stat-tile"><dt>건너뜀</dt><dd>{{ moduleSummary.skipped }}</dd></div>
+    <div class="stat-tile"><dt>실패율</dt><dd>{{ moduleSummary.failureRate|percent }}</dd></div>
+    <div class="stat-tile"><dt>수행 시간</dt><dd>{{ "%.2f"|format(moduleSummary.durationSeconds) }}s</dd></div>
+  </dl>
+</section>
+
+<section class="module-trend-section" aria-labelledby="module-trend-heading">
+  <h2 id="module-trend-heading">{{ moduleSummary.module }} 빌드별 실패율 추이</h2>
+  {% if moduleTrend %}
+  <table class="module-trend-table">
+    <thead>
+      <tr><th>빌드</th><th>전체</th><th>실패</th><th>실패율</th></tr>
+    </thead>
+    <tbody>
+      {% for point in moduleTrend %}
+      <tr class="{% if point.buildId == moduleSummary.buildId %}module-trend-row--current{% endif %}">
+        <td><a href="/builds/{{ point.buildId }}/modules/{{ moduleSummary.module }}">{{ point.buildId }}</a></td>
+        <td>{{ point.total }}</td>
+        <td>{{ point.failed }}</td>
+        <td>{{ point.failureRate|percent }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="empty-state">추이 데이터가 없습니다.</p>
+  {% endif %}
+</section>
+
+<section class="tests-section" aria-labelledby="module-tests-heading">
+  <h2 id="module-tests-heading">테스트 목록 ({{ testRows|length }}건)</h2>
+  <form class="filter-form" method="get">
+    <label for="function-filter">함수</label>
+    <input id="function-filter" type="text" name="function" value="{{ functionFilter or '' }}">
+    <label for="suite-filter">스위트</label>
+    <input id="suite-filter" type="text" name="suite" value="{{ suiteFilter or '' }}">
+    <button type="submit">필터 적용</button>
+    <a href="/builds/{{ moduleSummary.buildId }}/modules/{{ moduleSummary.module }}">초기화</a>
+  </form>
+  {% if testRows %}
+  <table class="tests-table">
+    <thead>
+      <tr>
+        <th>상태</th><th>함수</th><th>스위트</th><th>테스트명</th><th>수행 시간</th><th>파일:줄</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in testRows %}
+      <tr class="test-row test-row--{{ row.status|lower }}">
+        <td>{{ row.status }}</td>
+        <td>{{ row.function }}</td>
+        <td>{{ row.suite }}</td>
+        <td><a href="{{ row.testUrl }}">{{ row.testName }}</a></td>
+        <td>{{ "%.3f"|format(row.durationSeconds) }}s</td>
+        <td>{{ row.testFile or "-" }}{% if row.line %}:{{ row.line }}{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="empty-state">조건에 맞는 테스트가 없습니다.</p>
+  {% endif %}
+</section>
+{% endblock %}

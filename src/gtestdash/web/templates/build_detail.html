@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}GoogleTest 대시보드 - 빌드 {{ buildSummary.buildId }}{% endblock %}
+
+{% block content %}
+<nav class="crumb-nav"><a href="{{ url_for('dashboard') }}">메인</a> / 빌드 {{ buildSummary.buildId }}</nav>
+
+<section class="build-summary" aria-labelledby="build-summary-heading">
+  <div class="build-nav">
+    {% if prevBuildId %}
+    <a class="build-nav-link" href="/builds/{{ prevBuildId }}">&laquo; 이전 빌드 ({{ prevBuildId }})</a>
+    {% else %}
+    <span class="build-nav-link build-nav-link--disabled">&laquo; 이전 빌드</span>
+    {% endif %}
+    <h1 id="build-summary-heading">빌드 {{ buildSummary.buildId }} 상세</h1>
+    {% if nextBuildId %}
+    <a class="build-nav-link" href="/builds/{{ nextBuildId }}">다음 빌드 ({{ nextBuildId }}) &raquo;</a>
+    {% else %}
+    <span class="build-nav-link build-nav-link--disabled">다음 빌드 &raquo;</span>
+    {% endif %}
+  </div>
+  <p class="build-timestamp">빌드 시각: {{ buildSummary.buildTimestamp or "알 수 없음" }}</p>
+
+  <dl class="stat-grid">
+    <div class="stat-tile"><dt>전체</dt><dd>{{ buildSummary.total }}</dd></div>
+    <div class="stat-tile"><dt>통과</dt><dd>{{ buildSummary.passed }}</dd></div>
+    <div class="stat-tile stat-tile--failed"><dt>실패</dt><dd>{{ buildSummary.failed }}</dd></div>
+    <div class="stat-tile"><dt>오류</dt><dd>{{ buildSummary.error }}</dd></div>
+    <div class="stat-tile"><dt>건너뜀</dt><dd>{{ buildSummary.skipped }}</dd></div>
+    <div class="stat-tile"><dt>실패율</dt><dd>{{ buildSummary.failureRate|percent }}</dd></div>
+    <div class="stat-tile"><dt>총 수행 시간</dt><dd>{{ "%.2f"|format(buildSummary.durationSeconds) }}s</dd></div>
+  </dl>
+</section>
+
+<section class="module-section" aria-labelledby="build-module-heading">
+  <h2 id="build-module-heading">모듈별 집계</h2>
+  {% if moduleDistribution %}
+  <table class="module-table">
+    <thead>
+      <tr><th>모듈</th><th>전체</th><th>실패</th><th>실패율</th></tr>
+    </thead>
+    <tbody>
+      {% for entry in moduleDistribution %}
+      <tr>
+        <td><a href="/builds/{{ buildSummary.buildId }}/modules/{{ entry.module }}">{{ entry.module }}</a></td>
+        <td>{{ entry.total }}</td>
+        <td>{{ entry.failed }}</td>
+        <td>{{ entry.failureRate|percent }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="empty-state">모듈별 집계가 없습니다.</p>
+  {% endif %}
+</section>
+
+<section class="tests-section" aria-labelledby="build-tests-heading">
+  <h2 id="build-tests-heading">전체 테스트 목록 ({{ testRows|length }}건)</h2>
+  {% if testRows %}
+  <table class="tests-table">
+    <thead>
+      <tr>
+        <th>상태</th><th>모듈</th><th>함수</th><th>스위트</th><th>테스트명</th><th>수행 시간</th><th>파일:줄</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in testRows %}
+      <tr class="test-row test-row--{{ row.status|lower }}">
+        <td>{{ row.status }}</td>
+        <td>{{ row.module }}</td>
+        <td>{{ row.function }}</td>
+        <td>{{ row.suite }}</td>
+        <td><a href="{{ row.testUrl }}">{{ row.testName }}</a></td>
+        <td>{{ "%.3f"|format(row.durationSeconds) }}s</td>
+        <td>{{ row.testFile or "-" }}{% if row.line %}:{{ row.line }}{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="empty-state">표시할 테스트가 없습니다.</p>
+  {% endif %}
+</section>
+{% endblock %}

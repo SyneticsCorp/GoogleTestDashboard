@@ -2,8 +2,6 @@
 @file dashboard.py
 @brief Main dashboard route: GET / (FR-009~017).
 """
-from urllib.parse import quote
-
 from flask import render_template, request
 
 from gtestdash.aggregation.build_diff import computeBuildDiff
@@ -11,6 +9,7 @@ from gtestdash.aggregation.build_history import summarizeBuildsByBuild
 from gtestdash.aggregation.latest_build import resolveLatestBuild
 from gtestdash.aggregation.module_distribution import computeModuleDistribution
 from gtestdash.aggregation.trend import buildFailureRateTrend
+from gtestdash.web.routes.route_helpers import buildTestDetailUrl
 
 
 def _splitLatestAndPrevious(buildSummaries):
@@ -32,17 +31,6 @@ def _splitLatestAndPrevious(buildSummaries):
     return latestSummary, previousSummary
 
 
-def _buildTestUrl(record):
-    """!
-    @brief Build a test-detail URL for one failing record (Requirements.md §5 path shape).
-    @param record ResultRecord to link to.
-    @return Path `/builds/{build_id}/tests/{test_id}`; the route itself is
-            added in a later phase (FR-022), so this may 404 for now.
-    """
-    testId = quote(f"{record.classname}.{record.test_name}", safe="")
-    return f"/builds/{record.build_id}/tests/{testId}"
-
-
 def _toFailureRow(record):
     """!
     @brief Project one failing ResultRecord into the fields FR-016's list needs.
@@ -59,7 +47,7 @@ def _toFailureRow(record):
         "testFile": record.test_file,
         "line": record.line,
         "durationSeconds": record.duration_seconds,
-        "testUrl": _buildTestUrl(record),
+        "testUrl": buildTestDetailUrl(record),
     }
 
 

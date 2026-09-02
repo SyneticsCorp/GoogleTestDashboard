@@ -142,3 +142,44 @@ th { color: var(--ink-muted); font-weight: 600; }
   color: var(--ink-muted);
   font-style: italic;
 }
+
+.crumb-nav {
+  color: var(--ink-secondary);
+  font-size: 0.9rem;
+}
+
+.crumb-nav a { color: var(--series); }
+
+.build-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.build-nav h1 { margin: 0; }
+
+.build-nav-link { color: var(--series); text-decoration: none; }
+
+.build-nav-link--disabled {
+  color: var(--ink-muted);
+  pointer-events: none;
+}
+
+.module-trend-row--current { font-weight: 700; }
+
+.filter-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.filter-form input[type="text"] {
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--page);
+  color: var(--ink-primary);
+}
