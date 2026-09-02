@@ -83,6 +83,48 @@ PostToolUse 훅으로 실행되어, 이어서 `sw-system-tester`를 호출해 `R
 테스트 케이스를 생성/갱신하도록 컨텍스트에 상기시킵니다(`.claude/settings.json`에 등록). 이 상기 메시지를
 받으면 반드시 `sw-system-tester`를 호출하십시오.
 
+## 아키텍처 및 구현 계획 (확정)
+
+- **스택**: Flask + Jinja2 + Chart.js(CDN), 서버 렌더링. 인증/ORM 없음.
+- **데이터**: 파일 기반 XML을 앱 시작 시 1회, `POST /refresh` 호출 시에만 다시 파싱해 인메모리
+  스냅샷으로 원자적 교체(SQLite 등 DB 미사용). 요청 하나는 항상 같은 스냅샷만 참조.
+- **목록 상태 유지(FR-033)**: URL 쿼리 파라미터.
+- **네이밍**: pytest `test_*` 함수명, `Requirements.md` §4.3 정규화 필드명(`build_id` 등,
+  원문이 snake_case)만 예외로 두고, 나머지 우리 내부 함수/변수명은 이 문서의 낙타 표기법
+  (camelCase) 기준을 따른다.
+- **패키지 관리**: `requirements.txt` + 표준 `venv`.
+- **모듈 레이어** (`src/gtestdash/`):
+  - `parsing/` — XML→정규화 레코드(`discovery.py`, `xml_parser.py`, `status_resolver.py`,
+    `field_resolver.py`, `record_builder.py`, `validation.py`, `models.py`)
+  - `aggregation/` — 빌드/모듈 집계, 트렌드, diff(`build_summary.py`, `latest_build.py`,
+    `build_diff.py`, `trend.py`, `module_distribution.py`, `module_trend.py`)
+  - `repository.py` — 스냅샷 조립/새로고침 오케스트레이션
+  - `query/` — 검색/필터/정렬/페이지네이션(빌드 상세·모듈 상세·검색 결과 3개 라우트가 공유)
+  - `web/` — Flask 앱 팩토리, 라우트(`dashboard`, `builds`, `modules`, `tests`, `search`,
+    `refresh`), 템플릿, 정적 자산
+- **Phase 순서** (각 phase는 `tdd-flow`가 TDD로 구현): Phase 0 골격(패키지 스켈레톤 +
+  Playwright/pytest 테스트 인프라) → Phase 1 결과 수집/정규화(FR-001~008) → Phase 2 메인
+  대시보드(FR-009~017) → Phase 3 빌드/모듈 상세(FR-018~021) → Phase 4 테스트 상세(FR-022~024)
+  → Phase 5 검색/필터/정렬/페이지네이션(FR-025~031) → Phase 6 네비게이션/상태유지/새로고침/
+  에러처리(FR-032~036) → Phase 7 §7/§8 인수 기준 검증.
+- 손상/엣지 케이스 테스트 픽스처는 `GoogleTestResults/`(§7 수치의 근거, 읽기 전용 취급)를
+  건드리지 않고 `tests/fixtures/edge_cases/`에 별도로 둔다.
+
+## 개발 프로세스
+
+- **커밋/푸시**: Phase 0~7 각 phase가 끝날 때마다 반드시 커밋하고 `origin/main`에 푸시한다.
+  커밋 메시지에 Phase 번호와 해당 FR 범위를 명시한다.
+- **브라우저 E2E 테스트**: Playwright(Python, `pytest-playwright`)를 사용하고 `tests/e2e/`에
+  둔다. `sw-system-tester`가 생성한 `TestCase_Template.xlsx`의 각 시스템 테스트 케이스를
+  `tdd-flow`가 읽고 수동으로 Playwright 테스트로 옮긴다 — 테스트 이름/주석에 xlsx 케이스 ID를
+  남겨 추적성을 유지한다. xlsx 텍스트를 그대로 파싱해 테스트를 자동 생성하지 않는다(자유서술형
+  기대결과를 assertion으로 정확히 변환할 수 없기 때문). CI(GitHub Actions) 자동 실행은 구성하지
+  않는다 — 로컬 실행 전용.
+- **대화 로그**: 이 저장소 작업을 진행한 Claude Code 세션과의 대화를 `docs/conversation-log.md`에
+  요약해 기록하고 커밋한다(공개 저장소이므로 민감정보는 제외).
+- **자동 메모리**: `.claude/settings.json`의 `autoMemoryEnabled: true`로 프로젝트 자동 메모리
+  기능이 켜져 있다.
+
 ## 소스코드 품질 기준
 
 **다음의 품질 기준을 반드시 달성해야 한다**
