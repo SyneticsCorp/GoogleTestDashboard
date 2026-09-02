@@ -1,0 +1,8 @@
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = [
+    "unit: fast tests with no filesystem/network/browser dependency",
+    "integration: tests exercising the Flask app via its test client",
+    "e2e: Playwright browser tests against a live Flask server",
+]
