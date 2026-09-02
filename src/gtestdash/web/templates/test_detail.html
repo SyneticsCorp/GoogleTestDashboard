@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}GoogleTest 대시보드 - 빌드 {{ test.buildId }} / {{ test.testName }}{% endblock %}
+
+{% block content %}
+<nav class="crumb-nav">
+  <a href="{{ url_for('dashboard') }}">메인</a> /
+  <a href="/builds/{{ test.buildId }}">빌드 {{ test.buildId }}</a> /
+  <a href="/builds/{{ test.buildId }}/modules/{{ test.module }}">{{ test.module }}</a> /
+  {{ test.testName }}
+</nav>
+
+<section class="test-summary" aria-labelledby="test-summary-heading">
+  <h1 id="test-summary-heading">{{ test.testName }}</h1>
+
+  <dl class="stat-grid stat-grid--detail">
+    <div class="stat-tile"><dt>빌드</dt><dd>{{ test.buildId }}</dd></div>
+    <div class="stat-tile"><dt>모듈</dt><dd>{{ test.module }}</dd></div>
+    <div class="stat-tile"><dt>함수</dt><dd>{{ test.function }}</dd></div>
+    <div class="stat-tile"><dt>스위트</dt><dd>{{ test.suite }}</dd></div>
+    <div class="stat-tile"><dt>클래스명</dt><dd>{{ test.classname }}</dd></div>
+    <div class="stat-tile stat-tile--{{ 'failed' if test.status in ('FAILED', 'ERROR') else '' }}">
+      <dt>상태</dt><dd>{{ test.status }}</dd>
+    </div>
+    <div class="stat-tile"><dt>수행 시간</dt><dd>{{ "%.3f"|format(test.durationSeconds) }}s</dd></div>
+    <div class="stat-tile"><dt>시각</dt><dd>{{ test.timestamp or "알 수 없음" }}</dd></div>
+    <div class="stat-tile"><dt>테스트 파일</dt><dd>{{ test.testFile or "-" }}{% if test.line %}:{{ test.line }}{% endif %}</dd></div>
+    <div class="stat-tile"><dt>대상 소스 파일</dt><dd>{{ test.sourceFile or "-" }}</dd></div>
+  </dl>
+</section>
+
+<section class="failure-section" aria-labelledby="test-failure-heading">
+  <h2 id="test-failure-heading">실패 정보</h2>
+  {% if test.failureDetail %}
+  <dl class="stat-grid">
+    <div class="stat-tile"><dt>실패 유형</dt><dd>{{ test.failureType or "알 수 없음" }}</dd></div>
+    <div class="stat-tile"><dt>실패 요약</dt><dd>{{ test.failureSummary or "-" }}</dd></div>
+  </dl>
+  <pre class="failure-detail">{{ test.failureDetail }}</pre>
+  {% else %}
+  <p class="empty-state">실패 정보 없음</p>
+  {% endif %}
+</section>
+{% endblock %}

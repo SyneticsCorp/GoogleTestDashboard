@@ -14,6 +14,7 @@ from gtestdash.repository import buildSnapshot
 from gtestdash.web.routes.builds import registerBuildDetailRoute
 from gtestdash.web.routes.dashboard import registerDashboardRoute
 from gtestdash.web.routes.modules import registerModuleDetailRoute
+from gtestdash.web.routes.tests import registerTestDetailRoute
 from gtestdash.web.template_filters import formatPercent, formatPercentDiff
 
 
@@ -24,8 +25,9 @@ def createApp(resultsPath=None):
            omitted, config.resolveResultsPath() applies its default
            ("GoogleTestResults" under the current working directory) (FR-001).
     @return A configured Flask app exposing GET /healthz, GET / (FR-009~017),
-            GET /builds/<build_id> (FR-018/019) and
-            GET /builds/<build_id>/modules/<module> (FR-020/021).
+            GET /builds/<build_id> (FR-018/019),
+            GET /builds/<build_id>/modules/<module> (FR-020/021) and
+            GET /builds/<build_id>/tests/<test_id> (FR-022~024).
     """
     app = Flask(__name__)
     resolvedPath = resolveResultsPath(resultsPath)
@@ -36,6 +38,7 @@ def createApp(resultsPath=None):
     registerDashboardRoute(app)
     registerBuildDetailRoute(app)
     registerModuleDetailRoute(app)
+    registerTestDetailRoute(app)
     return app
 
 

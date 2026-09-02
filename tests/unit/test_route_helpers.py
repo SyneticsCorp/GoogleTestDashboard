@@ -3,7 +3,7 @@
 @brief Unit tests for shared route helpers (src/gtestdash/web/routes/route_helpers.py).
 """
 from gtestdash.parsing.models import ResultRecord
-from gtestdash.web.routes.route_helpers import buildTestDetailUrl
+from gtestdash.web.routes.route_helpers import buildTestDetailUrl, findRecordByTestId
 
 
 def _makeRecord(buildId, classname, testName):
@@ -55,3 +55,37 @@ def test_buildTestDetailUrl_percentEncodesSlashesInClassname():
     url = buildTestDetailUrl(record)
 
     assert url == "/builds/10/tests/Weird%2FClass.Case%2FName"
+
+
+def test_findRecordByTestId_matchesRecordWithSameBuildClassnameAndTestName():
+    """!
+    @brief findRecordByTestId() is the reverse of buildTestDetailUrl()'s slug (FR-022).
+    """
+    target = _makeRecord("10", "ChildLockController.Suite", "Locks_WhenChildLockActive")
+    other = _makeRecord("10", "ChildLockController.Suite", "OtherTest")
+
+    found = findRecordByTestId([other, target], "10", "ChildLockController.Suite.Locks_WhenChildLockActive")
+
+    assert found is target
+
+
+def test_findRecordByTestId_ignoresRecordsFromOtherBuilds():
+    """!
+    @brief A matching classname.test_name in a different build is not returned (FR-022).
+    """
+    wrongBuild = _makeRecord("09", "ChildLockController.Suite", "Locks_WhenChildLockActive")
+
+    found = findRecordByTestId([wrongBuild], "10", "ChildLockController.Suite.Locks_WhenChildLockActive")
+
+    assert found is None
+
+
+def test_findRecordByTestId_unknownTestId_returnsNone():
+    """!
+    @brief An unknown test_id yields None so the route can 404 (FR-022).
+    """
+    record = _makeRecord("10", "ChildLockController.Suite", "Locks_WhenChildLockActive")
+
+    found = findRecordByTestId([record], "10", "NoSuchClass.NoSuchTest")
+
+    assert found is None
