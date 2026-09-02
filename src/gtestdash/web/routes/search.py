@@ -5,7 +5,7 @@
 from flask import render_template, request
 
 from gtestdash.query.combined_query import runCombinedQuery
-from gtestdash.web.routes.route_helpers import attachPageNavLinks, buildTestDetailUrl, readListQueryArgs
+from gtestdash.web.routes.route_helpers import applyListPagePresentation, buildTestDetailUrl, readListQueryArgs
 
 
 def _toTestRow(record):
@@ -76,5 +76,5 @@ def registerSearchRoute(app):
         snapshot = app.config["SNAPSHOT"]
         queryArgs = readListQueryArgs(request.args, includeBuildId=True, includeModule=True)
         context = buildSearchResultsContext(snapshot.records, queryArgs)
-        attachPageNavLinks(context, request.path, request.args)
+        applyListPagePresentation(context, request.path, request.args)
         return render_template("search_results.html", **context)

@@ -10,6 +10,12 @@
   {{ test.testName }}
 </nav>
 
+{% if returnUrl %}
+<a class="back-to-list-link" href="{{ returnUrl }}">&laquo; 목록으로 돌아가기</a>
+{% else %}
+<a class="back-to-list-link" href="/builds/{{ test.buildId }}">&laquo; 목록으로 돌아가기</a>
+{% endif %}
+
 <section class="test-summary" aria-labelledby="test-summary-heading">
   <h1 id="test-summary-heading">{{ test.testName }}</h1>
 

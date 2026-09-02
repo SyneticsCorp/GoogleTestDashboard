@@ -1,10 +1,13 @@
 {% extends "base.html" %}
 {% from "_list_controls.html" import queryControls, paginationInfo %}
+{% from "_warning_banner.html" import warningBanner %}
+{% from "_empty_state.html" import emptyState %}
 
 {% block title %}GoogleTest 대시보드 - 빌드 {{ buildSummary.buildId }}{% endblock %}
 
 {% block content %}
 <nav class="crumb-nav"><a href="{{ url_for('dashboard') }}">메인</a> / 빌드 {{ buildSummary.buildId }}</nav>
+{{ warningBanner(warnings, excludedFiles) }}
 
 <section class="build-summary" aria-labelledby="build-summary-heading">
   <div class="build-nav">
@@ -52,7 +55,7 @@
     </tbody>
   </table>
   {% else %}
-  <p class="empty-state">모듈별 집계가 없습니다.</p>
+  {{ emptyState("모듈별 집계가 없습니다.") }}
   {% endif %}
 </section>
 
@@ -89,7 +92,7 @@
     </tbody>
   </table>
   {% else %}
-  <p class="empty-state">조건에 맞는 테스트가 없습니다. 검색어나 필터를 조정해 보세요.</p>
+  {{ emptyState("조건에 맞는 테스트가 없습니다.", "검색어나 필터를 조정하거나 전체 초기화를 눌러 보세요.") }}
   {% endif %}
 </section>
 {% endblock %}

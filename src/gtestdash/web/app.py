@@ -4,8 +4,9 @@
 
 Builds the results snapshot once at startup (FR-001~008) and stores it on
 app.config["SNAPSHOT"] so every route reads a single consistent snapshot per
-request instead of re-parsing the XML tree. POST /refresh (a later phase)
-replaces this reference atomically; nothing here mutates it in place.
+request instead of re-parsing the XML tree. POST /refresh (FR-034, see
+web.routes.refresh) replaces this reference atomically; nothing here mutates
+it in place.
 """
 from flask import Flask, jsonify
 
@@ -14,6 +15,7 @@ from gtestdash.repository import buildSnapshot
 from gtestdash.web.routes.builds import registerBuildDetailRoute
 from gtestdash.web.routes.dashboard import registerDashboardRoute
 from gtestdash.web.routes.modules import registerModuleDetailRoute
+from gtestdash.web.routes.refresh import registerRefreshRoute
 from gtestdash.web.routes.search import registerSearchRoute
 from gtestdash.web.routes.tests import registerTestDetailRoute
 from gtestdash.web.template_filters import formatPercent, formatPercentDiff
@@ -28,8 +30,8 @@ def createApp(resultsPath=None):
     @return A configured Flask app exposing GET /healthz, GET / (FR-009~017),
             GET /builds/<build_id> (FR-018/019, FR-025~031),
             GET /builds/<build_id>/modules/<module> (FR-020/021, FR-025~031),
-            GET /builds/<build_id>/tests/<test_id> (FR-022~024) and
-            GET /search (FR-026~031).
+            GET /builds/<build_id>/tests/<test_id> (FR-022~024, FR-033),
+            GET /search (FR-026~031) and POST /refresh (FR-034).
     """
     app = Flask(__name__)
     resolvedPath = resolveResultsPath(resultsPath)
@@ -42,6 +44,7 @@ def createApp(resultsPath=None):
     registerModuleDetailRoute(app)
     registerTestDetailRoute(app)
     registerSearchRoute(app)
+    registerRefreshRoute(app, resolvedPath)
     return app
 
 

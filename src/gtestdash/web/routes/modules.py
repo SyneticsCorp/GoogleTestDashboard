@@ -7,7 +7,7 @@ from flask import abort, render_template, request
 from gtestdash.aggregation.build_summary import computeCounts, computeFailureRate
 from gtestdash.aggregation.module_trend import computeModuleTrendAcrossBuilds
 from gtestdash.query.combined_query import runCombinedQuery
-from gtestdash.web.routes.route_helpers import attachPageNavLinks, buildTestDetailUrl, readListQueryArgs
+from gtestdash.web.routes.route_helpers import applyListPagePresentation, buildTestDetailUrl, readListQueryArgs
 
 
 def _toTestRow(record):
@@ -136,5 +136,5 @@ def registerModuleDetailRoute(app):
         context = buildModuleDetailContext(snapshot.records, build_id, module, **queryArgs)
         if context is None:
             abort(404)
-        attachPageNavLinks(context, request.path, request.args)
+        applyListPagePresentation(context, request.path, request.args)
         return render_template("module_detail.html", **context)

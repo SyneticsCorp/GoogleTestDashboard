@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% from "_list_controls.html" import queryControls, paginationInfo %}
+{% from "_empty_state.html" import emptyState %}
 
 {% block title %}GoogleTest 대시보드 - 빌드 {{ moduleSummary.buildId }} / {{ moduleSummary.module }}{% endblock %}
 
@@ -43,7 +44,7 @@
     </tbody>
   </table>
   {% else %}
-  <p class="empty-state">추이 데이터가 없습니다.</p>
+  {{ emptyState("추이 데이터가 없습니다.") }}
   {% endif %}
 </section>
 
@@ -79,7 +80,7 @@
     </tbody>
   </table>
   {% else %}
-  <p class="empty-state">조건에 맞는 테스트가 없습니다. 검색어나 필터를 조정해 보세요.</p>
+  {{ emptyState("조건에 맞는 테스트가 없습니다.", "검색어나 필터를 조정하거나 전체 초기화를 눌러 보세요.") }}
   {% endif %}
 </section>
 {% endblock %}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="3" failures="0" disabled="0" errors="0" time="0.003" timestamp="2026-09-02T00:00:00Z" name="AllTests">
+  <testsuite name="ZeroFailures.Cases" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.003" timestamp="2026-09-02T00:00:00Z">
+    <properties>
+      <property name="jenkins_build_number" value="1" />
+      <property name="module" value="ZeroFailuresModule" />
+      <property name="tested_function" value="AlwaysPasses" />
+    </properties>
+    <testcase name="Case_One" classname="ZeroFailures.Cases" status="run" time="0.001" />
+    <testcase name="Case_Two" classname="ZeroFailures.Cases" status="run" time="0.001" />
+    <testcase name="Case_Three" classname="ZeroFailures.Cases" status="run" time="0.001" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,23 @@
+{# !
+  @file _warning_banner.html
+  @brief FR-035: render Snapshot.warnings/excludedFiles (declared-vs-computed
+         count mismatches and parse-failed XML files) as one banner, reused by
+         dashboard.html and build_detail.html so the markup is defined once.
+#}
+{% macro warningBanner(warnings, excludedFiles) %}
+{% if warnings %}
+<section class="warning-banner" aria-labelledby="warning-banner-heading">
+  <h2 id="warning-banner-heading">데이터 경고 ({{ warnings|length }}건)</h2>
+  <ul class="warning-list">
+    {% for warning in warnings %}
+    <li class="warning-item warning-item--{{ warning.kind }}">
+      <span class="warning-path">{{ warning.xmlPath }}</span>: {{ warning.message }}
+    </li>
+    {% endfor %}
+  </ul>
+  {% if excludedFiles %}
+  <p class="excluded-files">제외된 파일 ({{ excludedFiles|length }}건): {{ excludedFiles|join(", ") }}</p>
+  {% endif %}
+</section>
+{% endif %}
+{% endmacro %}

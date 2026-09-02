@@ -150,6 +150,29 @@ th { color: var(--ink-muted); font-weight: 600; }
 
 .crumb-nav a { color: var(--series); }
 
+.back-to-list-link {
+  display: inline-block;
+  color: var(--series);
+  text-decoration: none;
+}
+
+.refresh-form button {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--page);
+  color: var(--ink-primary);
+  cursor: pointer;
+}
+
+.warning-banner {
+  border-color: var(--critical);
+}
+
+.warning-item { color: var(--ink-secondary); }
+.warning-path { font-weight: 600; }
+.excluded-files { color: var(--ink-muted); }
+
 .build-nav {
   display: flex;
   align-items: center;

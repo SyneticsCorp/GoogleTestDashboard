@@ -1,0 +1,9 @@
+{# !
+  @file _empty_state.html
+  @brief FR-036: shared "cause + next action" guidance shown instead of an
+         empty table, reused by dashboard.html, build_detail.html,
+         module_detail.html and search_results.html.
+#}
+{% macro emptyState(reason, action="") %}
+<p class="empty-state">{{ reason }}{% if action %} {{ action }}{% endif %}</p>
+{% endmacro %}

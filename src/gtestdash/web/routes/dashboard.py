@@ -81,14 +81,17 @@ def _resolveLatestSummaryAndDiff(buildSummaries):
     return latestSummary, computeBuildDiff(latestSummary, previousSummary)
 
 
-def buildDashboardContext(records, moduleScope="latest"):
+def buildDashboardContext(records, moduleScope="latest", warnings=None, excludedFiles=None):
     """!
-    @brief Assemble every value dashboard.html needs from the raw record list (FR-009~017).
+    @brief Assemble every value dashboard.html needs from the raw record list (FR-009~017, FR-035).
     @param records Full list of ResultRecord across every build.
     @param moduleScope "latest" (default), "cumulative", or a specific build id
            string, selecting the module failure chart's range (FR-014).
+    @param warnings Snapshot.warnings, or None when there are none (FR-008, FR-035).
+    @param excludedFiles Snapshot.excludedFiles, or None when there are none (FR-035).
     @return Dict of template context: latestSummary, buildDiff, trendPoints,
-            moduleScope, moduleDistribution, latestFailures, buildHistory.
+            moduleScope, moduleDistribution, latestFailures, buildHistory,
+            warnings, excludedFiles.
     """
     buildSummaries = summarizeBuildsByBuild(records)
     latestSummary, buildDiff = _resolveLatestSummaryAndDiff(buildSummaries)
@@ -101,6 +104,8 @@ def buildDashboardContext(records, moduleScope="latest"):
         "moduleDistribution": computeModuleDistribution(records, moduleScope),
         "latestFailures": _latestFailureRows(records, latestSummary),
         "buildHistory": list(reversed(buildSummaries)),
+        "warnings": warnings or [],
+        "excludedFiles": excludedFiles or [],
     }
 
 
@@ -118,5 +123,5 @@ def registerDashboardRoute(app):
         """
         moduleScope = request.args.get("scope", "latest")
         snapshot = app.config["SNAPSHOT"]
-        context = buildDashboardContext(snapshot.records, moduleScope)
+        context = buildDashboardContext(snapshot.records, moduleScope, snapshot.warnings, snapshot.excludedFiles)
         return render_template("dashboard.html", **context)

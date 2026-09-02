@@ -6,7 +6,10 @@ Centralized so the test-detail link shape (Requirements.md §5:
 `/builds/{build_id}/tests/{test_id}`) is defined once instead of duplicated
 in every route module that lists tests.
 """
+import os
 from urllib.parse import quote, urlencode
+
+from gtestdash.query.query_state import appendReturnUrlParam, buildCurrentListUrl
 
 
 def buildTestDetailUrl(record):
@@ -138,3 +141,67 @@ def attachPageNavLinks(context, path, args):
     context["nextPageUrl"] = (
         buildListPageUrl(path, args, page=currentPage + 1) if currentPage < context["totalPages"] else None
     )
+
+
+def attachReturnUrlToRows(rows, path, args):
+    """!
+    @brief Stamp FR-033's returnUrl parameter onto every row's test-detail link.
+
+    The returnUrl is this list page's own URL (path + current querystring), so
+    following a row's link to a test and back restores the exact same search/
+    filter/sort/page state the row was listed under.
+    @param rows List of row dicts (each with a "testUrl" key, as built by a
+           list route's own _toTestRow()); mutated in place.
+    @param path The list route's own path (request.path).
+    @param args The list route's current query args (request.args).
+    """
+    currentListUrl = buildCurrentListUrl(path, args)
+    for row in rows:
+        row["testUrl"] = appendReturnUrlParam(row["testUrl"], currentListUrl)
+
+
+def applyListPagePresentation(context, path, args):
+    """!
+    @brief Apply every list page's shared request-scoped decoration, in one call.
+
+    Bundles FR-031's prev/next page links with FR-033's returnUrl stamping, so
+    each list route (build-detail, module-detail, search) makes a single call
+    here instead of two separate ones (CLAUDE.md's function-calling-count limit).
+    @param context List-page context dict (already containing "page",
+           "totalPages" and "testRows"); mutated in place.
+    @param path The route's own path (request.path).
+    @param args Current request.args.
+    """
+    attachPageNavLinks(context, path, args)
+    attachReturnUrlToRows(context["testRows"], path, args)
+
+
+def _xmlBelongsToBuild(xmlPath, buildId):
+    """!
+    @brief Whether an XML file's immediate parent folder name equals buildId (FR-035 grouping).
+    @param xmlPath Path to a GoogleTest XML file, as recorded on a ParseWarning
+           or a Snapshot.excludedFiles entry.
+    @param buildId Build id (folder name) to match against.
+    @return True when xmlPath's parent directory name is exactly buildId.
+    """
+    return os.path.basename(os.path.dirname(xmlPath)) == buildId
+
+
+def filterWarningsForBuild(warnings, buildId):
+    """!
+    @brief Narrow snapshot warnings to the ones raised while parsing one build's own XML files (FR-035).
+    @param warnings Full ParseWarning list from the snapshot.
+    @param buildId Build id whose warnings to keep.
+    @return Warnings whose xmlPath belongs to buildId's folder.
+    """
+    return [warning for warning in warnings if _xmlBelongsToBuild(warning.xmlPath, buildId)]
+
+
+def filterExcludedFilesForBuild(excludedFiles, buildId):
+    """!
+    @brief Narrow snapshot excludedFiles to the ones under one build's own folder (FR-035).
+    @param excludedFiles Full excluded-file path list from the snapshot.
+    @param buildId Build id whose excluded files to keep.
+    @return Paths whose immediate parent folder name is buildId.
+    """
+    return [path for path in excludedFiles if _xmlBelongsToBuild(path, buildId)]

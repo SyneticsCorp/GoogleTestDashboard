@@ -8,7 +8,13 @@ from gtestdash.aggregation.build_history import summarizeBuildsByBuild
 from gtestdash.aggregation.grouping import numericBuildIdSortKey
 from gtestdash.aggregation.module_distribution import computeModuleDistribution
 from gtestdash.query.combined_query import runCombinedQuery
-from gtestdash.web.routes.route_helpers import attachPageNavLinks, buildTestDetailUrl, readListQueryArgs
+from gtestdash.web.routes.route_helpers import (
+    applyListPagePresentation,
+    buildTestDetailUrl,
+    filterExcludedFilesForBuild,
+    filterWarningsForBuild,
+    readListQueryArgs,
+)
 
 
 def _findBuildSummary(buildSummaries, buildId):
@@ -70,6 +76,11 @@ def buildBuildDetailContext(
 ):
     """!
     @brief Assemble every value build_detail.html needs for one build (FR-018, FR-019, FR-025~031).
+
+    warnings/excludedFiles (FR-035) are not assembled here: they are
+    request-scoped snapshot data, not derived from records, and are attached
+    afterwards by _applyBuildDetailPresentation() to keep this function's own
+    call count within CLAUDE.md's limit.
     @param records Full list of ResultRecord across every build.
     @param buildId Build id requested via the route (a str, e.g. "10").
     @param queryText FR-026 free-text search, scoped to this build (FR-027).
@@ -126,6 +137,25 @@ def buildBuildDetailContext(
     }
 
 
+def _applyBuildDetailPresentation(context, buildId, snapshot, path, args):
+    """!
+    @brief Apply every request-scoped decoration build_detail.html's context needs, in one call.
+
+    Bundles FR-031/FR-033's shared list-page nav/returnUrl handling with
+    FR-035's build-scoped warnings/excludedFiles, so registerBuildDetailRoute()
+    makes a single call here instead of four separate ones (CLAUDE.md's
+    function-calling-count limit).
+    @param context Context dict from buildBuildDetailContext(); mutated in place.
+    @param buildId Build id the page is showing.
+    @param snapshot The app's currently loaded Snapshot.
+    @param path The route's own path (request.path).
+    @param args Current request.args.
+    """
+    applyListPagePresentation(context, path, args)
+    context["warnings"] = filterWarningsForBuild(snapshot.warnings, buildId)
+    context["excludedFiles"] = filterExcludedFilesForBuild(snapshot.excludedFiles, buildId)
+
+
 def registerBuildDetailRoute(app):
     """!
     @brief Register GET /builds/<build_id> on the given Flask app (FR-018, FR-019, FR-025~031).
@@ -144,5 +174,5 @@ def registerBuildDetailRoute(app):
         context = buildBuildDetailContext(snapshot.records, build_id, **queryArgs)
         if context is None:
             abort(404)
-        attachPageNavLinks(context, request.path, request.args)
+        _applyBuildDetailPresentation(context, build_id, snapshot, request.path, request.args)
         return render_template("build_detail.html", **context)

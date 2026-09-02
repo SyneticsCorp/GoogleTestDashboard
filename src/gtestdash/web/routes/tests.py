@@ -1,8 +1,8 @@
 """!
 @file tests.py
-@brief Test-detail route: GET /builds/<build_id>/tests/<test_id> (FR-022~024).
+@brief Test-detail route: GET /builds/<build_id>/tests/<test_id> (FR-022~024, FR-033).
 """
-from flask import abort, render_template
+from flask import abort, render_template, request
 
 from gtestdash.web.routes.route_helpers import findRecordByTestId
 
@@ -69,4 +69,5 @@ def registerTestDetailRoute(app):
         context = buildTestDetailContext(snapshot.records, build_id, test_id)
         if context is None:
             abort(404)
+        context["returnUrl"] = request.args.get("returnUrl")
         return render_template("test_detail.html", **context)
