@@ -1,21 +1,35 @@
 """!
 @file app.py
-@brief Flask application factory for the GoogleTest dashboard (Phase 0 skeleton).
+@brief Flask application factory for the GoogleTest dashboard.
 
-Only infrastructure exists at this stage: an app factory and a health-check
-route used to prove the web layer, pytest and Playwright wiring all work.
-Dashboard/build/module/test routes are added in later phases.
+Builds the results snapshot once at startup (FR-001~008) and stores it on
+app.config["SNAPSHOT"] so every route reads a single consistent snapshot per
+request instead of re-parsing the XML tree. POST /refresh (a later phase)
+replaces this reference atomically; nothing here mutates it in place.
 """
 from flask import Flask, jsonify
 
+from gtestdash.config import resolveResultsPath
+from gtestdash.repository import buildSnapshot
+from gtestdash.web.routes.dashboard import registerDashboardRoute
+from gtestdash.web.template_filters import formatPercent, formatPercentDiff
 
-def createApp():
+
+def createApp(resultsPath=None):
     """!
     @brief Build and configure the Flask application instance.
-    @return A configured Flask app exposing GET /healthz.
+    @param resultsPath Optional explicit GoogleTest results root; when
+           omitted, config.resolveResultsPath() applies its default
+           ("GoogleTestResults" under the current working directory) (FR-001).
+    @return A configured Flask app exposing GET /healthz and GET / (FR-009~017).
     """
     app = Flask(__name__)
+    resolvedPath = resolveResultsPath(resultsPath)
+    app.config["SNAPSHOT"] = buildSnapshot(resolvedPath)
+    app.jinja_env.filters["percent"] = formatPercent
+    app.jinja_env.filters["percentDiff"] = formatPercentDiff
     registerHealthRoute(app)
+    registerDashboardRoute(app)
     return app
 
 

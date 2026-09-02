@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block title %}GoogleTest 대시보드 - 메인{% endblock %}
+
+{% block content %}
+{% if latestSummary %}
+<section class="latest-summary" aria-labelledby="latest-summary-heading">
+  <h1 id="latest-summary-heading">최신 빌드 {{ latestSummary.buildId }}</h1>
+  <p class="build-timestamp">빌드 시각: {{ latestSummary.buildTimestamp or "알 수 없음" }}</p>
+
+  <dl class="stat-grid">
+    <div class="stat-tile"><dt>전체</dt><dd>{{ latestSummary.total }}</dd></div>
+    <div class="stat-tile"><dt>통과</dt><dd>{{ latestSummary.passed }}</dd></div>
+    <div class="stat-tile stat-tile--failed"><dt>실패</dt><dd>{{ latestSummary.failed }}</dd></div>
+    <div class="stat-tile"><dt>오류</dt><dd>{{ latestSummary.error }}</dd></div>
+    <div class="stat-tile"><dt>건너뜀</dt><dd>{{ latestSummary.skipped }}</dd></div>
+    <div class="stat-tile"><dt>실패율</dt><dd>{{ latestSummary.failureRate|percent }}</dd></div>
+    <div class="stat-tile"><dt>총 수행 시간</dt><dd>{{ "%.2f"|format(latestSummary.durationSeconds) }}s</dd></div>
+  </dl>
+
+  {% if buildDiff and buildDiff.direction != "no_previous" %}
+  <p class="build-diff build-diff--{{ buildDiff.direction }}">
+    직전 빌드({{ buildDiff.previousFailureRate|percent }}) 대비 실패율
+    {{ buildDiff.failureRateDiff|percentDiff }}
+    ({{ {"increase": "증가", "decrease": "감소", "same": "동일"}[buildDiff.direction] }})
+  </p>
+  {% endif %}
+</section>
+
+<section class="trend-section" aria-labelledby="trend-heading">
+  <h2 id="trend-heading">빌드별 실패율 트렌드</h2>
+  <canvas id="trendChart" height="120" role="img" aria-label="빌드별 실패율 트렌드 차트"></canvas>
+</section>
+
+<section class="module-section" aria-labelledby="module-heading">
+  <h2 id="module-heading">모듈별 실패 분포</h2>
+  <form class="scope-form" method="get" action="{{ url_for('dashboard') }}">
+    <label for="scope-select">범위</label>
+    <select id="scope-select" name="scope" onchange="this.form.submit()">
+      <option value="latest" {% if moduleScope == "latest" %}selected{% endif %}>최신 빌드</option>
+      <option value="cumulative" {% if moduleScope == "cumulative" %}selected{% endif %}>전체 누적</option>
+      {% for build in buildHistory %}
+      <option value="{{ build.buildId }}" {% if moduleScope == build.buildId %}selected{% endif %}>빌드 {{ build.buildId }}</option>
+      {% endfor %}
+    </select>
+  </form>
+  <canvas id="moduleChart" height="160" role="img" aria-label="모듈별 실패 수 가로 막대 차트"></canvas>
+</section>
+
+<section class="failures-section" aria-labelledby="failures-heading">
+  <h2 id="failures-heading">최신 빌드 실패 테스트</h2>
+  {% if latestFailures %}
+  <p><a href="/builds/{{ latestSummary.buildId }}?failedOnly=true">전체 실패 보기 ({{ latestFailures|length }}건)</a></p>
+  <table class="failures-table">
+    <thead>
+      <tr>
+        <th>모듈</th><th>함수/스위트</th><th>테스트명</th><th>실패 요약</th><th>파일:줄</th><th>수행 시간</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for failure in latestFailures %}
+      <tr>
+        <td>{{ failure.module }}</td>
+        <td>{{ failure.function }} / {{ failure.suite }}</td>
+        <td><a href="{{ failure.testUrl }}">{{ failure.testName }}</a></td>
+        <td>{{ failure.failureSummary or "-" }}</td>
+        <td>{{ failure.testFile or "-" }}{% if failure.line %}:{{ failure.line }}{% endif %}</td>
+        <td>{{ "%.3f"|format(failure.durationSeconds) }}s</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="empty-state">실패 테스트 없음</p>
+  {% endif %}
+</section>
+
+<section class="build-history-section" aria-labelledby="build-history-heading">
+  <h2 id="build-history-heading">빌드 이력</h2>
+  <table class="build-history-table">
+    <thead>
+      <tr>
+        <th>빌드</th><th>시각</th><th>전체</th><th>실패</th><th>오류</th><th>실패율</th><th>수행 시간</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for build in buildHistory %}
+      <tr>
+        <td><a href="{{ build.buildUrl }}">{{ build.buildId }}</a></td>
+        <td>{{ build.buildTimestamp or "-" }}</td>
+        <td>{{ build.total }}</td>
+        <td>{{ build.failed }}</td>
+        <td>{{ build.error }}</td>
+        <td>{{ build.failureRate|percent }}</td>
+        <td>{{ "%.2f"|format(build.durationSeconds) }}s</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+{% else %}
+<p class="empty-state">표시할 빌드 결과가 없습니다. GoogleTestResults 경로를 확인하세요.</p>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+  window.gtestDashData = {
+    trendPoints: {{ trendPoints|tojson }},
+    moduleDistribution: {{ moduleDistribution|tojson }},
+    latestBuildId: {{ (latestSummary.buildId if latestSummary else none)|tojson }}
+  };
+</script>
+<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+{% endblock %}

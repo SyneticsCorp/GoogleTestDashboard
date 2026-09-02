@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}GoogleTest 대시보드{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+  <header class="app-header">
+    <a class="app-title" href="{{ url_for('dashboard') }}">GoogleTest 대시보드</a>
+    <form class="search-form" action="/search" method="get">
+      <input type="search" name="q" placeholder="모듈, 함수, 테스트명, 실패 메시지 검색">
+    </form>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>
