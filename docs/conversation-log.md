@@ -80,3 +80,30 @@ Phase 0~7을 다음 규칙으로 자동 진행하기로 확정했다:
   명시적으로 활성화했다.
 - 이후 Phase 0부터 Phase 7까지는 사용자 확인 없이 자동으로 진행하고, 완료 후 결과를 보고하기로
   했다.
+
+### 8. 개발 완료
+
+Phase 0~7을 `tdd-flow` 서브에이전트(백그라운드, TDD Red-Green-Refactor)로 순차 구현하고, 매
+Phase 완료마다 오케스트레이터가 `pytest` 전체 실행으로 검증한 뒤 커밋/`origin/main` 푸시했다.
+Phase 0 실행 중 일시적 API/네트워크 오류(ENOTFOUND)로 한 번 중단되어 사용자 지시로 재개했다.
+
+- Phase 0: 프로젝트 골격 + pytest/Playwright 테스트 인프라 (FR-001)
+- Phase 1: 결과 수집/정규화 — XML 파싱, 상태 우선순위, 모듈/함수 폴백, 집계 재계산 (FR-002~008)
+- Phase 2: 메인 대시보드 — 최신 빌드 요약, 트렌드 차트, 모듈별 실패 분포 (FR-009~017)
+- Phase 3: 빌드/모듈 상세 (FR-018~021)
+- Phase 4: 테스트 상세 (FR-022~024)
+- Phase 5: 검색/필터/정렬/페이지네이션 — 공용 쿼리 엔진으로 Phase 3 임시 로직 교체 (FR-025~031)
+- Phase 6: 네비게이션/상태유지/새로고침/에러처리 (FR-032~036)
+- `sw-system-tester`가 `Requirements.md` 전체(FR-001~036, §7/§8)를 근거로
+  `TestCase_Template.xlsx`에 시스템 테스트 케이스(기능 105건 + 비기능 12건)를 PICT 조합
+  포함해 작성. 진행 정지가 한 번 있었으나(PICT 실행 관련 오인) 재개해 완료.
+- `tdd-flow`가 위 xlsx에서 "(제안)"(합성 데이터 필요) 표시가 없는 케이스 81건을 Playwright
+  브라우저 E2E 테스트로 매핑(`tests/e2e/test_e2e_fr*.py`, TC_ID로 추적). 이 과정에서 모듈
+  상세 페이지의 공통 검색창이 검색 범위에 모듈을 누락해 다른 모듈 결과가 섞이는 버그(FR-027)를
+  발견해 수정했다.
+- Phase 7: 기존 287개(당시 284개) 테스트를 §7 수치 표/§8 완료 판정 7개 조건과 전수 대조해
+  `docs/acceptance-traceability.md` 작성, 누락된 회귀 테스트(빌드 폴더가 없는 결과 루트) 1건
+  보강. 최종 `pytest -q` 287개 전부 통과, §4 제외 범위 위반 없음, §8 7개 조건 모두 충족 확인.
+- 마무리 단계에서 `README.md`(Mermaid 아키텍처/페이지 흐름 다이어그램 포함), 샘플 데이터
+  기준 정적 HTML 미리보기(`target/`, `scripts/generate_static_snapshot.py`), 이 대화의 원문
+  기록(`docs/conversation-transcript.md`)을 추가하고 `CLAUDE.md`를 구현 완료 상태로 갱신했다.

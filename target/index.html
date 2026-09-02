@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GoogleTest 대시보드 - 메인</title>
+  <link rel="stylesheet" href="static/css/dashboard.css">
+</head>
+<body>
+  <header class="app-header">
+    <a class="app-title" href="/">GoogleTest 대시보드</a>
+    <form class="search-form" action="/search" method="get">
+      <input type="search" name="q" value="" placeholder="모듈, 함수, 테스트명, 실패 메시지 검색">
+      
+      
+      <button type="submit">검색</button>
+    </form>
+    <form class="refresh-form" action="/refresh" method="post">
+      <button type="submit" title="GoogleTest 결과를 다시 검색해 집계를 갱신합니다">새로고침</button>
+    </form>
+  </header>
+  <main>
+    
+
+
+
+
+<section class="latest-summary" aria-labelledby="latest-summary-heading">
+  <h1 id="latest-summary-heading">최신 빌드 10</h1>
+  <p class="build-timestamp">빌드 시각: 2026-09-02T00:00:00Z</p>
+
+  <dl class="stat-grid">
+    <div class="stat-tile"><dt>전체</dt><dd>1200</dd></div>
+    <div class="stat-tile"><dt>통과</dt><dd>1176</dd></div>
+    <div class="stat-tile stat-tile--failed"><dt>실패</dt><dd>24</dd></div>
+    <div class="stat-tile"><dt>오류</dt><dd>0</dd></div>
+    <div class="stat-tile"><dt>건너뜀</dt><dd>0</dd></div>
+    <div class="stat-tile"><dt>실패율</dt><dd>2.0%</dd></div>
+    <div class="stat-tile"><dt>총 수행 시간</dt><dd>153.01s</dd></div>
+  </dl>
+
+  
+  <p class="build-diff build-diff--decrease">
+    직전 빌드(4.0%) 대비 실패율
+    -2.0%p
+    (감소)
+  </p>
+  
+</section>
+
+<section class="trend-section" aria-labelledby="trend-heading">
+  <h2 id="trend-heading">빌드별 실패율 트렌드</h2>
+  <canvas id="trendChart" height="120" role="img" aria-label="빌드별 실패율 트렌드 차트"></canvas>
+</section>
+
+<section class="module-section" aria-labelledby="module-heading">
+  <h2 id="module-heading">모듈별 실패 분포</h2>
+  <form class="scope-form" method="get" action="/">
+    <label for="scope-select">범위</label>
+    <select id="scope-select" name="scope" onchange="this.form.submit()">
+      <option value="latest" selected>최신 빌드</option>
+      <option value="cumulative" >전체 누적</option>
+      
+      <option value="10" >빌드 10</option>
+      
+      <option value="09" >빌드 09</option>
+      
+      <option value="08" >빌드 08</option>
+      
+      <option value="07" >빌드 07</option>
+      
+      <option value="06" >빌드 06</option>
+      
+      <option value="05" >빌드 05</option>
+      
+      <option value="04" >빌드 04</option>
+      
+      <option value="03" >빌드 03</option>
+      
+      <option value="02" >빌드 02</option>
+      
+      <option value="01" >빌드 01</option>
+      
+    </select>
+  </form>
+  <canvas id="moduleChart" height="160" role="img" aria-label="모듈별 실패 수 가로 막대 차트"></canvas>
+</section>
+
+<section class="failures-section" aria-labelledby="failures-heading">
+  <h2 id="failures-heading">최신 빌드 실패 테스트</h2>
+  
+  <p><a href="/builds/10?failedOnly=true">전체 실패 보기 (24건)</a></p>
+  <table class="failures-table">
+    <thead>
+      <tr>
+        <th>모듈</th><th>함수/스위트</th><th>테스트명</th><th>실패 요약</th><th>파일:줄</th><th>수행 시간</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>ChildLockController</td>
+        <td>HandleRemoteCommand / ChildLockController.HandleRemoteCommandTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.HandleRemoteCommandTest.HandleRemoteCommand_UpperBoundary">HandleRemoteCommand_UpperBoundary</a></td>
+        <td>request acceptance mismatch</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:478</td>
+        <td>0.231s</td>
+      </tr>
+      
+      <tr>
+        <td>ChildLockController</td>
+        <td>HandleRemoteCommand / ChildLockController.HandleRemoteCommandTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.HandleRemoteCommandTest.HandleRemoteCommand_RepeatedCommand">HandleRemoteCommand_RepeatedCommand</a></td>
+        <td>state mismatch</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:506</td>
+        <td>0.177s</td>
+      </tr>
+      
+      <tr>
+        <td>ChildLockController</td>
+        <td>RecoverFromFault / ChildLockController.RecoverFromFaultTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.RecoverFromFaultTest.RecoverFromFault_DoorOpen">RecoverFromFault_DoorOpen</a></td>
+        <td>message validation mismatch</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:790</td>
+        <td>0.076s</td>
+      </tr>
+      
+      <tr>
+        <td>CommunicationGateway</td>
+        <td>ReceiveRemoteRequest / CommunicationGateway.ReceiveRemoteRequestTest</td>
+        <td><a href="/builds/10/tests/CommunicationGateway.ReceiveRemoteRequestTest.ReceiveRemoteRequest_BelowMinimum">ReceiveRemoteRequest_BelowMinimum</a></td>
+        <td>message validation mismatch</td>
+        <td>tests/communication/communication_gateway_test.cpp:222</td>
+        <td>0.089s</td>
+      </tr>
+      
+      <tr>
+        <td>CommunicationGateway</td>
+        <td>HandleSequenceError / CommunicationGateway.HandleSequenceErrorTest</td>
+        <td><a href="/builds/10/tests/CommunicationGateway.HandleSequenceErrorTest.HandleSequenceError_RapidToggle">HandleSequenceError_RapidToggle</a></td>
+        <td>diagnostic event mismatch</td>
+        <td>tests/communication/communication_gateway_test.cpp:632</td>
+        <td>0.135s</td>
+      </tr>
+      
+      <tr>
+        <td>CommunicationGateway</td>
+        <td>RecoverCommunication / CommunicationGateway.RecoverCommunicationTest</td>
+        <td><a href="/builds/10/tests/CommunicationGateway.RecoverCommunicationTest.RecoverCommunication_RecoveryAfterFault">RecoverCommunication_RecoveryAfterFault</a></td>
+        <td>state mismatch</td>
+        <td>tests/communication/communication_gateway_test.cpp:802</td>
+        <td>0.015s</td>
+      </tr>
+      
+      <tr>
+        <td>DiagnosticManager</td>
+        <td>ReportSignalFault / DiagnosticManager.ReportSignalFaultTest</td>
+        <td><a href="/builds/10/tests/DiagnosticManager.ReportSignalFaultTest.ReportSignalFault_BelowMinimum">ReportSignalFault_BelowMinimum</a></td>
+        <td>diagnostic event mismatch</td>
+        <td>tests/diagnostic/diagnostic_manager_test.cpp:612</td>
+        <td>0.129s</td>
+      </tr>
+      
+      <tr>
+        <td>DiagnosticManager</td>
+        <td>ReportSignalFault / DiagnosticManager.ReportSignalFaultTest</td>
+        <td><a href="/builds/10/tests/DiagnosticManager.ReportSignalFaultTest.ReportSignalFault_IgnitionOn">ReportSignalFault_IgnitionOn</a></td>
+        <td>retry count mismatch</td>
+        <td>tests/diagnostic/diagnostic_manager_test.cpp:648</td>
+        <td>0.034s</td>
+      </tr>
+      
+      <tr>
+        <td>DoorStateManager</td>
+        <td>ValidateDoorSignal / DoorStateManager.ValidateDoorSignalTest</td>
+        <td><a href="/builds/10/tests/DoorStateManager.ValidateDoorSignalTest.ValidateDoorSignal_RepeatedCommand">ValidateDoorSignal_RepeatedCommand</a></td>
+        <td>feedback timeout</td>
+        <td>tests/door/door_state_manager_test.cpp:246</td>
+        <td>0.212s</td>
+      </tr>
+      
+      <tr>
+        <td>DoorStateManager</td>
+        <td>DetectDoorAjar / DoorStateManager.DetectDoorAjarTest</td>
+        <td><a href="/builds/10/tests/DoorStateManager.DetectDoorAjarTest.DetectDoorAjar_SignalTimeout">DetectDoorAjar_SignalTimeout</a></td>
+        <td>stale signal handling mismatch</td>
+        <td>tests/door/door_state_manager_test.cpp:364</td>
+        <td>0.066s</td>
+      </tr>
+      
+      <tr>
+        <td>DoorStateManager</td>
+        <td>PublishDoorState / DoorStateManager.PublishDoorStateTest</td>
+        <td><a href="/builds/10/tests/DoorStateManager.PublishDoorStateTest.PublishDoorState_RapidToggle">PublishDoorState_RapidToggle</a></td>
+        <td>retry count mismatch</td>
+        <td>tests/door/door_state_manager_test.cpp:762</td>
+        <td>0.032s</td>
+      </tr>
+      
+      <tr>
+        <td>LockActuator</td>
+        <td>CommandLock / LockActuator.CommandLockTest</td>
+        <td><a href="/builds/10/tests/LockActuator.CommandLockTest.CommandLock_PowerCycle">CommandLock_PowerCycle</a></td>
+        <td>state mismatch</td>
+        <td>tests/actuator/lock_actuator_test.cpp:156</td>
+        <td>0.223s</td>
+      </tr>
+      
+      <tr>
+        <td>LockActuator</td>
+        <td>VerifyFeedback / LockActuator.VerifyFeedbackTest</td>
+        <td><a href="/builds/10/tests/LockActuator.VerifyFeedbackTest.VerifyFeedback_RepeatedCommand">VerifyFeedback_RepeatedCommand</a></td>
+        <td>feedback timeout</td>
+        <td>tests/actuator/lock_actuator_test.cpp:376</td>
+        <td>0.018s</td>
+      </tr>
+      
+      <tr>
+        <td>PersistenceManager</td>
+        <td>RecoverDefaultPreference / PersistenceManager.RecoverDefaultPreferenceTest</td>
+        <td><a href="/builds/10/tests/PersistenceManager.RecoverDefaultPreferenceTest.RecoverDefaultPreference_VehicleStopped">RecoverDefaultPreference_VehicleStopped</a></td>
+        <td>diagnostic event mismatch</td>
+        <td>tests/persistence/persistence_manager_test.cpp:522</td>
+        <td>0.117s</td>
+      </tr>
+      
+      <tr>
+        <td>PersistenceManager</td>
+        <td>HandleWriteFailure / PersistenceManager.HandleWriteFailureTest</td>
+        <td><a href="/builds/10/tests/PersistenceManager.HandleWriteFailureTest.HandleWriteFailure_StaleSignal">HandleWriteFailure_StaleSignal</a></td>
+        <td>retry count mismatch</td>
+        <td>tests/persistence/persistence_manager_test.cpp:628</td>
+        <td>0.066s</td>
+      </tr>
+      
+      <tr>
+        <td>SpeedInterlock</td>
+        <td>EvaluateVehicleSpeed / SpeedInterlock.EvaluateVehicleSpeedTest</td>
+        <td><a href="/builds/10/tests/SpeedInterlock.EvaluateVehicleSpeedTest.EvaluateVehicleSpeed_NominalInput">EvaluateVehicleSpeed_NominalInput</a></td>
+        <td>persistence mismatch</td>
+        <td>tests/interlock/speed_interlock_test.cpp:80</td>
+        <td>0.175s</td>
+      </tr>
+      
+      <tr>
+        <td>SpeedInterlock</td>
+        <td>ExitInterlock / SpeedInterlock.ExitInterlockTest</td>
+        <td><a href="/builds/10/tests/SpeedInterlock.ExitInterlockTest.ExitInterlock_StaleSignal">ExitInterlock_StaleSignal</a></td>
+        <td>stale signal handling mismatch</td>
+        <td>tests/interlock/speed_interlock_test.cpp:368</td>
+        <td>0.180s</td>
+      </tr>
+      
+      <tr>
+        <td>SpeedInterlock</td>
+        <td>RejectUnsafeUnlock / SpeedInterlock.RejectUnsafeUnlockTest</td>
+        <td><a href="/builds/10/tests/SpeedInterlock.RejectUnsafeUnlockTest.RejectUnsafeUnlock_VehicleStopped">RejectUnsafeUnlock_VehicleStopped</a></td>
+        <td>retry count mismatch</td>
+        <td>tests/interlock/speed_interlock_test.cpp:782</td>
+        <td>0.222s</td>
+      </tr>
+      
+      <tr>
+        <td>StateConsistencyMonitor</td>
+        <td>DetectInconsistentState / StateConsistencyMonitor.DetectInconsistentStateTest</td>
+        <td><a href="/builds/10/tests/StateConsistencyMonitor.DetectInconsistentStateTest.DetectInconsistentState_IgnitionOff">DetectInconsistentState_IgnitionOff</a></td>
+        <td>request acceptance mismatch</td>
+        <td>tests/monitor/state_consistency_monitor_test.cpp:254</td>
+        <td>0.050s</td>
+      </tr>
+      
+      <tr>
+        <td>StateConsistencyMonitor</td>
+        <td>ReportMonitorFault / StateConsistencyMonitor.ReportMonitorFaultTest</td>
+        <td><a href="/builds/10/tests/StateConsistencyMonitor.ReportMonitorFaultTest.ReportMonitorFault_IgnitionOff">ReportMonitorFault_IgnitionOff</a></td>
+        <td>feedback timeout</td>
+        <td>tests/monitor/state_consistency_monitor_test.cpp:774</td>
+        <td>0.002s</td>
+      </tr>
+      
+      <tr>
+        <td>SwitchInput</td>
+        <td>DebounceSwitch / SwitchInput.DebounceSwitchTest</td>
+        <td><a href="/builds/10/tests/SwitchInput.DebounceSwitchTest.DebounceSwitch_IgnitionOff">DebounceSwitch_IgnitionOff</a></td>
+        <td>diagnostic event mismatch</td>
+        <td>tests/input/switch_input_test.cpp:254</td>
+        <td>0.175s</td>
+      </tr>
+      
+      <tr>
+        <td>SwitchInput</td>
+        <td>MapSwitchPosition / SwitchInput.MapSwitchPositionTest</td>
+        <td><a href="/builds/10/tests/SwitchInput.MapSwitchPositionTest.MapSwitchPosition_RapidToggle">MapSwitchPosition_RapidToggle</a></td>
+        <td>diagnostic event mismatch</td>
+        <td>tests/input/switch_input_test.cpp:632</td>
+        <td>0.193s</td>
+      </tr>
+      
+      <tr>
+        <td>VehicleSignalAdapter</td>
+        <td>ValidateSignalAge / VehicleSignalAdapter.ValidateSignalAgeTest</td>
+        <td><a href="/builds/10/tests/VehicleSignalAdapter.ValidateSignalAgeTest.ValidateSignalAge_DoorOpen">ValidateSignalAge_DoorOpen</a></td>
+        <td>retry count mismatch</td>
+        <td>tests/signal/vehicle_signal_adapter_test.cpp:530</td>
+        <td>0.036s</td>
+      </tr>
+      
+      <tr>
+        <td>VehicleSignalAdapter</td>
+        <td>NormalizeSignal / VehicleSignalAdapter.NormalizeSignalTest</td>
+        <td><a href="/builds/10/tests/VehicleSignalAdapter.NormalizeSignalTest.NormalizeSignal_RepeatedCommand">NormalizeSignal_RepeatedCommand</a></td>
+        <td>state mismatch</td>
+        <td>tests/signal/vehicle_signal_adapter_test.cpp:766</td>
+        <td>0.168s</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  
+</section>
+
+<section class="build-history-section" aria-labelledby="build-history-heading">
+  <h2 id="build-history-heading">빌드 이력</h2>
+  <table class="build-history-table">
+    <thead>
+      <tr>
+        <th>빌드</th><th>시각</th><th>전체</th><th>실패</th><th>오류</th><th>실패율</th><th>수행 시간</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td><a href="/builds/10">10</a></td>
+        <td>2026-09-02T00:00:00Z</td>
+        <td>1200</td>
+        <td>24</td>
+        <td>0</td>
+        <td>2.0%</td>
+        <td>153.01s</td>
+      </tr>
+      
+      <tr>
+        <td><a href="/builds/09">09</a></td>
+        <td>2026-09-01T00:00:00Z</td>
+        <td>1200</td>
+        <td>48</td>
+        <td>0</td>
+        <td>4.0%</td>
+        <td>154.49s</td>
+      </tr>
+      
+      <tr>
+        <td><a href="/builds/08">08</a></td>
+        <td>2026-08-31T00:00:00Z</td>
+        <td>1200</td>
+        <td>120</td>
+        <td>0</td>
+        <td>10.0%</td>
+        <td>151.61s</td>
+      </tr>
+      
+      <tr>
+        <td><a href="/builds/07">07</a></td>
+        <td>2026-08-30T00:00:00Z</td>
+        <td>1200</td>
+        <td>60</td>
+        <td>0</td>
+        <td>5.0%</td>
+        <td>153.72s</td>
+      </tr>
+      
+      <tr>
+        <td><a href="/builds/06">06</a></td>
+        <td>2026-08-29T00:00:00Z</td>
+        <td>1200</td>
+        <td>84</td>
+        <td>0</td>
+        <td>7.0%</td>
+        <td>148.24s</td>
+      </tr>
+      
+      <tr>
+        <td><a href="/builds/05">05</a></td>
+        <td>2026-08-28T00:00:00Z</td>
+        <td>1200</td>
+        <td>36</td>
+        <td>0</td>
+        <td>3.0%</td>
+        <td>152.87s</td>
+      </tr>
+      
+      <tr>
+        <td><a href="/builds/04">04</a></td>
+        <td>2026-08-27T00:00:00Z</td>
+        <td>1200</td>
+        <td>72</td>
+        <td>0</td>
+        <td>6.0%</td>
+        <td>152.94s</td>
+      </tr>
+      
+      <tr>
+        <td><a href="/builds/03">03</a></td>
+        <td>2026-08-26T00:00:00Z</td>
+        <td>1200</td>
+        <td>108</td>
+        <td>0</td>
+        <td>9.0%</td>
+        <td>152.49s</td>
+      </tr>
+      
+      <tr>
+        <td><a href="/builds/02">02</a></td>
+        <td>2026-08-25T00:00:00Z</td>
+        <td>1200</td>
+        <td>48</td>
+        <td>0</td>
+        <td>4.0%</td>
+        <td>149.57s</td>
+      </tr>
+      
+      <tr>
+        <td><a href="/builds/01">01</a></td>
+        <td>2026-08-24T00:00:00Z</td>
+        <td>1200</td>
+        <td>96</td>
+        <td>0</td>
+        <td>8.0%</td>
+        <td>149.33s</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</section>
+
+
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  
+<script>
+  window.gtestDashData = {
+    trendPoints: [{"buildId": "01", "buildTimestamp": "2026-08-24T00:00:00Z", "buildUrl": "/builds/01", "failed": 96, "failureRate": 8.0, "total": 1200}, {"buildId": "02", "buildTimestamp": "2026-08-25T00:00:00Z", "buildUrl": "/builds/02", "failed": 48, "failureRate": 4.0, "total": 1200}, {"buildId": "03", "buildTimestamp": "2026-08-26T00:00:00Z", "buildUrl": "/builds/03", "failed": 108, "failureRate": 9.0, "total": 1200}, {"buildId": "04", "buildTimestamp": "2026-08-27T00:00:00Z", "buildUrl": "/builds/04", "failed": 72, "failureRate": 6.0, "total": 1200}, {"buildId": "05", "buildTimestamp": "2026-08-28T00:00:00Z", "buildUrl": "/builds/05", "failed": 36, "failureRate": 3.0, "total": 1200}, {"buildId": "06", "buildTimestamp": "2026-08-29T00:00:00Z", "buildUrl": "/builds/06", "failed": 84, "failureRate": 7.0, "total": 1200}, {"buildId": "07", "buildTimestamp": "2026-08-30T00:00:00Z", "buildUrl": "/builds/07", "failed": 60, "failureRate": 5.0, "total": 1200}, {"buildId": "08", "buildTimestamp": "2026-08-31T00:00:00Z", "buildUrl": "/builds/08", "failed": 120, "failureRate": 10.0, "total": 1200}, {"buildId": "09", "buildTimestamp": "2026-09-01T00:00:00Z", "buildUrl": "/builds/09", "failed": 48, "failureRate": 4.0, "total": 1200}, {"buildId": "10", "buildTimestamp": "2026-09-02T00:00:00Z", "buildUrl": "/builds/10", "failed": 24, "failureRate": 2.0, "total": 1200}],
+    moduleDistribution: [{"failed": 3, "failureRate": 2.5, "module": "ChildLockController", "moduleUrl": "/builds/10/modules/ChildLockController?failedOnly=true", "total": 120}, {"failed": 3, "failureRate": 2.5, "module": "CommunicationGateway", "moduleUrl": "/builds/10/modules/CommunicationGateway?failedOnly=true", "total": 120}, {"failed": 3, "failureRate": 2.5, "module": "DoorStateManager", "moduleUrl": "/builds/10/modules/DoorStateManager?failedOnly=true", "total": 120}, {"failed": 3, "failureRate": 2.5, "module": "SpeedInterlock", "moduleUrl": "/builds/10/modules/SpeedInterlock?failedOnly=true", "total": 120}, {"failed": 2, "failureRate": 1.7, "module": "DiagnosticManager", "moduleUrl": "/builds/10/modules/DiagnosticManager?failedOnly=true", "total": 120}, {"failed": 2, "failureRate": 1.7, "module": "LockActuator", "moduleUrl": "/builds/10/modules/LockActuator?failedOnly=true", "total": 120}, {"failed": 2, "failureRate": 1.7, "module": "PersistenceManager", "moduleUrl": "/builds/10/modules/PersistenceManager?failedOnly=true", "total": 120}, {"failed": 2, "failureRate": 1.7, "module": "StateConsistencyMonitor", "moduleUrl": "/builds/10/modules/StateConsistencyMonitor?failedOnly=true", "total": 120}, {"failed": 2, "failureRate": 1.7, "module": "SwitchInput", "moduleUrl": "/builds/10/modules/SwitchInput?failedOnly=true", "total": 120}, {"failed": 2, "failureRate": 1.7, "module": "VehicleSignalAdapter", "moduleUrl": "/builds/10/modules/VehicleSignalAdapter?failedOnly=true", "total": 120}],
+    latestBuildId: "10"
+  };
+</script>
+<script src="static/js/charts.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GoogleTest 대시보드 - 빌드 10 / HandleRemoteCommand_RepeatedCommand</title>
+  <link rel="stylesheet" href="static/css/dashboard.css">
+</head>
+<body>
+  <header class="app-header">
+    <a class="app-title" href="/">GoogleTest 대시보드</a>
+    <form class="search-form" action="/search" method="get">
+      <input type="search" name="q" value="" placeholder="모듈, 함수, 테스트명, 실패 메시지 검색">
+      
+      <input type="hidden" name="buildId" value="10">
+      
+      
+      <button type="submit">검색</button>
+    </form>
+    <form class="refresh-form" action="/refresh" method="post">
+      <button type="submit" title="GoogleTest 결과를 다시 검색해 집계를 갱신합니다">새로고침</button>
+    </form>
+  </header>
+  <main>
+    
+<nav class="crumb-nav">
+  <a href="/">메인</a> /
+  <a href="/builds/10">빌드 10</a> /
+  <a href="/builds/10/modules/ChildLockController">ChildLockController</a> /
+  HandleRemoteCommand_RepeatedCommand
+</nav>
+
+
+<a class="back-to-list-link" href="/builds/10">&laquo; 목록으로 돌아가기</a>
+
+
+<section class="test-summary" aria-labelledby="test-summary-heading">
+  <h1 id="test-summary-heading">HandleRemoteCommand_RepeatedCommand</h1>
+
+  <dl class="stat-grid stat-grid--detail">
+    <div class="stat-tile"><dt>빌드</dt><dd>10</dd></div>
+    <div class="stat-tile"><dt>모듈</dt><dd>ChildLockController</dd></div>
+    <div class="stat-tile"><dt>함수</dt><dd>HandleRemoteCommand</dd></div>
+    <div class="stat-tile"><dt>스위트</dt><dd>ChildLockController.HandleRemoteCommandTest</dd></div>
+    <div class="stat-tile"><dt>클래스명</dt><dd>ChildLockController.HandleRemoteCommandTest</dd></div>
+    <div class="stat-tile stat-tile--failed">
+      <dt>상태</dt><dd>FAILED</dd>
+    </div>
+    <div class="stat-tile"><dt>수행 시간</dt><dd>0.177s</dd></div>
+    <div class="stat-tile"><dt>시각</dt><dd>2026-09-02T00:00:00Z</dd></div>
+    <div class="stat-tile"><dt>테스트 파일</dt><dd>tests/child_lock/child_lock_controller_test.cpp:506</dd></div>
+    <div class="stat-tile"><dt>대상 소스 파일</dt><dd>src/child_lock/child_lock_controller.cpp</dd></div>
+  </dl>
+</section>
+
+<section class="failure-section" aria-labelledby="test-failure-heading">
+  <h2 id="test-failure-heading">실패 정보</h2>
+  
+  <dl class="stat-grid">
+    <div class="stat-tile"><dt>실패 유형</dt><dd>AssertionFailure</dd></div>
+    <div class="stat-tile"><dt>실패 요약</dt><dd>state mismatch</dd></div>
+  </dl>
+  <pre class="failure-detail">tests/child_lock/child_lock_controller_test.cpp:506
+Failure
+Expected child-lock state: LOCKED
+  Actual child-lock state: UNLOCKED
+Synthetic Jenkins build: 10</pre>
+  
+</section>
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  
+</body>
+</html>

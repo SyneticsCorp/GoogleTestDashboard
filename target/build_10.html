@@ -1,0 +1,989 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GoogleTest 대시보드 - 빌드 10</title>
+  <link rel="stylesheet" href="static/css/dashboard.css">
+</head>
+<body>
+  <header class="app-header">
+    <a class="app-title" href="/">GoogleTest 대시보드</a>
+    <form class="search-form" action="/search" method="get">
+      <input type="search" name="q" value="" placeholder="모듈, 함수, 테스트명, 실패 메시지 검색">
+      
+      <input type="hidden" name="buildId" value="10">
+      
+      
+      <button type="submit">검색</button>
+    </form>
+    <form class="refresh-form" action="/refresh" method="post">
+      <button type="submit" title="GoogleTest 결과를 다시 검색해 집계를 갱신합니다">새로고침</button>
+    </form>
+  </header>
+  <main>
+    
+<nav class="crumb-nav"><a href="/">메인</a> / 빌드 10</nav>
+
+
+
+
+<section class="build-summary" aria-labelledby="build-summary-heading">
+  <div class="build-nav">
+    
+    <a class="build-nav-link" href="/builds/09">&laquo; 이전 빌드 (09)</a>
+    
+    <h1 id="build-summary-heading">빌드 10 상세</h1>
+    
+    <span class="build-nav-link build-nav-link--disabled">다음 빌드 &raquo;</span>
+    
+  </div>
+  <p class="build-timestamp">빌드 시각: 2026-09-02T00:00:00Z</p>
+
+  <dl class="stat-grid">
+    <div class="stat-tile"><dt>전체</dt><dd>1200</dd></div>
+    <div class="stat-tile"><dt>통과</dt><dd>1176</dd></div>
+    <div class="stat-tile stat-tile--failed"><dt>실패</dt><dd>24</dd></div>
+    <div class="stat-tile"><dt>오류</dt><dd>0</dd></div>
+    <div class="stat-tile"><dt>건너뜀</dt><dd>0</dd></div>
+    <div class="stat-tile"><dt>실패율</dt><dd>2.0%</dd></div>
+    <div class="stat-tile"><dt>총 수행 시간</dt><dd>153.01s</dd></div>
+  </dl>
+</section>
+
+<section class="module-section" aria-labelledby="build-module-heading">
+  <h2 id="build-module-heading">모듈별 집계</h2>
+  
+  <table class="module-table">
+    <thead>
+      <tr><th>모듈</th><th>전체</th><th>실패</th><th>실패율</th></tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td><a href="/builds/10/modules/ChildLockController">ChildLockController</a></td>
+        <td>120</td>
+        <td>3</td>
+        <td>2.5%</td>
+      </tr>
+      
+      <tr>
+        <td><a href="/builds/10/modules/CommunicationGateway">CommunicationGateway</a></td>
+        <td>120</td>
+        <td>3</td>
+        <td>2.5%</td>
+      </tr>
+      
+      <tr>
+        <td><a href="/builds/10/modules/DoorStateManager">DoorStateManager</a></td>
+        <td>120</td>
+        <td>3</td>
+        <td>2.5%</td>
+      </tr>
+      
+      <tr>
+        <td><a href="/builds/10/modules/SpeedInterlock">SpeedInterlock</a></td>
+        <td>120</td>
+        <td>3</td>
+        <td>2.5%</td>
+      </tr>
+      
+      <tr>
+        <td><a href="/builds/10/modules/DiagnosticManager">DiagnosticManager</a></td>
+        <td>120</td>
+        <td>2</td>
+        <td>1.7%</td>
+      </tr>
+      
+      <tr>
+        <td><a href="/builds/10/modules/LockActuator">LockActuator</a></td>
+        <td>120</td>
+        <td>2</td>
+        <td>1.7%</td>
+      </tr>
+      
+      <tr>
+        <td><a href="/builds/10/modules/PersistenceManager">PersistenceManager</a></td>
+        <td>120</td>
+        <td>2</td>
+        <td>1.7%</td>
+      </tr>
+      
+      <tr>
+        <td><a href="/builds/10/modules/StateConsistencyMonitor">StateConsistencyMonitor</a></td>
+        <td>120</td>
+        <td>2</td>
+        <td>1.7%</td>
+      </tr>
+      
+      <tr>
+        <td><a href="/builds/10/modules/SwitchInput">SwitchInput</a></td>
+        <td>120</td>
+        <td>2</td>
+        <td>1.7%</td>
+      </tr>
+      
+      <tr>
+        <td><a href="/builds/10/modules/VehicleSignalAdapter">VehicleSignalAdapter</a></td>
+        <td>120</td>
+        <td>2</td>
+        <td>1.7%</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  
+</section>
+
+<section class="tests-section" aria-labelledby="build-tests-heading">
+  <h2 id="build-tests-heading">전체 테스트 목록 (1200건)</h2>
+  
+<form class="query-controls" method="get" action="/builds/10">
+  <input type="search" name="q" value="" placeholder="검색어 (모듈/함수/테스트명/실패 메시지 등)">
+
+  <label class="failed-only-toggle">
+    <input type="checkbox" name="failedOnly" value="true" >
+    실패 테스트만
+  </label>
+
+  <label for="status-filter">상태</label>
+  <select id="status-filter" name="status">
+    <option value="">전체</option>
+    
+    <option value="FAILED" >FAILED</option>
+    
+    <option value="PASSED" >PASSED</option>
+    
+  </select>
+
+  
+
+  
+  <label for="module-filter">모듈</label>
+  <select id="module-filter" name="module">
+    <option value="">전체</option>
+    
+    <option value="ChildLockController" >ChildLockController</option>
+    
+    <option value="CommunicationGateway" >CommunicationGateway</option>
+    
+    <option value="DiagnosticManager" >DiagnosticManager</option>
+    
+    <option value="DoorStateManager" >DoorStateManager</option>
+    
+    <option value="LockActuator" >LockActuator</option>
+    
+    <option value="PersistenceManager" >PersistenceManager</option>
+    
+    <option value="SpeedInterlock" >SpeedInterlock</option>
+    
+    <option value="StateConsistencyMonitor" >StateConsistencyMonitor</option>
+    
+    <option value="SwitchInput" >SwitchInput</option>
+    
+    <option value="VehicleSignalAdapter" >VehicleSignalAdapter</option>
+    
+  </select>
+  
+
+  <label for="function-or-suite-filter">함수/스위트</label>
+  <select id="function-or-suite-filter" name="functionOrSuite">
+    <option value="">전체</option>
+    
+    <option value="AggregateRearDoorState" >AggregateRearDoorState</option>
+    
+    <option value="ApplyChildLockPolicy" >ApplyChildLockPolicy</option>
+    
+    <option value="ApplyHysteresis" >ApplyHysteresis</option>
+    
+    <option value="ChildLockController.ApplyPolicyTest" >ChildLockController.ApplyPolicyTest</option>
+    
+    <option value="ChildLockController.EvaluateLockRequestTest" >ChildLockController.EvaluateLockRequestTest</option>
+    
+    <option value="ChildLockController.HandleManualSwitchTest" >ChildLockController.HandleManualSwitchTest</option>
+    
+    <option value="ChildLockController.HandleRemoteCommandTest" >ChildLockController.HandleRemoteCommandTest</option>
+    
+    <option value="ChildLockController.RecoverFromFaultTest" >ChildLockController.RecoverFromFaultTest</option>
+    
+    <option value="ChildLockController.SynchronizeDoorStateTest" >ChildLockController.SynchronizeDoorStateTest</option>
+    
+    <option value="ClearDiagnosticEvent" >ClearDiagnosticEvent</option>
+    
+    <option value="CommandLock" >CommandLock</option>
+    
+    <option value="CommandUnlock" >CommandUnlock</option>
+    
+    <option value="CommunicationGateway.HandleSequenceErrorTest" >CommunicationGateway.HandleSequenceErrorTest</option>
+    
+    <option value="CommunicationGateway.PublishChildLockStatusTest" >CommunicationGateway.PublishChildLockStatusTest</option>
+    
+    <option value="CommunicationGateway.ReceiveRemoteRequestTest" >CommunicationGateway.ReceiveRemoteRequestTest</option>
+    
+    <option value="CommunicationGateway.RecoverCommunicationTest" >CommunicationGateway.RecoverCommunicationTest</option>
+    
+    <option value="CommunicationGateway.ValidateChecksumTest" >CommunicationGateway.ValidateChecksumTest</option>
+    
+    <option value="CommunicationGateway.ValidateMessageCounterTest" >CommunicationGateway.ValidateMessageCounterTest</option>
+    
+    <option value="DebounceDoorInput" >DebounceDoorInput</option>
+    
+    <option value="DebounceSwitch" >DebounceSwitch</option>
+    
+    <option value="DecodeGearPosition" >DecodeGearPosition</option>
+    
+    <option value="DecodeIgnitionState" >DecodeIgnitionState</option>
+    
+    <option value="DecodeVehicleSpeed" >DecodeVehicleSpeed</option>
+    
+    <option value="DetectDoorAjar" >DetectDoorAjar</option>
+    
+    <option value="DetectInconsistentState" >DetectInconsistentState</option>
+    
+    <option value="DetectJam" >DetectJam</option>
+    
+    <option value="DetectLongPress" >DetectLongPress</option>
+    
+    <option value="DiagnosticManager.ClearDiagnosticEventTest" >DiagnosticManager.ClearDiagnosticEventTest</option>
+    
+    <option value="DiagnosticManager.ManageHealingCounterTest" >DiagnosticManager.ManageHealingCounterTest</option>
+    
+    <option value="DiagnosticManager.ReportActuatorFaultTest" >DiagnosticManager.ReportActuatorFaultTest</option>
+    
+    <option value="DiagnosticManager.ReportSignalFaultTest" >DiagnosticManager.ReportSignalFaultTest</option>
+    
+    <option value="DiagnosticManager.SetDiagnosticEventTest" >DiagnosticManager.SetDiagnosticEventTest</option>
+    
+    <option value="DiagnosticManager.SnapshotFreezeFrameTest" >DiagnosticManager.SnapshotFreezeFrameTest</option>
+    
+    <option value="DoorStateManager.AggregateRearDoorStateTest" >DoorStateManager.AggregateRearDoorStateTest</option>
+    
+    <option value="DoorStateManager.DebounceDoorInputTest" >DoorStateManager.DebounceDoorInputTest</option>
+    
+    <option value="DoorStateManager.DetectDoorAjarTest" >DoorStateManager.DetectDoorAjarTest</option>
+    
+    <option value="DoorStateManager.PublishDoorStateTest" >DoorStateManager.PublishDoorStateTest</option>
+    
+    <option value="DoorStateManager.UpdateDoorStateTest" >DoorStateManager.UpdateDoorStateTest</option>
+    
+    <option value="DoorStateManager.ValidateDoorSignalTest" >DoorStateManager.ValidateDoorSignalTest</option>
+    
+    <option value="EnterInterlock" >EnterInterlock</option>
+    
+    <option value="EnterProtectiveState" >EnterProtectiveState</option>
+    
+    <option value="EvaluateLockRequest" >EvaluateLockRequest</option>
+    
+    <option value="EvaluateVehicleSpeed" >EvaluateVehicleSpeed</option>
+    
+    <option value="ExitInterlock" >ExitInterlock</option>
+    
+    <option value="HandleBusTimeout" >HandleBusTimeout</option>
+    
+    <option value="HandleManualSwitch" >HandleManualSwitch</option>
+    
+    <option value="HandleRemoteCommand" >HandleRemoteCommand</option>
+    
+    <option value="HandleSequenceError" >HandleSequenceError</option>
+    
+    <option value="HandleSpeedTimeout" >HandleSpeedTimeout</option>
+    
+    <option value="HandleWriteFailure" >HandleWriteFailure</option>
+    
+    <option value="IgnoreBounce" >IgnoreBounce</option>
+    
+    <option value="LoadChildLockPreference" >LoadChildLockPreference</option>
+    
+    <option value="LockActuator.CommandLockTest" >LockActuator.CommandLockTest</option>
+    
+    <option value="LockActuator.CommandUnlockTest" >LockActuator.CommandUnlockTest</option>
+    
+    <option value="LockActuator.DetectJamTest" >LockActuator.DetectJamTest</option>
+    
+    <option value="LockActuator.RetryActuationTest" >LockActuator.RetryActuationTest</option>
+    
+    <option value="LockActuator.StopActuatorTest" >LockActuator.StopActuatorTest</option>
+    
+    <option value="LockActuator.VerifyFeedbackTest" >LockActuator.VerifyFeedbackTest</option>
+    
+    <option value="ManageHealingCounter" >ManageHealingCounter</option>
+    
+    <option value="MapSwitchPosition" >MapSwitchPosition</option>
+    
+    <option value="MigrateStoredVersion" >MigrateStoredVersion</option>
+    
+    <option value="MonitorCommandFeedback" >MonitorCommandFeedback</option>
+    
+    <option value="NormalizeSignal" >NormalizeSignal</option>
+    
+    <option value="PersistenceManager.HandleWriteFailureTest" >PersistenceManager.HandleWriteFailureTest</option>
+    
+    <option value="PersistenceManager.LoadChildLockPreferenceTest" >PersistenceManager.LoadChildLockPreferenceTest</option>
+    
+    <option value="PersistenceManager.MigrateStoredVersionTest" >PersistenceManager.MigrateStoredVersionTest</option>
+    
+    <option value="PersistenceManager.RecoverDefaultPreferenceTest" >PersistenceManager.RecoverDefaultPreferenceTest</option>
+    
+    <option value="PersistenceManager.StoreChildLockPreferenceTest" >PersistenceManager.StoreChildLockPreferenceTest</option>
+    
+    <option value="PersistenceManager.ValidateNvDataTest" >PersistenceManager.ValidateNvDataTest</option>
+    
+    <option value="PublishChildLockStatus" >PublishChildLockStatus</option>
+    
+    <option value="PublishDoorState" >PublishDoorState</option>
+    
+    <option value="ReadChildLockSwitch" >ReadChildLockSwitch</option>
+    
+    <option value="ReceiveRemoteRequest" >ReceiveRemoteRequest</option>
+    
+    <option value="RecoverCommunication" >RecoverCommunication</option>
+    
+    <option value="RecoverDefaultPreference" >RecoverDefaultPreference</option>
+    
+    <option value="RecoverFromFault" >RecoverFromFault</option>
+    
+    <option value="RejectUnsafeUnlock" >RejectUnsafeUnlock</option>
+    
+    <option value="ReportActuatorFault" >ReportActuatorFault</option>
+    
+    <option value="ReportMonitorFault" >ReportMonitorFault</option>
+    
+    <option value="ReportSignalFault" >ReportSignalFault</option>
+    
+    <option value="ReportSwitchFault" >ReportSwitchFault</option>
+    
+    <option value="RetryActuation" >RetryActuation</option>
+    
+    <option value="SetDiagnosticEvent" >SetDiagnosticEvent</option>
+    
+    <option value="SnapshotFreezeFrame" >SnapshotFreezeFrame</option>
+    
+    <option value="SpeedInterlock.ApplyHysteresisTest" >SpeedInterlock.ApplyHysteresisTest</option>
+    
+    <option value="SpeedInterlock.EnterInterlockTest" >SpeedInterlock.EnterInterlockTest</option>
+    
+    <option value="SpeedInterlock.EvaluateVehicleSpeedTest" >SpeedInterlock.EvaluateVehicleSpeedTest</option>
+    
+    <option value="SpeedInterlock.ExitInterlockTest" >SpeedInterlock.ExitInterlockTest</option>
+    
+    <option value="SpeedInterlock.HandleSpeedTimeoutTest" >SpeedInterlock.HandleSpeedTimeoutTest</option>
+    
+    <option value="SpeedInterlock.RejectUnsafeUnlockTest" >SpeedInterlock.RejectUnsafeUnlockTest</option>
+    
+    <option value="StateConsistencyMonitor.DetectInconsistentStateTest" >StateConsistencyMonitor.DetectInconsistentStateTest</option>
+    
+    <option value="StateConsistencyMonitor.EnterProtectiveStateTest" >StateConsistencyMonitor.EnterProtectiveStateTest</option>
+    
+    <option value="StateConsistencyMonitor.MonitorCommandFeedbackTest" >StateConsistencyMonitor.MonitorCommandFeedbackTest</option>
+    
+    <option value="StateConsistencyMonitor.ReportMonitorFaultTest" >StateConsistencyMonitor.ReportMonitorFaultTest</option>
+    
+    <option value="StateConsistencyMonitor.SuppressRepeatedCommandTest" >StateConsistencyMonitor.SuppressRepeatedCommandTest</option>
+    
+    <option value="StateConsistencyMonitor.WatchdogExpiryTest" >StateConsistencyMonitor.WatchdogExpiryTest</option>
+    
+    <option value="StopActuator" >StopActuator</option>
+    
+    <option value="StoreChildLockPreference" >StoreChildLockPreference</option>
+    
+    <option value="SuppressRepeatedCommand" >SuppressRepeatedCommand</option>
+    
+    <option value="SwitchInput.DebounceSwitchTest" >SwitchInput.DebounceSwitchTest</option>
+    
+    <option value="SwitchInput.DetectLongPressTest" >SwitchInput.DetectLongPressTest</option>
+    
+    <option value="SwitchInput.IgnoreBounceTest" >SwitchInput.IgnoreBounceTest</option>
+    
+    <option value="SwitchInput.MapSwitchPositionTest" >SwitchInput.MapSwitchPositionTest</option>
+    
+    <option value="SwitchInput.ReadChildLockSwitchTest" >SwitchInput.ReadChildLockSwitchTest</option>
+    
+    <option value="SwitchInput.ReportSwitchFaultTest" >SwitchInput.ReportSwitchFaultTest</option>
+    
+    <option value="SynchronizeDoorState" >SynchronizeDoorState</option>
+    
+    <option value="UpdateDoorState" >UpdateDoorState</option>
+    
+    <option value="ValidateChecksum" >ValidateChecksum</option>
+    
+    <option value="ValidateDoorSignal" >ValidateDoorSignal</option>
+    
+    <option value="ValidateMessageCounter" >ValidateMessageCounter</option>
+    
+    <option value="ValidateNvData" >ValidateNvData</option>
+    
+    <option value="ValidateSignalAge" >ValidateSignalAge</option>
+    
+    <option value="VehicleSignalAdapter.DecodeGearPositionTest" >VehicleSignalAdapter.DecodeGearPositionTest</option>
+    
+    <option value="VehicleSignalAdapter.DecodeIgnitionStateTest" >VehicleSignalAdapter.DecodeIgnitionStateTest</option>
+    
+    <option value="VehicleSignalAdapter.DecodeVehicleSpeedTest" >VehicleSignalAdapter.DecodeVehicleSpeedTest</option>
+    
+    <option value="VehicleSignalAdapter.HandleBusTimeoutTest" >VehicleSignalAdapter.HandleBusTimeoutTest</option>
+    
+    <option value="VehicleSignalAdapter.NormalizeSignalTest" >VehicleSignalAdapter.NormalizeSignalTest</option>
+    
+    <option value="VehicleSignalAdapter.ValidateSignalAgeTest" >VehicleSignalAdapter.ValidateSignalAgeTest</option>
+    
+    <option value="VerifyFeedback" >VerifyFeedback</option>
+    
+    <option value="WatchdogExpiry" >WatchdogExpiry</option>
+    
+  </select>
+
+  <label for="sort-select">정렬</label>
+  <select id="sort-select" name="sort">
+    <option value="">기본</option>
+    <option value="status" >상태</option>
+    <option value="module" >모듈</option>
+    <option value="functionOrSuite" >함수/스위트</option>
+    <option value="testName" >테스트명</option>
+    <option value="duration" >수행 시간</option>
+  </select>
+
+  <label for="page-size-select">페이지 크기</label>
+  <select id="page-size-select" name="pageSize">
+    
+    <option value="25" >25</option>
+    
+    <option value="50" selected>50</option>
+    
+    <option value="100" >100</option>
+    
+  </select>
+
+  <button type="submit">적용</button>
+  <a class="reset-link" href="/builds/10">전체 초기화</a>
+</form>
+
+  
+<div class="pagination-info">
+  <span class="pagination-range">1-50 / 전체 1200건 (페이지 1/24)</span>
+  
+  <span class="pagination-link pagination-link--disabled">&laquo; 이전 페이지</span>
+  
+  
+  <a class="pagination-link" href="/builds/10?page=2">다음 페이지 &raquo;</a>
+  
+</div>
+
+  
+  <table class="tests-table">
+    <thead>
+      <tr>
+        <th>상태</th><th>모듈</th><th>함수</th><th>스위트</th><th>테스트명</th><th>수행 시간</th><th>파일:줄</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_NominalInput?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_NominalInput</a></td>
+        <td>0.234s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:80</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_LowerBoundary?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_LowerBoundary</a></td>
+        <td>0.018s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:84</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_UpperBoundary?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_UpperBoundary</a></td>
+        <td>0.086s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:88</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_BelowMinimum?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_BelowMinimum</a></td>
+        <td>0.055s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:92</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_AboveMaximum?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_AboveMaximum</a></td>
+        <td>0.210s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:96</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_MissingSignal?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_MissingSignal</a></td>
+        <td>0.191s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:100</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_SignalTimeout?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_SignalTimeout</a></td>
+        <td>0.065s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:104</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_StaleSignal?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_StaleSignal</a></td>
+        <td>0.178s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:108</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_RapidToggle?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_RapidToggle</a></td>
+        <td>0.011s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:112</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_RepeatedCommand?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_RepeatedCommand</a></td>
+        <td>0.164s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:116</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_ConcurrentRequest?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_ConcurrentRequest</a></td>
+        <td>0.096s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:120</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_IgnitionOff?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_IgnitionOff</a></td>
+        <td>0.079s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:124</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_IgnitionOn?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_IgnitionOn</a></td>
+        <td>0.180s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:128</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_VehicleStopped?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_VehicleStopped</a></td>
+        <td>0.119s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:132</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_VehicleMoving?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_VehicleMoving</a></td>
+        <td>0.171s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:136</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_DoorOpen?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_DoorOpen</a></td>
+        <td>0.236s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:140</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_DoorClosed?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_DoorClosed</a></td>
+        <td>0.020s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:144</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_ActuatorBusy?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_ActuatorBusy</a></td>
+        <td>0.105s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:148</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_RecoveryAfterFault?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_RecoveryAfterFault</a></td>
+        <td>0.191s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:152</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>EvaluateLockRequest</td>
+        <td>ChildLockController.EvaluateLockRequestTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_PowerCycle?returnUrl=%2Fbuilds%2F10">EvaluateLockRequest_PowerCycle</a></td>
+        <td>0.126s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:156</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_NominalInput?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_NominalInput</a></td>
+        <td>0.077s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:210</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_LowerBoundary?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_LowerBoundary</a></td>
+        <td>0.033s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:214</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_UpperBoundary?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_UpperBoundary</a></td>
+        <td>0.008s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:218</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_BelowMinimum?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_BelowMinimum</a></td>
+        <td>0.192s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:222</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_AboveMaximum?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_AboveMaximum</a></td>
+        <td>0.188s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:226</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_MissingSignal?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_MissingSignal</a></td>
+        <td>0.014s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:230</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_SignalTimeout?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_SignalTimeout</a></td>
+        <td>0.137s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:234</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_StaleSignal?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_StaleSignal</a></td>
+        <td>0.124s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:238</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_RapidToggle?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_RapidToggle</a></td>
+        <td>0.086s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:242</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_RepeatedCommand?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_RepeatedCommand</a></td>
+        <td>0.025s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:246</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_ConcurrentRequest?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_ConcurrentRequest</a></td>
+        <td>0.154s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:250</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_IgnitionOff?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_IgnitionOff</a></td>
+        <td>0.146s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:254</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_IgnitionOn?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_IgnitionOn</a></td>
+        <td>0.067s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:258</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_VehicleStopped?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_VehicleStopped</a></td>
+        <td>0.090s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:262</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_VehicleMoving?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_VehicleMoving</a></td>
+        <td>0.152s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:266</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_DoorOpen?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_DoorOpen</a></td>
+        <td>0.106s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:270</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_DoorClosed?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_DoorClosed</a></td>
+        <td>0.010s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:274</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_ActuatorBusy?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_ActuatorBusy</a></td>
+        <td>0.134s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:278</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_RecoveryAfterFault?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_RecoveryAfterFault</a></td>
+        <td>0.028s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:282</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>ApplyChildLockPolicy</td>
+        <td>ChildLockController.ApplyPolicyTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_PowerCycle?returnUrl=%2Fbuilds%2F10">ApplyChildLockPolicy_PowerCycle</a></td>
+        <td>0.233s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:286</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>HandleManualSwitch</td>
+        <td>ChildLockController.HandleManualSwitchTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.HandleManualSwitchTest.HandleManualSwitch_NominalInput?returnUrl=%2Fbuilds%2F10">HandleManualSwitch_NominalInput</a></td>
+        <td>0.113s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:340</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>HandleManualSwitch</td>
+        <td>ChildLockController.HandleManualSwitchTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.HandleManualSwitchTest.HandleManualSwitch_LowerBoundary?returnUrl=%2Fbuilds%2F10">HandleManualSwitch_LowerBoundary</a></td>
+        <td>0.188s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:344</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>HandleManualSwitch</td>
+        <td>ChildLockController.HandleManualSwitchTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.HandleManualSwitchTest.HandleManualSwitch_UpperBoundary?returnUrl=%2Fbuilds%2F10">HandleManualSwitch_UpperBoundary</a></td>
+        <td>0.205s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:348</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>HandleManualSwitch</td>
+        <td>ChildLockController.HandleManualSwitchTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.HandleManualSwitchTest.HandleManualSwitch_BelowMinimum?returnUrl=%2Fbuilds%2F10">HandleManualSwitch_BelowMinimum</a></td>
+        <td>0.087s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:352</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>HandleManualSwitch</td>
+        <td>ChildLockController.HandleManualSwitchTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.HandleManualSwitchTest.HandleManualSwitch_AboveMaximum?returnUrl=%2Fbuilds%2F10">HandleManualSwitch_AboveMaximum</a></td>
+        <td>0.090s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:356</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>HandleManualSwitch</td>
+        <td>ChildLockController.HandleManualSwitchTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.HandleManualSwitchTest.HandleManualSwitch_MissingSignal?returnUrl=%2Fbuilds%2F10">HandleManualSwitch_MissingSignal</a></td>
+        <td>0.214s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:360</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>HandleManualSwitch</td>
+        <td>ChildLockController.HandleManualSwitchTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.HandleManualSwitchTest.HandleManualSwitch_SignalTimeout?returnUrl=%2Fbuilds%2F10">HandleManualSwitch_SignalTimeout</a></td>
+        <td>0.191s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:364</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>HandleManualSwitch</td>
+        <td>ChildLockController.HandleManualSwitchTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.HandleManualSwitchTest.HandleManualSwitch_StaleSignal?returnUrl=%2Fbuilds%2F10">HandleManualSwitch_StaleSignal</a></td>
+        <td>0.245s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:368</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>HandleManualSwitch</td>
+        <td>ChildLockController.HandleManualSwitchTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.HandleManualSwitchTest.HandleManualSwitch_RapidToggle?returnUrl=%2Fbuilds%2F10">HandleManualSwitch_RapidToggle</a></td>
+        <td>0.114s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:372</td>
+      </tr>
+      
+      <tr class="test-row test-row--passed">
+        <td>PASSED</td>
+        <td>ChildLockController</td>
+        <td>HandleManualSwitch</td>
+        <td>ChildLockController.HandleManualSwitchTest</td>
+        <td><a href="/builds/10/tests/ChildLockController.HandleManualSwitchTest.HandleManualSwitch_RepeatedCommand?returnUrl=%2Fbuilds%2F10">HandleManualSwitch_RepeatedCommand</a></td>
+        <td>0.221s</td>
+        <td>tests/child_lock/child_lock_controller_test.cpp:376</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  
+</section>
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  
+</body>
+</html>

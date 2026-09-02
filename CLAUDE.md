@@ -4,11 +4,29 @@
 
 ## 저장소 상태
 
-이 저장소에는 현재 **애플리케이션 코드가 없습니다** — 아직 구현되지 않은 웹 앱의 명세와 샘플
-데이터셋만 존재합니다. 빌드 시스템, 패키지 매니페스트, 테스트 러너가 없습니다. 코드를 작성하기
-전에 그 사이 구현이 추가되었는지 확인하세요(예: `src/`, `app/` 등의 디렉터리, 그리고
-`requirements.txt`/`pyproject.toml`). 그런 것이 있다면 이 문서보다 우선하는 것으로 간주하고,
-실제 명령어와 아키텍처를 반영하도록 이 파일을 갱신하세요.
+Requirements.md의 FR-001~036, §7/§8 인수 기준을 모두 만족하는 Flask 웹 애플리케이션이
+**구현 완료**되었습니다(Phase 0~7 전부 완료, 아래 "아키텍처 및 구현 계획" 참고). 사용자에게
+보여줄 개요는 `README.md`를 우선 참고하세요 — 이 CLAUDE.md는 Claude Code가 코드를 다룰 때
+필요한 세부 규칙 중심입니다.
+
+### 실행 방법
+
+```bash
+cd D:\GoogleTestExample
+source .venv/Scripts/activate           # 이미 만들어진 가상환경 (없으면: python -m venv .venv 후 pip install -r requirements.txt)
+python -m flask --app "src/gtestdash/web/app:createApp" run
+# http://127.0.0.1:5000 접속, 기본 데이터 소스는 ./GoogleTestResults
+```
+
+### 테스트 실행
+
+```bash
+source .venv/Scripts/activate
+python -m pytest -q                     # 전체(unit+integration+e2e), 287개
+python -m pytest tests/unit -q          # 순수 함수 단위 테스트만(가장 빠름)
+python -m pytest tests/integration -q   # Flask test client 라우트 통합 테스트
+python -m pytest tests/e2e -q           # Playwright 브라우저 E2E(최초 1회 `playwright install chromium` 필요)
+```
 
 ## 이 저장소의 목적
 
@@ -102,26 +120,35 @@ PostToolUse 훅으로 실행되어, 이어서 `sw-system-tester`를 호출해 `R
   - `query/` — 검색/필터/정렬/페이지네이션(빌드 상세·모듈 상세·검색 결과 3개 라우트가 공유)
   - `web/` — Flask 앱 팩토리, 라우트(`dashboard`, `builds`, `modules`, `tests`, `search`,
     `refresh`), 템플릿, 정적 자산
-- **Phase 순서** (각 phase는 `tdd-flow`가 TDD로 구현): Phase 0 골격(패키지 스켈레톤 +
-  Playwright/pytest 테스트 인프라) → Phase 1 결과 수집/정규화(FR-001~008) → Phase 2 메인
-  대시보드(FR-009~017) → Phase 3 빌드/모듈 상세(FR-018~021) → Phase 4 테스트 상세(FR-022~024)
-  → Phase 5 검색/필터/정렬/페이지네이션(FR-025~031) → Phase 6 네비게이션/상태유지/새로고침/
-  에러처리(FR-032~036) → Phase 7 §7/§8 인수 기준 검증.
+- **Phase 순서** (각 phase는 `tdd-flow`가 TDD로 구현, 전부 완료됨): Phase 0 골격(패키지
+  스켈레톤 + Playwright/pytest 테스트 인프라) → Phase 1 결과 수집/정규화(FR-001~008) →
+  Phase 2 메인 대시보드(FR-009~017) → Phase 3 빌드/모듈 상세(FR-018~021) → Phase 4 테스트
+  상세(FR-022~024) → Phase 5 검색/필터/정렬/페이지네이션(FR-025~031) → Phase 6 네비게이션/
+  상태유지/새로고침/에러처리(FR-032~036) → Phase 7 §7/§8 인수 기준 최종 검증. §7/§8 각 항목이
+  어느 테스트로 커버되는지의 전체 대응표는 `docs/acceptance-traceability.md`에 있다.
 - 손상/엣지 케이스 테스트 픽스처는 `GoogleTestResults/`(§7 수치의 근거, 읽기 전용 취급)를
   건드리지 않고 `tests/fixtures/edge_cases/`에 별도로 둔다.
+- 새 기능을 추가하거나 리팩터링할 때도 이 레이어 구조와 네이밍 규칙을 그대로 유지한다.
 
 ## 개발 프로세스
 
 - **커밋/푸시**: Phase 0~7 각 phase가 끝날 때마다 반드시 커밋하고 `origin/main`에 푸시한다.
-  커밋 메시지에 Phase 번호와 해당 FR 범위를 명시한다.
-- **브라우저 E2E 테스트**: Playwright(Python, `pytest-playwright`)를 사용하고 `tests/e2e/`에
-  둔다. `sw-system-tester`가 생성한 `TestCase_Template.xlsx`의 각 시스템 테스트 케이스를
-  `tdd-flow`가 읽고 수동으로 Playwright 테스트로 옮긴다 — 테스트 이름/주석에 xlsx 케이스 ID를
-  남겨 추적성을 유지한다. xlsx 텍스트를 그대로 파싱해 테스트를 자동 생성하지 않는다(자유서술형
-  기대결과를 assertion으로 정확히 변환할 수 없기 때문). CI(GitHub Actions) 자동 실행은 구성하지
-  않는다 — 로컬 실행 전용.
-- **대화 로그**: 이 저장소 작업을 진행한 Claude Code 세션과의 대화를 `docs/conversation-log.md`에
-  요약해 기록하고 커밋한다(공개 저장소이므로 민감정보는 제외).
+  커밋 메시지에 Phase 번호와 해당 FR 범위를 명시한다(과거형 — Phase 0~7은 이미 이 방식으로
+  완료됨. 이후 새 작업 단위에도 동일한 커밋 규율을 유지한다).
+- **시스템 테스트 케이스**: `sw-system-tester`가 `Requirements.md` FR-001~036, §7/§8을
+  근거로 `TestCase_Template.xlsx`에 시스템 테스트 케이스(기능/비기능 시트)를 작성해 둔다.
+  명세에 직접 근거가 없는 케이스는 이름에 "(제안)"으로 표시한다.
+- **브라우저 E2E 테스트**: Playwright(Python, `pytest-playwright`), `tests/e2e/`에 있다.
+  `TestCase_Template.xlsx`에서 "(제안)"(합성 데이터가 필요한 시나리오) 표시가 없는 케이스를
+  `tdd-flow`가 읽고 수동으로 Playwright 테스트로 옮겼다 — 각 테스트 함수명/docstring에 xlsx의
+  `TC_ID`를 남겨 추적성을 유지한다(`tests/e2e/test_e2e_fr*.py`, `test_e2e_acc_acceptance.py`).
+  xlsx 텍스트를 그대로 파싱해 테스트를 자동 생성하지 않는다. CI(GitHub Actions) 자동 실행은
+  구성하지 않는다 — 로컬 실행 전용.
+- **대화 기록**: 이 저장소 작업을 진행한 Claude Code 세션과의 대화를
+  `docs/conversation-log.md`(요약)와 `docs/conversation-transcript.md`(사용자 발화 원문)에
+  기록하고 커밋한다(공개 저장소이므로 민감정보는 제외).
+- **정적 스냅샷**: `target/`에 샘플 데이터(`GoogleTestResults`) 기준으로 렌더링한 주요 화면의
+  정적 HTML을 보관한다(서버 없이 미리보기용, README.md 참고).
 - **자동 메모리**: `.claude/settings.json`의 `autoMemoryEnabled: true`로 프로젝트 자동 메모리
   기능이 켜져 있다.
 
