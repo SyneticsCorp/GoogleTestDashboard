@@ -14,6 +14,9 @@
       {% if searchContextBuildId %}
       <input type="hidden" name="buildId" value="{{ searchContextBuildId }}">
       {% endif %}
+      {% if searchContextModule %}
+      <input type="hidden" name="module" value="{{ searchContextModule }}">
+      {% endif %}
       <button type="submit">검색</button>
     </form>
     <form class="refresh-form" action="{{ url_for('refresh') }}" method="post">

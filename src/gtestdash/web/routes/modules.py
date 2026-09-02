@@ -77,9 +77,10 @@ def buildModuleDetailContext(
     @param page FR-031 1-based page number.
     @param pageSize FR-031 page size (25/50/100; other values fall back to 50).
     @return Dict of template context (moduleSummary, moduleTrend, testRows,
-            plus the FR-025~031 query/pagination/filter state), or None when
-            the build+module combination is not present among records,
-            signaling the route should 404.
+            searchContextBuildId/searchContextModule for FR-027's common
+            search default scope, plus the FR-025~031 query/pagination/
+            filter state), or None when the build+module combination is not
+            present among records, signaling the route should 404.
     """
     moduleRecords = [record for record in records if record.build_id == buildId and record.module == module]
     if not moduleRecords:
@@ -103,6 +104,7 @@ def buildModuleDetailContext(
         "moduleTrend": computeModuleTrendAcrossBuilds(records, module),
         "testRows": [_toTestRow(record) for record in queryResult["records"]],
         "searchContextBuildId": buildId,
+        "searchContextModule": module,
         "queryText": queryText or "",
         "failedOnly": failedOnly,
         "statusFilter": status,
