@@ -69,7 +69,7 @@
     <tbody>
       {% for row in testRows %}
       <tr class="test-row test-row--{{ row.status|lower }}">
-        <td>{{ row.status }}</td>
+        <td><span class="status-badge status-badge--{{ row.status|lower }}">{{ row.status }}</span></td>
         <td>{{ row.function }}</td>
         <td>{{ row.suite }}</td>
         <td><a href="{{ row.testUrl }}">{{ row.testName }}</a></td>

@@ -71,6 +71,7 @@
   <button type="submit">적용</button>
   <a class="reset-link" href="{{ resetUrl }}">전체 초기화</a>
 </form>
+<script src="{{ url_for('static', filename='js/list-controls.js') }}" defer></script>
 {% endmacro %}
 
 {% macro paginationInfo(displayRange, totalMatches, prevPageUrl, nextPageUrl, page, totalPages) %}

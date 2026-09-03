@@ -28,7 +28,7 @@
     <tbody>
       {% for row in testRows %}
       <tr class="test-row test-row--{{ row.status|lower }}">
-        <td>{{ row.status }}</td>
+        <td><span class="status-badge status-badge--{{ row.status|lower }}">{{ row.status }}</span></td>
         <td><a href="/builds/{{ row.buildId }}">{{ row.buildId }}</a></td>
         <td>{{ row.module }}</td>
         <td>{{ row.function }}</td>

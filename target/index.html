@@ -6,16 +6,16 @@
   <title>GoogleTest 대시보드 - 메인</title>
   <link rel="stylesheet" href="static/css/dashboard.css">
 </head>
-<body>
+<body><div style="background:#fff3cd;color:#664d03;padding:10px 16px;font-size:14px;border-bottom:1px solid #ffe69c;">이 페이지는 샘플 데이터로 미리 렌더링한 정적 미리보기입니다. 실제 서버가 없어 내부 링크(빌드/모듈/테스트 이동, 검색, 새로고침)는 비활성화되어 있습니다 — 실제로 써보려면 앱을 로컬에서 실행하세요(README.md 참고).</div>
   <header class="app-header">
-    <a class="app-title" href="/">GoogleTest 대시보드</a>
-    <form class="search-form" action="/search" method="get">
+    <a class="app-title" href="javascript:void(0)" data-preview-target="/" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">GoogleTest 대시보드</a>
+    <form onsubmit="return false;" class="search-form" action="/search" method="get">
       <input type="search" name="q" value="" placeholder="모듈, 함수, 테스트명, 실패 메시지 검색">
       
       
       <button type="submit">검색</button>
     </form>
-    <form class="refresh-form" action="/refresh" method="post">
+    <form onsubmit="return false;" class="refresh-form" action="/refresh" method="post">
       <button type="submit" title="GoogleTest 결과를 다시 검색해 집계를 갱신합니다">새로고침</button>
     </form>
   </header>
@@ -55,7 +55,7 @@
 
 <section class="module-section" aria-labelledby="module-heading">
   <h2 id="module-heading">모듈별 실패 분포</h2>
-  <form class="scope-form" method="get" action="/">
+  <form onsubmit="return false;" class="scope-form" method="get" action="/">
     <label for="scope-select">범위</label>
     <select id="scope-select" name="scope" onchange="this.form.submit()">
       <option value="latest" selected>최신 빌드</option>
@@ -89,7 +89,7 @@
 <section class="failures-section" aria-labelledby="failures-heading">
   <h2 id="failures-heading">최신 빌드 실패 테스트</h2>
   
-  <p><a href="/builds/10?failedOnly=true">전체 실패 보기 (24건)</a></p>
+  <p><a href="javascript:void(0)" data-preview-target="/builds/10?failedOnly=true" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">전체 실패 보기 (24건)</a></p>
   <table class="failures-table">
     <thead>
       <tr>
@@ -101,7 +101,7 @@
       <tr>
         <td>ChildLockController</td>
         <td>HandleRemoteCommand / ChildLockController.HandleRemoteCommandTest</td>
-        <td><a href="/builds/10/tests/ChildLockController.HandleRemoteCommandTest.HandleRemoteCommand_UpperBoundary">HandleRemoteCommand_UpperBoundary</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/ChildLockController.HandleRemoteCommandTest.HandleRemoteCommand_UpperBoundary" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">HandleRemoteCommand_UpperBoundary</a></td>
         <td>request acceptance mismatch</td>
         <td>tests/child_lock/child_lock_controller_test.cpp:478</td>
         <td>0.231s</td>
@@ -110,7 +110,7 @@
       <tr>
         <td>ChildLockController</td>
         <td>HandleRemoteCommand / ChildLockController.HandleRemoteCommandTest</td>
-        <td><a href="/builds/10/tests/ChildLockController.HandleRemoteCommandTest.HandleRemoteCommand_RepeatedCommand">HandleRemoteCommand_RepeatedCommand</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/ChildLockController.HandleRemoteCommandTest.HandleRemoteCommand_RepeatedCommand" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">HandleRemoteCommand_RepeatedCommand</a></td>
         <td>state mismatch</td>
         <td>tests/child_lock/child_lock_controller_test.cpp:506</td>
         <td>0.177s</td>
@@ -119,7 +119,7 @@
       <tr>
         <td>ChildLockController</td>
         <td>RecoverFromFault / ChildLockController.RecoverFromFaultTest</td>
-        <td><a href="/builds/10/tests/ChildLockController.RecoverFromFaultTest.RecoverFromFault_DoorOpen">RecoverFromFault_DoorOpen</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/ChildLockController.RecoverFromFaultTest.RecoverFromFault_DoorOpen" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">RecoverFromFault_DoorOpen</a></td>
         <td>message validation mismatch</td>
         <td>tests/child_lock/child_lock_controller_test.cpp:790</td>
         <td>0.076s</td>
@@ -128,7 +128,7 @@
       <tr>
         <td>CommunicationGateway</td>
         <td>ReceiveRemoteRequest / CommunicationGateway.ReceiveRemoteRequestTest</td>
-        <td><a href="/builds/10/tests/CommunicationGateway.ReceiveRemoteRequestTest.ReceiveRemoteRequest_BelowMinimum">ReceiveRemoteRequest_BelowMinimum</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/CommunicationGateway.ReceiveRemoteRequestTest.ReceiveRemoteRequest_BelowMinimum" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ReceiveRemoteRequest_BelowMinimum</a></td>
         <td>message validation mismatch</td>
         <td>tests/communication/communication_gateway_test.cpp:222</td>
         <td>0.089s</td>
@@ -137,7 +137,7 @@
       <tr>
         <td>CommunicationGateway</td>
         <td>HandleSequenceError / CommunicationGateway.HandleSequenceErrorTest</td>
-        <td><a href="/builds/10/tests/CommunicationGateway.HandleSequenceErrorTest.HandleSequenceError_RapidToggle">HandleSequenceError_RapidToggle</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/CommunicationGateway.HandleSequenceErrorTest.HandleSequenceError_RapidToggle" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">HandleSequenceError_RapidToggle</a></td>
         <td>diagnostic event mismatch</td>
         <td>tests/communication/communication_gateway_test.cpp:632</td>
         <td>0.135s</td>
@@ -146,7 +146,7 @@
       <tr>
         <td>CommunicationGateway</td>
         <td>RecoverCommunication / CommunicationGateway.RecoverCommunicationTest</td>
-        <td><a href="/builds/10/tests/CommunicationGateway.RecoverCommunicationTest.RecoverCommunication_RecoveryAfterFault">RecoverCommunication_RecoveryAfterFault</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/CommunicationGateway.RecoverCommunicationTest.RecoverCommunication_RecoveryAfterFault" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">RecoverCommunication_RecoveryAfterFault</a></td>
         <td>state mismatch</td>
         <td>tests/communication/communication_gateway_test.cpp:802</td>
         <td>0.015s</td>
@@ -155,7 +155,7 @@
       <tr>
         <td>DiagnosticManager</td>
         <td>ReportSignalFault / DiagnosticManager.ReportSignalFaultTest</td>
-        <td><a href="/builds/10/tests/DiagnosticManager.ReportSignalFaultTest.ReportSignalFault_BelowMinimum">ReportSignalFault_BelowMinimum</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/DiagnosticManager.ReportSignalFaultTest.ReportSignalFault_BelowMinimum" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ReportSignalFault_BelowMinimum</a></td>
         <td>diagnostic event mismatch</td>
         <td>tests/diagnostic/diagnostic_manager_test.cpp:612</td>
         <td>0.129s</td>
@@ -164,7 +164,7 @@
       <tr>
         <td>DiagnosticManager</td>
         <td>ReportSignalFault / DiagnosticManager.ReportSignalFaultTest</td>
-        <td><a href="/builds/10/tests/DiagnosticManager.ReportSignalFaultTest.ReportSignalFault_IgnitionOn">ReportSignalFault_IgnitionOn</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/DiagnosticManager.ReportSignalFaultTest.ReportSignalFault_IgnitionOn" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ReportSignalFault_IgnitionOn</a></td>
         <td>retry count mismatch</td>
         <td>tests/diagnostic/diagnostic_manager_test.cpp:648</td>
         <td>0.034s</td>
@@ -173,7 +173,7 @@
       <tr>
         <td>DoorStateManager</td>
         <td>ValidateDoorSignal / DoorStateManager.ValidateDoorSignalTest</td>
-        <td><a href="/builds/10/tests/DoorStateManager.ValidateDoorSignalTest.ValidateDoorSignal_RepeatedCommand">ValidateDoorSignal_RepeatedCommand</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/DoorStateManager.ValidateDoorSignalTest.ValidateDoorSignal_RepeatedCommand" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ValidateDoorSignal_RepeatedCommand</a></td>
         <td>feedback timeout</td>
         <td>tests/door/door_state_manager_test.cpp:246</td>
         <td>0.212s</td>
@@ -182,7 +182,7 @@
       <tr>
         <td>DoorStateManager</td>
         <td>DetectDoorAjar / DoorStateManager.DetectDoorAjarTest</td>
-        <td><a href="/builds/10/tests/DoorStateManager.DetectDoorAjarTest.DetectDoorAjar_SignalTimeout">DetectDoorAjar_SignalTimeout</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/DoorStateManager.DetectDoorAjarTest.DetectDoorAjar_SignalTimeout" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">DetectDoorAjar_SignalTimeout</a></td>
         <td>stale signal handling mismatch</td>
         <td>tests/door/door_state_manager_test.cpp:364</td>
         <td>0.066s</td>
@@ -191,7 +191,7 @@
       <tr>
         <td>DoorStateManager</td>
         <td>PublishDoorState / DoorStateManager.PublishDoorStateTest</td>
-        <td><a href="/builds/10/tests/DoorStateManager.PublishDoorStateTest.PublishDoorState_RapidToggle">PublishDoorState_RapidToggle</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/DoorStateManager.PublishDoorStateTest.PublishDoorState_RapidToggle" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">PublishDoorState_RapidToggle</a></td>
         <td>retry count mismatch</td>
         <td>tests/door/door_state_manager_test.cpp:762</td>
         <td>0.032s</td>
@@ -200,7 +200,7 @@
       <tr>
         <td>LockActuator</td>
         <td>CommandLock / LockActuator.CommandLockTest</td>
-        <td><a href="/builds/10/tests/LockActuator.CommandLockTest.CommandLock_PowerCycle">CommandLock_PowerCycle</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/LockActuator.CommandLockTest.CommandLock_PowerCycle" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">CommandLock_PowerCycle</a></td>
         <td>state mismatch</td>
         <td>tests/actuator/lock_actuator_test.cpp:156</td>
         <td>0.223s</td>
@@ -209,7 +209,7 @@
       <tr>
         <td>LockActuator</td>
         <td>VerifyFeedback / LockActuator.VerifyFeedbackTest</td>
-        <td><a href="/builds/10/tests/LockActuator.VerifyFeedbackTest.VerifyFeedback_RepeatedCommand">VerifyFeedback_RepeatedCommand</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/LockActuator.VerifyFeedbackTest.VerifyFeedback_RepeatedCommand" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">VerifyFeedback_RepeatedCommand</a></td>
         <td>feedback timeout</td>
         <td>tests/actuator/lock_actuator_test.cpp:376</td>
         <td>0.018s</td>
@@ -218,7 +218,7 @@
       <tr>
         <td>PersistenceManager</td>
         <td>RecoverDefaultPreference / PersistenceManager.RecoverDefaultPreferenceTest</td>
-        <td><a href="/builds/10/tests/PersistenceManager.RecoverDefaultPreferenceTest.RecoverDefaultPreference_VehicleStopped">RecoverDefaultPreference_VehicleStopped</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/PersistenceManager.RecoverDefaultPreferenceTest.RecoverDefaultPreference_VehicleStopped" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">RecoverDefaultPreference_VehicleStopped</a></td>
         <td>diagnostic event mismatch</td>
         <td>tests/persistence/persistence_manager_test.cpp:522</td>
         <td>0.117s</td>
@@ -227,7 +227,7 @@
       <tr>
         <td>PersistenceManager</td>
         <td>HandleWriteFailure / PersistenceManager.HandleWriteFailureTest</td>
-        <td><a href="/builds/10/tests/PersistenceManager.HandleWriteFailureTest.HandleWriteFailure_StaleSignal">HandleWriteFailure_StaleSignal</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/PersistenceManager.HandleWriteFailureTest.HandleWriteFailure_StaleSignal" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">HandleWriteFailure_StaleSignal</a></td>
         <td>retry count mismatch</td>
         <td>tests/persistence/persistence_manager_test.cpp:628</td>
         <td>0.066s</td>
@@ -236,7 +236,7 @@
       <tr>
         <td>SpeedInterlock</td>
         <td>EvaluateVehicleSpeed / SpeedInterlock.EvaluateVehicleSpeedTest</td>
-        <td><a href="/builds/10/tests/SpeedInterlock.EvaluateVehicleSpeedTest.EvaluateVehicleSpeed_NominalInput">EvaluateVehicleSpeed_NominalInput</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/SpeedInterlock.EvaluateVehicleSpeedTest.EvaluateVehicleSpeed_NominalInput" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">EvaluateVehicleSpeed_NominalInput</a></td>
         <td>persistence mismatch</td>
         <td>tests/interlock/speed_interlock_test.cpp:80</td>
         <td>0.175s</td>
@@ -245,7 +245,7 @@
       <tr>
         <td>SpeedInterlock</td>
         <td>ExitInterlock / SpeedInterlock.ExitInterlockTest</td>
-        <td><a href="/builds/10/tests/SpeedInterlock.ExitInterlockTest.ExitInterlock_StaleSignal">ExitInterlock_StaleSignal</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/SpeedInterlock.ExitInterlockTest.ExitInterlock_StaleSignal" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ExitInterlock_StaleSignal</a></td>
         <td>stale signal handling mismatch</td>
         <td>tests/interlock/speed_interlock_test.cpp:368</td>
         <td>0.180s</td>
@@ -254,7 +254,7 @@
       <tr>
         <td>SpeedInterlock</td>
         <td>RejectUnsafeUnlock / SpeedInterlock.RejectUnsafeUnlockTest</td>
-        <td><a href="/builds/10/tests/SpeedInterlock.RejectUnsafeUnlockTest.RejectUnsafeUnlock_VehicleStopped">RejectUnsafeUnlock_VehicleStopped</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/SpeedInterlock.RejectUnsafeUnlockTest.RejectUnsafeUnlock_VehicleStopped" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">RejectUnsafeUnlock_VehicleStopped</a></td>
         <td>retry count mismatch</td>
         <td>tests/interlock/speed_interlock_test.cpp:782</td>
         <td>0.222s</td>
@@ -263,7 +263,7 @@
       <tr>
         <td>StateConsistencyMonitor</td>
         <td>DetectInconsistentState / StateConsistencyMonitor.DetectInconsistentStateTest</td>
-        <td><a href="/builds/10/tests/StateConsistencyMonitor.DetectInconsistentStateTest.DetectInconsistentState_IgnitionOff">DetectInconsistentState_IgnitionOff</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/StateConsistencyMonitor.DetectInconsistentStateTest.DetectInconsistentState_IgnitionOff" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">DetectInconsistentState_IgnitionOff</a></td>
         <td>request acceptance mismatch</td>
         <td>tests/monitor/state_consistency_monitor_test.cpp:254</td>
         <td>0.050s</td>
@@ -272,7 +272,7 @@
       <tr>
         <td>StateConsistencyMonitor</td>
         <td>ReportMonitorFault / StateConsistencyMonitor.ReportMonitorFaultTest</td>
-        <td><a href="/builds/10/tests/StateConsistencyMonitor.ReportMonitorFaultTest.ReportMonitorFault_IgnitionOff">ReportMonitorFault_IgnitionOff</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/StateConsistencyMonitor.ReportMonitorFaultTest.ReportMonitorFault_IgnitionOff" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ReportMonitorFault_IgnitionOff</a></td>
         <td>feedback timeout</td>
         <td>tests/monitor/state_consistency_monitor_test.cpp:774</td>
         <td>0.002s</td>
@@ -281,7 +281,7 @@
       <tr>
         <td>SwitchInput</td>
         <td>DebounceSwitch / SwitchInput.DebounceSwitchTest</td>
-        <td><a href="/builds/10/tests/SwitchInput.DebounceSwitchTest.DebounceSwitch_IgnitionOff">DebounceSwitch_IgnitionOff</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/SwitchInput.DebounceSwitchTest.DebounceSwitch_IgnitionOff" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">DebounceSwitch_IgnitionOff</a></td>
         <td>diagnostic event mismatch</td>
         <td>tests/input/switch_input_test.cpp:254</td>
         <td>0.175s</td>
@@ -290,7 +290,7 @@
       <tr>
         <td>SwitchInput</td>
         <td>MapSwitchPosition / SwitchInput.MapSwitchPositionTest</td>
-        <td><a href="/builds/10/tests/SwitchInput.MapSwitchPositionTest.MapSwitchPosition_RapidToggle">MapSwitchPosition_RapidToggle</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/SwitchInput.MapSwitchPositionTest.MapSwitchPosition_RapidToggle" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">MapSwitchPosition_RapidToggle</a></td>
         <td>diagnostic event mismatch</td>
         <td>tests/input/switch_input_test.cpp:632</td>
         <td>0.193s</td>
@@ -299,7 +299,7 @@
       <tr>
         <td>VehicleSignalAdapter</td>
         <td>ValidateSignalAge / VehicleSignalAdapter.ValidateSignalAgeTest</td>
-        <td><a href="/builds/10/tests/VehicleSignalAdapter.ValidateSignalAgeTest.ValidateSignalAge_DoorOpen">ValidateSignalAge_DoorOpen</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/VehicleSignalAdapter.ValidateSignalAgeTest.ValidateSignalAge_DoorOpen" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ValidateSignalAge_DoorOpen</a></td>
         <td>retry count mismatch</td>
         <td>tests/signal/vehicle_signal_adapter_test.cpp:530</td>
         <td>0.036s</td>
@@ -308,7 +308,7 @@
       <tr>
         <td>VehicleSignalAdapter</td>
         <td>NormalizeSignal / VehicleSignalAdapter.NormalizeSignalTest</td>
-        <td><a href="/builds/10/tests/VehicleSignalAdapter.NormalizeSignalTest.NormalizeSignal_RepeatedCommand">NormalizeSignal_RepeatedCommand</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10/tests/VehicleSignalAdapter.NormalizeSignalTest.NormalizeSignal_RepeatedCommand" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">NormalizeSignal_RepeatedCommand</a></td>
         <td>state mismatch</td>
         <td>tests/signal/vehicle_signal_adapter_test.cpp:766</td>
         <td>0.168s</td>
@@ -330,7 +330,7 @@
     <tbody>
       
       <tr>
-        <td><a href="/builds/10">10</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/10" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">10</a></td>
         <td>2026-09-02T00:00:00Z</td>
         <td>1200</td>
         <td>24</td>
@@ -340,7 +340,7 @@
       </tr>
       
       <tr>
-        <td><a href="/builds/09">09</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/09" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">09</a></td>
         <td>2026-09-01T00:00:00Z</td>
         <td>1200</td>
         <td>48</td>
@@ -350,7 +350,7 @@
       </tr>
       
       <tr>
-        <td><a href="/builds/08">08</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/08" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">08</a></td>
         <td>2026-08-31T00:00:00Z</td>
         <td>1200</td>
         <td>120</td>
@@ -360,7 +360,7 @@
       </tr>
       
       <tr>
-        <td><a href="/builds/07">07</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/07" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">07</a></td>
         <td>2026-08-30T00:00:00Z</td>
         <td>1200</td>
         <td>60</td>
@@ -370,7 +370,7 @@
       </tr>
       
       <tr>
-        <td><a href="/builds/06">06</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/06" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">06</a></td>
         <td>2026-08-29T00:00:00Z</td>
         <td>1200</td>
         <td>84</td>
@@ -380,7 +380,7 @@
       </tr>
       
       <tr>
-        <td><a href="/builds/05">05</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/05" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">05</a></td>
         <td>2026-08-28T00:00:00Z</td>
         <td>1200</td>
         <td>36</td>
@@ -390,7 +390,7 @@
       </tr>
       
       <tr>
-        <td><a href="/builds/04">04</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/04" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">04</a></td>
         <td>2026-08-27T00:00:00Z</td>
         <td>1200</td>
         <td>72</td>
@@ -400,7 +400,7 @@
       </tr>
       
       <tr>
-        <td><a href="/builds/03">03</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/03" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">03</a></td>
         <td>2026-08-26T00:00:00Z</td>
         <td>1200</td>
         <td>108</td>
@@ -410,7 +410,7 @@
       </tr>
       
       <tr>
-        <td><a href="/builds/02">02</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/02" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">02</a></td>
         <td>2026-08-25T00:00:00Z</td>
         <td>1200</td>
         <td>48</td>
@@ -420,7 +420,7 @@
       </tr>
       
       <tr>
-        <td><a href="/builds/01">01</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>2026-08-24T00:00:00Z</td>
         <td>1200</td>
         <td>96</td>

@@ -21,9 +21,39 @@ TARGET_DIR = REPO_ROOT / "target"
 STATIC_SRC = REPO_ROOT / "src" / "gtestdash" / "web" / "static"
 
 
+PREVIEW_BANNER = (
+    '<div style="background:#fff3cd;color:#664d03;padding:10px 16px;'
+    'font-size:14px;border-bottom:1px solid #ffe69c;">'
+    "이 페이지는 샘플 데이터로 미리 렌더링한 정적 미리보기입니다. "
+    "실제 서버가 없어 내부 링크(빌드/모듈/테스트 이동, 검색, 새로고침)는 비활성화되어 "
+    "있습니다 — 실제로 써보려면 앱을 로컬에서 실행하세요(README.md 참고).</div>"
+)
+
+
 def rewriteStaticPaths(html):
     """! 절대 정적 자산 경로(/static/..)를 스냅샷 상대 경로(static/..)로 바꾼다."""
     return html.replace('"/static/', '"static/').replace("'/static/", "'static/")
+
+
+def disableInternalNavigation(html):
+    """! 서버 없이는 깨지는 내부 링크(href="/...")를 비활성화한다.
+
+    file://로 정적 스냅샷을 열었을 때 href="/builds/10" 같은 절대 경로를 클릭하면
+    브라우저가 이를 로컬 드라이브 루트 경로로 해석해 chrome-error:// 페이지로 이동하는
+    문제가 있었다. 정적 자산(/static/..)이 아닌 절대 경로 href는 전부 무력화한다.
+    """
+    html = re.sub(
+        r'href="(/(?!static/)[^"]*)"',
+        r'href="javascript:void(0)" data-preview-target="\1" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다"',
+        html,
+    )
+    html = re.sub(r"(<body[^>]*>)", r"\1" + PREVIEW_BANNER, html, count=1)
+    return html
+
+
+def disableForms(html):
+    """! 검색/필터/새로고침 폼도 서버 없이는 동작하지 않으므로 제출을 막는다."""
+    return re.sub(r"<form ", '<form onsubmit="return false;" ', html)
 
 
 def findFirstTestDetailPath(html):
@@ -36,6 +66,8 @@ def saveSnapshot(client, urlPath, outFileName):
     """! 한 라우트를 요청해 정적 스냅샷 파일로 저장하고 저장한 HTML을 반환한다."""
     response = client.get(urlPath)
     html = rewriteStaticPaths(response.get_data(as_text=True))
+    html = disableInternalNavigation(html)
+    html = disableForms(html)
     outFile = TARGET_DIR / outFileName
     outFile.write_text(html, encoding="utf-8")
     print(f"{urlPath} -> target/{outFileName} ({response.status_code}, {len(html)} bytes)")

@@ -6,27 +6,27 @@
   <title>GoogleTest 대시보드 - 검색 결과</title>
   <link rel="stylesheet" href="static/css/dashboard.css">
 </head>
-<body>
+<body><div style="background:#fff3cd;color:#664d03;padding:10px 16px;font-size:14px;border-bottom:1px solid #ffe69c;">이 페이지는 샘플 데이터로 미리 렌더링한 정적 미리보기입니다. 실제 서버가 없어 내부 링크(빌드/모듈/테스트 이동, 검색, 새로고침)는 비활성화되어 있습니다 — 실제로 써보려면 앱을 로컬에서 실행하세요(README.md 참고).</div>
   <header class="app-header">
-    <a class="app-title" href="/">GoogleTest 대시보드</a>
-    <form class="search-form" action="/search" method="get">
+    <a class="app-title" href="javascript:void(0)" data-preview-target="/" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">GoogleTest 대시보드</a>
+    <form onsubmit="return false;" class="search-form" action="/search" method="get">
       <input type="search" name="q" value="" placeholder="모듈, 함수, 테스트명, 실패 메시지 검색">
       
       
       <button type="submit">검색</button>
     </form>
-    <form class="refresh-form" action="/refresh" method="post">
+    <form onsubmit="return false;" class="refresh-form" action="/refresh" method="post">
       <button type="submit" title="GoogleTest 결과를 다시 검색해 집계를 갱신합니다">새로고침</button>
     </form>
   </header>
   <main>
     
-<nav class="crumb-nav"><a href="/">메인</a> / 검색 결과</nav>
+<nav class="crumb-nav"><a href="javascript:void(0)" data-preview-target="/" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">메인</a> / 검색 결과</nav>
 
 <section class="tests-section" aria-labelledby="search-results-heading">
   <h1 id="search-results-heading">검색 결과 (696건)</h1>
   
-<form class="query-controls" method="get" action="/search">
+<form onsubmit="return false;" class="query-controls" method="get" action="/search">
   <input type="search" name="q" value="" placeholder="검색어 (모듈/함수/테스트명/실패 메시지 등)">
 
   <label class="failed-only-toggle">
@@ -366,8 +366,9 @@
   </select>
 
   <button type="submit">적용</button>
-  <a class="reset-link" href="/search">전체 초기화</a>
+  <a class="reset-link" href="javascript:void(0)" data-preview-target="/search" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">전체 초기화</a>
 </form>
+<script src="static/js/list-controls.js" defer></script>
 
   
 <div class="pagination-info">
@@ -376,7 +377,7 @@
   <span class="pagination-link pagination-link--disabled">&laquo; 이전 페이지</span>
   
   
-  <a class="pagination-link" href="/search?status=FAILED&amp;page=2">다음 페이지 &raquo;</a>
+  <a class="pagination-link" href="javascript:void(0)" data-preview-target="/search?status=FAILED&amp;page=2" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">다음 페이지 &raquo;</a>
   
 </div>
 
@@ -390,551 +391,551 @@
     <tbody>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>ChildLockController</td>
         <td>EvaluateLockRequest</td>
         <td>ChildLockController.EvaluateLockRequestTest</td>
-        <td><a href="/builds/01/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_AboveMaximum?returnUrl=%2Fsearch%3Fstatus%3DFAILED">EvaluateLockRequest_AboveMaximum</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/ChildLockController.EvaluateLockRequestTest.EvaluateLockRequest_AboveMaximum?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">EvaluateLockRequest_AboveMaximum</a></td>
         <td>0.052s</td>
         <td>tests/child_lock/child_lock_controller_test.cpp:96</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>ChildLockController</td>
         <td>ApplyChildLockPolicy</td>
         <td>ChildLockController.ApplyPolicyTest</td>
-        <td><a href="/builds/01/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_UpperBoundary?returnUrl=%2Fsearch%3Fstatus%3DFAILED">ApplyChildLockPolicy_UpperBoundary</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_UpperBoundary?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ApplyChildLockPolicy_UpperBoundary</a></td>
         <td>0.210s</td>
         <td>tests/child_lock/child_lock_controller_test.cpp:218</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>ChildLockController</td>
         <td>ApplyChildLockPolicy</td>
         <td>ChildLockController.ApplyPolicyTest</td>
-        <td><a href="/builds/01/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_SignalTimeout?returnUrl=%2Fsearch%3Fstatus%3DFAILED">ApplyChildLockPolicy_SignalTimeout</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_SignalTimeout?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ApplyChildLockPolicy_SignalTimeout</a></td>
         <td>0.013s</td>
         <td>tests/child_lock/child_lock_controller_test.cpp:234</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>ChildLockController</td>
         <td>ApplyChildLockPolicy</td>
         <td>ChildLockController.ApplyPolicyTest</td>
-        <td><a href="/builds/01/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_DoorClosed?returnUrl=%2Fsearch%3Fstatus%3DFAILED">ApplyChildLockPolicy_DoorClosed</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/ChildLockController.ApplyPolicyTest.ApplyChildLockPolicy_DoorClosed?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ApplyChildLockPolicy_DoorClosed</a></td>
         <td>0.102s</td>
         <td>tests/child_lock/child_lock_controller_test.cpp:274</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>ChildLockController</td>
         <td>HandleRemoteCommand</td>
         <td>ChildLockController.HandleRemoteCommandTest</td>
-        <td><a href="/builds/01/tests/ChildLockController.HandleRemoteCommandTest.HandleRemoteCommand_StaleSignal?returnUrl=%2Fsearch%3Fstatus%3DFAILED">HandleRemoteCommand_StaleSignal</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/ChildLockController.HandleRemoteCommandTest.HandleRemoteCommand_StaleSignal?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">HandleRemoteCommand_StaleSignal</a></td>
         <td>0.130s</td>
         <td>tests/child_lock/child_lock_controller_test.cpp:498</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>ChildLockController</td>
         <td>HandleRemoteCommand</td>
         <td>ChildLockController.HandleRemoteCommandTest</td>
-        <td><a href="/builds/01/tests/ChildLockController.HandleRemoteCommandTest.HandleRemoteCommand_DoorClosed?returnUrl=%2Fsearch%3Fstatus%3DFAILED">HandleRemoteCommand_DoorClosed</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/ChildLockController.HandleRemoteCommandTest.HandleRemoteCommand_DoorClosed?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">HandleRemoteCommand_DoorClosed</a></td>
         <td>0.105s</td>
         <td>tests/child_lock/child_lock_controller_test.cpp:534</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>ChildLockController</td>
         <td>HandleRemoteCommand</td>
         <td>ChildLockController.HandleRemoteCommandTest</td>
-        <td><a href="/builds/01/tests/ChildLockController.HandleRemoteCommandTest.HandleRemoteCommand_RecoveryAfterFault?returnUrl=%2Fsearch%3Fstatus%3DFAILED">HandleRemoteCommand_RecoveryAfterFault</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/ChildLockController.HandleRemoteCommandTest.HandleRemoteCommand_RecoveryAfterFault?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">HandleRemoteCommand_RecoveryAfterFault</a></td>
         <td>0.081s</td>
         <td>tests/child_lock/child_lock_controller_test.cpp:542</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>ChildLockController</td>
         <td>RecoverFromFault</td>
         <td>ChildLockController.RecoverFromFaultTest</td>
-        <td><a href="/builds/01/tests/ChildLockController.RecoverFromFaultTest.RecoverFromFault_BelowMinimum?returnUrl=%2Fsearch%3Fstatus%3DFAILED">RecoverFromFault_BelowMinimum</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/ChildLockController.RecoverFromFaultTest.RecoverFromFault_BelowMinimum?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">RecoverFromFault_BelowMinimum</a></td>
         <td>0.040s</td>
         <td>tests/child_lock/child_lock_controller_test.cpp:742</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>ChildLockController</td>
         <td>RecoverFromFault</td>
         <td>ChildLockController.RecoverFromFaultTest</td>
-        <td><a href="/builds/01/tests/ChildLockController.RecoverFromFaultTest.RecoverFromFault_StaleSignal?returnUrl=%2Fsearch%3Fstatus%3DFAILED">RecoverFromFault_StaleSignal</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/ChildLockController.RecoverFromFaultTest.RecoverFromFault_StaleSignal?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">RecoverFromFault_StaleSignal</a></td>
         <td>0.060s</td>
         <td>tests/child_lock/child_lock_controller_test.cpp:758</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>ChildLockController</td>
         <td>RecoverFromFault</td>
         <td>ChildLockController.RecoverFromFaultTest</td>
-        <td><a href="/builds/01/tests/ChildLockController.RecoverFromFaultTest.RecoverFromFault_RepeatedCommand?returnUrl=%2Fsearch%3Fstatus%3DFAILED">RecoverFromFault_RepeatedCommand</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/ChildLockController.RecoverFromFaultTest.RecoverFromFault_RepeatedCommand?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">RecoverFromFault_RepeatedCommand</a></td>
         <td>0.094s</td>
         <td>tests/child_lock/child_lock_controller_test.cpp:766</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>CommunicationGateway</td>
         <td>ReceiveRemoteRequest</td>
         <td>CommunicationGateway.ReceiveRemoteRequestTest</td>
-        <td><a href="/builds/01/tests/CommunicationGateway.ReceiveRemoteRequestTest.ReceiveRemoteRequest_MissingSignal?returnUrl=%2Fsearch%3Fstatus%3DFAILED">ReceiveRemoteRequest_MissingSignal</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/CommunicationGateway.ReceiveRemoteRequestTest.ReceiveRemoteRequest_MissingSignal?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ReceiveRemoteRequest_MissingSignal</a></td>
         <td>0.092s</td>
         <td>tests/communication/communication_gateway_test.cpp:230</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>CommunicationGateway</td>
         <td>ReceiveRemoteRequest</td>
         <td>CommunicationGateway.ReceiveRemoteRequestTest</td>
-        <td><a href="/builds/01/tests/CommunicationGateway.ReceiveRemoteRequestTest.ReceiveRemoteRequest_RapidToggle?returnUrl=%2Fsearch%3Fstatus%3DFAILED">ReceiveRemoteRequest_RapidToggle</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/CommunicationGateway.ReceiveRemoteRequestTest.ReceiveRemoteRequest_RapidToggle?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ReceiveRemoteRequest_RapidToggle</a></td>
         <td>0.244s</td>
         <td>tests/communication/communication_gateway_test.cpp:242</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>CommunicationGateway</td>
         <td>ReceiveRemoteRequest</td>
         <td>CommunicationGateway.ReceiveRemoteRequestTest</td>
-        <td><a href="/builds/01/tests/CommunicationGateway.ReceiveRemoteRequestTest.ReceiveRemoteRequest_RecoveryAfterFault?returnUrl=%2Fsearch%3Fstatus%3DFAILED">ReceiveRemoteRequest_RecoveryAfterFault</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/CommunicationGateway.ReceiveRemoteRequestTest.ReceiveRemoteRequest_RecoveryAfterFault?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ReceiveRemoteRequest_RecoveryAfterFault</a></td>
         <td>0.036s</td>
         <td>tests/communication/communication_gateway_test.cpp:282</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>CommunicationGateway</td>
         <td>ValidateChecksum</td>
         <td>CommunicationGateway.ValidateChecksumTest</td>
-        <td><a href="/builds/01/tests/CommunicationGateway.ValidateChecksumTest.ValidateChecksum_DoorOpen?returnUrl=%2Fsearch%3Fstatus%3DFAILED">ValidateChecksum_DoorOpen</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/CommunicationGateway.ValidateChecksumTest.ValidateChecksum_DoorOpen?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ValidateChecksum_DoorOpen</a></td>
         <td>0.015s</td>
         <td>tests/communication/communication_gateway_test.cpp:530</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>CommunicationGateway</td>
         <td>HandleSequenceError</td>
         <td>CommunicationGateway.HandleSequenceErrorTest</td>
-        <td><a href="/builds/01/tests/CommunicationGateway.HandleSequenceErrorTest.HandleSequenceError_StaleSignal?returnUrl=%2Fsearch%3Fstatus%3DFAILED">HandleSequenceError_StaleSignal</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/CommunicationGateway.HandleSequenceErrorTest.HandleSequenceError_StaleSignal?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">HandleSequenceError_StaleSignal</a></td>
         <td>0.097s</td>
         <td>tests/communication/communication_gateway_test.cpp:628</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>CommunicationGateway</td>
         <td>HandleSequenceError</td>
         <td>CommunicationGateway.HandleSequenceErrorTest</td>
-        <td><a href="/builds/01/tests/CommunicationGateway.HandleSequenceErrorTest.HandleSequenceError_DoorClosed?returnUrl=%2Fsearch%3Fstatus%3DFAILED">HandleSequenceError_DoorClosed</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/CommunicationGateway.HandleSequenceErrorTest.HandleSequenceError_DoorClosed?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">HandleSequenceError_DoorClosed</a></td>
         <td>0.181s</td>
         <td>tests/communication/communication_gateway_test.cpp:664</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>CommunicationGateway</td>
         <td>RecoverCommunication</td>
         <td>CommunicationGateway.RecoverCommunicationTest</td>
-        <td><a href="/builds/01/tests/CommunicationGateway.RecoverCommunicationTest.RecoverCommunication_UpperBoundary?returnUrl=%2Fsearch%3Fstatus%3DFAILED">RecoverCommunication_UpperBoundary</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/CommunicationGateway.RecoverCommunicationTest.RecoverCommunication_UpperBoundary?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">RecoverCommunication_UpperBoundary</a></td>
         <td>0.096s</td>
         <td>tests/communication/communication_gateway_test.cpp:738</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>CommunicationGateway</td>
         <td>RecoverCommunication</td>
         <td>CommunicationGateway.RecoverCommunicationTest</td>
-        <td><a href="/builds/01/tests/CommunicationGateway.RecoverCommunicationTest.RecoverCommunication_ConcurrentRequest?returnUrl=%2Fsearch%3Fstatus%3DFAILED">RecoverCommunication_ConcurrentRequest</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/CommunicationGateway.RecoverCommunicationTest.RecoverCommunication_ConcurrentRequest?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">RecoverCommunication_ConcurrentRequest</a></td>
         <td>0.014s</td>
         <td>tests/communication/communication_gateway_test.cpp:770</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>CommunicationGateway</td>
         <td>RecoverCommunication</td>
         <td>CommunicationGateway.RecoverCommunicationTest</td>
-        <td><a href="/builds/01/tests/CommunicationGateway.RecoverCommunicationTest.RecoverCommunication_DoorClosed?returnUrl=%2Fsearch%3Fstatus%3DFAILED">RecoverCommunication_DoorClosed</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/CommunicationGateway.RecoverCommunicationTest.RecoverCommunication_DoorClosed?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">RecoverCommunication_DoorClosed</a></td>
         <td>0.005s</td>
         <td>tests/communication/communication_gateway_test.cpp:794</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>DiagnosticManager</td>
         <td>ClearDiagnosticEvent</td>
         <td>DiagnosticManager.ClearDiagnosticEventTest</td>
-        <td><a href="/builds/01/tests/DiagnosticManager.ClearDiagnosticEventTest.ClearDiagnosticEvent_RapidToggle?returnUrl=%2Fsearch%3Fstatus%3DFAILED">ClearDiagnosticEvent_RapidToggle</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/DiagnosticManager.ClearDiagnosticEventTest.ClearDiagnosticEvent_RapidToggle?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ClearDiagnosticEvent_RapidToggle</a></td>
         <td>0.085s</td>
         <td>tests/diagnostic/diagnostic_manager_test.cpp:242</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>DiagnosticManager</td>
         <td>SnapshotFreezeFrame</td>
         <td>DiagnosticManager.SnapshotFreezeFrameTest</td>
-        <td><a href="/builds/01/tests/DiagnosticManager.SnapshotFreezeFrameTest.SnapshotFreezeFrame_BelowMinimum?returnUrl=%2Fsearch%3Fstatus%3DFAILED">SnapshotFreezeFrame_BelowMinimum</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/DiagnosticManager.SnapshotFreezeFrameTest.SnapshotFreezeFrame_BelowMinimum?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">SnapshotFreezeFrame_BelowMinimum</a></td>
         <td>0.134s</td>
         <td>tests/diagnostic/diagnostic_manager_test.cpp:352</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>DiagnosticManager</td>
         <td>SnapshotFreezeFrame</td>
         <td>DiagnosticManager.SnapshotFreezeFrameTest</td>
-        <td><a href="/builds/01/tests/DiagnosticManager.SnapshotFreezeFrameTest.SnapshotFreezeFrame_MissingSignal?returnUrl=%2Fsearch%3Fstatus%3DFAILED">SnapshotFreezeFrame_MissingSignal</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/DiagnosticManager.SnapshotFreezeFrameTest.SnapshotFreezeFrame_MissingSignal?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">SnapshotFreezeFrame_MissingSignal</a></td>
         <td>0.109s</td>
         <td>tests/diagnostic/diagnostic_manager_test.cpp:360</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>DiagnosticManager</td>
         <td>SnapshotFreezeFrame</td>
         <td>DiagnosticManager.SnapshotFreezeFrameTest</td>
-        <td><a href="/builds/01/tests/DiagnosticManager.SnapshotFreezeFrameTest.SnapshotFreezeFrame_IgnitionOff?returnUrl=%2Fsearch%3Fstatus%3DFAILED">SnapshotFreezeFrame_IgnitionOff</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/DiagnosticManager.SnapshotFreezeFrameTest.SnapshotFreezeFrame_IgnitionOff?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">SnapshotFreezeFrame_IgnitionOff</a></td>
         <td>0.078s</td>
         <td>tests/diagnostic/diagnostic_manager_test.cpp:384</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>DiagnosticManager</td>
         <td>SnapshotFreezeFrame</td>
         <td>DiagnosticManager.SnapshotFreezeFrameTest</td>
-        <td><a href="/builds/01/tests/DiagnosticManager.SnapshotFreezeFrameTest.SnapshotFreezeFrame_DoorOpen?returnUrl=%2Fsearch%3Fstatus%3DFAILED">SnapshotFreezeFrame_DoorOpen</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/DiagnosticManager.SnapshotFreezeFrameTest.SnapshotFreezeFrame_DoorOpen?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">SnapshotFreezeFrame_DoorOpen</a></td>
         <td>0.201s</td>
         <td>tests/diagnostic/diagnostic_manager_test.cpp:400</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>DiagnosticManager</td>
         <td>ReportActuatorFault</td>
         <td>DiagnosticManager.ReportActuatorFaultTest</td>
-        <td><a href="/builds/01/tests/DiagnosticManager.ReportActuatorFaultTest.ReportActuatorFault_NominalInput?returnUrl=%2Fsearch%3Fstatus%3DFAILED">ReportActuatorFault_NominalInput</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/DiagnosticManager.ReportActuatorFaultTest.ReportActuatorFault_NominalInput?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ReportActuatorFault_NominalInput</a></td>
         <td>0.218s</td>
         <td>tests/diagnostic/diagnostic_manager_test.cpp:470</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>DiagnosticManager</td>
         <td>ReportActuatorFault</td>
         <td>DiagnosticManager.ReportActuatorFaultTest</td>
-        <td><a href="/builds/01/tests/DiagnosticManager.ReportActuatorFaultTest.ReportActuatorFault_AboveMaximum?returnUrl=%2Fsearch%3Fstatus%3DFAILED">ReportActuatorFault_AboveMaximum</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/DiagnosticManager.ReportActuatorFaultTest.ReportActuatorFault_AboveMaximum?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ReportActuatorFault_AboveMaximum</a></td>
         <td>0.009s</td>
         <td>tests/diagnostic/diagnostic_manager_test.cpp:486</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>DiagnosticManager</td>
         <td>ReportSignalFault</td>
         <td>DiagnosticManager.ReportSignalFaultTest</td>
-        <td><a href="/builds/01/tests/DiagnosticManager.ReportSignalFaultTest.ReportSignalFault_VehicleStopped?returnUrl=%2Fsearch%3Fstatus%3DFAILED">ReportSignalFault_VehicleStopped</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/DiagnosticManager.ReportSignalFaultTest.ReportSignalFault_VehicleStopped?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ReportSignalFault_VehicleStopped</a></td>
         <td>0.104s</td>
         <td>tests/diagnostic/diagnostic_manager_test.cpp:652</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>DiagnosticManager</td>
         <td>ManageHealingCounter</td>
         <td>DiagnosticManager.ManageHealingCounterTest</td>
-        <td><a href="/builds/01/tests/DiagnosticManager.ManageHealingCounterTest.ManageHealingCounter_RecoveryAfterFault?returnUrl=%2Fsearch%3Fstatus%3DFAILED">ManageHealingCounter_RecoveryAfterFault</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/DiagnosticManager.ManageHealingCounterTest.ManageHealingCounter_RecoveryAfterFault?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ManageHealingCounter_RecoveryAfterFault</a></td>
         <td>0.016s</td>
         <td>tests/diagnostic/diagnostic_manager_test.cpp:802</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>DoorStateManager</td>
         <td>UpdateDoorState</td>
         <td>DoorStateManager.UpdateDoorStateTest</td>
-        <td><a href="/builds/01/tests/DoorStateManager.UpdateDoorStateTest.UpdateDoorState_LowerBoundary?returnUrl=%2Fsearch%3Fstatus%3DFAILED">UpdateDoorState_LowerBoundary</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/DoorStateManager.UpdateDoorStateTest.UpdateDoorState_LowerBoundary?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">UpdateDoorState_LowerBoundary</a></td>
         <td>0.196s</td>
         <td>tests/door/door_state_manager_test.cpp:84</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>DoorStateManager</td>
         <td>UpdateDoorState</td>
         <td>DoorStateManager.UpdateDoorStateTest</td>
-        <td><a href="/builds/01/tests/DoorStateManager.UpdateDoorStateTest.UpdateDoorState_MissingSignal?returnUrl=%2Fsearch%3Fstatus%3DFAILED">UpdateDoorState_MissingSignal</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/DoorStateManager.UpdateDoorStateTest.UpdateDoorState_MissingSignal?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">UpdateDoorState_MissingSignal</a></td>
         <td>0.248s</td>
         <td>tests/door/door_state_manager_test.cpp:100</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>DoorStateManager</td>
         <td>UpdateDoorState</td>
         <td>DoorStateManager.UpdateDoorStateTest</td>
-        <td><a href="/builds/01/tests/DoorStateManager.UpdateDoorStateTest.UpdateDoorState_ActuatorBusy?returnUrl=%2Fsearch%3Fstatus%3DFAILED">UpdateDoorState_ActuatorBusy</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/DoorStateManager.UpdateDoorStateTest.UpdateDoorState_ActuatorBusy?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">UpdateDoorState_ActuatorBusy</a></td>
         <td>0.166s</td>
         <td>tests/door/door_state_manager_test.cpp:148</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>DoorStateManager</td>
         <td>ValidateDoorSignal</td>
         <td>DoorStateManager.ValidateDoorSignalTest</td>
-        <td><a href="/builds/01/tests/DoorStateManager.ValidateDoorSignalTest.ValidateDoorSignal_LowerBoundary?returnUrl=%2Fsearch%3Fstatus%3DFAILED">ValidateDoorSignal_LowerBoundary</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/DoorStateManager.ValidateDoorSignalTest.ValidateDoorSignal_LowerBoundary?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">ValidateDoorSignal_LowerBoundary</a></td>
         <td>0.137s</td>
         <td>tests/door/door_state_manager_test.cpp:214</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>DoorStateManager</td>
         <td>AggregateRearDoorState</td>
         <td>DoorStateManager.AggregateRearDoorStateTest</td>
-        <td><a href="/builds/01/tests/DoorStateManager.AggregateRearDoorStateTest.AggregateRearDoorState_UpperBoundary?returnUrl=%2Fsearch%3Fstatus%3DFAILED">AggregateRearDoorState_UpperBoundary</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/DoorStateManager.AggregateRearDoorStateTest.AggregateRearDoorState_UpperBoundary?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">AggregateRearDoorState_UpperBoundary</a></td>
         <td>0.227s</td>
         <td>tests/door/door_state_manager_test.cpp:478</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>DoorStateManager</td>
         <td>AggregateRearDoorState</td>
         <td>DoorStateManager.AggregateRearDoorStateTest</td>
-        <td><a href="/builds/01/tests/DoorStateManager.AggregateRearDoorStateTest.AggregateRearDoorState_VehicleStopped?returnUrl=%2Fsearch%3Fstatus%3DFAILED">AggregateRearDoorState_VehicleStopped</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/DoorStateManager.AggregateRearDoorStateTest.AggregateRearDoorState_VehicleStopped?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">AggregateRearDoorState_VehicleStopped</a></td>
         <td>0.219s</td>
         <td>tests/door/door_state_manager_test.cpp:522</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>DoorStateManager</td>
         <td>DebounceDoorInput</td>
         <td>DoorStateManager.DebounceDoorInputTest</td>
-        <td><a href="/builds/01/tests/DoorStateManager.DebounceDoorInputTest.DebounceDoorInput_BelowMinimum?returnUrl=%2Fsearch%3Fstatus%3DFAILED">DebounceDoorInput_BelowMinimum</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/DoorStateManager.DebounceDoorInputTest.DebounceDoorInput_BelowMinimum?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">DebounceDoorInput_BelowMinimum</a></td>
         <td>0.206s</td>
         <td>tests/door/door_state_manager_test.cpp:612</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>DoorStateManager</td>
         <td>PublishDoorState</td>
         <td>DoorStateManager.PublishDoorStateTest</td>
-        <td><a href="/builds/01/tests/DoorStateManager.PublishDoorStateTest.PublishDoorState_UpperBoundary?returnUrl=%2Fsearch%3Fstatus%3DFAILED">PublishDoorState_UpperBoundary</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/DoorStateManager.PublishDoorStateTest.PublishDoorState_UpperBoundary?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">PublishDoorState_UpperBoundary</a></td>
         <td>0.105s</td>
         <td>tests/door/door_state_manager_test.cpp:738</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>DoorStateManager</td>
         <td>PublishDoorState</td>
         <td>DoorStateManager.PublishDoorStateTest</td>
-        <td><a href="/builds/01/tests/DoorStateManager.PublishDoorStateTest.PublishDoorState_BelowMinimum?returnUrl=%2Fsearch%3Fstatus%3DFAILED">PublishDoorState_BelowMinimum</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/DoorStateManager.PublishDoorStateTest.PublishDoorState_BelowMinimum?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">PublishDoorState_BelowMinimum</a></td>
         <td>0.060s</td>
         <td>tests/door/door_state_manager_test.cpp:742</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>DoorStateManager</td>
         <td>PublishDoorState</td>
         <td>DoorStateManager.PublishDoorStateTest</td>
-        <td><a href="/builds/01/tests/DoorStateManager.PublishDoorStateTest.PublishDoorState_SignalTimeout?returnUrl=%2Fsearch%3Fstatus%3DFAILED">PublishDoorState_SignalTimeout</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/DoorStateManager.PublishDoorStateTest.PublishDoorState_SignalTimeout?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">PublishDoorState_SignalTimeout</a></td>
         <td>0.099s</td>
         <td>tests/door/door_state_manager_test.cpp:754</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>LockActuator</td>
         <td>CommandLock</td>
         <td>LockActuator.CommandLockTest</td>
-        <td><a href="/builds/01/tests/LockActuator.CommandLockTest.CommandLock_VehicleMoving?returnUrl=%2Fsearch%3Fstatus%3DFAILED">CommandLock_VehicleMoving</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/LockActuator.CommandLockTest.CommandLock_VehicleMoving?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">CommandLock_VehicleMoving</a></td>
         <td>0.168s</td>
         <td>tests/actuator/lock_actuator_test.cpp:136</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>LockActuator</td>
         <td>CommandLock</td>
         <td>LockActuator.CommandLockTest</td>
-        <td><a href="/builds/01/tests/LockActuator.CommandLockTest.CommandLock_DoorOpen?returnUrl=%2Fsearch%3Fstatus%3DFAILED">CommandLock_DoorOpen</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/LockActuator.CommandLockTest.CommandLock_DoorOpen?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">CommandLock_DoorOpen</a></td>
         <td>0.029s</td>
         <td>tests/actuator/lock_actuator_test.cpp:140</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>LockActuator</td>
         <td>CommandLock</td>
         <td>LockActuator.CommandLockTest</td>
-        <td><a href="/builds/01/tests/LockActuator.CommandLockTest.CommandLock_ActuatorBusy?returnUrl=%2Fsearch%3Fstatus%3DFAILED">CommandLock_ActuatorBusy</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/LockActuator.CommandLockTest.CommandLock_ActuatorBusy?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">CommandLock_ActuatorBusy</a></td>
         <td>0.134s</td>
         <td>tests/actuator/lock_actuator_test.cpp:148</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>LockActuator</td>
         <td>CommandUnlock</td>
         <td>LockActuator.CommandUnlockTest</td>
-        <td><a href="/builds/01/tests/LockActuator.CommandUnlockTest.CommandUnlock_IgnitionOff?returnUrl=%2Fsearch%3Fstatus%3DFAILED">CommandUnlock_IgnitionOff</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/LockActuator.CommandUnlockTest.CommandUnlock_IgnitionOff?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">CommandUnlock_IgnitionOff</a></td>
         <td>0.234s</td>
         <td>tests/actuator/lock_actuator_test.cpp:254</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>LockActuator</td>
         <td>VerifyFeedback</td>
         <td>LockActuator.VerifyFeedbackTest</td>
-        <td><a href="/builds/01/tests/LockActuator.VerifyFeedbackTest.VerifyFeedback_IgnitionOn?returnUrl=%2Fsearch%3Fstatus%3DFAILED">VerifyFeedback_IgnitionOn</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/LockActuator.VerifyFeedbackTest.VerifyFeedback_IgnitionOn?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">VerifyFeedback_IgnitionOn</a></td>
         <td>0.020s</td>
         <td>tests/actuator/lock_actuator_test.cpp:388</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>LockActuator</td>
         <td>RetryActuation</td>
         <td>LockActuator.RetryActuationTest</td>
-        <td><a href="/builds/01/tests/LockActuator.RetryActuationTest.RetryActuation_DoorClosed?returnUrl=%2Fsearch%3Fstatus%3DFAILED">RetryActuation_DoorClosed</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/LockActuator.RetryActuationTest.RetryActuation_DoorClosed?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">RetryActuation_DoorClosed</a></td>
         <td>0.226s</td>
         <td>tests/actuator/lock_actuator_test.cpp:534</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>LockActuator</td>
         <td>DetectJam</td>
         <td>LockActuator.DetectJamTest</td>
-        <td><a href="/builds/01/tests/LockActuator.DetectJamTest.DetectJam_UpperBoundary?returnUrl=%2Fsearch%3Fstatus%3DFAILED">DetectJam_UpperBoundary</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/LockActuator.DetectJamTest.DetectJam_UpperBoundary?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">DetectJam_UpperBoundary</a></td>
         <td>0.205s</td>
         <td>tests/actuator/lock_actuator_test.cpp:608</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>LockActuator</td>
         <td>StopActuator</td>
         <td>LockActuator.StopActuatorTest</td>
-        <td><a href="/builds/01/tests/LockActuator.StopActuatorTest.StopActuator_LowerBoundary?returnUrl=%2Fsearch%3Fstatus%3DFAILED">StopActuator_LowerBoundary</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/LockActuator.StopActuatorTest.StopActuator_LowerBoundary?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">StopActuator_LowerBoundary</a></td>
         <td>0.175s</td>
         <td>tests/actuator/lock_actuator_test.cpp:734</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>LockActuator</td>
         <td>StopActuator</td>
         <td>LockActuator.StopActuatorTest</td>
-        <td><a href="/builds/01/tests/LockActuator.StopActuatorTest.StopActuator_SignalTimeout?returnUrl=%2Fsearch%3Fstatus%3DFAILED">StopActuator_SignalTimeout</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/LockActuator.StopActuatorTest.StopActuator_SignalTimeout?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">StopActuator_SignalTimeout</a></td>
         <td>0.074s</td>
         <td>tests/actuator/lock_actuator_test.cpp:754</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>LockActuator</td>
         <td>StopActuator</td>
         <td>LockActuator.StopActuatorTest</td>
-        <td><a href="/builds/01/tests/LockActuator.StopActuatorTest.StopActuator_RecoveryAfterFault?returnUrl=%2Fsearch%3Fstatus%3DFAILED">StopActuator_RecoveryAfterFault</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/LockActuator.StopActuatorTest.StopActuator_RecoveryAfterFault?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">StopActuator_RecoveryAfterFault</a></td>
         <td>0.166s</td>
         <td>tests/actuator/lock_actuator_test.cpp:802</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>PersistenceManager</td>
         <td>StoreChildLockPreference</td>
         <td>PersistenceManager.StoreChildLockPreferenceTest</td>
-        <td><a href="/builds/01/tests/PersistenceManager.StoreChildLockPreferenceTest.StoreChildLockPreference_DoorOpen?returnUrl=%2Fsearch%3Fstatus%3DFAILED">StoreChildLockPreference_DoorOpen</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/PersistenceManager.StoreChildLockPreferenceTest.StoreChildLockPreference_DoorOpen?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">StoreChildLockPreference_DoorOpen</a></td>
         <td>0.079s</td>
         <td>tests/persistence/persistence_manager_test.cpp:140</td>
       </tr>
       
       <tr class="test-row test-row--failed">
-        <td>FAILED</td>
-        <td><a href="/builds/01">01</a></td>
+        <td><span class="status-badge status-badge--failed">FAILED</span></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">01</a></td>
         <td>PersistenceManager</td>
         <td>StoreChildLockPreference</td>
         <td>PersistenceManager.StoreChildLockPreferenceTest</td>
-        <td><a href="/builds/01/tests/PersistenceManager.StoreChildLockPreferenceTest.StoreChildLockPreference_DoorClosed?returnUrl=%2Fsearch%3Fstatus%3DFAILED">StoreChildLockPreference_DoorClosed</a></td>
+        <td><a href="javascript:void(0)" data-preview-target="/builds/01/tests/PersistenceManager.StoreChildLockPreferenceTest.StoreChildLockPreference_DoorClosed?returnUrl=%2Fsearch%3Fstatus%3DFAILED" title="정적 미리보기 — 이동은 실제 앱 실행 후 가능합니다">StoreChildLockPreference_DoorClosed</a></td>
         <td>0.140s</td>
         <td>tests/persistence/persistence_manager_test.cpp:144</td>
       </tr>

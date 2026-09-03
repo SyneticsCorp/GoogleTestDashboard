@@ -319,3 +319,113 @@ def test_tcFr03103_currentRangeAndTotalShownOnPageTwo(page, liveServerUrl):
 
     assert "51" in rangeText and "100" in rangeText
     assert "1200" in rangeText
+
+
+## --- UX enhancement: query-controls auto-submit on checkbox/select change ---
+##
+## Not transcribed from TestCase_Template.xlsx (no TC_ID) -- these cover a UX
+## fix discovered via manual/browser exploration: the shared query-controls
+## form (_list_controls.html) only reflected a changed checkbox or <select>
+## after the user separately clicked "적용". Real users (unlike most of the
+## tests above, which navigate straight to a query-string URL) toggle the
+## control and expect the list to react immediately. These tests drive the
+## actual controls with page.check()/select_option() -- never page.goto()
+## with a pre-built query string -- and assert the list updates without any
+## "적용" click.
+
+
+@pytest.mark.e2e
+def test_uxAutoSubmit01_checkingFailedOnlyCheckboxNarrowsListWithoutApplyClick(page, liveServerUrl):
+    """!
+    @brief Checking the "실패 테스트만" checkbox alone (no "적용" click)
+           immediately narrows build 10's list to the 24 FAILED rows.
+    """
+    page.goto(liveServerUrl + "/builds/10")
+    expect(page.locator(".tests-table tbody tr")).to_have_count(50)  # default page size
+
+    page.locator(".query-controls input[name='failedOnly']").check()
+
+    expect(page.locator(".tests-table tbody tr")).to_have_count(24)
+    statuses = page.locator(".tests-table tbody tr td:first-child").all_inner_texts()
+    assert all(status == "FAILED" for status in statuses)
+
+
+@pytest.mark.e2e
+def test_uxAutoSubmit02_choosingStatusFilterNarrowsListWithoutApplyClick(page, liveServerUrl):
+    """!
+    @brief Selecting "FAILED" from the status <select> alone (no "적용"
+           click) immediately narrows build 10's list to only FAILED rows.
+    """
+    page.goto(liveServerUrl + "/builds/10")
+
+    page.locator("#status-filter").select_option("FAILED")
+
+    page.wait_for_url("**status=FAILED**")
+    statuses = page.locator(".tests-table tbody tr td:first-child").all_inner_texts()
+    assert statuses and all(status == "FAILED" for status in statuses)
+
+
+@pytest.mark.e2e
+def test_uxAutoSubmit03_textSearchBoxStillRequiresEnterOrButton(page, liveServerUrl):
+    """!
+    @brief Typing into the free-text search box must NOT auto-submit --
+           only Enter or the "적용" button should trigger a navigation, so
+           the URL stays unchanged while the user is still typing.
+    """
+    page.goto(liveServerUrl + "/search")
+    urlBeforeTyping = page.url
+
+    page.locator(".query-controls input[name='q']").fill("EvaluateLockRequest")
+
+    assert page.url == urlBeforeTyping
+
+    page.locator(".query-controls input[name='q']").press("Enter")
+    page.wait_for_url("**q=EvaluateLockRequest**")
+
+
+@pytest.mark.e2e
+def test_uxControls01_realCheckboxAndSelectCombineToExactThreeRows(page, liveServerUrl):
+    """!
+    @brief Real-control equivalent of TC-FR-029-01: on /search, choosing
+           buildId=10 and module=ChildLockController from the <select>
+           elements and checking "실패 테스트만" (no page.goto query string,
+           no "적용" click) narrows the list to exactly 3 rows.
+    """
+    page.goto(liveServerUrl + "/search")
+
+    page.locator("#build-filter").select_option("10")
+    page.locator("#module-filter").select_option("ChildLockController")
+    page.locator(".query-controls input[name='failedOnly']").check()
+
+    expect(page.locator(".tests-table tbody tr")).to_have_count(3)
+
+
+@pytest.mark.e2e
+def test_uxControls02_realSortSelectReordersListByStatus(page, liveServerUrl):
+    """!
+    @brief Real-control equivalent of TC-FR-030-01 for the status sort key:
+           choosing "상태" from the sort <select> on /builds/10 (no
+           page.goto query string) reorders the table by status ascending.
+    """
+    page.goto(liveServerUrl + "/builds/10")
+
+    page.locator("#sort-select").select_option("status")
+
+    page.wait_for_url("**sort=status**")
+    statuses = page.locator(".tests-table tbody tr td:first-child").all_inner_texts()
+    assert statuses == sorted(statuses)
+
+
+@pytest.mark.e2e
+def test_uxControls03_realPageSizeSelectRecomputesTotalPages(page, liveServerUrl):
+    """!
+    @brief Real-control equivalent of TC-FR-031-02: choosing "100" from the
+           page-size <select> on /builds/10 (no page.goto query string)
+           recomputes the pagination to 12 total pages.
+    """
+    page.goto(liveServerUrl + "/builds/10")
+
+    page.locator("#page-size-select").select_option("100")
+
+    page.wait_for_url("**pageSize=100**")
+    assert "12" in page.locator(".pagination-range").inner_text().split("페이지")[1]
